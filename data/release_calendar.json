@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T12:52:45",
+  "generated_at": "2026-08-15T15:26:38",
   "months": {
     "2026-08": [
       {
@@ -15,6 +15,28 @@
       }
     ],
     "2026-09": [
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Ayrton Senna Helmet",
+        "pieces": 931,
+        "price": "$89.99",
+        "set_num": "43024",
+        "theme": "LEGO® Editions",
+        "url": "https://www.lego.com/en-us/product/ayrton-senna-helmet-43024"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Doctor Doom Bust",
+        "pieces": 379,
+        "price": "$49.99",
+        "set_num": "76345",
+        "theme": "Marvel",
+        "url": "https://www.lego.com/en-us/product/doctor-doom-bust-76345"
+      },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
@@ -38,6 +60,72 @@
         "url": "https://www.lego.com/en-us/product/gremlins-gizmo-and-stripe-figures-40919"
       },
       {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "LEGO® City Advent Calendar 2026",
+        "pieces": 252,
+        "price": "$34.99",
+        "set_num": "60510",
+        "theme": "City",
+        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-60510"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "LEGO® Friends Advent Calendar 2026",
+        "pieces": 211,
+        "price": "$34.99",
+        "set_num": "42698",
+        "theme": "Friends",
+        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-42698"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "LEGO® Star Wars™ Advent Calendar 2026",
+        "pieces": 293,
+        "price": "$44.99",
+        "set_num": "75456",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-75456"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "LEGO® ǀ Disney Princess Advent Calendar 2026",
+        "pieces": 290,
+        "price": "$44.99",
+        "set_num": "43298",
+        "theme": "Disney™",
+        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-43298"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "LEGO® ǀ Marvel Advent Calendar 2026",
+        "pieces": 317,
+        "price": "$44.99",
+        "set_num": "76340",
+        "theme": "Marvel",
+        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-76340"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Mayor Manor",
+        "pieces": 1420,
+        "price": "$119.99",
+        "set_num": "11383",
+        "theme": "LEGO® Icons",
+        "url": "https://www.lego.com/en-us/product/mayor-manor-11383"
+      },
+      {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
         "launch_date": "2026-09-01",
@@ -45,7 +133,7 @@
         "pieces": 1093,
         "price": "$99.99",
         "set_num": "43026",
-        "theme": "LEGO® Editions",
+        "theme": "Nike",
         "url": "https://www.lego.com/en-us/product/nike-air-force-1-x-lego-set-43026"
       },
       {
@@ -69,6 +157,39 @@
         "set_num": "66815",
         "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/minifigures-66815-66815"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "SpongeBob SquarePants Figure",
+        "pieces": 72,
+        "price": "$12.99",
+        "set_num": "40858",
+        "theme": "BrickHeadz",
+        "url": "https://www.lego.com/en-us/product/spongebob-squarepants-figure-40858"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "SpongeBob SquarePants: Bikini Bottom",
+        "pieces": 1794,
+        "price": "$219.99",
+        "set_num": "11386",
+        "theme": "LEGO® Icons",
+        "url": "https://www.lego.com/en-us/product/spongebob-squarepants-bikini-bottom-11386"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Star Trek: U.S.S. Enterprise NCC-1701™ Bridge",
+        "pieces": 1701,
+        "price": "$199.99",
+        "set_num": "11385",
+        "theme": "LEGO® Icons",
+        "url": "https://www.lego.com/en-us/product/star-trek-uss-enterprise-ncc-1701-bridge-11385"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
@@ -95,6 +216,17 @@
         "url": "https://www.lego.com/en-us/product/christmas-stocking-40958"
       },
       {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
+        "launch_date": "2026-10-01",
+        "name": "Iconic Trainer Moments Poké Ball",
+        "pieces": 2386,
+        "price": "$299.99",
+        "set_num": "72154",
+        "theme": "Pokémon",
+        "url": "https://www.lego.com/en-us/product/iconic-trainer-moments-poke-ball-72154"
+      },
+      {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on October 1, 2026",
         "launch_date": "2026-10-01",
@@ -104,6 +236,17 @@
         "set_num": "76788",
         "theme": "LEGO® Wednesday",
         "url": "https://www.lego.com/en-us/product/nevermore-academy-76788"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
+        "launch_date": "2026-10-01",
+        "name": "Up-Scaled Red Minifigure",
+        "pieces": 930,
+        "price": "$79.99",
+        "set_num": "40868",
+        "theme": "Pokémon",
+        "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
@@ -124,8 +267,41 @@
         "pieces": 467,
         "price": "$39.99",
         "set_num": "40880",
-        "theme": "BrickHeadz",
+        "theme": "Marvel",
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
+        "launch_date": "2026-10-04",
+        "name": "Avengers: Doomsday New Avengers Tower",
+        "pieces": 954,
+        "price": "$109.99",
+        "set_num": "76352",
+        "theme": "Marvel",
+        "url": "https://www.lego.com/en-us/product/avengers-doomsday-new-avengers-tower-76352"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
+        "launch_date": "2026-10-04",
+        "name": "Avengers: Doomsday Quinjet",
+        "pieces": 433,
+        "price": "$59.99",
+        "set_num": "76347",
+        "theme": "Marvel",
+        "url": "https://www.lego.com/en-us/product/avengers-doomsday-quinjet-76347"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
+        "launch_date": "2026-10-04",
+        "name": "Epic Battle: Avengers: Doomsday",
+        "pieces": 846,
+        "price": "$99.99",
+        "set_num": "76348",
+        "theme": "Marvel",
+        "url": "https://www.lego.com/en-us/product/epic-battle-avengers-doomsday-76348"
       }
     ],
     "2026-11": [
@@ -139,184 +315,6 @@
         "set_num": "21065",
         "theme": "Architecture",
         "url": "https://www.lego.com/en-us/product/sagrada-familia-21065"
-      }
-    ],
-    "TBA": [
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
-        "launch_date": null,
-        "name": "Avengers: Doomsday New Avengers Tower",
-        "pieces": 954,
-        "price": "$109.99",
-        "set_num": "76352",
-        "theme": "Marvel",
-        "url": "https://www.lego.com/en-us/product/avengers-doomsday-new-avengers-tower-76352"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
-        "launch_date": null,
-        "name": "Avengers: Doomsday Quinjet",
-        "pieces": 433,
-        "price": "$59.99",
-        "set_num": "76347",
-        "theme": "Marvel",
-        "url": "https://www.lego.com/en-us/product/avengers-doomsday-quinjet-76347"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "Ayrton Senna Helmet",
-        "pieces": 931,
-        "price": "$89.99",
-        "set_num": "43024",
-        "theme": "LEGO® Editions",
-        "url": "https://www.lego.com/en-us/product/ayrton-senna-helmet-43024"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "Doctor Doom Bust",
-        "pieces": 379,
-        "price": "$49.99",
-        "set_num": "76345",
-        "theme": "Marvel",
-        "url": "https://www.lego.com/en-us/product/doctor-doom-bust-76345"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
-        "launch_date": null,
-        "name": "Epic Battle: Avengers: Doomsday",
-        "pieces": 846,
-        "price": "$99.99",
-        "set_num": "76348",
-        "theme": "Marvel",
-        "url": "https://www.lego.com/en-us/product/epic-battle-avengers-doomsday-76348"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
-        "launch_date": null,
-        "name": "Iconic Trainer Moments Poké Ball",
-        "pieces": 2386,
-        "price": "$299.99",
-        "set_num": "72154",
-        "theme": "Pokémon",
-        "url": "https://www.lego.com/en-us/product/iconic-trainer-moments-poke-ball-72154"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "LEGO® City Advent Calendar 2026",
-        "pieces": 252,
-        "price": "$34.99",
-        "set_num": "60510",
-        "theme": "City",
-        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-60510"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "LEGO® Friends Advent Calendar 2026",
-        "pieces": 211,
-        "price": "$34.99",
-        "set_num": "42698",
-        "theme": "Friends",
-        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-42698"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "LEGO® Star Wars™ Advent Calendar 2026",
-        "pieces": 293,
-        "price": "$44.99",
-        "set_num": "75456",
-        "theme": "Star Wars™",
-        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-75456"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "LEGO® ǀ Disney Princess Advent Calendar 2026",
-        "pieces": 290,
-        "price": "$44.99",
-        "set_num": "43298",
-        "theme": "Disney™",
-        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-43298"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "LEGO® ǀ Marvel Advent Calendar 2026",
-        "pieces": 317,
-        "price": "$44.99",
-        "set_num": "76340",
-        "theme": "Marvel",
-        "url": "https://www.lego.com/en-us/product/advent-calendar-2026-76340"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "Mayor Manor",
-        "pieces": 1420,
-        "price": "$119.99",
-        "set_num": "11383",
-        "theme": "LEGO® Icons",
-        "url": "https://www.lego.com/en-us/product/mayor-manor-11383"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "SpongeBob SquarePants Figure",
-        "pieces": 72,
-        "price": "$12.99",
-        "set_num": "40858",
-        "theme": "BrickHeadz",
-        "url": "https://www.lego.com/en-us/product/spongebob-squarepants-figure-40858"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "SpongeBob SquarePants: Bikini Bottom",
-        "pieces": 1794,
-        "price": "$219.99",
-        "set_num": "11386",
-        "theme": "LEGO® Icons",
-        "url": "https://www.lego.com/en-us/product/spongebob-squarepants-bikini-bottom-11386"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
-        "launch_date": null,
-        "name": "Star Trek: U.S.S. Enterprise NCC-1701™ Bridge",
-        "pieces": 1701,
-        "price": "$199.99",
-        "set_num": "11385",
-        "theme": "LEGO® Icons",
-        "url": "https://www.lego.com/en-us/product/star-trek-uss-enterprise-ncc-1701-bridge-11385"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
-        "launch_date": null,
-        "name": "Up-Scaled Red Minifigure",
-        "pieces": 930,
-        "price": "$79.99",
-        "set_num": "40868",
-        "theme": "Pokémon",
-        "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       }
     ]
   }
