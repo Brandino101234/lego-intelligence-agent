@@ -222,5 +222,149 @@
     "theme": "Pokémon",
     "timestamp": "2026-08-15T12:52:45",
     "type": "added_to_calendar"
+  },
+  {
+    "name": "Ayrton Senna Helmet",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "43024",
+    "theme": "LEGO® Editions",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "Doctor Doom Bust",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "76345",
+    "theme": "Marvel",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "LEGO® City Advent Calendar 2026",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "60510",
+    "theme": "City",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "LEGO® Friends Advent Calendar 2026",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "42698",
+    "theme": "Friends",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "LEGO® Star Wars™ Advent Calendar 2026",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "75456",
+    "theme": "Star Wars™",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "LEGO® ǀ Disney Princess Advent Calendar 2026",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "43298",
+    "theme": "Disney™",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "LEGO® ǀ Marvel Advent Calendar 2026",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "76340",
+    "theme": "Marvel",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "Mayor Manor",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "11383",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "SpongeBob SquarePants Figure",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "40858",
+    "theme": "BrickHeadz",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "SpongeBob SquarePants: Bikini Bottom",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "11386",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "Star Trek: U.S.S. Enterprise NCC-1701™ Bridge",
+    "new_month": "2026-09",
+    "old_month": "TBA",
+    "set_num": "11385",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "Iconic Trainer Moments Poké Ball",
+    "new_month": "2026-10",
+    "old_month": "TBA",
+    "set_num": "72154",
+    "theme": "Pokémon",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "Up-Scaled Red Minifigure",
+    "new_month": "2026-10",
+    "old_month": "TBA",
+    "set_num": "40868",
+    "theme": "Pokémon",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "Avengers: Doomsday New Avengers Tower",
+    "new_month": "2026-10",
+    "old_month": "TBA",
+    "set_num": "76352",
+    "theme": "Marvel",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "Avengers: Doomsday Quinjet",
+    "new_month": "2026-10",
+    "old_month": "TBA",
+    "set_num": "76347",
+    "theme": "Marvel",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
+  },
+  {
+    "name": "Epic Battle: Avengers: Doomsday",
+    "new_month": "2026-10",
+    "old_month": "TBA",
+    "set_num": "76348",
+    "theme": "Marvel",
+    "timestamp": "2026-08-15T15:26:38",
+    "type": "month_changed"
   }
 ]
