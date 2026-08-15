@@ -22,7 +22,6 @@ SITE_DIR.mkdir(exist_ok=True)
 FONTS_CSS = (ROOT / "assets" / "embedded_fonts.css").read_text(encoding="utf-8")
 
 RETIRING_PATH = DATA_DIR / "retiring_sets.json"
-NEW_SETS_LOG_PATH = DATA_DIR / "new_sets_changes_log.json"
 CALENDAR_PATH = DATA_DIR / "release_calendar.json"
 GWP_PATH = DATA_DIR / "gwp.json"
 
@@ -127,51 +126,6 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
           </div>''')
 
     return stat, "".join(rows)
-
-
-# ------------------------------------------------------------- new arrivals --
-
-def render_new_arrivals(new_log: list) -> tuple[str, str]:
-    latest_by_set: dict[str, dict] = {}
-    for entry in new_log:
-        set_num = entry["set_num"]
-        if set_num not in latest_by_set or entry["timestamp"] > latest_by_set[set_num]["timestamp"]:
-            latest_by_set[set_num] = entry
-
-    items = sorted(
-        latest_by_set.values(),
-        key=lambda e: (e["timestamp"], e.get("launch_date") or "", e["name"]),
-        reverse=True,
-    )
-    total = len(items)
-
-    most_recent_ts = items[0]["timestamp"][:10] if items else None
-    today_count = sum(1 for e in items if e["timestamp"][:10] == most_recent_ts) if items else 0
-    stat = f"{total} tracked"
-    if items:
-        stat += f" &middot; {today_count} in latest run"
-
-    if not items:
-        return stat, '<p class="empty">No new sets tracked yet &mdash; run the new-sets agent to build a baseline.</p>'
-
-    rows = []
-    for e in items:
-        launch = e.get("launch_date")
-        launch_label = datetime.strptime(launch, "%Y-%m-%d").strftime("%b %-d, %Y") if launch else "date TBA"
-        theme = esc(e.get("theme") or "Uncategorized")
-        rows.append(f'''
-          <div class="feed-row">
-            <div class="feed-main">
-              <span class="feed-name">{esc(e.get("name"))}</span>
-              <span class="theme-tag">{theme}</span>
-            </div>
-            <div class="feed-meta">
-              <span class="mono feed-setnum">#{esc(e.get("set_num"))}</span>
-              <span class="mono feed-date">{esc(launch_label)}</span>
-            </div>
-          </div>''')
-
-    return stat, f'<div class="feed">{"".join(rows)}</div>'
 
 
 # ------------------------------------------------------------------ retiring --
@@ -475,11 +429,9 @@ nav.chapters {{
 }}
 
 .chapter-btn[data-accent="blue"].active {{ border-left-color: var(--blue); }}
-.chapter-btn[data-accent="gold"].active {{ border-left-color: var(--gold-fill); }}
 .chapter-btn[data-accent="red"].active {{ border-left-color: var(--red); }}
 .chapter-btn[data-accent="green"].active {{ border-left-color: var(--green); }}
 .chapter-btn[data-accent="blue"].active .num {{ color: var(--blue); }}
-.chapter-btn[data-accent="gold"].active .num {{ color: var(--gold); }}
 .chapter-btn[data-accent="red"].active .num {{ color: var(--red); }}
 .chapter-btn[data-accent="green"].active .num {{ color: var(--green); }}
 .chapter-btn:not(.active) {{ opacity: 0.6; }}
@@ -514,7 +466,6 @@ section.panel.active {{ display: block; }}
   line-height: 1;
 }}
 section.panel[data-accent="blue"] .panel-num {{ color: var(--blue); }}
-section.panel[data-accent="gold"] .panel-num {{ color: var(--gold-fill); -webkit-text-stroke: 1px var(--ink); }}
 section.panel[data-accent="red"] .panel-num {{ color: var(--red); }}
 section.panel[data-accent="green"] .panel-num {{ color: var(--green); }}
 
@@ -611,23 +562,6 @@ a.cal-card:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px;
 .badge-circle .n {{ font-family: 'Plex Mono', monospace; font-size: 11px; font-weight: 700; }}
 .badge-circle .u {{ font-size: 7px; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-muted); margin-top: 1px; }}
 
-/* ---- new arrivals feed ---- */
-.feed {{ display: flex; flex-direction: column; max-height: 68vh; overflow-y: auto; border: 2px solid var(--line); border-radius: 8px; background: var(--paper-2); }}
-.feed-row {{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
-  border-bottom: 1px solid var(--line);
-  flex-wrap: wrap;
-}}
-.feed-row:last-child {{ border-bottom: none; }}
-.feed-main {{ display: flex; align-items: center; gap: 10px; min-width: 0; }}
-.feed-name {{ font-size: 13.5px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
-.feed-meta {{ display: flex; gap: 14px; font-size: 11.5px; color: var(--ink-muted); flex-shrink: 0; }}
-.feed-setnum {{ color: var(--gold); }}
-
 /* ---- retiring table ---- */
 .table-wrap {{ max-height: 68vh; overflow: auto; border: 2px solid var(--line); border-radius: 8px; background: var(--paper-2); }}
 table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
@@ -710,7 +644,6 @@ footer.page-footer {{
   nav.chapters {{ position: static; flex-direction: row; overflow-x: auto; border-bottom: 2px solid var(--ink); padding-bottom: 8px; }}
   .chapter-btn {{ border-left: none; border-bottom: 3px solid var(--line); padding: 4px 12px 8px 0; flex-shrink: 0; }}
   .chapter-btn[data-accent="blue"].active {{ border-bottom-color: var(--blue); }}
-  .chapter-btn[data-accent="gold"].active {{ border-bottom-color: var(--gold-fill); }}
   .chapter-btn[data-accent="red"].active {{ border-bottom-color: var(--red); }}
   .chapter-btn[data-accent="green"].active {{ border-bottom-color: var(--green); }}
   .statusbar {{ flex-wrap: wrap; }}
@@ -733,14 +666,11 @@ footer.page-footer {{
     <button class="chapter-btn active" data-accent="blue" data-target="panel-calendar" onclick="showPanel(this)">
       <span class="num">01</span><span class="name">Calendar</span>
     </button>
-    <button class="chapter-btn" data-accent="gold" data-target="panel-new" onclick="showPanel(this)">
-      <span class="num">02</span><span class="name">New arrivals</span>
-    </button>
     <button class="chapter-btn" data-accent="red" data-target="panel-retiring" onclick="showPanel(this)">
-      <span class="num">03</span><span class="name">Retiring soon</span>
+      <span class="num">02</span><span class="name">Retiring soon</span>
     </button>
     <button class="chapter-btn" data-accent="green" data-target="panel-gwp" onclick="showPanel(this)">
-      <span class="num">04</span><span class="name">Gift w/ purchase</span>
+      <span class="num">03</span><span class="name">Gift w/ purchase</span>
     </button>
   </nav>
 
@@ -759,24 +689,10 @@ footer.page-footer {{
       {calendar_body}
     </section>
 
-    <section class="panel" data-accent="gold" id="panel-new">
-      <div class="panel-head">
-        <div class="title-block">
-          <div class="panel-num display">02</div>
-          <div class="panel-title">
-            <h2>New arrivals</h2>
-            <p>Sets newly added to Brickset&rsquo;s database, most recent first.</p>
-          </div>
-        </div>
-        <div class="panel-stat">{new_stat}</div>
-      </div>
-      {new_body}
-    </section>
-
     <section class="panel" data-accent="red" id="panel-retiring">
       <div class="panel-head">
         <div class="title-block">
-          <div class="panel-num display">03</div>
+          <div class="panel-num display">02</div>
           <div class="panel-title">
             <h2>Retiring soon</h2>
             <p>Flagged by BrickRanker&rsquo;s tracker, cross-checked against Brick Fanatics.</p>
@@ -790,7 +706,7 @@ footer.page-footer {{
     <section class="panel" data-accent="green" id="panel-gwp">
       <div class="panel-head">
         <div class="title-block">
-          <div class="panel-num display">04</div>
+          <div class="panel-num display">03</div>
           <div class="panel-title">
             <h2>Gift with purchase</h2>
             <p>Currently active GWP promotions, straight from LEGO.com. Future GWPs aren&rsquo;t announced in advance by LEGO or reliably tracked anywhere, so this is current-only.</p>
@@ -824,7 +740,6 @@ setTimeout(() => location.reload(), {refresh_minutes} * 60 * 1000);
 
 def build() -> Path:
     retiring = load_json(RETIRING_PATH, {})
-    new_log = load_json(NEW_SETS_LOG_PATH, [])
     calendar = load_json(CALENDAR_PATH, {"months": {}})
     gwp = load_json(GWP_PATH, {})
 
@@ -832,7 +747,6 @@ def build() -> Path:
     today = now.date()
 
     calendar_stat, calendar_body = render_calendar(calendar, today)
-    new_stat, new_body = render_new_arrivals(new_log)
     retiring_stat, retiring_body = render_retiring(retiring, today)
     gwp_stat, gwp_body = render_gwp(gwp, today)
 
@@ -842,8 +756,6 @@ def build() -> Path:
         next_run_label=next_run_after(now).strftime("%-I:%M %p"),
         calendar_stat=calendar_stat,
         calendar_body=calendar_body,
-        new_stat=new_stat,
-        new_body=new_body,
         retiring_stat=retiring_stat,
         retiring_body=retiring_body,
         gwp_stat=gwp_stat,
