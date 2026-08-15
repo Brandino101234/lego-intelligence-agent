@@ -36,3 +36,9 @@ jobs:
           git add data/ site/
           git diff --cached --quiet || git commit -m "Automated data refresh"
           git push
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: 7cddcdf1-067d-4ee7-bbdd-22e03667bed7
+        run: /opt/homebrew/bin/netlify deploy --prod --dir=site
