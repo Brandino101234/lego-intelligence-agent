@@ -35,6 +35,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/ site/
           git diff --cached --quiet || git commit -m "Automated data refresh"
+          git pull --rebase --autostash
           git push
 
       - name: Deploy to Netlify
