@@ -57,6 +57,8 @@
   --gold-soft: #FBEFD2;
   --red: #C91A09;
   --red-soft: #FAE1DC;
+  --green: #237A3F;
+  --green-soft: #DEEFE1;
   --shadow: 0 1px 0 rgba(26,23,16,0.05);
 }
 
@@ -75,6 +77,8 @@
     --gold-soft: #3A2E10;
     --red: #FF6A55;
     --red-soft: #3A1A14;
+    --green: #4CBE73;
+    --green-soft: #17301F;
     --shadow: 0 1px 0 rgba(0,0,0,0.4);
   }
 }
@@ -92,6 +96,8 @@
   --gold-soft: #3A2E10;
   --red: #FF6A55;
   --red-soft: #3A1A14;
+  --green: #4CBE73;
+  --green-soft: #17301F;
   --shadow: 0 1px 0 rgba(0,0,0,0.4);
 }
 
@@ -213,9 +219,11 @@ nav.chapters {
 .chapter-btn[data-accent="blue"].active { border-left-color: var(--blue); }
 .chapter-btn[data-accent="gold"].active { border-left-color: var(--gold-fill); }
 .chapter-btn[data-accent="red"].active { border-left-color: var(--red); }
+.chapter-btn[data-accent="green"].active { border-left-color: var(--green); }
 .chapter-btn[data-accent="blue"].active .num { color: var(--blue); }
 .chapter-btn[data-accent="gold"].active .num { color: var(--gold); }
 .chapter-btn[data-accent="red"].active .num { color: var(--red); }
+.chapter-btn[data-accent="green"].active .num { color: var(--green); }
 .chapter-btn:not(.active) { opacity: 0.6; }
 .chapter-btn:hover { opacity: 1; }
 
@@ -250,6 +258,7 @@ section.panel.active { display: block; }
 section.panel[data-accent="blue"] .panel-num { color: var(--blue); }
 section.panel[data-accent="gold"] .panel-num { color: var(--gold-fill); -webkit-text-stroke: 1px var(--ink); }
 section.panel[data-accent="red"] .panel-num { color: var(--red); }
+section.panel[data-accent="green"] .panel-num { color: var(--green); }
 
 .panel-title h2 {
   font-family: 'Rubik Var', sans-serif;
@@ -392,6 +401,32 @@ tbody tr:hover { background: var(--paper); }
 .date-pill.neutral { color: var(--ink-muted); }
 td.confirm { text-align: center; letter-spacing: 1px; }
 
+/* ---- gift with purchase ---- */
+.gwp-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+a.gwp-card {
+  display: flex;
+  gap: 14px;
+  background: var(--paper-2);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.12s ease, transform 0.12s ease;
+}
+a.gwp-card:hover { border-color: var(--green); transform: translateY(-1px); }
+a.gwp-card:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+.gwp-img { width: 72px; height: 72px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; flex-shrink: 0; }
+.gwp-img-empty { background: var(--paper); }
+
+.gwp-card-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.gwp-card-top { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.theme-tag.insiders { background: var(--green-soft); border-color: var(--green); color: var(--green); }
+.gwp-card-name { font-size: 14px; font-weight: 600; line-height: 1.3; }
+.gwp-card-qualify { font-size: 12px; color: var(--ink-muted); }
+
 footer.page-footer {
   max-width: 1080px;
   margin: 40px auto 0;
@@ -412,6 +447,7 @@ footer.page-footer {
   .chapter-btn[data-accent="blue"].active { border-bottom-color: var(--blue); }
   .chapter-btn[data-accent="gold"].active { border-bottom-color: var(--gold-fill); }
   .chapter-btn[data-accent="red"].active { border-bottom-color: var(--red); }
+  .chapter-btn[data-accent="green"].active { border-bottom-color: var(--green); }
   .statusbar { flex-wrap: wrap; }
 }
 </style>
@@ -421,7 +457,7 @@ footer.page-footer {
 <div class="statusbar">
   <div class="wordmark">LEGO<span>&bull;</span>INTEL</div>
   <div class="status-right">
-    <span>Updated <span class="mono">Aug 15, 4:46 PM</span></span>
+    <span>Updated <span class="mono">Aug 15, 3:38 PM</span></span>
     <span>Next run <span class="mono">6:00 PM</span></span>
     <button class="refresh" onclick="location.reload()">Refresh</button>
   </div>
@@ -438,6 +474,9 @@ footer.page-footer {
     <button class="chapter-btn" data-accent="red" data-target="panel-retiring" onclick="showPanel(this)">
       <span class="num">03</span><span class="name">Retiring soon</span>
     </button>
+    <button class="chapter-btn" data-accent="green" data-target="panel-gwp" onclick="showPanel(this)">
+      <span class="num">04</span><span class="name">Gift w/ purchase</span>
+    </button>
   </nav>
 
   <main>
@@ -450,7 +489,7 @@ footer.page-footer {
             <p>Upcoming sets from LEGO.com&rsquo;s own &ldquo;Coming soon&rdquo; listing, by month.</p>
           </div>
         </div>
-        <div class="panel-stat">12 sets tracked &middot; next in 14 days</div>
+        <div class="panel-stat">28 sets tracked &middot; next in 14 days</div>
       </div>
       
           <div class="cal-month">
@@ -504,7 +543,7 @@ footer.page-footer {
               <a class="cal-card" href="https://www.lego.com/en-us/product/nike-air-force-1-x-lego-set-43026" target="_blank" rel="noopener">
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
-                  <span class="theme-tag">Nike</span>
+                  <span class="theme-tag">LEGO® Editions</span>
                 </div>
                 <div class="cal-card-name">Nike Air Force 1 x LEGO® Set</div>
                 <div class="cal-card-bottom">
@@ -589,7 +628,7 @@ footer.page-footer {
               <a class="cal-card" href="https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880" target="_blank" rel="noopener">
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 4</span>
-                  <span class="theme-tag">Marvel</span>
+                  <span class="theme-tag">BrickHeadz</span>
                 </div>
                 <div class="cal-card-name">Avengers: Doomsday Heroes &amp; Villain</div>
                 <div class="cal-card-bottom">
@@ -614,6 +653,190 @@ footer.page-footer {
                 <div class="cal-card-bottom">
                   <div class="badge-circle"><span class="n">12,060</span><span class="u">PC</span></div>
                   <span class="cal-card-price">$799.99</span>
+                </div>
+              </a></div>
+          </div>
+          <div class="cal-month">
+            <div class="cal-month-label">
+              <div class="cal-m">DATE</div>
+              <div class="cal-y">TBA</div>
+              <div class="cal-count">16 SETS</div>
+            </div>
+            <div class="cal-cards">
+              <a class="cal-card" href="https://www.lego.com/en-us/product/avengers-doomsday-new-avengers-tower-76352" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Marvel</span>
+                </div>
+                <div class="cal-card-name">Avengers: Doomsday New Avengers Tower</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">954</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$109.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/avengers-doomsday-quinjet-76347" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Marvel</span>
+                </div>
+                <div class="cal-card-name">Avengers: Doomsday Quinjet</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">433</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$59.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/ayrton-senna-helmet-43024" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">LEGO® Editions</span>
+                </div>
+                <div class="cal-card-name">Ayrton Senna Helmet</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">931</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$89.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/doctor-doom-bust-76345" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Marvel</span>
+                </div>
+                <div class="cal-card-name">Doctor Doom Bust</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">379</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$49.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/epic-battle-avengers-doomsday-76348" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Marvel</span>
+                </div>
+                <div class="cal-card-name">Epic Battle: Avengers: Doomsday</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">846</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$99.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/iconic-trainer-moments-poke-ball-72154" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Pokémon</span>
+                </div>
+                <div class="cal-card-name">Iconic Trainer Moments Poké Ball</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">2,386</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$299.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-60510" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">City</span>
+                </div>
+                <div class="cal-card-name">LEGO® City Advent Calendar 2026</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">252</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$34.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-42698" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Friends</span>
+                </div>
+                <div class="cal-card-name">LEGO® Friends Advent Calendar 2026</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">211</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$34.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-75456" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Star Wars™</span>
+                </div>
+                <div class="cal-card-name">LEGO® Star Wars™ Advent Calendar 2026</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">293</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$44.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-43298" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Disney™</span>
+                </div>
+                <div class="cal-card-name">LEGO® ǀ Disney Princess Advent Calendar 2026</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">290</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$44.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-76340" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Marvel</span>
+                </div>
+                <div class="cal-card-name">LEGO® ǀ Marvel Advent Calendar 2026</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">317</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$44.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/mayor-manor-11383" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">LEGO® Icons</span>
+                </div>
+                <div class="cal-card-name">Mayor Manor</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">1,420</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$119.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/spongebob-squarepants-figure-40858" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">BrickHeadz</span>
+                </div>
+                <div class="cal-card-name">SpongeBob SquarePants Figure</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">72</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$12.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/spongebob-squarepants-bikini-bottom-11386" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">LEGO® Icons</span>
+                </div>
+                <div class="cal-card-name">SpongeBob SquarePants: Bikini Bottom</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">1,794</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$219.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/star-trek-uss-enterprise-ncc-1701-bridge-11385" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">LEGO® Icons</span>
+                </div>
+                <div class="cal-card-name">Star Trek: U.S.S. Enterprise NCC-1701™ Bridge</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">1,701</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$199.99</span>
+                </div>
+              </a>
+              <a class="cal-card" href="https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868" target="_blank" rel="noopener">
+                <div class="cal-card-top">
+                  <span class="cal-card-date">TBA</span>
+                  <span class="theme-tag">Pokémon</span>
+                </div>
+                <div class="cal-card-name">Up-Scaled Red Minifigure</div>
+                <div class="cal-card-bottom">
+                  <div class="badge-circle"><span class="n">930</span><span class="u">PC</span></div>
+                  <span class="cal-card-price">$79.99</span>
                 </div>
               </a></div>
           </div>
@@ -4651,6 +4874,42 @@ footer.page-footer {
           </tr></tbody>
         </table>
       </div>
+    </section>
+
+    <section class="panel" data-accent="green" id="panel-gwp">
+      <div class="panel-head">
+        <div class="title-block">
+          <div class="panel-num display">04</div>
+          <div class="panel-title">
+            <h2>Gift with purchase</h2>
+            <p>Currently active GWP promotions, straight from LEGO.com. Future GWPs aren&rsquo;t announced in advance by LEGO or reliably tracked anywhere, so this is current-only.</p>
+          </div>
+        </div>
+        <div class="panel-stat">2 active</div>
+      </div>
+      <div class="gwp-cards">
+          <a class="gwp-card" href="https://www.lego.com/en-us/search?q=30729" target="_blank" rel="noopener">
+            <img class="gwp-img" src="https://www.lego.com/cdn/cs/set/assets/blte73338ab8203486d/blt69bbba09c488dd56-30729_Prod_en-gb.png" alt="" loading="lazy">
+            <div class="gwp-card-body">
+              <div class="gwp-card-top">
+                <span class="date-pill urgent mono">ends Aug 17</span>
+                
+              </div>
+              <div class="gwp-card-name">Premier Ball</div>
+              <div class="gwp-card-qualify">Spend over $40 to unlock this gift</div>
+            </div>
+          </a>
+          <a class="gwp-card" href="https://www.lego.com/en-us/search?q=40908" target="_blank" rel="noopener">
+            <img class="gwp-img" src="https://www.lego.com/cdn/cs/set/assets/blt41b7a9ef16623deb/40908_Prod.png" alt="" loading="lazy">
+            <div class="gwp-card-body">
+              <div class="gwp-card-top">
+                <span class="date-pill soon mono">ends Aug 21</span>
+                <span class="theme-tag insiders">INSIDERS ONLY</span>
+              </div>
+              <div class="gwp-card-name">Restaurants of the World: Greece</div>
+              <div class="gwp-card-qualify">Spend over $180 to unlock this gift</div>
+            </div>
+          </a></div>
     </section>
   </main>
 </div>

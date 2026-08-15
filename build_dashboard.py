@@ -24,6 +24,7 @@ FONTS_CSS = (ROOT / "assets" / "embedded_fonts.css").read_text(encoding="utf-8")
 RETIRING_PATH = DATA_DIR / "retiring_sets.json"
 NEW_SETS_LOG_PATH = DATA_DIR / "new_sets_changes_log.json"
 CALENDAR_PATH = DATA_DIR / "release_calendar.json"
+GWP_PATH = DATA_DIR / "gwp.json"
 
 REFRESH_MINUTES = 30
 DAILY_RUN_TIMES = ((6, 0), (18, 0))
@@ -230,6 +231,54 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
     return stat, table
 
 
+# ------------------------------------------------------------------------ gwp --
+
+def render_gwp(gwp: dict, today: date) -> tuple[str, str]:
+    stat = f"{len(gwp)} active"
+
+    if not gwp:
+        return stat, '<p class="empty">No gift-with-purchase promotions currently active.</p>'
+
+    def sort_key(g):
+        d = g.get("end_date")
+        return (d is None, d or "", g["name"])
+
+    ordered = sorted(gwp.values(), key=sort_key)
+
+    cards = []
+    for g in ordered:
+        end_date = g.get("end_date")
+        days_left = None
+        end_label = "ends date unknown"
+        if end_date:
+            d = datetime.strptime(end_date, "%Y-%m-%d").date()
+            days_left = days_between(today, d)
+            end_label = f"ends {d.strftime('%b %-d')}" if days_left > 0 else "ends today"
+
+        urgency_class = "neutral"
+        if days_left is not None:
+            urgency_class = "urgent" if days_left <= 3 else ("soon" if days_left <= 14 else "neutral")
+
+        insiders_badge = '<span class="theme-tag insiders">INSIDERS ONLY</span>' if g.get("insiders_only") else ""
+        image = g.get("image")
+        image_html = f'<img class="gwp-img" src="{esc(image)}" alt="" loading="lazy">' if image else '<div class="gwp-img gwp-img-empty"></div>'
+
+        cards.append(f'''
+          <a class="gwp-card" href="{esc(g.get("url", "#"))}" target="_blank" rel="noopener">
+            {image_html}
+            <div class="gwp-card-body">
+              <div class="gwp-card-top">
+                <span class="date-pill {urgency_class} mono">{esc(end_label)}</span>
+                {insiders_badge}
+              </div>
+              <div class="gwp-card-name">{esc(g.get("name"))}</div>
+              <div class="gwp-card-qualify">{esc(g.get("qualifying_text"))}</div>
+            </div>
+          </a>''')
+
+    return stat, f'<div class="gwp-cards">{"".join(cards)}</div>'
+
+
 # ------------------------------------------------------------------ template --
 
 PAGE_TEMPLATE = """<!doctype html>
@@ -255,6 +304,8 @@ PAGE_TEMPLATE = """<!doctype html>
   --gold-soft: #FBEFD2;
   --red: #C91A09;
   --red-soft: #FAE1DC;
+  --green: #237A3F;
+  --green-soft: #DEEFE1;
   --shadow: 0 1px 0 rgba(26,23,16,0.05);
 }}
 
@@ -273,6 +324,8 @@ PAGE_TEMPLATE = """<!doctype html>
     --gold-soft: #3A2E10;
     --red: #FF6A55;
     --red-soft: #3A1A14;
+    --green: #4CBE73;
+    --green-soft: #17301F;
     --shadow: 0 1px 0 rgba(0,0,0,0.4);
   }}
 }}
@@ -290,6 +343,8 @@ PAGE_TEMPLATE = """<!doctype html>
   --gold-soft: #3A2E10;
   --red: #FF6A55;
   --red-soft: #3A1A14;
+  --green: #4CBE73;
+  --green-soft: #17301F;
   --shadow: 0 1px 0 rgba(0,0,0,0.4);
 }}
 
@@ -411,9 +466,11 @@ nav.chapters {{
 .chapter-btn[data-accent="blue"].active {{ border-left-color: var(--blue); }}
 .chapter-btn[data-accent="gold"].active {{ border-left-color: var(--gold-fill); }}
 .chapter-btn[data-accent="red"].active {{ border-left-color: var(--red); }}
+.chapter-btn[data-accent="green"].active {{ border-left-color: var(--green); }}
 .chapter-btn[data-accent="blue"].active .num {{ color: var(--blue); }}
 .chapter-btn[data-accent="gold"].active .num {{ color: var(--gold); }}
 .chapter-btn[data-accent="red"].active .num {{ color: var(--red); }}
+.chapter-btn[data-accent="green"].active .num {{ color: var(--green); }}
 .chapter-btn:not(.active) {{ opacity: 0.6; }}
 .chapter-btn:hover {{ opacity: 1; }}
 
@@ -448,6 +505,7 @@ section.panel.active {{ display: block; }}
 section.panel[data-accent="blue"] .panel-num {{ color: var(--blue); }}
 section.panel[data-accent="gold"] .panel-num {{ color: var(--gold-fill); -webkit-text-stroke: 1px var(--ink); }}
 section.panel[data-accent="red"] .panel-num {{ color: var(--red); }}
+section.panel[data-accent="green"] .panel-num {{ color: var(--green); }}
 
 .panel-title h2 {{
   font-family: 'Rubik Var', sans-serif;
@@ -590,6 +648,32 @@ tbody tr:hover {{ background: var(--paper); }}
 .date-pill.neutral {{ color: var(--ink-muted); }}
 td.confirm {{ text-align: center; letter-spacing: 1px; }}
 
+/* ---- gift with purchase ---- */
+.gwp-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }}
+
+a.gwp-card {{
+  display: flex;
+  gap: 14px;
+  background: var(--paper-2);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.12s ease, transform 0.12s ease;
+}}
+a.gwp-card:hover {{ border-color: var(--green); transform: translateY(-1px); }}
+a.gwp-card:focus-visible {{ outline: 2px solid var(--green); outline-offset: 2px; }}
+
+.gwp-img {{ width: 72px; height: 72px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; flex-shrink: 0; }}
+.gwp-img-empty {{ background: var(--paper); }}
+
+.gwp-card-body {{ display: flex; flex-direction: column; gap: 6px; min-width: 0; }}
+.gwp-card-top {{ display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }}
+.theme-tag.insiders {{ background: var(--green-soft); border-color: var(--green); color: var(--green); }}
+.gwp-card-name {{ font-size: 14px; font-weight: 600; line-height: 1.3; }}
+.gwp-card-qualify {{ font-size: 12px; color: var(--ink-muted); }}
+
 footer.page-footer {{
   max-width: 1080px;
   margin: 40px auto 0;
@@ -610,6 +694,7 @@ footer.page-footer {{
   .chapter-btn[data-accent="blue"].active {{ border-bottom-color: var(--blue); }}
   .chapter-btn[data-accent="gold"].active {{ border-bottom-color: var(--gold-fill); }}
   .chapter-btn[data-accent="red"].active {{ border-bottom-color: var(--red); }}
+  .chapter-btn[data-accent="green"].active {{ border-bottom-color: var(--green); }}
   .statusbar {{ flex-wrap: wrap; }}
 }}
 </style>
@@ -635,6 +720,9 @@ footer.page-footer {{
     </button>
     <button class="chapter-btn" data-accent="red" data-target="panel-retiring" onclick="showPanel(this)">
       <span class="num">03</span><span class="name">Retiring soon</span>
+    </button>
+    <button class="chapter-btn" data-accent="green" data-target="panel-gwp" onclick="showPanel(this)">
+      <span class="num">04</span><span class="name">Gift w/ purchase</span>
     </button>
   </nav>
 
@@ -680,6 +768,20 @@ footer.page-footer {{
       </div>
       {retiring_body}
     </section>
+
+    <section class="panel" data-accent="green" id="panel-gwp">
+      <div class="panel-head">
+        <div class="title-block">
+          <div class="panel-num display">04</div>
+          <div class="panel-title">
+            <h2>Gift with purchase</h2>
+            <p>Currently active GWP promotions, straight from LEGO.com. Future GWPs aren&rsquo;t announced in advance by LEGO or reliably tracked anywhere, so this is current-only.</p>
+          </div>
+        </div>
+        <div class="panel-stat">{gwp_stat}</div>
+      </div>
+      {gwp_body}
+    </section>
   </main>
 </div>
 
@@ -706,6 +808,7 @@ def build() -> Path:
     retiring = load_json(RETIRING_PATH, {})
     new_log = load_json(NEW_SETS_LOG_PATH, [])
     calendar = load_json(CALENDAR_PATH, {"months": {}})
+    gwp = load_json(GWP_PATH, {})
 
     now = datetime.now()
     today = now.date()
@@ -713,6 +816,7 @@ def build() -> Path:
     calendar_stat, calendar_body = render_calendar(calendar, today)
     new_stat, new_body = render_new_arrivals(new_log)
     retiring_stat, retiring_body = render_retiring(retiring, today)
+    gwp_stat, gwp_body = render_gwp(gwp, today)
 
     page = PAGE_TEMPLATE.format(
         fonts_css=FONTS_CSS,
@@ -724,6 +828,8 @@ def build() -> Path:
         new_body=new_body,
         retiring_stat=retiring_stat,
         retiring_body=retiring_body,
+        gwp_stat=gwp_stat,
+        gwp_body=gwp_body,
         refresh_minutes=REFRESH_MINUTES,
     )
 
