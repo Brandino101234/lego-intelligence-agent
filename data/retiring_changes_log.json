@@ -1,0 +1,4554 @@
+[
+  {
+    "name": "Mando and Grogu's N-1 Starfighter",
+    "retiring_soon": true,
+    "set_num": "75410-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "AT-AT Driver Helmet",
+    "retiring_soon": true,
+    "set_num": "75429-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Rebel U-wing Starfighter",
+    "retiring_soon": true,
+    "set_num": "75399-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Plo Koon's Jedi Starfighter Microfighter",
+    "retiring_soon": true,
+    "set_num": "75400-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kylo Ren's Command Shuttle",
+    "retiring_soon": true,
+    "set_num": "75406-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Death Trooper & Night Trooper…",
+    "retiring_soon": true,
+    "set_num": "75412-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "UCS Millennium Falcon",
+    "retiring_soon": true,
+    "set_num": "75192-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kylo Ren Helmet",
+    "retiring_soon": true,
+    "set_num": "75415-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Venator-class Republic Attack Cruiser",
+    "retiring_soon": true,
+    "set_num": "75367-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "TIE Interceptor",
+    "retiring_soon": true,
+    "set_num": "75382-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Battle Droid with STAP",
+    "retiring_soon": true,
+    "set_num": "75428-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Jabba's Sail Barge",
+    "retiring_soon": true,
+    "set_num": "75397-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Republic Juggernaut",
+    "retiring_soon": true,
+    "set_num": "75413-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Force Burner Snowspeeder",
+    "retiring_soon": true,
+    "set_num": "75414-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Mandalorian Helmet",
+    "retiring_soon": true,
+    "set_num": "75328-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Clone Trooper & Battle Droid…",
+    "retiring_soon": true,
+    "set_num": "75372-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Buildable Droideka",
+    "retiring_soon": true,
+    "set_num": "75381-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tantive IV Boarding Diorama",
+    "retiring_soon": true,
+    "set_num": "75387-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Imperial Star Destroyer",
+    "retiring_soon": true,
+    "set_num": "75394-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Dark Falcon",
+    "retiring_soon": true,
+    "set_num": "75389-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cobb Vanth's Speeder",
+    "retiring_soon": false,
+    "set_num": "75437-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Jango Fett Helmet",
+    "retiring_soon": false,
+    "set_num": "75408-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Darth Maul Mech",
+    "retiring_soon": false,
+    "set_num": "75411-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Siege of Mandalore Battle Pack",
+    "retiring_soon": false,
+    "set_num": "75449-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Chopper (C1-10P)",
+    "retiring_soon": false,
+    "set_num": "75416-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "K-2SO",
+    "retiring_soon": false,
+    "set_num": "75434-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "327th Star Corps Clone Troopers…",
+    "retiring_soon": false,
+    "set_num": "75431-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "V-19 Torrent Starfighter",
+    "retiring_soon": false,
+    "set_num": "75432-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "ARC-170 Starfighter",
+    "retiring_soon": false,
+    "set_num": "75402-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Grogu with Hover Pram",
+    "retiring_soon": false,
+    "set_num": "75403-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Millennium Falcon",
+    "retiring_soon": false,
+    "set_num": "75426-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Throne Room Duel & A-wing",
+    "retiring_soon": false,
+    "set_num": "75427-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Mandalorian & Grogu's Speeder…",
+    "retiring_soon": false,
+    "set_num": "75436-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "AT-AT",
+    "retiring_soon": false,
+    "set_num": "75440-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Venator-class Attack Cruiser",
+    "retiring_soon": false,
+    "set_num": "75441-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Brick-Built Star Wars Logo",
+    "retiring_soon": false,
+    "set_num": "75407-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Grogu's Homestead",
+    "retiring_soon": false,
+    "set_num": "75443-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Clone Shock Trooper Mech",
+    "retiring_soon": false,
+    "set_num": "75448-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Jango Fett's Starship",
+    "retiring_soon": false,
+    "set_num": "75409-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "AT-ST",
+    "retiring_soon": false,
+    "set_num": "75417-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Wicket the Ewok",
+    "retiring_soon": false,
+    "set_num": "75430-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Jango Fett's Starship",
+    "retiring_soon": false,
+    "set_num": "75433-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Buildable R2-D2",
+    "retiring_soon": false,
+    "set_num": "75379-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Battle of Felucia Separatist MTT",
+    "retiring_soon": false,
+    "set_num": "75435-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Gingerbread AT-AT Walker",
+    "retiring_soon": false,
+    "set_num": "40806-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Landspeeder",
+    "retiring_soon": false,
+    "set_num": "75420-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Millennium Falcon",
+    "retiring_soon": false,
+    "set_num": "75375-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Darth Vader's TIE Fighter",
+    "retiring_soon": false,
+    "set_num": "75421-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Yoda's Hut and Jedi Training",
+    "retiring_soon": false,
+    "set_num": "75422-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Luke's Red Five X-wing",
+    "retiring_soon": false,
+    "set_num": "75423-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "C-3PO",
+    "retiring_soon": false,
+    "set_num": "75398-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "AT-ST Attack on Endor",
+    "retiring_soon": false,
+    "set_num": "75424-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mos Eisley Cantina",
+    "retiring_soon": false,
+    "set_num": "75425-1",
+    "theme": "Star Wars",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lamborghini Countach 5000 Quattrovalvole",
+    "retiring_soon": true,
+    "set_num": "10337-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "NASA Artemis Space Launch System",
+    "retiring_soon": true,
+    "set_num": "10341-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Wreath",
+    "retiring_soon": true,
+    "set_num": "10340-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Poinsettia",
+    "retiring_soon": true,
+    "set_num": "10370-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Leonardo da Vinci's Flying Machine",
+    "retiring_soon": true,
+    "set_num": "10363-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Sherlock Holmes: Book Nook",
+    "retiring_soon": true,
+    "set_num": "10351-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Titanic",
+    "retiring_soon": true,
+    "set_num": "10294-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Succulents",
+    "retiring_soon": true,
+    "set_num": "10309-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Everyone Is Awesome",
+    "retiring_soon": true,
+    "set_num": "40516-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tranquil Garden",
+    "retiring_soon": true,
+    "set_num": "10315-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Natural History Museum",
+    "retiring_soon": true,
+    "set_num": "10326-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Williams Racing FW14B & Nigel…",
+    "retiring_soon": false,
+    "set_num": "10353-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Lord of the Rings:…",
+    "retiring_soon": false,
+    "set_num": "10354-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Shuttle Carrier Aircraft",
+    "retiring_soon": false,
+    "set_num": "10360-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Shelby Cobra 427 S/C",
+    "retiring_soon": false,
+    "set_num": "10357-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Lord of the Rings:…",
+    "retiring_soon": false,
+    "set_num": "10367-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Bonsai Trees",
+    "retiring_soon": false,
+    "set_num": "10373-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Holiday Express Train",
+    "retiring_soon": false,
+    "set_num": "10361-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tropical Aquarium",
+    "retiring_soon": false,
+    "set_num": "10366-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "McLaren MP4/4 & Ayrton Senna",
+    "retiring_soon": false,
+    "set_num": "10330-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Medieval Town Square",
+    "retiring_soon": false,
+    "set_num": "10332-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Lord of the Rings:…",
+    "retiring_soon": false,
+    "set_num": "10333-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Chrysanthemum",
+    "retiring_soon": false,
+    "set_num": "10368-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Plum Blossom",
+    "retiring_soon": false,
+    "set_num": "10369-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lucky Bamboo",
+    "retiring_soon": false,
+    "set_num": "10344-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Japanese Maple Tree",
+    "retiring_soon": false,
+    "set_num": "10348-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Happy Plants",
+    "retiring_soon": false,
+    "set_num": "10349-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Back to the Future Time…",
+    "retiring_soon": false,
+    "set_num": "10300-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Orchid",
+    "retiring_soon": false,
+    "set_num": "10311-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nike Dunk",
+    "retiring_soon": false,
+    "set_num": "43008-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hibiscus",
+    "retiring_soon": false,
+    "set_num": "10372-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Wildflower Bouquet",
+    "retiring_soon": false,
+    "set_num": "10313-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Rivendell",
+    "retiring_soon": false,
+    "set_num": "10316-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Concorde",
+    "retiring_soon": false,
+    "set_num": "10318-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bouquet of Roses",
+    "retiring_soon": false,
+    "set_num": "10328-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tiny Plants",
+    "retiring_soon": false,
+    "set_num": "10329-1",
+    "theme": "Icons",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Grand Piano",
+    "retiring_soon": true,
+    "set_num": "21323-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Starry Night",
+    "retiring_soon": true,
+    "set_num": "21333-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Polaroid OneStep SX-70 Camera",
+    "retiring_soon": true,
+    "set_num": "21345-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Family Tree",
+    "retiring_soon": true,
+    "set_num": "21346-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Red London Telephone Box",
+    "retiring_soon": true,
+    "set_num": "21347-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Nightmare Before Christmas",
+    "retiring_soon": true,
+    "set_num": "21351-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Evolution of STEM",
+    "retiring_soon": true,
+    "set_num": "21355-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "River Steamboat",
+    "retiring_soon": true,
+    "set_num": "21356-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Charlie and the Chocolate Factory",
+    "retiring_soon": true,
+    "set_num": "21360-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Twilight The Cullen House",
+    "retiring_soon": false,
+    "set_num": "21354-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tuxedo Cat",
+    "retiring_soon": false,
+    "set_num": "21349-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Disney Pixar Luxo Jr.",
+    "retiring_soon": false,
+    "set_num": "21357-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Minifigure Vending Machine",
+    "retiring_soon": false,
+    "set_num": "21358-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Italian Riviera",
+    "retiring_soon": false,
+    "set_num": "21359-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Gizmo",
+    "retiring_soon": false,
+    "set_num": "21361-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mineral Collection",
+    "retiring_soon": false,
+    "set_num": "21362-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Goonies",
+    "retiring_soon": false,
+    "set_num": "21363-1",
+    "theme": "Ideas and CUUSOO",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tipping Dump Truck",
+    "retiring_soon": true,
+    "set_num": "42203-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fast & Furious Toyota Supra…",
+    "retiring_soon": true,
+    "set_num": "42204-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Chevrolet Corvette Stingray",
+    "retiring_soon": true,
+    "set_num": "42205-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lamborghini Revuelto",
+    "retiring_soon": true,
+    "set_num": "42214-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Chevrolet Corvette Stingray",
+    "retiring_soon": true,
+    "set_num": "42217-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "2022 Ford GT",
+    "retiring_soon": true,
+    "set_num": "42154-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kawasaki Ninja H2R",
+    "retiring_soon": true,
+    "set_num": "42170-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mars Crew Exploration Rover",
+    "retiring_soon": true,
+    "set_num": "42180-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "VTOL Heavy Cargo Spaceship LT81",
+    "retiring_soon": true,
+    "set_num": "42181-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mercedes-AMG F1 W14 E Performance",
+    "retiring_soon": true,
+    "set_num": "42171-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Koenigsegg Jesko Absolut Grey Hypercar",
+    "retiring_soon": true,
+    "set_num": "42173-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Volvo FMX Truck & EC230…",
+    "retiring_soon": true,
+    "set_num": "42175-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Porsche GT4 e-Performance Race Car",
+    "retiring_soon": true,
+    "set_num": "42176-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "NASA Apollo Lunar Roving Vehicle…",
+    "retiring_soon": true,
+    "set_num": "42182-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mercedes-Benz G 500 PROFESSIONAL Line",
+    "retiring_soon": true,
+    "set_num": "42177-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Backhoe Loader",
+    "retiring_soon": true,
+    "set_num": "42197-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bush Plane",
+    "retiring_soon": true,
+    "set_num": "42198-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monster Jam DIGatron Pull-Back",
+    "retiring_soon": true,
+    "set_num": "42199-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monster Jam ThunderROARus Pull-Back",
+    "retiring_soon": true,
+    "set_num": "42200-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Deep-Sea Research Submarine",
+    "retiring_soon": true,
+    "set_num": "42201-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ducati Panigale V4 S Motorcycle",
+    "retiring_soon": false,
+    "set_num": "42202-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Aston Martin Valkyrie",
+    "retiring_soon": false,
+    "set_num": "42208-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Volvo L120 Electric Wheel Loader",
+    "retiring_soon": false,
+    "set_num": "42209-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ford Bronco SUV",
+    "retiring_soon": false,
+    "set_num": "42213-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Volvo EC500 Hybrid",
+    "retiring_soon": false,
+    "set_num": "42215-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "John Deere 1470H Wheeled Harvester",
+    "retiring_soon": false,
+    "set_num": "42218-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Planet Earth and Moon in…",
+    "retiring_soon": false,
+    "set_num": "42179-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Yellow Motorcycle",
+    "retiring_soon": false,
+    "set_num": "42225-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Oracle Red Bull Racing RB20…",
+    "retiring_soon": false,
+    "set_num": "42206-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ferrari SF-24 F1 Car",
+    "retiring_soon": false,
+    "set_num": "42207-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "2 Fast 2 Furious Nissan…",
+    "retiring_soon": false,
+    "set_num": "42210-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ferrari FXX K",
+    "retiring_soon": false,
+    "set_num": "42212-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monster Jam Grave Digger",
+    "retiring_soon": false,
+    "set_num": "42219-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monster Jam Sparkle Smash",
+    "retiring_soon": false,
+    "set_num": "42220-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "NASA Artemis Space Launch System…",
+    "retiring_soon": false,
+    "set_num": "42221-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bugatti Chiron Pur Sport",
+    "retiring_soon": false,
+    "set_num": "42222-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Porsche 911 GT3 R REXY…",
+    "retiring_soon": false,
+    "set_num": "42224-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "McLaren P1",
+    "retiring_soon": false,
+    "set_num": "42172-1",
+    "theme": "Technic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mandrake",
+    "retiring_soon": true,
+    "set_num": "76433-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Burrow - Collectors' Edition",
+    "retiring_soon": true,
+    "set_num": "76437-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogwarts Castle: Charms Class",
+    "retiring_soon": true,
+    "set_num": "76442-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Knight Bus Adventure",
+    "retiring_soon": true,
+    "set_num": "76446-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogwarts Castle: Flying Lessons",
+    "retiring_soon": true,
+    "set_num": "76447-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Malfoy Manor",
+    "retiring_soon": true,
+    "set_num": "76453-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogwarts Castle: Herbology Class",
+    "retiring_soon": true,
+    "set_num": "76445-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Chomping Monster Book of Monsters",
+    "retiring_soon": true,
+    "set_num": "76449-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Privet Drive: Aunt Marge's Visit",
+    "retiring_soon": true,
+    "set_num": "76451-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Quality Quidditch Supplies & Ice…",
+    "retiring_soon": true,
+    "set_num": "76452-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Thestral Family",
+    "retiring_soon": true,
+    "set_num": "76458-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Luna Lovegood's House",
+    "retiring_soon": true,
+    "set_num": "76467-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Flying Ford Anglia",
+    "retiring_soon": false,
+    "set_num": "76424-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogwarts Castle: The Main Tower",
+    "retiring_soon": false,
+    "set_num": "76454-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cornish Pixie",
+    "retiring_soon": false,
+    "set_num": "76461-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogwarts Castle",
+    "retiring_soon": false,
+    "set_num": "71043-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Dobby the House-Elf",
+    "retiring_soon": false,
+    "set_num": "76421-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogwarts Castle and Grounds",
+    "retiring_soon": false,
+    "set_num": "76419-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Diagon Alley Wizarding Shops",
+    "retiring_soon": false,
+    "set_num": "76444-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Book Nook: Hogwarts Express",
+    "retiring_soon": false,
+    "set_num": "76450-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogsmeade Village - Collectors' Edition",
+    "retiring_soon": false,
+    "set_num": "76457-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hagrid & Harry's Privet Drive…",
+    "retiring_soon": false,
+    "set_num": "76459-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogwarts Castle: Hospital Wing",
+    "retiring_soon": false,
+    "set_num": "76463-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cauldron: Secret Potions Classroom",
+    "retiring_soon": false,
+    "set_num": "76464-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Philosopher's Stone - Collectors' Edition",
+    "retiring_soon": false,
+    "set_num": "76466-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Enchanted Flying Ford Anglia",
+    "retiring_soon": false,
+    "set_num": "76470-1",
+    "theme": "Harry Potter",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fly with Dodo Airlines",
+    "retiring_soon": true,
+    "set_num": "77051-1",
+    "theme": "Animal Crossing",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "K.K.'s Concert at the Plaza",
+    "retiring_soon": true,
+    "set_num": "77052-1",
+    "theme": "Animal Crossing",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Stargazing with Celeste",
+    "retiring_soon": true,
+    "set_num": "77053-1",
+    "theme": "Animal Crossing",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Blathers's Museum Collection",
+    "retiring_soon": true,
+    "set_num": "77056-1",
+    "theme": "Animal Crossing",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Goldie's Cosy House",
+    "retiring_soon": true,
+    "set_num": "77058-1",
+    "theme": "Animal Crossing",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Himeji Castle",
+    "retiring_soon": true,
+    "set_num": "21060-1",
+    "theme": "Architecture",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "LEGO House",
+    "retiring_soon": false,
+    "set_num": "21037-1",
+    "theme": "Architecture",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Trevi Fountain",
+    "retiring_soon": false,
+    "set_num": "21062-1",
+    "theme": "Architecture",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "London",
+    "retiring_soon": false,
+    "set_num": "21034-1",
+    "theme": "Architecture",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Notre-Dame de Paris",
+    "retiring_soon": false,
+    "set_num": "21061-1",
+    "theme": "Architecture",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Keith Haring - Dancing Figures",
+    "retiring_soon": true,
+    "set_num": "31216-1",
+    "theme": "Art",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Milky Way Galaxy",
+    "retiring_soon": false,
+    "set_num": "31212-1",
+    "theme": "Art",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "LOVE",
+    "retiring_soon": false,
+    "set_num": "31214-1",
+    "theme": "Art",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Vincent van Gogh – Sunflowers",
+    "retiring_soon": false,
+    "set_num": "31215-1",
+    "theme": "Art",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Playground Fun with Bluey and…",
+    "retiring_soon": true,
+    "set_num": "11201-1",
+    "theme": "Bluey",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bluey's Beach & Family Car…",
+    "retiring_soon": true,
+    "set_num": "11202-1",
+    "theme": "Bluey",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bluey's Family House",
+    "retiring_soon": false,
+    "set_num": "11203-1",
+    "theme": "Bluey",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Stitch",
+    "retiring_soon": true,
+    "set_num": "40674-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Joy, Sadness & Anxiety",
+    "retiring_soon": true,
+    "set_num": "40749-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Carl, Russell & Kevin",
+    "retiring_soon": true,
+    "set_num": "40752-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Eeyore",
+    "retiring_soon": true,
+    "set_num": "40797-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Optimus Prime Robot & Vehicle",
+    "retiring_soon": true,
+    "set_num": "40803-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bumblebee Robot & Vehicle",
+    "retiring_soon": true,
+    "set_num": "40804-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Luke Skywalker (Rebel Pilot)",
+    "retiring_soon": true,
+    "set_num": "40795-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Goblet of Fire Figures",
+    "retiring_soon": true,
+    "set_num": "40791-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mike, Dustin, Lucas and Will",
+    "retiring_soon": true,
+    "set_num": "40801-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Luna Lovegood & Thestral",
+    "retiring_soon": true,
+    "set_num": "40802-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Drift & Raven",
+    "retiring_soon": true,
+    "set_num": "40884-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Eleven, Max, Demogorgon and Holly…",
+    "retiring_soon": true,
+    "set_num": "40879-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "EVE & WALL-E",
+    "retiring_soon": false,
+    "set_num": "40619-1",
+    "theme": "Brickheadz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Creative Pets",
+    "retiring_soon": false,
+    "set_num": "11034-1",
+    "theme": "Classic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Creative Vehicles",
+    "retiring_soon": false,
+    "set_num": "11036-1",
+    "theme": "Classic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Creative Space Planets",
+    "retiring_soon": false,
+    "set_num": "11037-1",
+    "theme": "Classic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Vibrant Creative Brick Box",
+    "retiring_soon": false,
+    "set_num": "11038-1",
+    "theme": "Classic",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Retro Roller Skate",
+    "retiring_soon": true,
+    "set_num": "31148-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Wild Safari Animals",
+    "retiring_soon": true,
+    "set_num": "31150-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cherry Blossoms",
+    "retiring_soon": true,
+    "set_num": "40725-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Typewriter with Flowers",
+    "retiring_soon": true,
+    "set_num": "31169-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Record Player with Flowers",
+    "retiring_soon": true,
+    "set_num": "31172-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Retro Telephone",
+    "retiring_soon": true,
+    "set_num": "31174-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Unicorn Castle",
+    "retiring_soon": true,
+    "set_num": "31175-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Majestic Rhino",
+    "retiring_soon": true,
+    "set_num": "31171-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Space Exploration Telescope",
+    "retiring_soon": true,
+    "set_num": "31378-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "London Bus",
+    "retiring_soon": true,
+    "set_num": "40220-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Yellow Taxi",
+    "retiring_soon": true,
+    "set_num": "40468-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Exotic Parrot",
+    "retiring_soon": true,
+    "set_num": "31136-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Up-Scaled LEGO Minifigure",
+    "retiring_soon": true,
+    "set_num": "40649-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Retro Camera",
+    "retiring_soon": false,
+    "set_num": "31147-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Wild Animals: Surprising Spider",
+    "retiring_soon": false,
+    "set_num": "31159-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Medieval Dragon",
+    "retiring_soon": false,
+    "set_num": "31161-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Playful Cat",
+    "retiring_soon": false,
+    "set_num": "31163-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Wild Animals: Pink Flamingo",
+    "retiring_soon": false,
+    "set_num": "31170-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tropical Toucan",
+    "retiring_soon": false,
+    "set_num": "31173-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Space Shuttle",
+    "retiring_soon": false,
+    "set_num": "31134-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Magical Unicorn",
+    "retiring_soon": false,
+    "set_num": "31140-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Flatbed Truck with Helicopter",
+    "retiring_soon": false,
+    "set_num": "31146-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Japan Postcard",
+    "retiring_soon": false,
+    "set_num": "40713-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Daffodils",
+    "retiring_soon": false,
+    "set_num": "40747-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Beautiful Horse",
+    "retiring_soon": false,
+    "set_num": "31166-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Haunted Mansion",
+    "retiring_soon": false,
+    "set_num": "31167-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Italy Postcard",
+    "retiring_soon": false,
+    "set_num": "40818-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cute Hamster with a Flower",
+    "retiring_soon": false,
+    "set_num": "31376-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Turtle with a Water Lily",
+    "retiring_soon": false,
+    "set_num": "31377-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fierce Dinosaur",
+    "retiring_soon": false,
+    "set_num": "31379-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Retro Gaming Console",
+    "retiring_soon": false,
+    "set_num": "31380-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bonsai Tree",
+    "retiring_soon": false,
+    "set_num": "10281-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "High-Speed Train",
+    "retiring_soon": false,
+    "set_num": "40518-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fierce Shark with a Treasure…",
+    "retiring_soon": false,
+    "set_num": "31381-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Porsche 911",
+    "retiring_soon": false,
+    "set_num": "10295-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Sunflowers",
+    "retiring_soon": false,
+    "set_num": "40524-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "New York Postcard",
+    "retiring_soon": false,
+    "set_num": "40519-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Playful Puppy",
+    "retiring_soon": false,
+    "set_num": "31382-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "London Postcard",
+    "retiring_soon": false,
+    "set_num": "40569-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Colourful Hummingbird",
+    "retiring_soon": false,
+    "set_num": "31384-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Beautiful Dolphins",
+    "retiring_soon": false,
+    "set_num": "31385-1",
+    "theme": "Creator",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Belle & Tiana with…",
+    "retiring_soon": true,
+    "set_num": "43291-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Jasmine & Rapunzel",
+    "retiring_soon": true,
+    "set_num": "43303-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Up' House",
+    "retiring_soon": true,
+    "set_num": "43217-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Disney Ariel's Castle",
+    "retiring_soon": true,
+    "set_num": "40708-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Stitch",
+    "retiring_soon": true,
+    "set_num": "43249-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Disney Sleeping Beauty Castle",
+    "retiring_soon": true,
+    "set_num": "40720-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Moana's Island Fun",
+    "retiring_soon": true,
+    "set_num": "43260-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Arendelle Frozen Castle",
+    "retiring_soon": true,
+    "set_num": "43265-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Moana's Adventure Canoe",
+    "retiring_soon": true,
+    "set_num": "43270-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heihei",
+    "retiring_soon": true,
+    "set_num": "43272-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kakamora Barge",
+    "retiring_soon": true,
+    "set_num": "43258-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Maleficent's and Cruella De Vil's…",
+    "retiring_soon": true,
+    "set_num": "43262-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lilo and Stitch Beach House",
+    "retiring_soon": true,
+    "set_num": "43268-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Beauty and the Beast Castle",
+    "retiring_soon": true,
+    "set_num": "43263-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Toy Story Celebration Train &…",
+    "retiring_soon": true,
+    "set_num": "43264-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Princess Castle & Royal Pets",
+    "retiring_soon": true,
+    "set_num": "43267-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Arendelle Castle & Elsa's…",
+    "retiring_soon": true,
+    "set_num": "43278-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cruella De Vil's Car",
+    "retiring_soon": true,
+    "set_num": "43277-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Anna & Elsa",
+    "retiring_soon": true,
+    "set_num": "43284-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ariel's Magical Mini Palace",
+    "retiring_soon": true,
+    "set_num": "43285-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Sally's Flowerpot",
+    "retiring_soon": false,
+    "set_num": "43288-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "101 Dalmatians Puppy",
+    "retiring_soon": false,
+    "set_num": "43269-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lucky & Penny 101 Dalmatians…",
+    "retiring_soon": false,
+    "set_num": "43271-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Aristocats Adorable Marie",
+    "retiring_soon": false,
+    "set_num": "43286-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kevin & Dug",
+    "retiring_soon": false,
+    "set_num": "43290-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Disney Castle",
+    "retiring_soon": false,
+    "set_num": "40478-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Angel",
+    "retiring_soon": false,
+    "set_num": "43257-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Olaf and Bruni's Picnic Fun",
+    "retiring_soon": false,
+    "set_num": "43287-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "WALL-E and EVE",
+    "retiring_soon": false,
+    "set_num": "43279-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Elsa's Ice Castle & Snow…",
+    "retiring_soon": false,
+    "set_num": "43281-1",
+    "theme": "Disney",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mateo's Fire Chameleon",
+    "retiring_soon": true,
+    "set_num": "71492-1",
+    "theme": "DreamZzz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mateo's Spray Paint Truck",
+    "retiring_soon": true,
+    "set_num": "71499-1",
+    "theme": "DreamZzz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nightmare Shark Submarine",
+    "retiring_soon": true,
+    "set_num": "71500-1",
+    "theme": "DreamZzz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fox Guardian Mech",
+    "retiring_soon": true,
+    "set_num": "71508-1",
+    "theme": "DreamZzz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Crocodile Submarine",
+    "retiring_soon": true,
+    "set_num": "71512-1",
+    "theme": "DreamZzz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nightmare Scorpion Digger",
+    "retiring_soon": true,
+    "set_num": "71513-1",
+    "theme": "DreamZzz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Dino Jet",
+    "retiring_soon": true,
+    "set_num": "71514-1",
+    "theme": "DreamZzz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tiger Shark Tank",
+    "retiring_soon": true,
+    "set_num": "71515-1",
+    "theme": "DreamZzz",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bath Time Fun: Floating Animal…",
+    "retiring_soon": true,
+    "set_num": "10965-1",
+    "theme": "Duplo",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Peppa Pig Supermarket",
+    "retiring_soon": true,
+    "set_num": "10434-1",
+    "theme": "Duplo",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Brick Box",
+    "retiring_soon": false,
+    "set_num": "10913-1",
+    "theme": "Duplo",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Deluxe Brick Box",
+    "retiring_soon": false,
+    "set_num": "10914-1",
+    "theme": "Duplo",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Number Train - Learn To…",
+    "retiring_soon": false,
+    "set_num": "10954-1",
+    "theme": "Duplo",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Alphabet Truck",
+    "retiring_soon": false,
+    "set_num": "10421-1",
+    "theme": "Duplo",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mickey & Minnie Birthday Train",
+    "retiring_soon": false,
+    "set_num": "10941-1",
+    "theme": "Duplo",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Green Baseplate",
+    "retiring_soon": false,
+    "set_num": "11023-1",
+    "theme": "Educational and Dacta",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Gray Baseplate",
+    "retiring_soon": false,
+    "set_num": "11024-1",
+    "theme": "Educational and Dacta",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Blue Baseplate",
+    "retiring_soon": false,
+    "set_num": "11025-1",
+    "theme": "Educational and Dacta",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "White Baseplate",
+    "retiring_soon": false,
+    "set_num": "11026-1",
+    "theme": "Educational and Dacta",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Klombo",
+    "retiring_soon": true,
+    "set_num": "77077-1",
+    "theme": "Fortnite",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mecha Team Leader",
+    "retiring_soon": true,
+    "set_num": "77078-1",
+    "theme": "Fortnite",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Peely & Sparkplug's Camp",
+    "retiring_soon": true,
+    "set_num": "77075-1",
+    "theme": "Fortnite",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Durrr Burger Restaurant",
+    "retiring_soon": true,
+    "set_num": "77076-1",
+    "theme": "Fortnite",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Supply Llama",
+    "retiring_soon": false,
+    "set_num": "77071-1",
+    "theme": "Fortnite",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Battle Bus",
+    "retiring_soon": false,
+    "set_num": "77073-1",
+    "theme": "Fortnite",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Ice Cream Truck",
+    "retiring_soon": true,
+    "set_num": "42644-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Sweet Shop",
+    "retiring_soon": true,
+    "set_num": "42649-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Pet Accessories Shop",
+    "retiring_soon": true,
+    "set_num": "42650-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Friendship Camper Van Adventure",
+    "retiring_soon": true,
+    "set_num": "42663-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Panda Sanctuary",
+    "retiring_soon": true,
+    "set_num": "42648-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Friendship Road-Trip Travel Car",
+    "retiring_soon": true,
+    "set_num": "42659-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Costume Party",
+    "retiring_soon": true,
+    "set_num": "42661-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Travel Boat Adventure",
+    "retiring_soon": true,
+    "set_num": "42664-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Puppy Playground",
+    "retiring_soon": true,
+    "set_num": "42665-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cat Birthday Party",
+    "retiring_soon": true,
+    "set_num": "42666-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Plant Café & Flower Shop",
+    "retiring_soon": true,
+    "set_num": "42671-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Family Holiday Beach Resort",
+    "retiring_soon": true,
+    "set_num": "42673-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Comic Book and Game Shop",
+    "retiring_soon": true,
+    "set_num": "42674-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Dog Treats Bakery",
+    "retiring_soon": true,
+    "set_num": "42677-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Pet Accessories Van",
+    "retiring_soon": true,
+    "set_num": "42678-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Bunny Hotel",
+    "retiring_soon": true,
+    "set_num": "42679-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Mini Supermarket",
+    "retiring_soon": true,
+    "set_num": "42680-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Fashion Show",
+    "retiring_soon": true,
+    "set_num": "42685-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fun Indoor Playground",
+    "retiring_soon": true,
+    "set_num": "42686-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Friends Club House",
+    "retiring_soon": true,
+    "set_num": "42689-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Horse & Baby Foal Trailer",
+    "retiring_soon": true,
+    "set_num": "42695-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Beach House with Seals",
+    "retiring_soon": true,
+    "set_num": "42699-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Hospital",
+    "retiring_soon": false,
+    "set_num": "42621-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Horse and Pony Trailer",
+    "retiring_soon": false,
+    "set_num": "42634-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Water Park",
+    "retiring_soon": false,
+    "set_num": "42630-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Unicorn Cake Delivery Car",
+    "retiring_soon": false,
+    "set_num": "42675-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Axolotl Adventure Boat",
+    "retiring_soon": false,
+    "set_num": "42681-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Unicorn Dream Café",
+    "retiring_soon": false,
+    "set_num": "42684-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Liann's Family House",
+    "retiring_soon": false,
+    "set_num": "42687-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Horse Stable and Riding Academy",
+    "retiring_soon": false,
+    "set_num": "42688-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Garden Restaurant",
+    "retiring_soon": false,
+    "set_num": "42691-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Animal Vet Clinic",
+    "retiring_soon": false,
+    "set_num": "42696-1",
+    "theme": "Friends",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Gabby's Kitty Care Ear",
+    "retiring_soon": true,
+    "set_num": "10796-1",
+    "theme": "Gabby's Dollhouse",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Gabby's Brick-Built Cat Friends",
+    "retiring_soon": false,
+    "set_num": "11215-1",
+    "theme": "Gabby's Dollhouse",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Gabby's Dollhouse",
+    "retiring_soon": false,
+    "set_num": "10788-1",
+    "theme": "Gabby's Dollhouse",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Dinosaur Fossils: Triceratops Skull",
+    "retiring_soon": true,
+    "set_num": "76969-1",
+    "theme": "Jurassic World",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Dinosaur Fossils: Tyrannosaurus rex",
+    "retiring_soon": true,
+    "set_num": "76968-1",
+    "theme": "Jurassic World",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Raptor Off-Road Escape",
+    "retiring_soon": true,
+    "set_num": "76972-1",
+    "theme": "Jurassic World",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Brick-Built Mosasaurus Boat Mission",
+    "retiring_soon": true,
+    "set_num": "76974-1",
+    "theme": "Jurassic World",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "T. rex River Escape",
+    "retiring_soon": false,
+    "set_num": "76975-1",
+    "theme": "Jurassic World",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spinosaurus & Quetzalcoatlus Air Mission",
+    "retiring_soon": false,
+    "set_num": "76976-1",
+    "theme": "Jurassic World",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Wooden Duck",
+    "retiring_soon": false,
+    "set_num": "40501-1",
+    "theme": "LEGO Exclusive",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Illager Desert Patrol",
+    "retiring_soon": true,
+    "set_num": "21267-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Baby Pig House",
+    "retiring_soon": true,
+    "set_num": "21268-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Armadillo Mine Expedition",
+    "retiring_soon": true,
+    "set_num": "21269-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Mooshroom House",
+    "retiring_soon": true,
+    "set_num": "21270-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Woodland Mansion Fighting Ring",
+    "retiring_soon": true,
+    "set_num": "21272-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Ghast Balloon Village Attack",
+    "retiring_soon": true,
+    "set_num": "21273-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Parrot Houses",
+    "retiring_soon": true,
+    "set_num": "21282-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Warden Encounter",
+    "retiring_soon": true,
+    "set_num": "21274-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The TNT Jungle House",
+    "retiring_soon": true,
+    "set_num": "21275-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Pickaxe Mine",
+    "retiring_soon": true,
+    "set_num": "21277-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Pillager Outpost and Ravager",
+    "retiring_soon": true,
+    "set_num": "21278-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Enderman Tower",
+    "retiring_soon": true,
+    "set_num": "21279-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nether & End Portal Journey",
+    "retiring_soon": true,
+    "set_num": "21584-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Nether Lava Battle",
+    "retiring_soon": true,
+    "set_num": "21266-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Zombie Dungeon",
+    "retiring_soon": false,
+    "set_num": "21587-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mini Biomes",
+    "retiring_soon": false,
+    "set_num": "21589-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Creeper",
+    "retiring_soon": false,
+    "set_num": "21276-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Steve's Taiga Adventure",
+    "retiring_soon": false,
+    "set_num": "21583-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Chicken Farm",
+    "retiring_soon": false,
+    "set_num": "21585-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Pale Garden",
+    "retiring_soon": false,
+    "set_num": "21586-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Fox",
+    "retiring_soon": false,
+    "set_num": "21588-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Wither Battle",
+    "retiring_soon": false,
+    "set_num": "21590-1",
+    "theme": "Minecraft",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Play with Braille - Spanish…",
+    "retiring_soon": true,
+    "set_num": "40724-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Yellow Travel Suitcase",
+    "retiring_soon": true,
+    "set_num": "40817-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Up-Scaled Racing Driver Minifigure",
+    "retiring_soon": true,
+    "set_num": "40819-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Baby Elephant in the Sky",
+    "retiring_soon": true,
+    "set_num": "40814-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Arcade Machine",
+    "retiring_soon": true,
+    "set_num": "40805-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Play with Braille – French…",
+    "retiring_soon": true,
+    "set_num": "40655-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Play with Braille – English…",
+    "retiring_soon": true,
+    "set_num": "40656-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Play with Braille - German…",
+    "retiring_soon": true,
+    "set_num": "40722-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Play with Braille - Italian…",
+    "retiring_soon": true,
+    "set_num": "40723-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Traditional Chess Set",
+    "retiring_soon": false,
+    "set_num": "40719-1",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monkie Kid's Combi Mech",
+    "retiring_soon": false,
+    "set_num": "80040-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monkey King Ultra Mech",
+    "retiring_soon": false,
+    "set_num": "80045-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monkie Kid's Mini Mech",
+    "retiring_soon": false,
+    "set_num": "80051-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Megapolis City",
+    "retiring_soon": false,
+    "set_num": "80054-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monkie Kid's Team Power Truck",
+    "retiring_soon": false,
+    "set_num": "80055-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nine-Headed Beast",
+    "retiring_soon": false,
+    "set_num": "80056-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nezha's Ring of Fire Mech",
+    "retiring_soon": false,
+    "set_num": "80057-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Celestial Pagoda",
+    "retiring_soon": false,
+    "set_num": "80058-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Erlang's Celestial Mech",
+    "retiring_soon": false,
+    "set_num": "80065-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mythical Creature Qilin",
+    "retiring_soon": false,
+    "set_num": "80066-1",
+    "theme": "Monkie Kid",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nike Slam Dunk",
+    "retiring_soon": true,
+    "set_num": "43010-1",
+    "theme": "Nike",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nike Dunk Trickshot",
+    "retiring_soon": true,
+    "set_num": "43021-1",
+    "theme": "Nike",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kai's Ninja Race Car EVO",
+    "retiring_soon": true,
+    "set_num": "71780-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "NINJAGO City Markets",
+    "retiring_soon": true,
+    "set_num": "71799-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kai's Elemental Fire Mech",
+    "retiring_soon": true,
+    "set_num": "71808-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tournament Temple City",
+    "retiring_soon": true,
+    "set_num": "71814-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Dragon Spinjitzu Battle Pack",
+    "retiring_soon": true,
+    "set_num": "71826-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Zane's Battle Suit Mech",
+    "retiring_soon": true,
+    "set_num": "71827-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lloyd's Green Forest Dragon",
+    "retiring_soon": true,
+    "set_num": "71829-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kai's Mech Storm Rider",
+    "retiring_soon": true,
+    "set_num": "71830-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ninja Spinjitzu Temple",
+    "retiring_soon": true,
+    "set_num": "71831-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Zane's Ultra Combiner Mech",
+    "retiring_soon": true,
+    "set_num": "71834-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Thunderfang Dragon of Chaos",
+    "retiring_soon": true,
+    "set_num": "71832-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Arc Dragon of Focus",
+    "retiring_soon": true,
+    "set_num": "71836-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kai's Motorcycle Speed Race",
+    "retiring_soon": true,
+    "set_num": "71838-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Arin's Spinjitzu Battle Mech",
+    "retiring_soon": true,
+    "set_num": "71839-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Rogue vs. Drix Race Car…",
+    "retiring_soon": true,
+    "set_num": "71840-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Fire Knight Mech",
+    "retiring_soon": true,
+    "set_num": "71846-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Guardian Dragon",
+    "retiring_soon": true,
+    "set_num": "71847-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Nya vs. Mutation Monster Spinner",
+    "retiring_soon": true,
+    "set_num": "71849-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lloyd vs. Earth Monster Spinner",
+    "retiring_soon": true,
+    "set_num": "71850-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cole's Mission Mech",
+    "retiring_soon": true,
+    "set_num": "71854-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Jay's Transforming Car",
+    "retiring_soon": true,
+    "set_num": "71856-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ninja Vehicle Tree House Battle",
+    "retiring_soon": true,
+    "set_num": "71857-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Dragon of Life",
+    "retiring_soon": false,
+    "set_num": "71859-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "NINJAGO City Workshops",
+    "retiring_soon": false,
+    "set_num": "71837-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Kai's Dragon Mech Battle Pack",
+    "retiring_soon": false,
+    "set_num": "71851-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Jay's Dragon Mech Fight",
+    "retiring_soon": false,
+    "set_num": "71853-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ninja Dragon Riyu's Battle",
+    "retiring_soon": false,
+    "set_num": "71855-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Four Weapons Blacksmith",
+    "retiring_soon": false,
+    "set_num": "71858-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lloyd's Titan Mech",
+    "retiring_soon": false,
+    "set_num": "71860-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Old Town",
+    "retiring_soon": false,
+    "set_num": "71861-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ninja Character Display",
+    "retiring_soon": false,
+    "set_num": "71866-1",
+    "theme": "Ninjago",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Windmill Village Hut",
+    "retiring_soon": true,
+    "set_num": "75636-1",
+    "theme": "One Piece",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Buggy the Clown's Circus Tent",
+    "retiring_soon": true,
+    "set_num": "75637-1",
+    "theme": "One Piece",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Baratie Floating Restaurant",
+    "retiring_soon": false,
+    "set_num": "75640-1",
+    "theme": "One Piece",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Going Merry Pirate Ship",
+    "retiring_soon": false,
+    "set_num": "75639-1",
+    "theme": "One Piece",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Roses",
+    "retiring_soon": false,
+    "set_num": "40460-1",
+    "theme": "Other",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Eevee",
+    "retiring_soon": false,
+    "set_num": "72151-1",
+    "theme": "Pokémon",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Pikachu and Poké Ball",
+    "retiring_soon": false,
+    "set_num": "72152-1",
+    "theme": "Pokémon",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Venusaur, Charizard and Blastoise",
+    "retiring_soon": false,
+    "set_num": "72153-1",
+    "theme": "Pokémon",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heart Ornament",
+    "retiring_soon": true,
+    "set_num": "40638-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Festival Calendar",
+    "retiring_soon": true,
+    "set_num": "40678-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Sweetheart Tweety Bird",
+    "retiring_soon": true,
+    "set_num": "40824-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Birthday Numbers",
+    "retiring_soon": true,
+    "set_num": "40807-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fortune Firecracker",
+    "retiring_soon": true,
+    "set_num": "80118-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Galloping Horse Canvas",
+    "retiring_soon": true,
+    "set_num": "80119-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Christmas Table Decoration",
+    "retiring_soon": true,
+    "set_num": "40743-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Snowman Ornaments",
+    "retiring_soon": true,
+    "set_num": "40812-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Family Christmas Tree Decoration",
+    "retiring_soon": true,
+    "set_num": "41843-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Easter Bunny and Chick Egg…",
+    "retiring_soon": true,
+    "set_num": "40808-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Decorative Easter Egg",
+    "retiring_soon": true,
+    "set_num": "40816-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Jack-O'-Lantern Pickup Truck",
+    "retiring_soon": true,
+    "set_num": "40822-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Halloween Wreath",
+    "retiring_soon": false,
+    "set_num": "40825-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lucky Cat",
+    "retiring_soon": false,
+    "set_num": "40813-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Altar of the Dead",
+    "retiring_soon": false,
+    "set_num": "40811-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fortune Master",
+    "retiring_soon": false,
+    "set_num": "40864-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Festive Gingerbread House",
+    "retiring_soon": false,
+    "set_num": "40809-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Up-Scaled Santa Minifigure",
+    "retiring_soon": false,
+    "set_num": "40820-1",
+    "theme": "Seasonal",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Sonic's Campfire Clash",
+    "retiring_soon": true,
+    "set_num": "77001-1",
+    "theme": "Sonic the Hedgehog",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cyclone vs. Metal Sonic",
+    "retiring_soon": true,
+    "set_num": "77002-1",
+    "theme": "Sonic the Hedgehog",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Knuckles vs. Dr. Eggman Egg…",
+    "retiring_soon": true,
+    "set_num": "77005-1",
+    "theme": "Sonic the Hedgehog",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Team Sonic Command Truck",
+    "retiring_soon": true,
+    "set_num": "77006-1",
+    "theme": "Sonic the Hedgehog",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Sonic: Speedster Lightning",
+    "retiring_soon": true,
+    "set_num": "77117-1",
+    "theme": "Sonic the Hedgehog",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Silver's Car vs. Knuckles' Monster…",
+    "retiring_soon": true,
+    "set_num": "77118-1",
+    "theme": "Sonic the Hedgehog",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "McLaren MCL38 F1 Team Race…",
+    "retiring_soon": true,
+    "set_num": "77251-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Audi Revolut F1 Team R26…",
+    "retiring_soon": true,
+    "set_num": "77259-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mercedes-AMG G 63 & Mercedes-AMG…",
+    "retiring_soon": true,
+    "set_num": "76924-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "NASCAR Next Gen Chevrolet Camaro…",
+    "retiring_soon": true,
+    "set_num": "76935-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ferrari SF-24 F1 Race Car",
+    "retiring_soon": true,
+    "set_num": "77242-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Oracle Red Bull Racing RB20…",
+    "retiring_soon": true,
+    "set_num": "77243-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mercedes-AMG PETRONAS W15 F1 Race…",
+    "retiring_soon": true,
+    "set_num": "77244-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Aston Martin Aramco F1 AMR24…",
+    "retiring_soon": true,
+    "set_num": "77245-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Visa Cash App VCARB 01…",
+    "retiring_soon": true,
+    "set_num": "77246-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "BWT Alpine F1 Team A524…",
+    "retiring_soon": true,
+    "set_num": "77248-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Williams Racing FW46 F1 Race…",
+    "retiring_soon": true,
+    "set_num": "77249-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "MoneyGram Haas F1 Team VF-24…",
+    "retiring_soon": true,
+    "set_num": "77250-1",
+    "theme": "Speed Champions",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Arkham Asylum",
+    "retiring_soon": true,
+    "set_num": "76300-1",
+    "theme": "Super Heroes DC",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Batman Tumbler vs. Two-Face &…",
+    "retiring_soon": true,
+    "set_num": "76303-1",
+    "theme": "Super Heroes DC",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Batman Forever Batmobile",
+    "retiring_soon": true,
+    "set_num": "76304-1",
+    "theme": "Super Heroes DC",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Batman Logo",
+    "retiring_soon": false,
+    "set_num": "76330-1",
+    "theme": "Super Heroes DC",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Batman & Robin Batmobile",
+    "retiring_soon": false,
+    "set_num": "76333-1",
+    "theme": "Super Heroes DC",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Batman v Superman Batmobile",
+    "retiring_soon": false,
+    "set_num": "76331-1",
+    "theme": "Super Heroes DC",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Batman Batmobile",
+    "retiring_soon": false,
+    "set_num": "76332-1",
+    "theme": "Super Heroes DC",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Captain America vs. Thanos",
+    "retiring_soon": true,
+    "set_num": "76319-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spider-Man vs. Venom Muscle Car",
+    "retiring_soon": true,
+    "set_num": "76309-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Peter Parker's Apartment",
+    "retiring_soon": true,
+    "set_num": "76317-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spider-Man vs. Oscorp",
+    "retiring_soon": true,
+    "set_num": "76324-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Miles Morales' Mask",
+    "retiring_soon": true,
+    "set_num": "76329-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spin and Electro Dinosaur Vehicle…",
+    "retiring_soon": true,
+    "set_num": "11198-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spidey and Gobby's Raptor Battle…",
+    "retiring_soon": true,
+    "set_num": "11200-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "MARVEL Logo",
+    "retiring_soon": true,
+    "set_num": "76313-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Iron Man's Laboratory: Hall of…",
+    "retiring_soon": true,
+    "set_num": "76315-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Avengers: Endgame Final Battle",
+    "retiring_soon": true,
+    "set_num": "76323-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Iron Man & War Machine…",
+    "retiring_soon": true,
+    "set_num": "76320-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spider-Man vs. Doc Ock Subway…",
+    "retiring_soon": true,
+    "set_num": "76321-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Avengers: Endgame Thor vs. Chitauri",
+    "retiring_soon": true,
+    "set_num": "76322-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Avengers: Age of Ultron Quinjet",
+    "retiring_soon": true,
+    "set_num": "76325-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Iron Spider-Man Bust",
+    "retiring_soon": true,
+    "set_num": "76326-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Iron Man MK4 Bust",
+    "retiring_soon": true,
+    "set_num": "76327-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fantastic Four vs. Galactus Construction…",
+    "retiring_soon": true,
+    "set_num": "76316-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "X-Men: The X-Mansion",
+    "retiring_soon": true,
+    "set_num": "76294-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spidey: Underwater Vehicles",
+    "retiring_soon": true,
+    "set_num": "11207-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Epic Battle: Spider-Man vs. Sandman",
+    "retiring_soon": false,
+    "set_num": "76334-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spider-Man Car vs. Venomized Wolverine",
+    "retiring_soon": false,
+    "set_num": "76336-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Miles Morales Mech vs. Spider-Man…",
+    "retiring_soon": false,
+    "set_num": "76337-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mech Battle: Spider-Man vs. Doc…",
+    "retiring_soon": false,
+    "set_num": "76338-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Team Spidey Pirate Ship",
+    "retiring_soon": false,
+    "set_num": "11208-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ravager Jumpsuit Groot",
+    "retiring_soon": false,
+    "set_num": "76341-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Epic Battle: Hulkbuster vs. The…",
+    "retiring_soon": false,
+    "set_num": "76343-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Iron Man Mark 3 Collectors'…",
+    "retiring_soon": false,
+    "set_num": "76344-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spider-Man vs. Ghost Rider Motorcycle",
+    "retiring_soon": false,
+    "set_num": "76335-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spider-Man vs. Mysterio: The Daily…",
+    "retiring_soon": false,
+    "set_num": "76342-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Avengers Tower",
+    "retiring_soon": false,
+    "set_num": "76269-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Spidey on his Motorcycle vs.…",
+    "retiring_soon": false,
+    "set_num": "11206-1",
+    "theme": "Super Heroes Marvel",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Adventures with Interactive LEGO Luigi",
+    "retiring_soon": true,
+    "set_num": "71440-1",
+    "theme": "Super Mario",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Adventures with Interactive LEGO Peach",
+    "retiring_soon": true,
+    "set_num": "71441-1",
+    "theme": "Super Mario",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Interactive LEGO Mario & Standard…",
+    "retiring_soon": true,
+    "set_num": "72043-1",
+    "theme": "Super Mario",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Shy Guy & P-Wing",
+    "retiring_soon": true,
+    "set_num": "72045-1",
+    "theme": "Super Mario",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Mario Kart - Mario &…",
+    "retiring_soon": false,
+    "set_num": "72037-1",
+    "theme": "Super Mario",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Game Boy",
+    "retiring_soon": false,
+    "set_num": "72046-1",
+    "theme": "Super Mario",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ocarina of Time - The…",
+    "retiring_soon": false,
+    "set_num": "77093-1",
+    "theme": "The Legend of Zelda",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Go-Karts and Race Drivers",
+    "retiring_soon": true,
+    "set_num": "60400-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Monster Truck",
+    "retiring_soon": true,
+    "set_num": "60402-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Burger Truck",
+    "retiring_soon": true,
+    "set_num": "60404-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Jet vs. Car",
+    "retiring_soon": true,
+    "set_num": "60489-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Snowplough",
+    "retiring_soon": true,
+    "set_num": "60490-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Motorcycle Transporter",
+    "retiring_soon": true,
+    "set_num": "60491-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Police Prison Island",
+    "retiring_soon": true,
+    "set_num": "60419-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "F1 Display Truck with Audi…",
+    "retiring_soon": true,
+    "set_num": "60493-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Interstellar Spaceship",
+    "retiring_soon": true,
+    "set_num": "60430-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Recycling Truck",
+    "retiring_soon": true,
+    "set_num": "60495-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Double-Decker Sightseeing Bus",
+    "retiring_soon": true,
+    "set_num": "60407-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Downtown Streetcar and Station",
+    "retiring_soon": true,
+    "set_num": "60423-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "F1 Truck with RB20 &…",
+    "retiring_soon": true,
+    "set_num": "60445-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Off-Road Mountain Truck",
+    "retiring_soon": true,
+    "set_num": "60447-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Police Car",
+    "retiring_soon": true,
+    "set_num": "60312-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fire Engine",
+    "retiring_soon": true,
+    "set_num": "60463-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Police Station",
+    "retiring_soon": true,
+    "set_num": "60316-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "F1 Williams Racing & Haas…",
+    "retiring_soon": true,
+    "set_num": "60464-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Custom Police Garage",
+    "retiring_soon": true,
+    "set_num": "60457-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Passenger Express Train",
+    "retiring_soon": true,
+    "set_num": "60337-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Air Ambulance",
+    "retiring_soon": true,
+    "set_num": "60465-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Bulldozer",
+    "retiring_soon": true,
+    "set_num": "60466-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Central Train Station",
+    "retiring_soon": true,
+    "set_num": "60469-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Explorer Train",
+    "retiring_soon": true,
+    "set_num": "60470-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Arctic Truck",
+    "retiring_soon": true,
+    "set_num": "60471-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Police Truck",
+    "retiring_soon": true,
+    "set_num": "60481-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Car Wash",
+    "retiring_soon": true,
+    "set_num": "60362-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Loader",
+    "retiring_soon": true,
+    "set_num": "60483-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Ice Cream Parlour",
+    "retiring_soon": true,
+    "set_num": "60363-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Police Car and Muscle Car…",
+    "retiring_soon": false,
+    "set_num": "60415-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Airport Fire Truck",
+    "retiring_soon": false,
+    "set_num": "60499-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Emergency Ambulance",
+    "retiring_soon": false,
+    "set_num": "60451-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Police Train Heist",
+    "retiring_soon": false,
+    "set_num": "60508-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Cement Mixer",
+    "retiring_soon": false,
+    "set_num": "60478-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fire Rescue Boat",
+    "retiring_soon": false,
+    "set_num": "60373-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Passenger Airplane",
+    "retiring_soon": false,
+    "set_num": "60367-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hot Rod",
+    "retiring_soon": false,
+    "set_num": "60485-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "EV Supercar",
+    "retiring_soon": false,
+    "set_num": "60486-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Yellow Taxi",
+    "retiring_soon": false,
+    "set_num": "60487-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fries Food Truck",
+    "retiring_soon": false,
+    "set_num": "60488-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fire Rescue Helicopter",
+    "retiring_soon": false,
+    "set_num": "60411-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fire Station with Fire Truck",
+    "retiring_soon": false,
+    "set_num": "60414-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tractor",
+    "retiring_soon": false,
+    "set_num": "60498-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "F1 Driver with McLaren Race…",
+    "retiring_soon": false,
+    "set_num": "60442-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The LEGO Van",
+    "retiring_soon": false,
+    "set_num": "60500-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "F1 Pit Stop & Pit…",
+    "retiring_soon": false,
+    "set_num": "60443-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Airport with Airplane",
+    "retiring_soon": false,
+    "set_num": "60502-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Coast Guard Helicopter",
+    "retiring_soon": false,
+    "set_num": "60503-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Coast Guard Rescue Boat",
+    "retiring_soon": false,
+    "set_num": "60504-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Airplane, Service Truck & Hovercraft…",
+    "retiring_soon": false,
+    "set_num": "60505-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Holiday Camper Van",
+    "retiring_soon": false,
+    "set_num": "60454-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Tracks",
+    "retiring_soon": false,
+    "set_num": "60205-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Police Boat",
+    "retiring_soon": false,
+    "set_num": "60456-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Switch Tracks",
+    "retiring_soon": false,
+    "set_num": "60238-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Police Prisoner Transport Van",
+    "retiring_soon": false,
+    "set_num": "60479-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Road Plates",
+    "retiring_soon": false,
+    "set_num": "60304-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Fire Engine",
+    "retiring_soon": false,
+    "set_num": "60482-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Gaming Car",
+    "retiring_soon": false,
+    "set_num": "60484-1",
+    "theme": "Town",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Black Dahlia Flower",
+    "retiring_soon": true,
+    "set_num": "76784-1",
+    "theme": "Wednesday",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Morticia's Cottage",
+    "retiring_soon": true,
+    "set_num": "76786-1",
+    "theme": "Wednesday",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Glinda & Elphaba's Dormitory",
+    "retiring_soon": true,
+    "set_num": "75683-1",
+    "theme": "Wicked",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Welcome to Emerald City",
+    "retiring_soon": true,
+    "set_num": "75684-1",
+    "theme": "Wicked",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Emerald City Wall Art",
+    "retiring_soon": true,
+    "set_num": "75685-1",
+    "theme": "Wicked",
+    "timestamp": "2026-08-14T23:35:30",
+    "type": "new_set_tracked"
+  }
+]

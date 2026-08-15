@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026-08-15T12:02:10",
+  "months": {
+    "2026-08": [
+      {
+        "availability_text": "Coming soon on August 29, 2026",
+        "launch_date": "2026-08-29",
+        "name": "Mini Hogwarts™ Castle",
+        "pieces": 700,
+        "price": "$39.99",
+        "set_num": "40975",
+        "theme": "Harry Potter™",
+        "url": "https://www.lego.com/en-us/product/mini-hogwarts-castle-40975"
+      }
+    ],
+    "2026-09": [
+      {
+        "availability_text": "Coming soon on September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Golden Age Superman™ and Batman™ Figures",
+        "pieces": 218,
+        "price": "$24.99",
+        "set_num": "40859",
+        "theme": "BrickHeadz",
+        "url": "https://www.lego.com/en-us/product/golden-age-superman-and-batman-figures-40859"
+      },
+      {
+        "availability_text": "Coming soon on September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Gremlins Gizmo™ and Stripe Figures",
+        "pieces": 230,
+        "price": "$24.99",
+        "set_num": "40919",
+        "theme": "BrickHeadz",
+        "url": "https://www.lego.com/en-us/product/gremlins-gizmo-and-stripe-figures-40919"
+      },
+      {
+        "availability_text": "Coming soon on September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Nike Air Force 1 x LEGO® Set",
+        "pieces": 1093,
+        "price": "$99.99",
+        "set_num": "43026",
+        "theme": "Nike",
+        "url": "https://www.lego.com/en-us/product/nike-air-force-1-x-lego-set-43026"
+      },
+      {
+        "availability_text": "Coming soon on September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Shrek Series",
+        "pieces": 7,
+        "price": "$4.99",
+        "set_num": "71053",
+        "theme": "Minifigures",
+        "url": "https://www.lego.com/en-us/product/shrek-series-71053"
+      },
+      {
+        "availability_text": "Coming soon on September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "Shrek Series 6 Pack",
+        "pieces": 42,
+        "price": "$29.94",
+        "set_num": "66815",
+        "theme": "Minifigures",
+        "url": "https://www.lego.com/en-us/product/minifigures-66815-66815"
+      },
+      {
+        "availability_text": "Coming soon on September 1, 2026",
+        "launch_date": "2026-09-01",
+        "name": "The Ministry of Magic™ – Collectors' Edition",
+        "pieces": 3491,
+        "price": "$449.99",
+        "set_num": "76476",
+        "theme": "Harry Potter™",
+        "url": "https://www.lego.com/en-us/product/the-ministry-of-magic-collectors-edition-76476"
+      }
+    ],
+    "2026-10": [
+      {
+        "availability_text": "Coming soon on October 1, 2026",
+        "launch_date": "2026-10-01",
+        "name": "Christmas Stocking",
+        "pieces": 342,
+        "price": "$34.99",
+        "set_num": "40958",
+        "theme": null,
+        "url": "https://www.lego.com/en-us/product/christmas-stocking-40958"
+      },
+      {
+        "availability_text": "Coming soon on October 1, 2026",
+        "launch_date": "2026-10-01",
+        "name": "Nevermore Academy",
+        "pieces": 890,
+        "price": "$69.99",
+        "set_num": "76788",
+        "theme": "LEGO® Wednesday",
+        "url": "https://www.lego.com/en-us/product/nevermore-academy-76788"
+      },
+      {
+        "availability_text": "Coming soon on October 1, 2026",
+        "launch_date": "2026-10-01",
+        "name": "Wednesday Backpack",
+        "pieces": 401,
+        "price": "$44.99",
+        "set_num": "76787",
+        "theme": "LEGO® Wednesday",
+        "url": "https://www.lego.com/en-us/product/wednesday-backpack-76787"
+      },
+      {
+        "availability_text": "Coming soon on October 4, 2026",
+        "launch_date": "2026-10-04",
+        "name": "Avengers: Doomsday Heroes & Villain",
+        "pieces": 467,
+        "price": "$39.99",
+        "set_num": "40880",
+        "theme": "Marvel",
+        "url": "https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880"
+      }
+    ],
+    "2026-11": [
+      {
+        "availability_text": "Coming soon on November 1, 2026",
+        "launch_date": "2026-11-01",
+        "name": "Sagrada Família",
+        "pieces": 12060,
+        "price": "$799.99",
+        "set_num": "21065",
+        "theme": "Architecture",
+        "url": "https://www.lego.com/en-us/product/sagrada-familia-21065"
+      }
+    ]
+  }
+}
