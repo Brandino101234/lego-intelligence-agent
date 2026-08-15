@@ -16,17 +16,18 @@ permissions:
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
+    # Runs on the Mac itself (registered as a self-hosted runner), not
+    # GitHub's shared runners — LEGO.com's Cloudflare protection blocks
+    # GitHub's runner IP ranges outright (confirmed: every request 403'd,
+    # including just fetching the sitemap), while it's fine from a
+    # residential IP. BrickRanker/Brickset/Brick Fanatics work from either.
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      - run: "/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/pip install -r requirements.txt"
 
-      - run: pip install -r requirements.txt
-
-      - run: python run_all.py
+      - run: "/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/python3 run_all.py"
 
       - name: Commit updated data and dashboard
         run: |
