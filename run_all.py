@@ -25,6 +25,8 @@ AGENTS = [
     "lego_release_calendar_agent",
     "lego_retirement_agent",
     "lego_gwp_agent",
+    # Notify last, so it sees every other agent's freshly-written change log.
+    "lego_notify_agent",
 ]
 
 
