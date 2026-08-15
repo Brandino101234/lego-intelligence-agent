@@ -35,7 +35,11 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/ site/
           git diff --cached --quiet || git commit -m "Automated data refresh"
-          git pull --rebase --autostash
+          git fetch origin main
+          # data/ and site/ are fully regenerated every run, so on conflict
+          # this run's fresh scrape always wins over whatever else pushed
+          # to main in the meantime (e.g. a manual push mid-run).
+          git merge -X ours --no-edit origin/main
           git push
 
       - name: Deploy to Netlify
