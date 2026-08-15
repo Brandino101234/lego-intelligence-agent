@@ -28,6 +28,8 @@ jobs:
       - run: '"/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/pip" install -r requirements.txt'
 
       - run: '"/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/python3" run_all.py'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
 
       - name: Commit updated data and dashboard
         run: |
