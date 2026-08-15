@@ -67,6 +67,9 @@ def scrape_brickranker() -> dict[str, dict]:
             name = links[-1].get_text(strip=True)
             retiring_soon = "Retiring soon" in name_cell.get_text()
 
+            img = name_cell.find("img", src=True)
+            image = img["src"] if img else None
+
             year_text = tds[1].get_text(strip=True)
             year_released = int(year_text) if year_text.isdigit() else None
 
@@ -82,6 +85,7 @@ def scrape_brickranker() -> dict[str, dict]:
                 "retirement_date": retirement_date.isoformat() if retirement_date else None,
                 "retiring_soon": retiring_soon,
                 "url": set_link["href"],
+                "image": image,
             }
 
     return sets

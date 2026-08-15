@@ -142,6 +142,7 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
         "availability_text": availability_text,
         "launch_date": parse_availability_date(availability_text),
         "url": f"https://www.lego.com{product['pdpPath']}",
+        "image": product.get('primaryImage({"size":"THUMBNAIL"})'),
     }
 
 

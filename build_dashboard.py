@@ -98,8 +98,14 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
                 f'<div class="badge-circle"><span class="n">{pieces:,}</span><span class="u">PC</span></div>'
                 if pieces else ""
             )
+            image = e.get("image")
+            image_html = (
+                f'<img class="cal-card-img" src="{esc(image)}" alt="" loading="lazy">'
+                if image else '<div class="cal-card-img cal-card-img-empty"></div>'
+            )
             cards.append(f'''
               <a class="cal-card" href="{esc(e.get("url", "#"))}" target="_blank" rel="noopener">
+                {image_html}
                 <div class="cal-card-top">
                   <span class="cal-card-date">{esc(day_label)}</span>
                   <span class="theme-tag">{theme}</span>
@@ -203,8 +209,12 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
         confirm_mark = "&#10003;&#10003;" if v.get("brickfanatics_confirmed") else "&#10003;"
         confirm_title = "Confirmed by BrickRanker + Brick Fanatics" if v.get("brickfanatics_confirmed") else "BrickRanker only"
 
+        image = v.get("image")
+        image_html = f'<img class="row-thumb" src="{esc(image)}" alt="" loading="lazy">' if image else '<div class="row-thumb row-thumb-empty"></div>'
+
         rows.append(f'''
           <tr>
+            <td class="thumb-cell">{image_html}</td>
             <td class="mono">{esc(v.get("set_num"))}</td>
             <td>{esc(v.get("name"))}</td>
             <td><span class="theme-tag">{esc(v.get("theme"))}</span></td>
@@ -217,6 +227,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
         <table>
           <thead>
             <tr>
+              <th></th>
               <th>Set</th>
               <th>Name</th>
               <th>Theme</th>
@@ -572,6 +583,9 @@ a.cal-card {{
 a.cal-card:hover {{ border-color: var(--blue); transform: translateY(-1px); }}
 a.cal-card:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px; }}
 
+.cal-card-img {{ width: 100%; height: 120px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; }}
+.cal-card-img-empty {{ background: var(--paper); }}
+
 .cal-card-top {{ display: flex; justify-content: space-between; align-items: center; }}
 .cal-card-date {{
   font-family: 'Plex Mono', monospace;
@@ -633,6 +647,10 @@ thead th {{
 tbody td {{ padding: 8px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }}
 tbody tr:last-child td {{ border-bottom: none; }}
 tbody tr:hover {{ background: var(--paper); }}
+
+td.thumb-cell {{ padding: 6px 0 6px 14px; width: 44px; }}
+.row-thumb {{ width: 36px; height: 36px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 5px; display: block; }}
+.row-thumb-empty {{ background: var(--paper); }}
 
 .date-pill {{
   display: inline-flex;

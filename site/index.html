@@ -325,6 +325,9 @@ a.cal-card {
 a.cal-card:hover { border-color: var(--blue); transform: translateY(-1px); }
 a.cal-card:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
+.cal-card-img { width: 100%; height: 120px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; }
+.cal-card-img-empty { background: var(--paper); }
+
 .cal-card-top { display: flex; justify-content: space-between; align-items: center; }
 .cal-card-date {
   font-family: 'Plex Mono', monospace;
@@ -386,6 +389,10 @@ thead th {
 tbody td { padding: 8px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
 tbody tr:last-child td { border-bottom: none; }
 tbody tr:hover { background: var(--paper); }
+
+td.thumb-cell { padding: 6px 0 6px 14px; width: 44px; }
+.row-thumb { width: 36px; height: 36px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 5px; display: block; }
+.row-thumb-empty { background: var(--paper); }
 
 .date-pill {
   display: inline-flex;
@@ -457,7 +464,7 @@ footer.page-footer {
 <div class="statusbar">
   <div class="wordmark">LEGO<span>&bull;</span>INTEL</div>
   <div class="status-right">
-    <span>Updated <span class="mono">Aug 15, 3:39 PM</span></span>
+    <span>Updated <span class="mono">Aug 15, 3:44 PM</span></span>
     <span>Next run <span class="mono">6:00 PM</span></span>
     <button class="refresh" onclick="location.reload()">Refresh</button>
   </div>
@@ -500,6 +507,7 @@ footer.page-footer {
             </div>
             <div class="cal-cards">
               <a class="cal-card" href="https://www.lego.com/en-us/product/mini-hogwarts-castle-40975" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">AUG 29</span>
                   <span class="theme-tag">Harry Potter™</span>
@@ -519,6 +527,7 @@ footer.page-footer {
             </div>
             <div class="cal-cards">
               <a class="cal-card" href="https://www.lego.com/en-us/product/ayrton-senna-helmet-43024" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">LEGO® Editions</span>
@@ -530,6 +539,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/doctor-doom-bust-76345" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Marvel</span>
@@ -541,6 +551,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/golden-age-superman-and-batman-figures-40859" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">BrickHeadz</span>
@@ -552,6 +563,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/gremlins-gizmo-and-stripe-figures-40919" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">BrickHeadz</span>
@@ -563,6 +575,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-60510" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">City</span>
@@ -574,6 +587,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-42698" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Friends</span>
@@ -585,6 +599,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-75456" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Star Wars™</span>
@@ -596,6 +611,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-43298" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Disney™</span>
@@ -607,6 +623,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/advent-calendar-2026-76340" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Marvel</span>
@@ -618,6 +635,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/mayor-manor-11383" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">LEGO® Icons</span>
@@ -629,6 +647,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/nike-air-force-1-x-lego-set-43026" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Nike</span>
@@ -640,6 +659,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/shrek-series-71053" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Minifigures</span>
@@ -651,6 +671,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/minifigures-66815-66815" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Minifigures</span>
@@ -662,6 +683,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/spongebob-squarepants-figure-40858" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">BrickHeadz</span>
@@ -673,6 +695,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/spongebob-squarepants-bikini-bottom-11386" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">LEGO® Icons</span>
@@ -684,6 +707,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/star-trek-uss-enterprise-ncc-1701-bridge-11385" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">LEGO® Icons</span>
@@ -695,6 +719,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/the-ministry-of-magic-collectors-edition-76476" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
                   <span class="theme-tag">Harry Potter™</span>
@@ -714,6 +739,7 @@ footer.page-footer {
             </div>
             <div class="cal-cards">
               <a class="cal-card" href="https://www.lego.com/en-us/product/christmas-stocking-40958" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 1</span>
                   <span class="theme-tag">Uncategorized</span>
@@ -725,6 +751,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/iconic-trainer-moments-poke-ball-72154" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 1</span>
                   <span class="theme-tag">Pokémon</span>
@@ -736,6 +763,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/nevermore-academy-76788" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 1</span>
                   <span class="theme-tag">LEGO® Wednesday</span>
@@ -747,6 +775,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 1</span>
                   <span class="theme-tag">Pokémon</span>
@@ -758,6 +787,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/wednesday-backpack-76787" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 1</span>
                   <span class="theme-tag">LEGO® Wednesday</span>
@@ -769,6 +799,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 4</span>
                   <span class="theme-tag">Marvel</span>
@@ -780,6 +811,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/avengers-doomsday-new-avengers-tower-76352" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 4</span>
                   <span class="theme-tag">Marvel</span>
@@ -791,6 +823,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/avengers-doomsday-quinjet-76347" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 4</span>
                   <span class="theme-tag">Marvel</span>
@@ -802,6 +835,7 @@ footer.page-footer {
                 </div>
               </a>
               <a class="cal-card" href="https://www.lego.com/en-us/product/epic-battle-avengers-doomsday-76348" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">OCT 4</span>
                   <span class="theme-tag">Marvel</span>
@@ -821,6 +855,7 @@ footer.page-footer {
             </div>
             <div class="cal-cards">
               <a class="cal-card" href="https://www.lego.com/en-us/product/sagrada-familia-21065" target="_blank" rel="noopener">
+                <div class="cal-card-img cal-card-img-empty"></div>
                 <div class="cal-card-top">
                   <span class="cal-card-date">NOV 1</span>
                   <span class="theme-tag">Architecture</span>
@@ -2714,6 +2749,7 @@ footer.page-footer {
         <table>
           <thead>
             <tr>
+              <th></th>
               <th>Set</th>
               <th>Name</th>
               <th>Theme</th>
@@ -2723,6 +2759,7 @@ footer.page-footer {
           </thead>
           <tbody>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42154.webp" alt="" loading="lazy"></td>
             <td class="mono">42154-1</td>
             <td>2022 Ford GT</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -2730,6 +2767,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75429.webp" alt="" loading="lazy"></td>
             <td class="mono">75429-1</td>
             <td>AT-AT Driver Helmet</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -2737,6 +2775,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71440.webp" alt="" loading="lazy"></td>
             <td class="mono">71440-1</td>
             <td>Adventures with Interactive LEGO Luigi</td>
             <td><span class="theme-tag">Super Mario</span></td>
@@ -2744,6 +2783,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71441.webp" alt="" loading="lazy"></td>
             <td class="mono">71441-1</td>
             <td>Adventures with Interactive LEGO Peach</td>
             <td><span class="theme-tag">Super Mario</span></td>
@@ -2751,6 +2791,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">60465-1</td>
             <td>Air Ambulance</td>
             <td><span class="theme-tag">Town</span></td>
@@ -2758,6 +2799,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71836.webp" alt="" loading="lazy"></td>
             <td class="mono">71836-1</td>
             <td>Arc Dragon of Focus</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -2765,6 +2807,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40805.webp" alt="" loading="lazy"></td>
             <td class="mono">40805-1</td>
             <td>Arcade Machine</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -2772,6 +2815,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">60471-1</td>
             <td>Arctic Truck</td>
             <td><span class="theme-tag">Town</span></td>
@@ -2779,6 +2823,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43265.webp" alt="" loading="lazy"></td>
             <td class="mono">43265-1</td>
             <td>Arendelle Frozen Castle</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -2786,6 +2831,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43285.webp" alt="" loading="lazy"></td>
             <td class="mono">43285-1</td>
             <td>Ariel&#x27;s Magical Mini Palace</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -2793,6 +2839,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71839.webp" alt="" loading="lazy"></td>
             <td class="mono">71839-1</td>
             <td>Arin&#x27;s Spinjitzu Battle Mech</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -2800,6 +2847,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76300-1</td>
             <td>Arkham Asylum</td>
             <td><span class="theme-tag">Super Heroes DC</span></td>
@@ -2807,6 +2855,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77245.webp" alt="" loading="lazy"></td>
             <td class="mono">77245-1</td>
             <td>Aston Martin Aramco F1 AMR24…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -2814,6 +2863,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77259.webp" alt="" loading="lazy"></td>
             <td class="mono">77259-1</td>
             <td>Audi Revolut F1 Team R26…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -2821,6 +2871,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76325.webp" alt="" loading="lazy"></td>
             <td class="mono">76325-1</td>
             <td>Avengers: Age of Ultron Quinjet</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -2828,6 +2879,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76323.webp" alt="" loading="lazy"></td>
             <td class="mono">76323-1</td>
             <td>Avengers: Endgame Final Battle</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -2835,6 +2887,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76322.webp" alt="" loading="lazy"></td>
             <td class="mono">76322-1</td>
             <td>Avengers: Endgame Thor vs. Chitauri</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -2842,6 +2895,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77248.webp" alt="" loading="lazy"></td>
             <td class="mono">77248-1</td>
             <td>BWT Alpine F1 Team A524…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -2849,6 +2903,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">40814-1</td>
             <td>Baby Elephant in the Sky</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -2856,6 +2911,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42197.webp" alt="" loading="lazy"></td>
             <td class="mono">42197-1</td>
             <td>Backhoe Loader</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -2863,6 +2919,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10965.webp" alt="" loading="lazy"></td>
             <td class="mono">10965-1</td>
             <td>Bath Time Fun: Floating Animal…</td>
             <td><span class="theme-tag">Duplo</span></td>
@@ -2870,6 +2927,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76304-1</td>
             <td>Batman Forever Batmobile</td>
             <td><span class="theme-tag">Super Heroes DC</span></td>
@@ -2877,6 +2935,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76303.webp" alt="" loading="lazy"></td>
             <td class="mono">76303-1</td>
             <td>Batman Tumbler vs. Two-Face &amp;…</td>
             <td><span class="theme-tag">Super Heroes DC</span></td>
@@ -2884,6 +2943,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75428.webp" alt="" loading="lazy"></td>
             <td class="mono">75428-1</td>
             <td>Battle Droid with STAP</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -2891,6 +2951,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42699.webp" alt="" loading="lazy"></td>
             <td class="mono">42699-1</td>
             <td>Beach House with Seals</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -2898,6 +2959,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43263.webp" alt="" loading="lazy"></td>
             <td class="mono">43263-1</td>
             <td>Beauty and the Beast Castle</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -2905,6 +2967,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">40807-1</td>
             <td>Birthday Numbers</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -2912,6 +2975,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76784.webp" alt="" loading="lazy"></td>
             <td class="mono">76784-1</td>
             <td>Black Dahlia Flower</td>
             <td><span class="theme-tag">Wednesday</span></td>
@@ -2919,6 +2983,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77056.webp" alt="" loading="lazy"></td>
             <td class="mono">77056-1</td>
             <td>Blathers&#x27;s Museum Collection</td>
             <td><span class="theme-tag">Animal Crossing</span></td>
@@ -2926,6 +2991,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/11202.webp" alt="" loading="lazy"></td>
             <td class="mono">11202-1</td>
             <td>Bluey&#x27;s Beach &amp; Family Car…</td>
             <td><span class="theme-tag">Bluey</span></td>
@@ -2933,6 +2999,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76974-1</td>
             <td>Brick-Built Mosasaurus Boat Mission</td>
             <td><span class="theme-tag">Jurassic World</span></td>
@@ -2940,6 +3007,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75637.webp" alt="" loading="lazy"></td>
             <td class="mono">75637-1</td>
             <td>Buggy the Clown&#x27;s Circus Tent</td>
             <td><span class="theme-tag">One Piece</span></td>
@@ -2947,6 +3015,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75381.webp" alt="" loading="lazy"></td>
             <td class="mono">75381-1</td>
             <td>Buildable Droideka</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -2954,6 +3023,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">60466-1</td>
             <td>Bulldozer</td>
             <td><span class="theme-tag">Town</span></td>
@@ -2961,6 +3031,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40804.webp" alt="" loading="lazy"></td>
             <td class="mono">40804-1</td>
             <td>Bumblebee Robot &amp; Vehicle</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -2968,6 +3039,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60404.webp" alt="" loading="lazy"></td>
             <td class="mono">60404-1</td>
             <td>Burger Truck</td>
             <td><span class="theme-tag">Town</span></td>
@@ -2975,6 +3047,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42198.webp" alt="" loading="lazy"></td>
             <td class="mono">42198-1</td>
             <td>Bush Plane</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -2982,6 +3055,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76319-1</td>
             <td>Captain America vs. Thanos</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -2989,6 +3063,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60362.webp" alt="" loading="lazy"></td>
             <td class="mono">60362-1</td>
             <td>Car Wash</td>
             <td><span class="theme-tag">Town</span></td>
@@ -2996,6 +3071,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40752.webp" alt="" loading="lazy"></td>
             <td class="mono">40752-1</td>
             <td>Carl, Russell &amp; Kevin</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -3003,6 +3079,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42666-1</td>
             <td>Cat Birthday Party</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3010,6 +3087,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">60469-1</td>
             <td>Central Train Station</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3017,6 +3095,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">21360-1</td>
             <td>Charlie and the Chocolate Factory</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -3024,6 +3103,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40725.webp" alt="" loading="lazy"></td>
             <td class="mono">40725-1</td>
             <td>Cherry Blossoms</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -3031,6 +3111,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42205-1</td>
             <td>Chevrolet Corvette Stingray</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3038,6 +3119,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42217-1</td>
             <td>Chevrolet Corvette Stingray</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3045,6 +3127,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76449.webp" alt="" loading="lazy"></td>
             <td class="mono">76449-1</td>
             <td>Chomping Monster Book of Monsters</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -3052,6 +3135,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40743.webp" alt="" loading="lazy"></td>
             <td class="mono">40743-1</td>
             <td>Christmas Table Decoration</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3059,6 +3143,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75372.webp" alt="" loading="lazy"></td>
             <td class="mono">75372-1</td>
             <td>Clone Trooper &amp; Battle Droid…</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -3066,6 +3151,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71854.webp" alt="" loading="lazy"></td>
             <td class="mono">71854-1</td>
             <td>Cole&#x27;s Mission Mech</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3073,6 +3159,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42674-1</td>
             <td>Comic Book and Game Shop</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3080,6 +3167,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42661-1</td>
             <td>Costume Party</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3087,6 +3175,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71512.webp" alt="" loading="lazy"></td>
             <td class="mono">71512-1</td>
             <td>Crocodile Submarine</td>
             <td><span class="theme-tag">DreamZzz</span></td>
@@ -3094,6 +3183,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">43277-1</td>
             <td>Cruella De Vil&#x27;s Car</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3101,6 +3191,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">60457-1</td>
             <td>Custom Police Garage</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3108,6 +3199,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77002.webp" alt="" loading="lazy"></td>
             <td class="mono">77002-1</td>
             <td>Cyclone vs. Metal Sonic</td>
             <td><span class="theme-tag">Sonic the Hedgehog</span></td>
@@ -3115,6 +3207,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75412.webp" alt="" loading="lazy"></td>
             <td class="mono">75412-1</td>
             <td>Death Trooper &amp; Night Trooper…</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -3122,6 +3215,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40816.webp" alt="" loading="lazy"></td>
             <td class="mono">40816-1</td>
             <td>Decorative Easter Egg</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3129,6 +3223,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42201.webp" alt="" loading="lazy"></td>
             <td class="mono">42201-1</td>
             <td>Deep-Sea Research Submarine</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3136,6 +3231,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71514.webp" alt="" loading="lazy"></td>
             <td class="mono">71514-1</td>
             <td>Dino Jet</td>
             <td><span class="theme-tag">DreamZzz</span></td>
@@ -3143,6 +3239,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76969.webp" alt="" loading="lazy"></td>
             <td class="mono">76969-1</td>
             <td>Dinosaur Fossils: Triceratops Skull</td>
             <td><span class="theme-tag">Jurassic World</span></td>
@@ -3150,6 +3247,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76968.webp" alt="" loading="lazy"></td>
             <td class="mono">76968-1</td>
             <td>Dinosaur Fossils: Tyrannosaurus rex</td>
             <td><span class="theme-tag">Jurassic World</span></td>
@@ -3157,6 +3255,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42677.webp" alt="" loading="lazy"></td>
             <td class="mono">42677-1</td>
             <td>Dog Treats Bakery</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3164,6 +3263,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60407.webp" alt="" loading="lazy"></td>
             <td class="mono">60407-1</td>
             <td>Double-Decker Sightseeing Bus</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3171,6 +3271,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60423.webp" alt="" loading="lazy"></td>
             <td class="mono">60423-1</td>
             <td>Downtown Streetcar and Station</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3178,6 +3279,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71826.webp" alt="" loading="lazy"></td>
             <td class="mono">71826-1</td>
             <td>Dragon Spinjitzu Battle Pack</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3185,6 +3287,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40884.webp" alt="" loading="lazy"></td>
             <td class="mono">40884-1</td>
             <td>Drift &amp; Raven</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -3192,6 +3295,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">77076-1</td>
             <td>Durrr Burger Restaurant</td>
             <td><span class="theme-tag">Fortnite</span></td>
@@ -3199,6 +3303,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40808.webp" alt="" loading="lazy"></td>
             <td class="mono">40808-1</td>
             <td>Easter Bunny and Chick Egg…</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3206,6 +3311,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40797.webp" alt="" loading="lazy"></td>
             <td class="mono">40797-1</td>
             <td>Eeyore</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -3213,6 +3319,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40879.webp" alt="" loading="lazy"></td>
             <td class="mono">40879-1</td>
             <td>Eleven, Max, Demogorgon and Holly…</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -3220,6 +3327,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">75685-1</td>
             <td>Emerald City Wall Art</td>
             <td><span class="theme-tag">Wicked</span></td>
@@ -3227,6 +3335,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40516.webp" alt="" loading="lazy"></td>
             <td class="mono">40516-1</td>
             <td>Everyone Is Awesome</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -3234,6 +3343,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/31136.webp" alt="" loading="lazy"></td>
             <td class="mono">31136-1</td>
             <td>Exotic Parrot</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -3241,6 +3351,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">60470-1</td>
             <td>Explorer Train</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3248,6 +3359,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60493.webp" alt="" loading="lazy"></td>
             <td class="mono">60493-1</td>
             <td>F1 Display Truck with Audi…</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3255,6 +3367,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60445.webp" alt="" loading="lazy"></td>
             <td class="mono">60445-1</td>
             <td>F1 Truck with RB20 &amp;…</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3262,6 +3375,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60464.webp" alt="" loading="lazy"></td>
             <td class="mono">60464-1</td>
             <td>F1 Williams Racing &amp; Haas…</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3269,6 +3383,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/41843.webp" alt="" loading="lazy"></td>
             <td class="mono">41843-1</td>
             <td>Family Christmas Tree Decoration</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3276,6 +3391,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42673-1</td>
             <td>Family Holiday Beach Resort</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3283,6 +3399,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21346.webp" alt="" loading="lazy"></td>
             <td class="mono">21346-1</td>
             <td>Family Tree</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -3290,6 +3407,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76316.webp" alt="" loading="lazy"></td>
             <td class="mono">76316-1</td>
             <td>Fantastic Four vs. Galactus Construction…</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -3297,6 +3415,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42204-1</td>
             <td>Fast &amp; Furious Toyota Supra…</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3304,6 +3423,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77242.webp" alt="" loading="lazy"></td>
             <td class="mono">77242-1</td>
             <td>Ferrari SF-24 F1 Race Car</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -3311,6 +3431,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40678.webp" alt="" loading="lazy"></td>
             <td class="mono">40678-1</td>
             <td>Festival Calendar</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3318,6 +3439,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60463.webp" alt="" loading="lazy"></td>
             <td class="mono">60463-1</td>
             <td>Fire Engine</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3325,6 +3447,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77051.webp" alt="" loading="lazy"></td>
             <td class="mono">77051-1</td>
             <td>Fly with Dodo Airlines</td>
             <td><span class="theme-tag">Animal Crossing</span></td>
@@ -3332,6 +3455,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/80118.webp" alt="" loading="lazy"></td>
             <td class="mono">80118-1</td>
             <td>Fortune Firecracker</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3339,6 +3463,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71508.webp" alt="" loading="lazy"></td>
             <td class="mono">71508-1</td>
             <td>Fox Guardian Mech</td>
             <td><span class="theme-tag">DreamZzz</span></td>
@@ -3346,6 +3471,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42663.webp" alt="" loading="lazy"></td>
             <td class="mono">42663-1</td>
             <td>Friendship Camper Van Adventure</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3353,6 +3479,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42659-1</td>
             <td>Friendship Road-Trip Travel Car</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3360,6 +3487,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42686.webp" alt="" loading="lazy"></td>
             <td class="mono">42686-1</td>
             <td>Fun Indoor Playground</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3367,6 +3495,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10796.webp" alt="" loading="lazy"></td>
             <td class="mono">10796-1</td>
             <td>Gabby&#x27;s Kitty Care Ear</td>
             <td><span class="theme-tag">Gabby&#x27;s Dollhouse</span></td>
@@ -3374,6 +3503,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/80119.webp" alt="" loading="lazy"></td>
             <td class="mono">80119-1</td>
             <td>Galloping Horse Canvas</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3381,6 +3511,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75683.webp" alt="" loading="lazy"></td>
             <td class="mono">75683-1</td>
             <td>Glinda &amp; Elphaba&#x27;s Dormitory</td>
             <td><span class="theme-tag">Wicked</span></td>
@@ -3388,6 +3519,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60400.webp" alt="" loading="lazy"></td>
             <td class="mono">60400-1</td>
             <td>Go-Karts and Race Drivers</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3395,6 +3527,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77058.webp" alt="" loading="lazy"></td>
             <td class="mono">77058-1</td>
             <td>Goldie&#x27;s Cosy House</td>
             <td><span class="theme-tag">Animal Crossing</span></td>
@@ -3402,6 +3535,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21323.webp" alt="" loading="lazy"></td>
             <td class="mono">21323-1</td>
             <td>Grand Piano</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -3409,6 +3543,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40638.webp" alt="" loading="lazy"></td>
             <td class="mono">40638-1</td>
             <td>Heart Ornament</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3416,6 +3551,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42679.webp" alt="" loading="lazy"></td>
             <td class="mono">42679-1</td>
             <td>Heartlake City Bunny Hotel</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3423,6 +3559,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42685.webp" alt="" loading="lazy"></td>
             <td class="mono">42685-1</td>
             <td>Heartlake City Fashion Show</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3430,6 +3567,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42644.webp" alt="" loading="lazy"></td>
             <td class="mono">42644-1</td>
             <td>Heartlake City Ice Cream Truck</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3437,6 +3575,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42680.webp" alt="" loading="lazy"></td>
             <td class="mono">42680-1</td>
             <td>Heartlake City Mini Supermarket</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3444,6 +3583,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42649.webp" alt="" loading="lazy"></td>
             <td class="mono">42649-1</td>
             <td>Heartlake City Sweet Shop</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3451,6 +3591,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42689.webp" alt="" loading="lazy"></td>
             <td class="mono">42689-1</td>
             <td>Heartlake City Friends Club House</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3458,6 +3599,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">43272-1</td>
             <td>Heihei</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3465,6 +3607,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21060.webp" alt="" loading="lazy"></td>
             <td class="mono">21060-1</td>
             <td>Himeji Castle</td>
             <td><span class="theme-tag">Architecture</span></td>
@@ -3472,6 +3615,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76442.webp" alt="" loading="lazy"></td>
             <td class="mono">76442-1</td>
             <td>Hogwarts Castle: Charms Class</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -3479,6 +3623,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76447.webp" alt="" loading="lazy"></td>
             <td class="mono">76447-1</td>
             <td>Hogwarts Castle: Flying Lessons</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -3486,6 +3631,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76445-1</td>
             <td>Hogwarts Castle: Herbology Class</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -3493,6 +3639,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42695.webp" alt="" loading="lazy"></td>
             <td class="mono">42695-1</td>
             <td>Horse &amp; Baby Foal Trailer</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -3500,6 +3647,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60363.webp" alt="" loading="lazy"></td>
             <td class="mono">60363-1</td>
             <td>Ice Cream Parlour</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3507,6 +3655,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75394.webp" alt="" loading="lazy"></td>
             <td class="mono">75394-1</td>
             <td>Imperial Star Destroyer</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -3514,6 +3663,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">72043-1</td>
             <td>Interactive LEGO Mario &amp; Standard…</td>
             <td><span class="theme-tag">Super Mario</span></td>
@@ -3521,6 +3671,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60430.webp" alt="" loading="lazy"></td>
             <td class="mono">60430-1</td>
             <td>Interstellar Spaceship</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3528,6 +3679,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76320-1</td>
             <td>Iron Man &amp; War Machine…</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -3535,6 +3687,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76327.webp" alt="" loading="lazy"></td>
             <td class="mono">76327-1</td>
             <td>Iron Man MK4 Bust</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -3542,6 +3695,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76315.webp" alt="" loading="lazy"></td>
             <td class="mono">76315-1</td>
             <td>Iron Man&#x27;s Laboratory: Hall of…</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -3549,6 +3703,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76326.webp" alt="" loading="lazy"></td>
             <td class="mono">76326-1</td>
             <td>Iron Spider-Man Bust</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -3556,6 +3711,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75397.webp" alt="" loading="lazy"></td>
             <td class="mono">75397-1</td>
             <td>Jabba&#x27;s Sail Barge</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -3563,6 +3719,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40822.webp" alt="" loading="lazy"></td>
             <td class="mono">40822-1</td>
             <td>Jack-O&#x27;-Lantern Pickup Truck</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -3570,6 +3727,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71856.webp" alt="" loading="lazy"></td>
             <td class="mono">71856-1</td>
             <td>Jay&#x27;s Transforming Car</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3577,6 +3735,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60489.webp" alt="" loading="lazy"></td>
             <td class="mono">60489-1</td>
             <td>Jet vs. Car</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3584,6 +3743,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40749.webp" alt="" loading="lazy"></td>
             <td class="mono">40749-1</td>
             <td>Joy, Sadness &amp; Anxiety</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -3591,6 +3751,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77052.webp" alt="" loading="lazy"></td>
             <td class="mono">77052-1</td>
             <td>K.K.&#x27;s Concert at the Plaza</td>
             <td><span class="theme-tag">Animal Crossing</span></td>
@@ -3598,6 +3759,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71808.webp" alt="" loading="lazy"></td>
             <td class="mono">71808-1</td>
             <td>Kai&#x27;s Elemental Fire Mech</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3605,6 +3767,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71830.webp" alt="" loading="lazy"></td>
             <td class="mono">71830-1</td>
             <td>Kai&#x27;s Mech Storm Rider</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3612,6 +3775,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71838.webp" alt="" loading="lazy"></td>
             <td class="mono">71838-1</td>
             <td>Kai&#x27;s Motorcycle Speed Race</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3619,6 +3783,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71780.webp" alt="" loading="lazy"></td>
             <td class="mono">71780-1</td>
             <td>Kai&#x27;s Ninja Race Car EVO</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3626,6 +3791,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">43258-1</td>
             <td>Kakamora Barge</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3633,6 +3799,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42170.webp" alt="" loading="lazy"></td>
             <td class="mono">42170-1</td>
             <td>Kawasaki Ninja H2R</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3640,6 +3807,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">31216-1</td>
             <td>Keith Haring - Dancing Figures</td>
             <td><span class="theme-tag">Art</span></td>
@@ -3647,6 +3815,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77077.webp" alt="" loading="lazy"></td>
             <td class="mono">77077-1</td>
             <td>Klombo</td>
             <td><span class="theme-tag">Fortnite</span></td>
@@ -3654,6 +3823,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76446-1</td>
             <td>Knight Bus Adventure</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -3661,6 +3831,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77005.webp" alt="" loading="lazy"></td>
             <td class="mono">77005-1</td>
             <td>Knuckles vs. Dr. Eggman Egg…</td>
             <td><span class="theme-tag">Sonic the Hedgehog</span></td>
@@ -3668,6 +3839,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42173.webp" alt="" loading="lazy"></td>
             <td class="mono">42173-1</td>
             <td>Koenigsegg Jesko Absolut Grey Hypercar</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3675,6 +3847,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75415.webp" alt="" loading="lazy"></td>
             <td class="mono">75415-1</td>
             <td>Kylo Ren Helmet</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -3682,6 +3855,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75406.webp" alt="" loading="lazy"></td>
             <td class="mono">75406-1</td>
             <td>Kylo Ren&#x27;s Command Shuttle</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -3689,6 +3863,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10337.webp" alt="" loading="lazy"></td>
             <td class="mono">10337-1</td>
             <td>Lamborghini Countach 5000 Quattrovalvole</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -3696,6 +3871,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42214-1</td>
             <td>Lamborghini Revuelto</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3703,6 +3879,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10363.webp" alt="" loading="lazy"></td>
             <td class="mono">10363-1</td>
             <td>Leonardo da Vinci&#x27;s Flying Machine</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -3710,6 +3887,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43268.webp" alt="" loading="lazy"></td>
             <td class="mono">43268-1</td>
             <td>Lilo and Stitch Beach House</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3717,6 +3895,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71850.webp" alt="" loading="lazy"></td>
             <td class="mono">71850-1</td>
             <td>Lloyd vs. Earth Monster Spinner</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3724,6 +3903,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71829.webp" alt="" loading="lazy"></td>
             <td class="mono">71829-1</td>
             <td>Lloyd&#x27;s Green Forest Dragon</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -3731,6 +3911,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60483.webp" alt="" loading="lazy"></td>
             <td class="mono">60483-1</td>
             <td>Loader</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3738,6 +3919,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40220.webp" alt="" loading="lazy"></td>
             <td class="mono">40220-1</td>
             <td>London Bus</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -3745,6 +3927,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40795.webp" alt="" loading="lazy"></td>
             <td class="mono">40795-1</td>
             <td>Luke Skywalker (Rebel Pilot)</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -3752,6 +3935,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">40802-1</td>
             <td>Luna Lovegood &amp; Thestral</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -3759,6 +3943,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76467.webp" alt="" loading="lazy"></td>
             <td class="mono">76467-1</td>
             <td>Luna Lovegood&#x27;s House</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -3766,6 +3951,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76313.webp" alt="" loading="lazy"></td>
             <td class="mono">76313-1</td>
             <td>MARVEL Logo</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -3773,6 +3959,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/31171.webp" alt="" loading="lazy"></td>
             <td class="mono">31171-1</td>
             <td>Majestic Rhino</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -3780,6 +3967,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43262.webp" alt="" loading="lazy"></td>
             <td class="mono">43262-1</td>
             <td>Maleficent&#x27;s and Cruella De Vil&#x27;s…</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3787,6 +3975,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76453.webp" alt="" loading="lazy"></td>
             <td class="mono">76453-1</td>
             <td>Malfoy Manor</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -3794,6 +3983,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75410.webp" alt="" loading="lazy"></td>
             <td class="mono">75410-1</td>
             <td>Mando and Grogu&#x27;s N-1 Starfighter</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -3801,6 +3991,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76433.webp" alt="" loading="lazy"></td>
             <td class="mono">76433-1</td>
             <td>Mandrake</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -3808,6 +3999,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42180.webp" alt="" loading="lazy"></td>
             <td class="mono">42180-1</td>
             <td>Mars Crew Exploration Rover</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3815,6 +4007,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">71492-1</td>
             <td>Mateo&#x27;s Fire Chameleon</td>
             <td><span class="theme-tag">DreamZzz</span></td>
@@ -3822,6 +4015,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">71499-1</td>
             <td>Mateo&#x27;s Spray Paint Truck</td>
             <td><span class="theme-tag">DreamZzz</span></td>
@@ -3829,6 +4023,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">77251-1</td>
             <td>McLaren MCL38 F1 Team Race…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -3836,6 +4031,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77078.webp" alt="" loading="lazy"></td>
             <td class="mono">77078-1</td>
             <td>Mecha Team Leader</td>
             <td><span class="theme-tag">Fortnite</span></td>
@@ -3843,6 +4039,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42171.webp" alt="" loading="lazy"></td>
             <td class="mono">42171-1</td>
             <td>Mercedes-AMG F1 W14 E Performance</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3850,6 +4047,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76924.webp" alt="" loading="lazy"></td>
             <td class="mono">76924-1</td>
             <td>Mercedes-AMG G 63 &amp; Mercedes-AMG…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -3857,6 +4055,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77244.webp" alt="" loading="lazy"></td>
             <td class="mono">77244-1</td>
             <td>Mercedes-AMG PETRONAS W15 F1 Race…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -3864,6 +4063,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42177.webp" alt="" loading="lazy"></td>
             <td class="mono">42177-1</td>
             <td>Mercedes-Benz G 500 PROFESSIONAL Line</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3871,6 +4071,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">40801-1</td>
             <td>Mike, Dustin, Lucas and Will</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -3878,6 +4079,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76329.webp" alt="" loading="lazy"></td>
             <td class="mono">76329-1</td>
             <td>Miles Morales&#x27; Mask</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -3885,6 +4087,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43284.webp" alt="" loading="lazy"></td>
             <td class="mono">43284-1</td>
             <td>Mini Anna &amp; Elsa</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3892,6 +4095,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">43278-1</td>
             <td>Mini Arendelle Castle &amp; Elsa&#x27;s…</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3899,6 +4103,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43291.webp" alt="" loading="lazy"></td>
             <td class="mono">43291-1</td>
             <td>Mini Belle &amp; Tiana with…</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3906,6 +4111,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40708.webp" alt="" loading="lazy"></td>
             <td class="mono">40708-1</td>
             <td>Mini Disney Ariel&#x27;s Castle</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3913,6 +4119,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40720.webp" alt="" loading="lazy"></td>
             <td class="mono">40720-1</td>
             <td>Mini Disney Sleeping Beauty Castle</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3920,6 +4127,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43303.webp" alt="" loading="lazy"></td>
             <td class="mono">43303-1</td>
             <td>Mini Jasmine &amp; Rapunzel</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3927,6 +4135,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43270.webp" alt="" loading="lazy"></td>
             <td class="mono">43270-1</td>
             <td>Moana&#x27;s Adventure Canoe</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3934,6 +4143,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43260.webp" alt="" loading="lazy"></td>
             <td class="mono">43260-1</td>
             <td>Moana&#x27;s Island Fun</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -3941,6 +4151,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77250.webp" alt="" loading="lazy"></td>
             <td class="mono">77250-1</td>
             <td>MoneyGram Haas F1 Team VF-24…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -3948,6 +4159,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42199.webp" alt="" loading="lazy"></td>
             <td class="mono">42199-1</td>
             <td>Monster Jam DIGatron Pull-Back</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3955,6 +4167,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42200.webp" alt="" loading="lazy"></td>
             <td class="mono">42200-1</td>
             <td>Monster Jam ThunderROARus Pull-Back</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3962,6 +4175,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60402.webp" alt="" loading="lazy"></td>
             <td class="mono">60402-1</td>
             <td>Monster Truck</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3969,6 +4183,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76786.webp" alt="" loading="lazy"></td>
             <td class="mono">76786-1</td>
             <td>Morticia&#x27;s Cottage</td>
             <td><span class="theme-tag">Wednesday</span></td>
@@ -3976,6 +4191,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60491.webp" alt="" loading="lazy"></td>
             <td class="mono">60491-1</td>
             <td>Motorcycle Transporter</td>
             <td><span class="theme-tag">Town</span></td>
@@ -3983,6 +4199,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42182.webp" alt="" loading="lazy"></td>
             <td class="mono">42182-1</td>
             <td>NASA Apollo Lunar Roving Vehicle…</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -3990,6 +4207,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10341.webp" alt="" loading="lazy"></td>
             <td class="mono">10341-1</td>
             <td>NASA Artemis Space Launch System</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -3997,6 +4215,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76935.webp" alt="" loading="lazy"></td>
             <td class="mono">76935-1</td>
             <td>NASCAR Next Gen Chevrolet Camaro…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -4004,6 +4223,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71799.webp" alt="" loading="lazy"></td>
             <td class="mono">71799-1</td>
             <td>NINJAGO City Markets</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4011,6 +4231,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10326.webp" alt="" loading="lazy"></td>
             <td class="mono">10326-1</td>
             <td>Natural History Museum</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -4018,6 +4239,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21584.webp" alt="" loading="lazy"></td>
             <td class="mono">21584-1</td>
             <td>Nether &amp; End Portal Journey</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4025,6 +4247,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71513.webp" alt="" loading="lazy"></td>
             <td class="mono">71513-1</td>
             <td>Nightmare Scorpion Digger</td>
             <td><span class="theme-tag">DreamZzz</span></td>
@@ -4032,6 +4255,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">71500-1</td>
             <td>Nightmare Shark Submarine</td>
             <td><span class="theme-tag">DreamZzz</span></td>
@@ -4039,6 +4263,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43021.webp" alt="" loading="lazy"></td>
             <td class="mono">43021-1</td>
             <td>Nike Dunk Trickshot</td>
             <td><span class="theme-tag">Nike</span></td>
@@ -4046,6 +4271,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43010.webp" alt="" loading="lazy"></td>
             <td class="mono">43010-1</td>
             <td>Nike Slam Dunk</td>
             <td><span class="theme-tag">Nike</span></td>
@@ -4053,6 +4279,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71831.webp" alt="" loading="lazy"></td>
             <td class="mono">71831-1</td>
             <td>Ninja Spinjitzu Temple</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4060,6 +4287,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71857.webp" alt="" loading="lazy"></td>
             <td class="mono">71857-1</td>
             <td>Ninja Vehicle Tree House Battle</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4067,6 +4295,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71849.webp" alt="" loading="lazy"></td>
             <td class="mono">71849-1</td>
             <td>Nya vs. Mutation Monster Spinner</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4074,6 +4303,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60447.webp" alt="" loading="lazy"></td>
             <td class="mono">60447-1</td>
             <td>Off-Road Mountain Truck</td>
             <td><span class="theme-tag">Town</span></td>
@@ -4081,6 +4311,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40803.webp" alt="" loading="lazy"></td>
             <td class="mono">40803-1</td>
             <td>Optimus Prime Robot &amp; Vehicle</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -4088,6 +4319,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77243.webp" alt="" loading="lazy"></td>
             <td class="mono">77243-1</td>
             <td>Oracle Red Bull Racing RB20…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -4095,6 +4327,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42648-1</td>
             <td>Panda Sanctuary</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -4102,6 +4335,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60337.webp" alt="" loading="lazy"></td>
             <td class="mono">60337-1</td>
             <td>Passenger Express Train</td>
             <td><span class="theme-tag">Town</span></td>
@@ -4109,6 +4343,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">77075-1</td>
             <td>Peely &amp; Sparkplug&#x27;s Camp</td>
             <td><span class="theme-tag">Fortnite</span></td>
@@ -4116,6 +4351,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10434.webp" alt="" loading="lazy"></td>
             <td class="mono">10434-1</td>
             <td>Peppa Pig Supermarket</td>
             <td><span class="theme-tag">Duplo</span></td>
@@ -4123,6 +4359,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42650.webp" alt="" loading="lazy"></td>
             <td class="mono">42650-1</td>
             <td>Pet Accessories Shop</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -4130,6 +4367,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42678.webp" alt="" loading="lazy"></td>
             <td class="mono">42678-1</td>
             <td>Pet Accessories Van</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -4137,6 +4375,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76317.webp" alt="" loading="lazy"></td>
             <td class="mono">76317-1</td>
             <td>Peter Parker&#x27;s Apartment</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -4144,6 +4383,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42671-1</td>
             <td>Plant Café &amp; Flower Shop</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -4151,6 +4391,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40722.webp" alt="" loading="lazy"></td>
             <td class="mono">40722-1</td>
             <td>Play with Braille - German…</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -4158,6 +4399,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40723.webp" alt="" loading="lazy"></td>
             <td class="mono">40723-1</td>
             <td>Play with Braille - Italian…</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -4165,6 +4407,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40724.webp" alt="" loading="lazy"></td>
             <td class="mono">40724-1</td>
             <td>Play with Braille - Spanish…</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -4172,6 +4415,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40656.webp" alt="" loading="lazy"></td>
             <td class="mono">40656-1</td>
             <td>Play with Braille – English…</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -4179,6 +4423,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40655.webp" alt="" loading="lazy"></td>
             <td class="mono">40655-1</td>
             <td>Play with Braille – French…</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -4186,6 +4431,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/11201.webp" alt="" loading="lazy"></td>
             <td class="mono">11201-1</td>
             <td>Playground Fun with Bluey and…</td>
             <td><span class="theme-tag">Bluey</span></td>
@@ -4193,6 +4439,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75400.webp" alt="" loading="lazy"></td>
             <td class="mono">75400-1</td>
             <td>Plo Koon&#x27;s Jedi Starfighter Microfighter</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4200,6 +4447,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10370.webp" alt="" loading="lazy"></td>
             <td class="mono">10370-1</td>
             <td>Poinsettia</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -4207,6 +4455,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21345.webp" alt="" loading="lazy"></td>
             <td class="mono">21345-1</td>
             <td>Polaroid OneStep SX-70 Camera</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -4214,6 +4463,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60312.webp" alt="" loading="lazy"></td>
             <td class="mono">60312-1</td>
             <td>Police Car</td>
             <td><span class="theme-tag">Town</span></td>
@@ -4221,6 +4471,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60419.webp" alt="" loading="lazy"></td>
             <td class="mono">60419-1</td>
             <td>Police Prison Island</td>
             <td><span class="theme-tag">Town</span></td>
@@ -4228,6 +4479,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60316.webp" alt="" loading="lazy"></td>
             <td class="mono">60316-1</td>
             <td>Police Station</td>
             <td><span class="theme-tag">Town</span></td>
@@ -4235,6 +4487,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60481.webp" alt="" loading="lazy"></td>
             <td class="mono">60481-1</td>
             <td>Police Truck</td>
             <td><span class="theme-tag">Town</span></td>
@@ -4242,6 +4495,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42176.webp" alt="" loading="lazy"></td>
             <td class="mono">42176-1</td>
             <td>Porsche GT4 e-Performance Race Car</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -4249,6 +4503,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">43267-1</td>
             <td>Princess Castle &amp; Royal Pets</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -4256,6 +4511,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76451.webp" alt="" loading="lazy"></td>
             <td class="mono">76451-1</td>
             <td>Privet Drive: Aunt Marge&#x27;s Visit</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -4263,6 +4519,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42665-1</td>
             <td>Puppy Playground</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -4270,6 +4527,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76452-1</td>
             <td>Quality Quidditch Supplies &amp; Ice…</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -4277,6 +4535,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76972-1</td>
             <td>Raptor Off-Road Escape</td>
             <td><span class="theme-tag">Jurassic World</span></td>
@@ -4284,6 +4543,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75399.webp" alt="" loading="lazy"></td>
             <td class="mono">75399-1</td>
             <td>Rebel U-wing Starfighter</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4291,6 +4551,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/31172.webp" alt="" loading="lazy"></td>
             <td class="mono">31172-1</td>
             <td>Record Player with Flowers</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4298,6 +4559,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60495.webp" alt="" loading="lazy"></td>
             <td class="mono">60495-1</td>
             <td>Recycling Truck</td>
             <td><span class="theme-tag">Town</span></td>
@@ -4305,6 +4567,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21347.webp" alt="" loading="lazy"></td>
             <td class="mono">21347-1</td>
             <td>Red London Telephone Box</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -4312,6 +4575,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75413.webp" alt="" loading="lazy"></td>
             <td class="mono">75413-1</td>
             <td>Republic Juggernaut</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4319,6 +4583,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/31148.webp" alt="" loading="lazy"></td>
             <td class="mono">31148-1</td>
             <td>Retro Roller Skate</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4326,6 +4591,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">31174-1</td>
             <td>Retro Telephone</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4333,6 +4599,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21356.webp" alt="" loading="lazy"></td>
             <td class="mono">21356-1</td>
             <td>River Steamboat</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -4340,6 +4607,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71840.webp" alt="" loading="lazy"></td>
             <td class="mono">71840-1</td>
             <td>Rogue vs. Drix Race Car…</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4347,6 +4615,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">10351-1</td>
             <td>Sherlock Holmes: Book Nook</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -4354,6 +4623,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/72045.webp" alt="" loading="lazy"></td>
             <td class="mono">72045-1</td>
             <td>Shy Guy &amp; P-Wing</td>
             <td><span class="theme-tag">Super Mario</span></td>
@@ -4361,6 +4631,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77118.webp" alt="" loading="lazy"></td>
             <td class="mono">77118-1</td>
             <td>Silver&#x27;s Car vs. Knuckles&#x27; Monster…</td>
             <td><span class="theme-tag">Sonic the Hedgehog</span></td>
@@ -4368,6 +4639,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40812.webp" alt="" loading="lazy"></td>
             <td class="mono">40812-1</td>
             <td>Snowman Ornaments</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -4375,6 +4647,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/60490.webp" alt="" loading="lazy"></td>
             <td class="mono">60490-1</td>
             <td>Snowplough</td>
             <td><span class="theme-tag">Town</span></td>
@@ -4382,6 +4655,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77001.webp" alt="" loading="lazy"></td>
             <td class="mono">77001-1</td>
             <td>Sonic&#x27;s Campfire Clash</td>
             <td><span class="theme-tag">Sonic the Hedgehog</span></td>
@@ -4389,6 +4663,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77117.webp" alt="" loading="lazy"></td>
             <td class="mono">77117-1</td>
             <td>Sonic: Speedster Lightning</td>
             <td><span class="theme-tag">Sonic the Hedgehog</span></td>
@@ -4396,6 +4671,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/31378.webp" alt="" loading="lazy"></td>
             <td class="mono">31378-1</td>
             <td>Space Exploration Telescope</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4403,6 +4679,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76321-1</td>
             <td>Spider-Man vs. Doc Ock Subway…</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -4410,6 +4687,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76324.webp" alt="" loading="lazy"></td>
             <td class="mono">76324-1</td>
             <td>Spider-Man vs. Oscorp</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -4417,6 +4695,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76309.webp" alt="" loading="lazy"></td>
             <td class="mono">76309-1</td>
             <td>Spider-Man vs. Venom Muscle Car</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -4424,6 +4703,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/11200.webp" alt="" loading="lazy"></td>
             <td class="mono">11200-1</td>
             <td>Spidey and Gobby&#x27;s Raptor Battle…</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -4431,6 +4711,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/11207.webp" alt="" loading="lazy"></td>
             <td class="mono">11207-1</td>
             <td>Spidey: Underwater Vehicles</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -4438,6 +4719,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/11198.webp" alt="" loading="lazy"></td>
             <td class="mono">11198-1</td>
             <td>Spin and Electro Dinosaur Vehicle…</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -4445,6 +4727,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77053.webp" alt="" loading="lazy"></td>
             <td class="mono">77053-1</td>
             <td>Stargazing with Celeste</td>
             <td><span class="theme-tag">Animal Crossing</span></td>
@@ -4452,6 +4735,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40674.webp" alt="" loading="lazy"></td>
             <td class="mono">40674-1</td>
             <td>Stitch</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -4459,6 +4743,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43249.webp" alt="" loading="lazy"></td>
             <td class="mono">43249-1</td>
             <td>Stitch</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -4466,6 +4751,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10309.webp" alt="" loading="lazy"></td>
             <td class="mono">10309-1</td>
             <td>Succulents</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -4473,6 +4759,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40824.webp" alt="" loading="lazy"></td>
             <td class="mono">40824-1</td>
             <td>Sweetheart Tweety Bird</td>
             <td><span class="theme-tag">Seasonal</span></td>
@@ -4480,6 +4767,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75382.webp" alt="" loading="lazy"></td>
             <td class="mono">75382-1</td>
             <td>TIE Interceptor</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4487,6 +4775,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75387.webp" alt="" loading="lazy"></td>
             <td class="mono">75387-1</td>
             <td>Tantive IV Boarding Diorama</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4494,6 +4783,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">77006-1</td>
             <td>Team Sonic Command Truck</td>
             <td><span class="theme-tag">Sonic the Hedgehog</span></td>
@@ -4501,6 +4791,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21269.webp" alt="" loading="lazy"></td>
             <td class="mono">21269-1</td>
             <td>The Armadillo Mine Expedition</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4508,6 +4799,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21268.webp" alt="" loading="lazy"></td>
             <td class="mono">21268-1</td>
             <td>The Baby Pig House</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4515,6 +4807,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76437.webp" alt="" loading="lazy"></td>
             <td class="mono">76437-1</td>
             <td>The Burrow - Collectors&#x27; Edition</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -4522,6 +4815,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75389.webp" alt="" loading="lazy"></td>
             <td class="mono">75389-1</td>
             <td>The Dark Falcon</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4529,6 +4823,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">21279-1</td>
             <td>The Enderman Tower</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4536,6 +4831,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21355.webp" alt="" loading="lazy"></td>
             <td class="mono">21355-1</td>
             <td>The Evolution of STEM</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -4543,6 +4839,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">71846-1</td>
             <td>The Fire Knight Mech</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4550,6 +4847,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75414.webp" alt="" loading="lazy"></td>
             <td class="mono">75414-1</td>
             <td>The Force Burner Snowspeeder</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4557,6 +4855,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21273.webp" alt="" loading="lazy"></td>
             <td class="mono">21273-1</td>
             <td>The Ghast Balloon Village Attack</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4564,6 +4863,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">40791-1</td>
             <td>The Goblet of Fire Figures</td>
             <td><span class="theme-tag">Brickheadz</span></td>
@@ -4571,6 +4871,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71847.webp" alt="" loading="lazy"></td>
             <td class="mono">71847-1</td>
             <td>The Guardian Dragon</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4578,6 +4879,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21267.webp" alt="" loading="lazy"></td>
             <td class="mono">21267-1</td>
             <td>The Illager Desert Patrol</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4585,6 +4887,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75328.webp" alt="" loading="lazy"></td>
             <td class="mono">75328-1</td>
             <td>The Mandalorian Helmet</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4592,6 +4895,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21270.webp" alt="" loading="lazy"></td>
             <td class="mono">21270-1</td>
             <td>The Mooshroom House</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4599,6 +4903,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21266.webp" alt="" loading="lazy"></td>
             <td class="mono">21266-1</td>
             <td>The Nether Lava Battle</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4606,6 +4911,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21351.webp" alt="" loading="lazy"></td>
             <td class="mono">21351-1</td>
             <td>The Nightmare Before Christmas</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -4613,6 +4919,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21282.webp" alt="" loading="lazy"></td>
             <td class="mono">21282-1</td>
             <td>The Parrot Houses</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4620,6 +4927,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">21277-1</td>
             <td>The Pickaxe Mine</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4627,6 +4935,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">21278-1</td>
             <td>The Pillager Outpost and Ravager</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4634,6 +4943,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21333.webp" alt="" loading="lazy"></td>
             <td class="mono">21333-1</td>
             <td>The Starry Night</td>
             <td><span class="theme-tag">Ideas and CUUSOO</span></td>
@@ -4641,6 +4951,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">21275-1</td>
             <td>The TNT Jungle House</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4648,6 +4959,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">21274-1</td>
             <td>The Warden Encounter</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4655,6 +4967,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">76458-1</td>
             <td>Thestral Family</td>
             <td><span class="theme-tag">Harry Potter</span></td>
@@ -4662,6 +4975,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71832.webp" alt="" loading="lazy"></td>
             <td class="mono">71832-1</td>
             <td>Thunderfang Dragon of Chaos</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4669,6 +4983,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71515.webp" alt="" loading="lazy"></td>
             <td class="mono">71515-1</td>
             <td>Tiger Shark Tank</td>
             <td><span class="theme-tag">DreamZzz</span></td>
@@ -4676,6 +4991,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42203-1</td>
             <td>Tipping Dump Truck</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -4683,6 +4999,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10294.webp" alt="" loading="lazy"></td>
             <td class="mono">10294-1</td>
             <td>Titanic</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -4690,6 +5007,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71814.webp" alt="" loading="lazy"></td>
             <td class="mono">71814-1</td>
             <td>Tournament Temple City</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4697,6 +5015,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">43264-1</td>
             <td>Toy Story Celebration Train &amp;…</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -4704,6 +5023,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10315.webp" alt="" loading="lazy"></td>
             <td class="mono">10315-1</td>
             <td>Tranquil Garden</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -4711,6 +5031,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">42664-1</td>
             <td>Travel Boat Adventure</td>
             <td><span class="theme-tag">Friends</span></td>
@@ -4718,6 +5039,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/31169.webp" alt="" loading="lazy"></td>
             <td class="mono">31169-1</td>
             <td>Typewriter with Flowers</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4725,6 +5047,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75192.webp" alt="" loading="lazy"></td>
             <td class="mono">75192-1</td>
             <td>UCS Millennium Falcon</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4732,6 +5055,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">31175-1</td>
             <td>Unicorn Castle</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4739,6 +5063,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/43217.webp" alt="" loading="lazy"></td>
             <td class="mono">43217-1</td>
             <td>Up&#x27; House</td>
             <td><span class="theme-tag">Disney</span></td>
@@ -4746,6 +5071,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40649.webp" alt="" loading="lazy"></td>
             <td class="mono">40649-1</td>
             <td>Up-Scaled LEGO Minifigure</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4753,6 +5079,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40819.webp" alt="" loading="lazy"></td>
             <td class="mono">40819-1</td>
             <td>Up-Scaled Racing Driver Minifigure</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -4760,6 +5087,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42181.webp" alt="" loading="lazy"></td>
             <td class="mono">42181-1</td>
             <td>VTOL Heavy Cargo Spaceship LT81</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -4767,6 +5095,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75367.webp" alt="" loading="lazy"></td>
             <td class="mono">75367-1</td>
             <td>Venator-class Republic Attack Cruiser</td>
             <td><span class="theme-tag">Star Wars</span></td>
@@ -4774,6 +5103,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77246.webp" alt="" loading="lazy"></td>
             <td class="mono">77246-1</td>
             <td>Visa Cash App VCARB 01…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -4781,6 +5111,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/42175.webp" alt="" loading="lazy"></td>
             <td class="mono">42175-1</td>
             <td>Volvo FMX Truck &amp; EC230…</td>
             <td><span class="theme-tag">Technic</span></td>
@@ -4788,6 +5119,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75684.webp" alt="" loading="lazy"></td>
             <td class="mono">75684-1</td>
             <td>Welcome to Emerald City</td>
             <td><span class="theme-tag">Wicked</span></td>
@@ -4795,6 +5127,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/31150.webp" alt="" loading="lazy"></td>
             <td class="mono">31150-1</td>
             <td>Wild Safari Animals</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4802,6 +5135,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/77249.webp" alt="" loading="lazy"></td>
             <td class="mono">77249-1</td>
             <td>Williams Racing FW46 F1 Race…</td>
             <td><span class="theme-tag">Speed Champions</span></td>
@@ -4809,6 +5143,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/75636.webp" alt="" loading="lazy"></td>
             <td class="mono">75636-1</td>
             <td>Windmill Village Hut</td>
             <td><span class="theme-tag">One Piece</span></td>
@@ -4816,6 +5151,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/21272.webp" alt="" loading="lazy"></td>
             <td class="mono">21272-1</td>
             <td>Woodland Mansion Fighting Ring</td>
             <td><span class="theme-tag">Minecraft</span></td>
@@ -4823,6 +5159,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/10340.webp" alt="" loading="lazy"></td>
             <td class="mono">10340-1</td>
             <td>Wreath</td>
             <td><span class="theme-tag">Icons</span></td>
@@ -4830,6 +5167,7 @@ footer.page-footer {
             <td class="mono confirm" title="BrickRanker only">&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/76294.webp" alt="" loading="lazy"></td>
             <td class="mono">76294-1</td>
             <td>X-Men: The X-Mansion</td>
             <td><span class="theme-tag">Super Heroes Marvel</span></td>
@@ -4837,6 +5175,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/40468.webp" alt="" loading="lazy"></td>
             <td class="mono">40468-1</td>
             <td>Yellow Taxi</td>
             <td><span class="theme-tag">Creator</span></td>
@@ -4844,6 +5183,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><div class="row-thumb row-thumb-empty"></div></td>
             <td class="mono">40817-1</td>
             <td>Yellow Travel Suitcase</td>
             <td><span class="theme-tag">Miscellaneous</span></td>
@@ -4851,6 +5191,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71827.webp" alt="" loading="lazy"></td>
             <td class="mono">71827-1</td>
             <td>Zane&#x27;s Battle Suit Mech</td>
             <td><span class="theme-tag">Ninjago</span></td>
@@ -4858,6 +5199,7 @@ footer.page-footer {
             <td class="mono confirm" title="Confirmed by BrickRanker + Brick Fanatics">&#10003;&#10003;</td>
           </tr>
           <tr>
+            <td class="thumb-cell"><img class="row-thumb" src="https://brickranker.com/img/sets/small/71834.webp" alt="" loading="lazy"></td>
             <td class="mono">71834-1</td>
             <td>Zane&#x27;s Ultra Combiner Mech</td>
             <td><span class="theme-tag">Ninjago</span></td>
