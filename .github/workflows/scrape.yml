@@ -25,9 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: "/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/pip install -r requirements.txt"
+      - run: '"/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/pip" install -r requirements.txt'
 
-      - run: "/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/python3 run_all.py"
+      - run: '"/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/python3" run_all.py'
 
       - name: Commit updated data and dashboard
         run: |

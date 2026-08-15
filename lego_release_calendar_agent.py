@@ -46,7 +46,10 @@ CALENDAR_PATH = DATA_DIR / "release_calendar.json"
 LOG_PATH = DATA_DIR / "release_calendar_changes_log.json"
 
 NEXT_DATA_MARKER = '__NEXT_DATA__" type="application/json">'
-AVAILABILITY_DATE_RE = re.compile(r"on\s+([A-Za-z]+ \d{1,2},\s*\d{4})")
+# Matches the trailing date regardless of the lead-in phrase — LEGO.com
+# uses both "Coming soon on September 1, 2026" and "Pre-order this item
+# today, it will ship from September 1, 2026" for the same date concept.
+AVAILABILITY_DATE_RE = re.compile(r"([A-Za-z]+ \d{1,2},\s*\d{4})")
 
 # The only two statuses that mean "not released yet" — everything else
 # (E_AVAILABLE, F/G_BACKORDER*, H_OUT_OF_STOCK, K_SOLD_OUT, ...) describes
