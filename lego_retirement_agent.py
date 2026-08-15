@@ -11,6 +11,13 @@
 - Diffs the result against data/retiring_sets.json to detect newly-flagged,
   confirmed-retired, and date-changed sets, and logs those changes to
   data/retiring_changes_log.json.
+
+Product images come from LEGO.com itself rather than BrickRanker: the
+release-calendar agent's crawl passes through every currently-on-sale
+product too and saves an image lookup to data/lego_product_images.json —
+run_all.py runs that agent before this one so the lookup is fresh. A set
+that's no longer sold on LEGO.com at all (fully gone, not just retiring)
+won't have an entry there, and gets no image rather than a substitute.
 """
 
 from __future__ import annotations
@@ -34,6 +41,7 @@ BRICKFANATICS_URL = "https://www.brickfanatics.com/every-lego-set-retiring-this-
 
 SETS_PATH = DATA_DIR / "retiring_sets.json"
 LOG_PATH = DATA_DIR / "retiring_changes_log.json"
+IMAGES_PATH = DATA_DIR / "lego_product_images.json"
 
 
 def scrape_brickranker() -> dict[str, dict]:
@@ -67,9 +75,6 @@ def scrape_brickranker() -> dict[str, dict]:
             name = links[-1].get_text(strip=True)
             retiring_soon = "Retiring soon" in name_cell.get_text()
 
-            img = name_cell.find("img", src=True)
-            image = img["src"] if img else None
-
             year_text = tds[1].get_text(strip=True)
             year_released = int(year_text) if year_text.isdigit() else None
 
@@ -85,7 +90,6 @@ def scrape_brickranker() -> dict[str, dict]:
                 "retirement_date": retirement_date.isoformat() if retirement_date else None,
                 "retiring_soon": retiring_soon,
                 "url": set_link["href"],
-                "image": image,
             }
 
     return sets
@@ -138,12 +142,17 @@ def build_current_state() -> dict[str, dict]:
     if confirmations:
         print(f"  found {len(confirmations)} sets referenced on Brick Fanatics")
 
+    images = load_json(IMAGES_PATH, {})
+    if not images:
+        print("  (no LEGO.com image lookup found yet — run the release-calendar agent first to build one)")
+
     for set_num, entry in sets.items():
         base_num = set_num.split("-")[0]
         match = confirmations.get(base_num)
         entry["brickfanatics_confirmed"] = match is not None
         entry["brickfanatics_retirement_heading"] = match["retirement_date_heading"] if match else None
         entry["last_checked"] = now_iso()
+        entry["image"] = images.get(base_num)
 
     return sets
 

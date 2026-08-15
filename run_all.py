@@ -19,9 +19,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 
 AGENTS = [
+    # Calendar first: its crawl builds data/lego_product_images.json (every
+    # currently-on-sale product it passes through, not just upcoming ones),
+    # which the retirement agent then uses for official LEGO.com images.
+    "lego_release_calendar_agent",
     "lego_retirement_agent",
     "lego_new_sets_agent",
-    "lego_release_calendar_agent",
     "lego_gwp_agent",
 ]
 

@@ -29,6 +29,12 @@ Results are grouped by release month (YYYY-MM) and saved to
 data/release_calendar.json, diffed against the previous snapshot the same
 way the other two agents work, with the diff logged to
 data/release_calendar_changes_log.json.
+
+Along the way this crawl passes through every *currently on sale* product
+too (not just upcoming ones), so it also collects an official-LEGO.com-image
+lookup keyed by set number and saves it to data/lego_product_images.json —
+the retirement agent uses this instead of scraping images from a
+third-party site.
 """
 
 from __future__ import annotations
@@ -44,6 +50,7 @@ MAX_PAGES_PER_LISTING = 12
 
 CALENDAR_PATH = DATA_DIR / "release_calendar.json"
 LOG_PATH = DATA_DIR / "release_calendar_changes_log.json"
+IMAGES_PATH = DATA_DIR / "lego_product_images.json"
 
 NEXT_DATA_MARKER = '__NEXT_DATA__" type="application/json">'
 # Matches the trailing date regardless of the lead-in phrase — LEGO.com
@@ -111,6 +118,10 @@ def parse_availability_date(text: str | None) -> str | None:
     return parsed.isoformat() if parsed else None
 
 
+def product_image(product: dict) -> str | None:
+    return product.get('primaryImage({"size":"THUMBNAIL"})')
+
+
 def build_entry(apollo: dict, product: dict) -> dict | None:
     variant_ref = product.get("variant") or next(iter(product.get("variants") or []), None)
     variant = resolve(apollo, variant_ref)
@@ -142,12 +153,23 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
         "availability_text": availability_text,
         "launch_date": parse_availability_date(availability_text),
         "url": f"https://www.lego.com{product['pdpPath']}",
-        "image": product.get('primaryImage({"size":"THUMBNAIL"})'),
+        "image": product_image(product),
     }
 
 
-def extract_products(apollo: dict) -> tuple[list[dict], int | None]:
-    """Returns (entries, next_page). Handles both listing-page shapes."""
+def extract_products(apollo: dict) -> tuple[list[dict], int | None, dict[str, str]]:
+    """Returns (upcoming_entries, next_page, images). `images` covers every
+    real buildable set seen on the page — not just upcoming ones — keyed by
+    set number, so other agents (e.g. the retirement tracker) can look up an
+    official LEGO.com product image without a separate crawl."""
+
+    images: dict[str, str] = {}
+
+    def collect_image(product: dict, pieces) -> None:
+        if pieces:
+            img = product_image(product)
+            if img:
+                images[product["productCode"]] = img
 
     plp = next(
         (v for v in apollo.values() if isinstance(v, dict) and v.get("__typename") == "ProductListingPage"),
@@ -162,11 +184,15 @@ def extract_products(apollo: dict) -> tuple[list[dict], int | None]:
             product = resolve(apollo, tile.get("product"))
             if not product:
                 continue
+            variant_ref = product.get("variant") or next(iter(product.get("variants") or []), None)
+            variant = resolve(apollo, variant_ref)
+            attrs = (resolve(apollo, variant.get("attributes")) if variant else None) or {}
+            collect_image(product, attrs.get("pieceCount"))
             entry = build_entry(apollo, product)
             if entry:
                 entries.append(entry)
         pagination = resolve(apollo, plp.get("pagination")) or {}
-        return entries, pagination.get("nextPage")
+        return entries, pagination.get("nextPage"), images
 
     pqr = next(
         (v for v in apollo.values() if isinstance(v, dict) and v.get("__typename") == "ProductQueryResult"),
@@ -178,15 +204,19 @@ def extract_products(apollo: dict) -> tuple[list[dict], int | None]:
             product = resolve(apollo, ref)
             if not product:
                 continue
+            variant_ref = product.get("variant") or next(iter(product.get("variants") or []), None)
+            variant = resolve(apollo, variant_ref)
+            attrs = (resolve(apollo, variant.get("attributes")) if variant else None) or {}
+            collect_image(product, attrs.get("pieceCount"))
             entry = build_entry(apollo, product)
             if entry:
                 entries.append(entry)
         offset, count, total = pqr.get("offset", 0), pqr.get("count", 0), pqr.get("total", 0)
         has_more = offset + count < total
         current_page = (offset // count) + 1 if count else 1
-        return entries, (current_page + 1 if has_more else None)
+        return entries, (current_page + 1 if has_more else None), images
 
-    return [], None
+    return [], None, images
 
 
 def discover_theme_urls() -> list[str] | None:
@@ -210,8 +240,9 @@ def discover_theme_urls() -> list[str] | None:
     return top_level or None
 
 
-def scrape_listing(start_url: str) -> dict[str, dict]:
+def scrape_listing(start_url: str) -> tuple[dict[str, dict], dict[str, str]]:
     found: dict[str, dict] = {}
+    all_images: dict[str, str] = {}
     page = 1
     while page and page <= MAX_PAGES_PER_LISTING:
         url = start_url if page == 1 else f"{start_url}?page={page}"
@@ -227,18 +258,22 @@ def scrape_listing(start_url: str) -> dict[str, dict]:
             # unrelated page (e.g. a discontinued-product news article)
             # instead of a product listing — nothing to scrape there.
             break
-        entries, next_page = extract_products(apollo)
+        entries, next_page, images = extract_products(apollo)
         for e in entries:
             found[e["set_num"]] = e
+        all_images.update(images)
         page = next_page
-    return found
+    return found, all_images
 
 
-def scrape_all_upcoming() -> dict[str, dict]:
+def scrape_all_upcoming() -> tuple[dict[str, dict], dict[str, str]]:
     all_products: dict[str, dict] = {}
+    all_images: dict[str, str] = {}
 
     print(f"Fetching {COMING_SOON_URL} ...")
-    all_products.update(scrape_listing(COMING_SOON_URL))
+    products, images = scrape_listing(COMING_SOON_URL)
+    all_products.update(products)
+    all_images.update(images)
 
     theme_urls = discover_theme_urls()
     if theme_urls is None:
@@ -248,13 +283,14 @@ def scrape_all_upcoming() -> dict[str, dict]:
         print(f"  discovered {len(theme_urls)} themes from LEGO.com's sitemap")
 
     for i, url in enumerate(theme_urls, 1):
-        theme_products = scrape_listing(url)
+        theme_products, theme_images = scrape_listing(url)
         if theme_products:
             new_count = sum(1 for k in theme_products if k not in all_products)
             print(f"  [{i}/{len(theme_urls)}] {url.rsplit('/', 1)[-1]}: {len(theme_products)} upcoming ({new_count} new)")
         all_products.update(theme_products)
+        all_images.update(theme_images)
 
-    return all_products
+    return all_products, all_images
 
 
 def build_calendar(products: dict[str, dict]) -> dict[str, list[dict]]:
@@ -348,16 +384,18 @@ def main() -> None:
     previous = load_json(CALENDAR_PATH, {"months": {}})
     previous_months = previous.get("months", {})
 
-    products = scrape_all_upcoming()
+    products, images = scrape_all_upcoming()
     if not products:
         print("No data scraped (LEGO.com fetch failed) — leaving saved state untouched.")
         return
 
     print(f"\n  found {len(products)} buildable sets not yet released, across LEGO.com")
+    print(f"  collected {len(images)} product images along the way")
     current_months = build_calendar(products)
 
     changes = diff_and_log(previous_months, current_months)
     save_json(CALENDAR_PATH, {"generated_at": now_iso(), "months": current_months})
+    save_json(IMAGES_PATH, images)
     append_log(LOG_PATH, changes)
     report(changes)
 
