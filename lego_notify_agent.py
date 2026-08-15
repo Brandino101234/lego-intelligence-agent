@@ -24,7 +24,7 @@ import requests
 
 from lego_common import DATA_DIR, load_json, save_json, now_iso
 
-NTFY_TOPIC = "lego-intel-ccc9140ce9"
+NTFY_TOPIC = "lego-intel-4e111a"
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 DASHBOARD_URL = "https://lego-intelligence-agent.netlify.app"
 
