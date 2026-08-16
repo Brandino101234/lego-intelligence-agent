@@ -99,7 +99,7 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
             )
             image = e.get("image")
             image_html = (
-                f'<img class="cal-card-img" src="{esc(image)}" alt="" loading="lazy">'
+                f'<img class="cal-card-img" src="{esc(image)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{{className:\'cal-card-img cal-card-img-empty\'}}))">'
                 if image else '<div class="cal-card-img cal-card-img-empty"></div>'
             )
             cards.append(f'''
@@ -164,7 +164,10 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
         confirm_title = "Confirmed by BrickRanker + Brick Fanatics" if v.get("brickfanatics_confirmed") else "BrickRanker only"
 
         image = v.get("image")
-        image_html = f'<img class="row-thumb" src="{esc(image)}" alt="" loading="lazy">' if image else '<div class="row-thumb row-thumb-empty"></div>'
+        image_html = (
+            f'<img class="row-thumb" src="{esc(image)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{{className:\'row-thumb row-thumb-empty\'}}))">'
+            if image else '<div class="row-thumb row-thumb-empty"></div>'
+        )
 
         rows.append(f'''
           <tr>
@@ -226,7 +229,10 @@ def render_gwp(gwp: dict, today: date) -> tuple[str, str]:
 
         insiders_badge = '<span class="theme-tag insiders">INSIDERS ONLY</span>' if g.get("insiders_only") else ""
         image = g.get("image")
-        image_html = f'<img class="gwp-img" src="{esc(image)}" alt="" loading="lazy">' if image else '<div class="gwp-img gwp-img-empty"></div>'
+        image_html = (
+            f'<img class="gwp-img" src="{esc(image)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{{className:\'gwp-img gwp-img-empty\'}}))">'
+            if image else '<div class="gwp-img gwp-img-empty"></div>'
+        )
 
         cards.append(f'''
           <a class="gwp-card" href="{esc(g.get("url", "#"))}" target="_blank" rel="noopener">
