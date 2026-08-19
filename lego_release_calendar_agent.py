@@ -35,6 +35,19 @@ too (not just upcoming ones), so it also collects an official-LEGO.com-image
 lookup keyed by set number and saves it to data/lego_product_images.json —
 the retirement agent uses this instead of scraping images from a
 third-party site.
+
+LEGO Insiders early-access windows (short-lived, tied to specific launches)
+are NOT visible in the Apollo state used above — confirmed by checking a
+set actually showing early access live on the site, whose
+vipAvailabilityStatus/vipAvailabilityText fields were still null. That
+banner is rendered from a separate per-product GraphQL call
+(ProductDetailsContentQuery) using an Apollo persisted query built from
+bundle-defined fragments, which isn't worth hand-replicating — and product
+pages block plain HTTP requests outright (Cloudflare, confirmed even with
+full browser-matching headers) where category/theme pages don't. So this
+uses a real headless browser (Playwright) for that one signal, scoped only
+to the sets already in the calendar (~30, not the full catalog) to keep it
+fast and polite.
 """
 
 from __future__ import annotations
@@ -42,7 +55,7 @@ from __future__ import annotations
 import json
 import re
 
-from lego_common import DATA_DIR, fetch_via_curl, load_json, now_iso, parse_flexible_date, save_json, append_log
+from lego_common import DATA_DIR, HEADERS, fetch_via_curl, load_json, now_iso, parse_flexible_date, save_json, append_log
 
 COMING_SOON_URL = "https://www.lego.com/en-us/categories/coming-soon"
 SITEMAP_INDEX_URL = "https://www.lego.com/productlisting-sitemap.xml"
@@ -144,14 +157,6 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
     brand_category = resolve(apollo, product.get("brandCategory"))
     availability_text = attrs.get("availabilityText")
 
-    # LEGO Insiders (their API still calls it "VIP" internally) sometimes
-    # get early access to a set before its general release date. These
-    # fields exist on every product but are usually null — only populated
-    # during an actual active early-access window, which is short-lived
-    # and tied to specific launches rather than always-on.
-    vip_text = attrs.get("vipAvailabilityText")
-    vip_status = attrs.get("vipAvailabilityStatus")
-
     return {
         "set_num": product["productCode"],
         "name": product["name"],
@@ -161,8 +166,12 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
         "availability_status": status,
         "availability_text": availability_text,
         "launch_date": parse_availability_date(availability_text),
-        "insiders_early_access": vip_text or (vip_status is not None),
-        "insiders_early_access_text": vip_text,
+        # Filled in later by check_insiders_early_access(), which visits
+        # each product page with a real browser — that per-product promo
+        # banner isn't in this listing-page data at all (see module
+        # docstring for why).
+        "insiders_early_access": False,
+        "insiders_early_access_text": None,
         "url": f"https://www.lego.com{product['pdpPath']}",
         "image": product_image(product),
     }
@@ -387,6 +396,51 @@ def diff_and_log(previous_months: dict[str, list[dict]], current_months: dict[st
     return changes
 
 
+def check_insiders_early_access(months: dict[str, list[dict]]) -> None:
+    """Visits each calendar entry's product page with a real headless
+    browser and checks for a LEGO Insiders early-access promo banner,
+    mutating each entry's insiders_early_access fields in place. Scoped to
+    just the calendar (~30 sets), not the full catalog, to stay fast."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("  ! playwright not installed — skipping Insiders early-access check")
+        return
+
+    entries = [e for month_entries in months.values() for e in month_entries if e.get("url")]
+    print(f"  checking {len(entries)} product pages for Insiders early access...")
+
+    # LEGO.com shows a generic recurring Insiders marketing blurb ("...
+    # unlock Early Access to exclusive sets! Sign up today.") on products
+    # that DON'T have an active window — it happens to contain "Early
+    # Access" too, so text-matching alone false-positives on it (confirmed:
+    # it showed up right alongside two genuine, dated banners in testing).
+    # A real window always names a specific date range (e.g. "9/1-9/4"),
+    # the generic blurb never does — require that to tell them apart.
+    date_range_re = re.compile(r"\d{1,2}/\d{1,2}")
+
+    found = 0
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(user_agent=HEADERS["User-Agent"])
+        for entry in entries:
+            try:
+                page.goto(entry["url"], timeout=30000, wait_until="domcontentloaded")
+                page.wait_for_timeout(1200)  # let client-rendered promo content settle
+                banner = page.locator('[data-test="markup"]', has_text="Early Access").first
+                if banner.count() > 0:
+                    text = banner.inner_text().strip()
+                    if date_range_re.search(text):
+                        entry["insiders_early_access"] = True
+                        entry["insiders_early_access_text"] = text
+                        found += 1
+            except Exception as exc:
+                print(f"    ! {entry['set_num']}: {exc}")
+        browser.close()
+
+    print(f"  found Insiders early access on {found} set(s)")
+
+
 def report(changes: list[dict]) -> None:
     if not changes:
         print("No changes to the release calendar since last run.")
@@ -415,6 +469,7 @@ def main() -> None:
     print(f"\n  found {len(products)} buildable sets not yet released, across LEGO.com")
     print(f"  collected {len(images)} product images and {len(prices)} prices along the way")
     current_months = build_calendar(products)
+    check_insiders_early_access(current_months)
 
     changes = diff_and_log(previous_months, current_months)
     save_json(CALENDAR_PATH, {"generated_at": now_iso(), "months": current_months})
