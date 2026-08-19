@@ -30,29 +30,39 @@ HEADERS = {
 
 REQUEST_TIMEOUT = 20
 REQUEST_DELAY_SECONDS = 1.5
+RETRY_ATTEMPTS = 2
+RETRY_BACKOFF_SECONDS = 3
 
 
 def fetch(url: str, *, timeout: int = REQUEST_TIMEOUT) -> requests.Response | None:
-    """GET a URL with browser-like headers. Returns None on any failure
-    (network error, non-200, or a Cloudflare JS-challenge page) instead of
-    raising, so callers can treat a source as best-effort. Sleeps briefly
-    beforehand to avoid hammering sites when paginating."""
-    time.sleep(REQUEST_DELAY_SECONDS)
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=timeout)
-    except requests.RequestException as exc:
-        print(f"  ! request failed for {url}: {exc}")
-        return None
+    """GET a URL with browser-like headers. Returns None if every attempt
+    fails (network error, non-200, or a Cloudflare JS-challenge page)
+    instead of raising, so callers can treat a source as best-effort.
+    Retries transient failures once after a short backoff before giving up
+    — across a run this may fetch hundreds of pages, so an occasional
+    single-request blip shouldn't be treated the same as the source being
+    genuinely down. Sleeps briefly before each attempt to avoid hammering
+    sites when paginating."""
+    last_reason = None
+    for attempt in range(1, RETRY_ATTEMPTS + 1):
+        time.sleep(REQUEST_DELAY_SECONDS)
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=timeout)
+        except requests.RequestException as exc:
+            last_reason = f"request failed: {exc}"
+        else:
+            if resp.status_code != 200:
+                last_reason = f"returned HTTP {resp.status_code}"
+            elif "Just a moment" in resp.text[:2000] or "cf-chl-opt" in resp.text[:4000]:
+                last_reason = "served a Cloudflare challenge page instead of content"
+            else:
+                return resp
 
-    if resp.status_code != 200:
-        print(f"  ! {url} returned HTTP {resp.status_code}")
-        return None
+        if attempt < RETRY_ATTEMPTS:
+            time.sleep(RETRY_BACKOFF_SECONDS)
 
-    if "Just a moment" in resp.text[:2000] or "cf-chl-opt" in resp.text[:4000]:
-        print(f"  ! {url} served a Cloudflare challenge page instead of content")
-        return None
-
-    return resp
+    print(f"  ! {url} {last_reason} (after {RETRY_ATTEMPTS} attempts)")
+    return None
 
 
 def fetch_via_curl(url: str, *, timeout: int = REQUEST_TIMEOUT) -> str | None:
@@ -63,37 +73,47 @@ def fetch_via_curl(url: str, *, timeout: int = REQUEST_TIMEOUT) -> str | None:
     but plain curl gets through fine. This is a pragmatic workaround for
     that one site rather than a general-purpose fetcher; prefer fetch()
     unless a source specifically needs it. Returns response body text, or
-    None on failure (network error, non-200, curl missing)."""
-    time.sleep(REQUEST_DELAY_SECONDS)
+    None if every attempt fails (network error, non-200, curl missing).
+    Retries transient failures once after a short backoff — a calendar
+    crawl alone makes 300+ of these requests, so an occasional single-page
+    blip shouldn't be treated the same as the source being genuinely down."""
     status_marker = "__STATUS__:"
-    try:
-        result = subprocess.run(
-            [
-                "curl", "-s", "-L", "--max-time", str(timeout),
-                "-A", HEADERS["User-Agent"],
-                "-H", f"Accept-Language: {HEADERS['Accept-Language']}",
-                "-w", f"\n{status_marker}%{{http_code}}",
-                url,
-            ],
-            capture_output=True,
-            text=True,
-            timeout=timeout + 5,
-        )
-    except (subprocess.SubprocessError, FileNotFoundError, OSError) as exc:
-        print(f"  ! curl fetch failed for {url}: {exc}")
-        return None
+    last_reason = None
 
-    idx = result.stdout.rfind(f"\n{status_marker}")
-    if idx == -1:
-        print(f"  ! curl fetch for {url} returned unexpected output")
-        return None
+    for attempt in range(1, RETRY_ATTEMPTS + 1):
+        time.sleep(REQUEST_DELAY_SECONDS)
+        try:
+            result = subprocess.run(
+                [
+                    "curl", "-s", "-L", "--max-time", str(timeout),
+                    "-A", HEADERS["User-Agent"],
+                    "-H", f"Accept-Language: {HEADERS['Accept-Language']}",
+                    "-w", f"\n{status_marker}%{{http_code}}",
+                    url,
+                ],
+                capture_output=True,
+                text=True,
+                timeout=timeout + 5,
+            )
+        except (subprocess.SubprocessError, FileNotFoundError, OSError) as exc:
+            last_reason = f"curl fetch failed: {exc}"
+        else:
+            idx = result.stdout.rfind(f"\n{status_marker}")
+            if idx == -1:
+                last_reason = "returned unexpected output"
+            else:
+                body = result.stdout[:idx]
+                status_code = result.stdout[idx + len(status_marker) + 1:].strip()
+                if status_code != "200":
+                    last_reason = f"returned HTTP {status_code} (via curl)"
+                else:
+                    return body
 
-    body, status_code = result.stdout[:idx], result.stdout[idx + len(status_marker) + 1:].strip()
-    if status_code != "200":
-        print(f"  ! {url} returned HTTP {status_code} (via curl)")
-        return None
+        if attempt < RETRY_ATTEMPTS:
+            time.sleep(RETRY_BACKOFF_SECONDS)
 
-    return body
+    print(f"  ! {url} {last_reason} (after {RETRY_ATTEMPTS} attempts)")
+    return None
 
 
 def load_json(path: Path, default):

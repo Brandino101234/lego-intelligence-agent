@@ -173,7 +173,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
           <tr>
             <td class="thumb-cell">{image_html}</td>
             <td class="mono">{esc(v.get("set_num"))}</td>
-            <td>{esc(v.get("name"))}</td>
+            <td><a class="row-link" href="{esc(v.get("url", "#"))}" target="_blank" rel="noopener">{esc(v.get("name"))}</a></td>
             <td><span class="theme-tag">{esc(v.get("theme"))}</span></td>
             <td><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
             <td class="mono confirm" title="{confirm_title}">{confirm_mark}</td>
@@ -605,6 +605,9 @@ td.thumb-cell {{ padding: 6px 0 6px 14px; width: 44px; }}
 .date-pill.soon {{ background: var(--gold-soft); border-color: var(--gold-fill); color: var(--gold); }}
 .date-pill.neutral {{ color: var(--ink-muted); }}
 td.confirm {{ text-align: center; letter-spacing: 1px; }}
+
+a.row-link {{ text-decoration: none; font-weight: 500; }}
+a.row-link:hover {{ text-decoration: underline; color: var(--red); }}
 
 /* ---- gift with purchase ---- */
 .gwp-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }}
