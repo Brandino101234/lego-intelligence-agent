@@ -160,8 +160,22 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
                 urgency_class = "soon"
             date_label = d.strftime("%b %-d, %Y")
 
-        confirm_mark = "&#10003;&#10003;" if v.get("brickfanatics_confirmed") else "&#10003;"
-        confirm_title = "Confirmed by BrickRanker + Brick Fanatics" if v.get("brickfanatics_confirmed") else "BrickRanker only"
+        confirmed_flag = bool(v.get("brickfanatics_confirmed"))
+        sources_count = 2 if confirmed_flag else 1
+        confirm_mark = "&#10003;&#10003;" if confirmed_flag else "&#10003;"
+        confirm_title = "Confirmed by BrickRanker + Brick Fanatics" if confirmed_flag else "BrickRanker only"
+
+        retiring_sort = delta if d_raw else 999999
+
+        price_raw = v.get("price")
+        price_value = None
+        if price_raw:
+            try:
+                price_value = float(price_raw.replace("$", "").replace(",", ""))
+            except ValueError:
+                price_value = None
+        price_sort = price_value if price_value is not None else 999999
+        price_label = esc(price_raw) if price_raw else "&mdash;"
 
         image = v.get("image")
         image_html = (
@@ -172,11 +186,12 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
         rows.append(f'''
           <tr>
             <td class="thumb-cell">{image_html}</td>
-            <td class="mono">{esc(v.get("set_num"))}</td>
-            <td><a class="row-link" href="{esc(v.get("url", "#"))}" target="_blank" rel="noopener">{esc(v.get("name"))}</a></td>
-            <td><span class="theme-tag">{esc(v.get("theme"))}</span></td>
-            <td><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
-            <td class="mono confirm" title="{confirm_title}">{confirm_mark}</td>
+            <td class="mono" data-sort="{esc(v.get("set_num"))}">{esc(v.get("set_num"))}</td>
+            <td data-sort="{esc((v.get("name") or "").lower())}"><a class="row-link" href="{esc(v.get("url", "#"))}" target="_blank" rel="noopener">{esc(v.get("name"))}</a></td>
+            <td data-sort="{esc((v.get("theme") or "").lower())}"><span class="theme-tag">{esc(v.get("theme"))}</span></td>
+            <td class="mono" data-sort="{price_sort}">{price_label}</td>
+            <td data-sort="{retiring_sort}"><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
+            <td class="mono confirm" data-sort="{sources_count}" title="{confirm_title}">{confirm_mark}</td>
           </tr>''')
 
     table = f'''
@@ -185,11 +200,12 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
           <thead>
             <tr>
               <th></th>
-              <th>Set</th>
-              <th>Name</th>
-              <th>Theme</th>
-              <th>Retiring</th>
-              <th title="Source confirmation">Src</th>
+              <th onclick="sortTable(1,this)">Set</th>
+              <th onclick="sortTable(2,this)">Name</th>
+              <th onclick="sortTable(3,this)">Theme</th>
+              <th onclick="sortTable(4,this)">Price</th>
+              <th onclick="sortTable(5,this)" data-dir="asc" class="sorted">Retiring</th>
+              <th onclick="sortTable(6,this)" title="Number of sources confirming this set is retiring">Sources</th>
             </tr>
           </thead>
           <tbody>{"".join(rows)}</tbody>
@@ -583,10 +599,17 @@ thead th {{
   color: var(--ink-muted);
   padding: 10px 14px;
   border-bottom: 2px solid var(--ink);
+  white-space: nowrap;
 }}
 tbody td {{ padding: 8px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }}
 tbody tr:last-child td {{ border-bottom: none; }}
 tbody tr:hover {{ background: var(--paper); }}
+
+thead th[onclick] {{ cursor: pointer; user-select: none; }}
+thead th[onclick]:hover {{ color: var(--ink); }}
+thead th[data-dir]::after {{ font-size: 9px; margin-left: 4px; }}
+thead th[data-dir="asc"]::after {{ content: "\\25B2"; }}
+thead th[data-dir="desc"]::after {{ content: "\\25BC"; }}
 
 td.thumb-cell {{ padding: 6px 0 6px 14px; width: 44px; }}
 .row-thumb {{ width: 36px; height: 36px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 5px; display: block; }}
@@ -740,6 +763,28 @@ function showPanel(btn) {{
   btn.classList.add('active');
   document.getElementById(btn.dataset.target).classList.add('active');
 }}
+
+function sortTable(colIndex, header) {{
+  const table = header.closest('table');
+  const tbody = table.querySelector('tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  const dir = header.dataset.dir === 'asc' ? 'desc' : 'asc';
+
+  table.querySelectorAll('th').forEach(th => {{ delete th.dataset.dir; th.classList.remove('sorted'); }});
+  header.dataset.dir = dir;
+  header.classList.add('sorted');
+
+  rows.sort((a, b) => {{
+    const av = a.children[colIndex].dataset.sort || '';
+    const bv = b.children[colIndex].dataset.sort || '';
+    const numeric = av !== '' && bv !== '' && !isNaN(av) && !isNaN(bv);
+    const cmp = numeric ? (Number(av) - Number(bv)) : av.localeCompare(bv);
+    return dir === 'asc' ? cmp : -cmp;
+  }});
+
+  rows.forEach(r => tbody.appendChild(r));
+}}
+
 setTimeout(() => location.reload(), {refresh_minutes} * 60 * 1000);
 </script>
 </body>

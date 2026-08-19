@@ -12,12 +12,14 @@
   confirmed-retired, and date-changed sets, and logs those changes to
   data/retiring_changes_log.json.
 
-Product images come from LEGO.com itself rather than BrickRanker: the
-release-calendar agent's crawl passes through every currently-on-sale
-product too and saves an image lookup to data/lego_product_images.json —
-run_all.py runs that agent before this one so the lookup is fresh. A set
-that's no longer sold on LEGO.com at all (fully gone, not just retiring)
-won't have an entry there, and gets no image rather than a substitute.
+Product images and prices come from LEGO.com itself rather than
+BrickRanker (which never listed price at all): the release-calendar
+agent's crawl passes through every currently-on-sale product too and
+saves lookups to data/lego_product_images.json and
+data/lego_product_prices.json — run_all.py runs that agent before this
+one so the lookups are fresh. A set that's no longer sold on LEGO.com at
+all (fully gone, not just retiring) won't have an entry there, and gets
+no image/price rather than a substitute.
 """
 
 from __future__ import annotations
@@ -42,6 +44,7 @@ BRICKFANATICS_URL = "https://www.brickfanatics.com/every-lego-set-retiring-this-
 SETS_PATH = DATA_DIR / "retiring_sets.json"
 LOG_PATH = DATA_DIR / "retiring_changes_log.json"
 IMAGES_PATH = DATA_DIR / "lego_product_images.json"
+PRICES_PATH = DATA_DIR / "lego_product_prices.json"
 
 
 def scrape_brickranker() -> dict[str, dict]:
@@ -143,8 +146,9 @@ def build_current_state() -> dict[str, dict]:
         print(f"  found {len(confirmations)} sets referenced on Brick Fanatics")
 
     images = load_json(IMAGES_PATH, {})
+    prices = load_json(PRICES_PATH, {})
     if not images:
-        print("  (no LEGO.com image lookup found yet — run the release-calendar agent first to build one)")
+        print("  (no LEGO.com image/price lookup found yet — run the release-calendar agent first to build one)")
 
     for set_num, entry in sets.items():
         base_num = set_num.split("-")[0]
@@ -153,6 +157,7 @@ def build_current_state() -> dict[str, dict]:
         entry["brickfanatics_retirement_heading"] = match["retirement_date_heading"] if match else None
         entry["last_checked"] = now_iso()
         entry["image"] = images.get(base_num)
+        entry["price"] = prices.get(base_num)
 
     return sets
 
