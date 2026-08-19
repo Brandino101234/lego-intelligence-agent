@@ -284,6 +284,30 @@ section.panel[data-accent="green"] .panel-num { color: var(--green); }
   padding: 24px 0;
 }
 
+/* ---- search ---- */
+.panel-search {
+  margin-bottom: 20px;
+}
+.panel-search input {
+  width: 100%;
+  max-width: 340px;
+  font-family: 'Plex Mono', monospace;
+  font-size: 13px;
+  background: var(--paper-2);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 14px;
+  color: var(--ink);
+}
+.panel-search input::placeholder { color: var(--ink-faint); }
+.panel-search input:focus { outline: none; border-color: var(--ink-muted); }
+.no-matches {
+  display: none;
+  color: var(--ink-muted);
+  font-size: 14px;
+  padding: 24px 0;
+}
+
 /* ---- theme tag ---- */
 .theme-tag {
   display: inline-flex;
@@ -453,7 +477,7 @@ footer.page-footer {
 <div class="statusbar">
   <div class="wordmark">LEGO<span>&bull;</span>INTEL</div>
   <div class="status-right">
-    <span>Updated <span class="mono">Aug 19, 1:14 AM</span></span>
+    <span>Updated <span class="mono">Aug 19, 1:26 AM</span></span>
     <span>Next run <span class="mono">6:00 AM</span></span>
     <button class="refresh" onclick="location.reload()">Refresh</button>
   </div>
@@ -483,6 +507,9 @@ footer.page-footer {
           </div>
         </div>
         <div class="panel-stat">29 sets tracked &middot; next in 10 days</div>
+      </div>
+      <div class="panel-search">
+        <input type="text" placeholder="Search by name or theme&hellip;" oninput="filterCards(this,'panel-calendar','.cal-card','.cal-month')">
       </div>
       
           <div class="cal-month">
@@ -865,6 +892,7 @@ footer.page-footer {
                 </div>
               </a></div>
           </div>
+      <p class="no-matches" id="no-matches-calendar">No sets match your search.</p>
     </section>
 
     <section class="panel" data-accent="red" id="panel-retiring">
@@ -877,6 +905,9 @@ footer.page-footer {
           </div>
         </div>
         <div class="panel-stat">306 flagged of 569 tracked &middot; 230 confirmed by both sources</div>
+      </div>
+      <div class="panel-search">
+        <input type="text" placeholder="Search by name, set #, or theme&hellip;" oninput="filterCards(this,'panel-retiring','tbody tr',null)">
       </div>
       
       <div class="table-wrap">
@@ -3649,6 +3680,7 @@ footer.page-footer {
           </tr></tbody>
         </table>
       </div>
+      <p class="no-matches" id="no-matches-retiring">No sets match your search.</p>
     </section>
 
     <section class="panel" data-accent="green" id="panel-gwp">
@@ -3662,7 +3694,11 @@ footer.page-footer {
         </div>
         <div class="panel-stat">0 active</div>
       </div>
+      <div class="panel-search">
+        <input type="text" placeholder="Search by name&hellip;" oninput="filterCards(this,'panel-gwp','.gwp-card',null)">
+      </div>
       <p class="empty">No gift-with-purchase promotions currently active.</p>
+      <p class="no-matches" id="no-matches-gwp">No promotions match your search.</p>
     </section>
   </main>
 </div>
@@ -3699,6 +3735,29 @@ function sortTable(colIndex, header) {
   });
 
   rows.forEach(r => tbody.appendChild(r));
+}
+
+function filterCards(input, panelId, itemSelector, groupSelector) {
+  const panel = document.getElementById(panelId);
+  const query = input.value.trim().toLowerCase();
+  let visibleCount = 0;
+
+  panel.querySelectorAll(itemSelector).forEach(item => {
+    const match = item.textContent.toLowerCase().includes(query);
+    item.style.display = match ? '' : 'none';
+    if (match) visibleCount++;
+  });
+
+  if (groupSelector) {
+    panel.querySelectorAll(groupSelector).forEach(group => {
+      const anyVisible = Array.from(group.querySelectorAll(itemSelector))
+        .some(item => item.style.display !== 'none');
+      group.style.display = anyVisible ? '' : 'none';
+    });
+  }
+
+  const noMatches = document.getElementById(panelId.replace('panel-', 'no-matches-'));
+  if (noMatches) noMatches.style.display = visibleCount === 0 ? '' : 'none';
 }
 
 setTimeout(() => location.reload(), 30 * 60 * 1000);

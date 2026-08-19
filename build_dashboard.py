@@ -518,6 +518,30 @@ section.panel[data-accent="green"] .panel-num {{ color: var(--green); }}
   padding: 24px 0;
 }}
 
+/* ---- search ---- */
+.panel-search {{
+  margin-bottom: 20px;
+}}
+.panel-search input {{
+  width: 100%;
+  max-width: 340px;
+  font-family: 'Plex Mono', monospace;
+  font-size: 13px;
+  background: var(--paper-2);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 14px;
+  color: var(--ink);
+}}
+.panel-search input::placeholder {{ color: var(--ink-faint); }}
+.panel-search input:focus {{ outline: none; border-color: var(--ink-muted); }}
+.no-matches {{
+  display: none;
+  color: var(--ink-muted);
+  font-size: 14px;
+  padding: 24px 0;
+}}
+
 /* ---- theme tag ---- */
 .theme-tag {{
   display: inline-flex;
@@ -718,7 +742,11 @@ footer.page-footer {{
         </div>
         <div class="panel-stat">{calendar_stat}</div>
       </div>
+      <div class="panel-search">
+        <input type="text" placeholder="Search by name or theme&hellip;" oninput="filterCards(this,'panel-calendar','.cal-card','.cal-month')">
+      </div>
       {calendar_body}
+      <p class="no-matches" id="no-matches-calendar">No sets match your search.</p>
     </section>
 
     <section class="panel" data-accent="red" id="panel-retiring">
@@ -732,7 +760,11 @@ footer.page-footer {{
         </div>
         <div class="panel-stat">{retiring_stat}</div>
       </div>
+      <div class="panel-search">
+        <input type="text" placeholder="Search by name, set #, or theme&hellip;" oninput="filterCards(this,'panel-retiring','tbody tr',null)">
+      </div>
       {retiring_body}
+      <p class="no-matches" id="no-matches-retiring">No sets match your search.</p>
     </section>
 
     <section class="panel" data-accent="green" id="panel-gwp">
@@ -746,7 +778,11 @@ footer.page-footer {{
         </div>
         <div class="panel-stat">{gwp_stat}</div>
       </div>
+      <div class="panel-search">
+        <input type="text" placeholder="Search by name&hellip;" oninput="filterCards(this,'panel-gwp','.gwp-card',null)">
+      </div>
       {gwp_body}
+      <p class="no-matches" id="no-matches-gwp">No promotions match your search.</p>
     </section>
   </main>
 </div>
@@ -783,6 +819,29 @@ function sortTable(colIndex, header) {{
   }});
 
   rows.forEach(r => tbody.appendChild(r));
+}}
+
+function filterCards(input, panelId, itemSelector, groupSelector) {{
+  const panel = document.getElementById(panelId);
+  const query = input.value.trim().toLowerCase();
+  let visibleCount = 0;
+
+  panel.querySelectorAll(itemSelector).forEach(item => {{
+    const match = item.textContent.toLowerCase().includes(query);
+    item.style.display = match ? '' : 'none';
+    if (match) visibleCount++;
+  }});
+
+  if (groupSelector) {{
+    panel.querySelectorAll(groupSelector).forEach(group => {{
+      const anyVisible = Array.from(group.querySelectorAll(itemSelector))
+        .some(item => item.style.display !== 'none');
+      group.style.display = anyVisible ? '' : 'none';
+    }});
+  }}
+
+  const noMatches = document.getElementById(panelId.replace('panel-', 'no-matches-'));
+  if (noMatches) noMatches.style.display = visibleCount === 0 ? '' : 'none';
 }}
 
 setTimeout(() => location.reload(), {refresh_minutes} * 60 * 1000);
