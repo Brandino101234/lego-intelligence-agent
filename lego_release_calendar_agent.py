@@ -144,6 +144,14 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
     brand_category = resolve(apollo, product.get("brandCategory"))
     availability_text = attrs.get("availabilityText")
 
+    # LEGO Insiders (their API still calls it "VIP" internally) sometimes
+    # get early access to a set before its general release date. These
+    # fields exist on every product but are usually null — only populated
+    # during an actual active early-access window, which is short-lived
+    # and tied to specific launches rather than always-on.
+    vip_text = attrs.get("vipAvailabilityText")
+    vip_status = attrs.get("vipAvailabilityStatus")
+
     return {
         "set_num": product["productCode"],
         "name": product["name"],
@@ -153,6 +161,8 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
         "availability_status": status,
         "availability_text": availability_text,
         "launch_date": parse_availability_date(availability_text),
+        "insiders_early_access": vip_text or (vip_status is not None),
+        "insiders_early_access_text": vip_text,
         "url": f"https://www.lego.com{product['pdpPath']}",
         "image": product_image(product),
     }

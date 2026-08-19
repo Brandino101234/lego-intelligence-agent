@@ -102,6 +102,10 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
                 f'<img class="cal-card-img" src="{esc(image)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{{className:\'cal-card-img cal-card-img-empty\'}}))">'
                 if image else '<div class="cal-card-img cal-card-img-empty"></div>'
             )
+            insiders_badge = ""
+            if e.get("insiders_early_access"):
+                insiders_label = esc(e.get("insiders_early_access_text") or "Insiders early access")
+                insiders_badge = f'<div class="insiders-badge">&#9733; {insiders_label}</div>'
             cards.append(f'''
               <a class="cal-card" href="{esc(e.get("url", "#"))}" target="_blank" rel="noopener">
                 {image_html}
@@ -110,6 +114,7 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
                   <span class="theme-tag">{theme}</span>
                 </div>
                 <div class="cal-card-name">{esc(e.get("name"))}</div>
+                {insiders_badge}
                 <div class="cal-card-bottom">
                   {piece_badge}
                   <span class="cal-card-price">{esc(e.get("price") or "&mdash;")}</span>
@@ -591,6 +596,20 @@ a.cal-card:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px;
   color: var(--blue);
 }}
 .cal-card-name {{ font-size: 14px; font-weight: 600; line-height: 1.32; }}
+.insiders-badge {{
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 3px 8px;
+  border-radius: 100px;
+  background: var(--gold-soft);
+  border: 1px solid var(--gold-fill);
+  color: var(--gold);
+}}
 .cal-card-bottom {{ display: flex; justify-content: space-between; align-items: center; margin-top: auto; }}
 .cal-card-price {{ font-family: 'Plex Mono', monospace; font-size: 13px; font-weight: 600; }}
 
