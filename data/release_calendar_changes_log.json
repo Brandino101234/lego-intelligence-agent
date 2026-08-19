@@ -366,5 +366,13 @@
     "theme": "Marvel",
     "timestamp": "2026-08-15T15:26:38",
     "type": "month_changed"
+  },
+  {
+    "month": "2026-09",
+    "name": "Batman Returns™ Batmobile™",
+    "set_num": "76355",
+    "theme": "DC",
+    "timestamp": "2026-08-18T21:25:10",
+    "type": "added_to_calendar"
   }
 ]

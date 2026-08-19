@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T18:42:08",
+  "generated_at": "2026-08-18T21:25:10",
   "months": {
     "2026-08": [
       {
@@ -29,8 +29,8 @@
         "url": "https://www.lego.com/en-us/product/ayrton-senna-helmet-43024"
       },
       {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on September 1, 2026",
         "image": "https://www.lego.com/cdn/cs/set/assets/blta7a2a9ec28607b76/bltaa1f5d2205b08b15-76345_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "launch_date": "2026-09-01",
         "name": "Doctor Doom Bust",
@@ -49,7 +49,7 @@
         "pieces": 218,
         "price": "$24.99",
         "set_num": "40859",
-        "theme": "DC",
+        "theme": "BrickHeadz",
         "url": "https://www.lego.com/en-us/product/golden-age-superman-and-batman-figures-40859"
       },
       {
@@ -219,6 +219,18 @@
         "set_num": "76476",
         "theme": "Harry Potter™",
         "url": "https://www.lego.com/en-us/product/the-ministry-of-magic-collectors-edition-76476"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on September 4, 2026",
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltfbc74614e1423428/76355_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "launch_date": "2026-09-04",
+        "name": "Batman Returns™ Batmobile™",
+        "pieces": 2269,
+        "price": "$229.99",
+        "set_num": "76355",
+        "theme": "DC",
+        "url": "https://www.lego.com/en-us/product/batman-returns-batmobile-76355"
       }
     ],
     "2026-10": [
@@ -267,7 +279,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Pokémon",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -291,7 +303,7 @@
         "pieces": 467,
         "price": "$39.99",
         "set_num": "40880",
-        "theme": "Marvel",
+        "theme": "BrickHeadz",
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880"
       },
       {
