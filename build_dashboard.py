@@ -105,7 +105,7 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
             insiders_badge = ""
             if e.get("insiders_early_access"):
                 insiders_label = esc(e.get("insiders_early_access_text") or "Insiders early access")
-                insiders_badge = f'<div class="insiders-badge">&#9733; {insiders_label}</div>'
+                insiders_badge = f'<div class="insiders-badge"><span class="star">&#9733;</span><span>{insiders_label}</span></div>'
             cards.append(f'''
               <a class="cal-card" href="{esc(e.get("url", "#"))}" target="_blank" rel="noopener">
                 {image_html}
@@ -299,6 +299,11 @@ PAGE_TEMPLATE = """<!doctype html>
   --green: #237A3F;
   --green-soft: #DEEFE1;
   --shadow: 0 1px 0 rgba(26,23,16,0.05);
+  /* Deliberately NOT theme-dependent: LEGO's product photography is shot
+     on white, so pinning every product-image container to white keeps
+     them looking consistent with each other regardless of each image's
+     own transparency/aspect ratio, in both light and dark mode. */
+  --img-bg: #FFFFFF;
 }}
 
 @media (prefers-color-scheme: dark) {{
@@ -585,8 +590,8 @@ a.cal-card {{
 a.cal-card:hover {{ border-color: var(--blue); transform: translateY(-1px); }}
 a.cal-card:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px; }}
 
-.cal-card-img {{ width: 100%; height: 120px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; }}
-.cal-card-img-empty {{ background: var(--paper); }}
+.cal-card-img {{ width: 100%; height: 120px; object-fit: contain; background: var(--img-bg); border: 1px solid var(--line); border-radius: 6px; }}
+.cal-card-img-empty {{ background: var(--img-bg); }}
 
 .cal-card-top {{ display: flex; justify-content: space-between; align-items: center; }}
 .cal-card-date {{
@@ -597,19 +602,19 @@ a.cal-card:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px;
 }}
 .cal-card-name {{ font-size: 14px; font-weight: 600; line-height: 1.32; }}
 .insiders-badge {{
-  display: inline-flex;
-  align-self: flex-start;
-  align-items: center;
-  gap: 4px;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 3px 8px;
-  border-radius: 100px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 7px 10px;
+  border-radius: 6px;
   background: var(--gold-soft);
   border: 1px solid var(--gold-fill);
   color: var(--gold);
 }}
+.insiders-badge .star {{ flex-shrink: 0; font-size: 12px; }}
 .cal-card-bottom {{ display: flex; justify-content: space-between; align-items: center; margin-top: auto; }}
 .cal-card-price {{ font-family: 'Plex Mono', monospace; font-size: 13px; font-weight: 600; }}
 
@@ -655,8 +660,8 @@ thead th[data-dir="asc"]::after {{ content: "\\25B2"; }}
 thead th[data-dir="desc"]::after {{ content: "\\25BC"; }}
 
 td.thumb-cell {{ padding: 6px 0 6px 14px; width: 44px; }}
-.row-thumb {{ width: 36px; height: 36px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 5px; display: block; }}
-.row-thumb-empty {{ background: var(--paper); }}
+.row-thumb {{ width: 36px; height: 36px; object-fit: contain; background: var(--img-bg); border: 1px solid var(--line); border-radius: 5px; display: block; }}
+.row-thumb-empty {{ background: var(--img-bg); }}
 
 .date-pill {{
   display: inline-flex;
@@ -692,8 +697,8 @@ a.gwp-card {{
 a.gwp-card:hover {{ border-color: var(--green); transform: translateY(-1px); }}
 a.gwp-card:focus-visible {{ outline: 2px solid var(--green); outline-offset: 2px; }}
 
-.gwp-img {{ width: 72px; height: 72px; object-fit: contain; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; flex-shrink: 0; }}
-.gwp-img-empty {{ background: var(--paper); }}
+.gwp-img {{ width: 72px; height: 72px; object-fit: contain; background: var(--img-bg); border: 1px solid var(--line); border-radius: 6px; flex-shrink: 0; }}
+.gwp-img-empty {{ background: var(--img-bg); }}
 
 .gwp-card-body {{ display: flex; flex-direction: column; gap: 6px; min-width: 0; }}
 .gwp-card-top {{ display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }}
