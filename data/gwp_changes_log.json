@@ -26,5 +26,29 @@
     "name": "Premier Ball",
     "timestamp": "2026-08-18T21:25:25",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": "2026-08-25",
+    "gwp_code": "30730",
+    "name": "Trainer Supplies",
+    "qualifying_text": "Gift with qualifying purchases of $40 or more",
+    "timestamp": "2026-08-21T18:33:06",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": "2026-08-25",
+    "gwp_code": "30733",
+    "name": "Badnik: Skorp",
+    "qualifying_text": "Gift with qualifying purchases of $40 or more",
+    "timestamp": "2026-08-21T18:33:06",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": "2026-08-29",
+    "gwp_code": "40894",
+    "name": "Koenigsegg Sadair's Spear Steering Wheel",
+    "qualifying_text": "Unlock when purchasing Koenigsegg Sadair's Spear Megacar",
+    "timestamp": "2026-08-21T18:33:06",
+    "type": "gwp_started"
   }
 ]
