@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T18:32:52",
+  "generated_at": "2026-08-22T18:29:48",
   "months": {
     "2026-08": [
       {
@@ -145,8 +145,8 @@
         "url": "https://www.lego.com/en-us/product/advent-calendar-2026-76340"
       },
       {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on September 1, 2026",
         "image": "https://www.lego.com/cdn/cs/set/assets/blt5999ea5e1c071687/blt21fb8295f9caaf81-11383_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
         "insiders_early_access_text": null,
@@ -169,7 +169,7 @@
         "pieces": 1093,
         "price": "$99.99",
         "set_num": "43026",
-        "theme": "Nike",
+        "theme": "LEGO® Editions",
         "url": "https://www.lego.com/en-us/product/nike-air-force-1-x-lego-set-43026"
       },
       {
@@ -267,7 +267,7 @@
         "pieces": 2269,
         "price": "$229.99",
         "set_num": "76355",
-        "theme": "Batman™",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/batman-returns-batmobile-76355"
       }
     ],
