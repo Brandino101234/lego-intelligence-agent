@@ -374,5 +374,13 @@
     "theme": "DC",
     "timestamp": "2026-08-18T21:25:10",
     "type": "added_to_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Iconic Trainer Moments Poké Ball",
+    "set_num": "72154",
+    "theme": "Pokémon",
+    "timestamp": "2026-08-24T06:36:54",
+    "type": "removed_from_calendar"
   }
 ]
