@@ -47,6 +47,7 @@ def main() -> None:
     for agent in AGENTS:
         run_module(agent)
 
+    run_module("build_image_zips")
     run_module("build_dashboard")
 
     print(f"\nRun finished {datetime.now().isoformat(timespec='seconds')}")

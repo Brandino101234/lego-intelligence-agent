@@ -5,3 +5,11 @@ logs/*.log
 
 # Local Netlify folder
 .netlify
+
+# Regenerated every scrape run; deployed straight from the local site/
+# folder by `netlify deploy --dir=site` regardless of git, so tracking
+# these would just bloat the repo with duplicate binary blobs twice daily.
+site/downloads/
+
+# Local output from export_month_images.py's manual ad-hoc runs.
+exports/

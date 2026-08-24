@@ -24,6 +24,7 @@ FONTS_CSS = (ROOT / "assets" / "embedded_fonts.css").read_text(encoding="utf-8")
 RETIRING_PATH = DATA_DIR / "retiring_sets.json"
 CALENDAR_PATH = DATA_DIR / "release_calendar.json"
 GWP_PATH = DATA_DIR / "gwp.json"
+IMAGE_ZIP_MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
 
 REFRESH_MINUTES = 30
 DAILY_RUN_TIMES = ((6, 0), (18, 0))
@@ -61,6 +62,7 @@ def days_between(d1: date, d2: date) -> int:
 def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
     months = calendar.get("months", {})
     total = sum(len(v) for v in months.values())
+    zip_manifest = load_json(IMAGE_ZIP_MANIFEST_PATH, {})
 
     next_entry = None
     next_days = None
@@ -120,12 +122,21 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
                   <span class="cal-card-price">{esc(e.get("price") or "&mdash;")}</span>
                 </div>
               </a>''')
+
+        zip_info = zip_manifest.get(month_key)
+        download_button = (
+            f'<a class="cal-month-download" href="{esc(zip_info["file"])}" download>'
+            f'&#8681; Download images <span class="n">({zip_info["count"]})</span></a>'
+            if zip_info else ""
+        )
+
         rows.append(f'''
           <div class="cal-month">
             <div class="cal-month-label">
               <div class="cal-m">{name}</div>
               <div class="cal-y">{year}</div>
               <div class="cal-count">{len(entries)} SET{"S" if len(entries) != 1 else ""}</div>
+              {download_button}
             </div>
             <div class="cal-cards">{"".join(cards)}</div>
           </div>''')
@@ -572,6 +583,26 @@ section.panel[data-accent="green"] .panel-num {{ color: var(--green); }}
 .cal-m {{ font-family: 'Rubik Var', sans-serif; font-weight: 700; font-size: 13.5px; }}
 .cal-y {{ font-family: 'Plex Mono', monospace; font-size: 11px; color: var(--ink-faint); }}
 .cal-count {{ margin-top: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-muted); }}
+.cal-month-download {{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  margin-top: 12px;
+  padding: 6px 7px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--paper);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--blue);
+  text-decoration: none;
+  line-height: 1.5;
+}}
+.cal-month-download .n {{ font-weight: 500; color: var(--ink-muted); letter-spacing: 0; }}
+.cal-month-download:hover {{ border-color: var(--blue); background: var(--blue-soft); }}
+.cal-month-download:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px; }}
 
 .cal-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }}
 

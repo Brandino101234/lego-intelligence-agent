@@ -14,6 +14,7 @@ import subprocess
 import time
 from datetime import datetime, date
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 import requests
 
@@ -143,6 +144,19 @@ def now_iso() -> str:
 
 def today() -> date:
     return date.today()
+
+
+def upsize_lego_image_url(url: str, *, size: int = 1500, quality: int = 90) -> str:
+    """The image URLs collected while scraping are sized for the dashboard's
+    small thumbnails (320x320). LEGO's image CDN will happily re-render the
+    same asset at any size on request, so bump the query params rather than
+    re-scraping — used for image exports where a real resolution matters."""
+    parts = urlsplit(url)
+    query = dict(parse_qsl(parts.query))
+    query["width"] = str(size)
+    query["height"] = str(size)
+    query["quality"] = str(quality)
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
 
 
 def is_placeholder_name(name: str) -> bool:
