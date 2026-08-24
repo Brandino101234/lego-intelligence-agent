@@ -337,21 +337,23 @@ section.panel[data-accent="green"] .panel-num { color: var(--green); }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1px;
+  gap: 3px;
   margin-top: 12px;
-  padding: 6px 7px;
-  border: 1px solid var(--line);
+  padding: 7px 9px;
   border-radius: 5px;
-  background: var(--paper);
+  background: var(--blue);
+  text-decoration: none;
+  line-height: 1.3;
+}
+.cal-month-download .label {
+  font-family: 'Plex Mono', monospace;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: var(--blue);
-  text-decoration: none;
-  line-height: 1.5;
+  color: var(--paper);
 }
-.cal-month-download .n { font-weight: 500; color: var(--ink-muted); letter-spacing: 0; }
-.cal-month-download:hover { border-color: var(--blue); background: var(--blue-soft); }
+.cal-month-download .n { font-size: 9px; color: var(--paper); opacity: 0.75; }
+.cal-month-download:hover { opacity: 0.85; }
 .cal-month-download:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
 .cal-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
@@ -516,7 +518,7 @@ footer.page-footer {
 <div class="statusbar">
   <div class="wordmark">LEGO<span>&bull;</span>INTEL</div>
   <div class="status-right">
-    <span>Updated <span class="mono">Aug 24, 2:17 PM</span></span>
+    <span>Updated <span class="mono">Aug 24, 2:50 PM</span></span>
     <span>Next run <span class="mono">6:00 PM</span></span>
     <button class="refresh" onclick="location.reload()">Refresh</button>
   </div>
@@ -556,7 +558,7 @@ footer.page-footer {
               <div class="cal-m">AUGUST</div>
               <div class="cal-y">2026</div>
               <div class="cal-count">1 SET</div>
-              <a class="cal-month-download" href="downloads/2026-08.zip" download>&#8681; Download images <span class="n">(1)</span></a>
+              <a class="cal-month-download" href="downloads/2026-08.zip" download><span class="label">&#8681; Download images</span><span class="n">13 photos &middot; 1 set</span></a>
             </div>
             <div class="cal-cards">
               <a class="cal-card" href="https://www.lego.com/en-us/product/mini-hogwarts-castle-40975" target="_blank" rel="noopener">
@@ -578,7 +580,7 @@ footer.page-footer {
               <div class="cal-m">SEPTEMBER</div>
               <div class="cal-y">2026</div>
               <div class="cal-count">18 SETS</div>
-              <a class="cal-month-download" href="downloads/2026-09.zip" download>&#8681; Download images <span class="n">(16)</span></a>
+              <a class="cal-month-download" href="downloads/2026-09.zip" download><span class="label">&#8681; Download images</span><span class="n">235 photos &middot; 18 sets</span></a>
             </div>
             <div class="cal-cards">
               <a class="cal-card" href="https://www.lego.com/en-us/product/ayrton-senna-helmet-43024" target="_blank" rel="noopener">
@@ -611,7 +613,7 @@ footer.page-footer {
                 <img class="cal-card-img" src="https://www.lego.com/cdn/cs/set/assets/blt52848b506011af0a/bltb213baf82cc46073-40859_Prod.png?fit=bounds&amp;format=jpg&amp;quality=80&amp;width=320&amp;height=320&amp;dpr=1" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'cal-card-img cal-card-img-empty'}))">
                 <div class="cal-card-top">
                   <span class="cal-card-date">SEP 1</span>
-                  <span class="theme-tag">DC</span>
+                  <span class="theme-tag">Batman™</span>
                 </div>
                 <div class="cal-card-name">Golden Age Superman™ and Batman™ Figures</div>
                 
@@ -821,7 +823,7 @@ footer.page-footer {
               <div class="cal-m">OCTOBER</div>
               <div class="cal-y">2026</div>
               <div class="cal-count">8 SETS</div>
-              <a class="cal-month-download" href="downloads/2026-10.zip" download>&#8681; Download images <span class="n">(8)</span></a>
+              <a class="cal-month-download" href="downloads/2026-10.zip" download><span class="label">&#8681; Download images</span><span class="n">101 photos &middot; 8 sets</span></a>
             </div>
             <div class="cal-cards">
               <a class="cal-card" href="https://www.lego.com/en-us/product/christmas-stocking-40958" target="_blank" rel="noopener">
@@ -934,7 +936,7 @@ footer.page-footer {
               <div class="cal-m">NOVEMBER</div>
               <div class="cal-y">2026</div>
               <div class="cal-count">1 SET</div>
-              <a class="cal-month-download" href="downloads/2026-11.zip" download>&#8681; Download images <span class="n">(1)</span></a>
+              <a class="cal-month-download" href="downloads/2026-11.zip" download><span class="label">&#8681; Download images</span><span class="n">19 photos &middot; 1 set</span></a>
             </div>
             <div class="cal-cards">
               <a class="cal-card" href="https://www.lego.com/en-us/product/sagrada-familia-21065" target="_blank" rel="noopener">
@@ -3761,7 +3763,7 @@ footer.page-footer {
             <img class="gwp-img" src="https://www.lego.com/cdn/cs/set/assets/blt4bee4e48d9edceab/blt6afe0ed4b6a7b612-30733_Prod_en-gb.png" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'gwp-img gwp-img-empty'}))">
             <div class="gwp-card-body">
               <div class="gwp-card-top">
-                <span class="date-pill urgent mono">ends Aug 25</span>
+                <span class="date-pill urgent mono">ends today</span>
                 
               </div>
               <div class="gwp-card-name">Badnik: Skorp</div>
@@ -3772,7 +3774,7 @@ footer.page-footer {
             <img class="gwp-img" src="https://www.lego.com/cdn/cs/set/assets/bltb7d3a26e2da0c36e/bltf2254f2bc108ed3f-30730_Prod_en-gb.png" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'gwp-img gwp-img-empty'}))">
             <div class="gwp-card-body">
               <div class="gwp-card-top">
-                <span class="date-pill urgent mono">ends Aug 25</span>
+                <span class="date-pill urgent mono">ends today</span>
                 
               </div>
               <div class="gwp-card-name">Trainer Supplies</div>
@@ -3783,7 +3785,7 @@ footer.page-footer {
             <img class="gwp-img" src="https://www.lego.com/cdn/cs/set/assets/blt277aa92d593803ca/bltdda4cd05f6b1431a-40894_Box1_v29.png" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'gwp-img gwp-img-empty'}))">
             <div class="gwp-card-body">
               <div class="gwp-card-top">
-                <span class="date-pill soon mono">ends Aug 29</span>
+                <span class="date-pill soon mono">ends Aug 28</span>
                 
               </div>
               <div class="gwp-card-name">Koenigsegg Sadair&#x27;s Spear Steering Wheel</div>

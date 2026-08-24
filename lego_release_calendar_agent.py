@@ -48,6 +48,13 @@ full browser-matching headers) where category/theme pages don't. So this
 uses a real headless browser (Playwright) for that one signal, scoped only
 to the sets already in the calendar (~30, not the full catalog) to keep it
 fast and polite.
+
+The same product-page visit also pulls each set's full image gallery (box
+front/back, in-hand shots, feature call-outs) from its embedded Apollo
+state's `productMediaAssets` field — listing pages only ever carry one
+thumbnail per product, so this is the only place that data exists at all.
+Reusing the same page load as the Insiders check avoids a second browser
+pass per set.
 """
 
 from __future__ import annotations
@@ -166,12 +173,13 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
         "availability_status": status,
         "availability_text": availability_text,
         "launch_date": parse_availability_date(availability_text),
-        # Filled in later by check_insiders_early_access(), which visits
-        # each product page with a real browser — that per-product promo
-        # banner isn't in this listing-page data at all (see module
-        # docstring for why).
+        # Filled in later by enrich_from_product_pages(), which visits each
+        # product page with a real browser — the per-product promo banner
+        # and the full image gallery aren't in this listing-page data at
+        # all (see module docstring for why).
         "insiders_early_access": False,
         "insiders_early_access_text": None,
+        "gallery_images": [],
         "url": f"https://www.lego.com{product['pdpPath']}",
         "image": product_image(product),
     }
@@ -396,19 +404,59 @@ def diff_and_log(previous_months: dict[str, list[dict]], current_months: dict[st
     return changes
 
 
-def check_insiders_early_access(months: dict[str, list[dict]]) -> None:
+PDP_NEXT_DATA_RE = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
+
+
+def extract_gallery_images(html: str) -> list[str]:
+    """Pulls the full product image gallery (box front/back, in-hand shots,
+    feature call-outs, etc.) from a PDP's embedded Apollo state — a signal
+    the listing-page crawl never sees, since listing pages only carry one
+    thumbnail per product. `productMediaAssets` on the SingleVariantProduct
+    node is the ordered gallery list, mixing ProductAssetImage and
+    ProductAssetVideo refs; only the images are useful here. Returns full
+    native-resolution URLs (no size/quality params) — callers that want a
+    capped size should run them through upsize_lego_image_url()."""
+    match = PDP_NEXT_DATA_RE.search(html)
+    if not match:
+        return []
+    try:
+        data = json.loads(match.group(1))
+        apollo = data["props"]["pageProps"]["__APOLLO_STATE__"]
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return []
+
+    product = next(
+        (v for k, v in apollo.items() if k.startswith("SingleVariantProduct:") and "." not in k),
+        None,
+    )
+    if not product:
+        return []
+
+    urls = []
+    for ref in product.get("productMediaAssets") or []:
+        if ref.get("typename") != "ProductAssetImage":
+            continue
+        asset = resolve(apollo, ref)
+        if asset and asset.get("url"):
+            urls.append(asset["url"])
+    return urls
+
+
+def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
     """Visits each calendar entry's product page with a real headless
-    browser and checks for a LEGO Insiders early-access promo banner,
-    mutating each entry's insiders_early_access fields in place. Scoped to
-    just the calendar (~30 sets), not the full catalog, to stay fast."""
+    browser to fill in the two signals that only exist there, not on the
+    listing pages the rest of this crawl uses: a LEGO Insiders early-access
+    promo banner, and the full image gallery. One page load per set covers
+    both, mutating each entry in place. Scoped to just the calendar (~30
+    sets), not the full catalog, to stay fast."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
-        print("  ! playwright not installed — skipping Insiders early-access check")
+        print("  ! playwright not installed — skipping product page enrichment")
         return
 
     entries = [e for month_entries in months.values() for e in month_entries if e.get("url")]
-    print(f"  checking {len(entries)} product pages for Insiders early access...")
+    print(f"  checking {len(entries)} product pages for Insiders early access + image galleries...")
 
     # LEGO.com shows a generic recurring Insiders marketing blurb ("...
     # unlock Early Access to exclusive sets! Sign up today.") on products
@@ -419,7 +467,8 @@ def check_insiders_early_access(months: dict[str, list[dict]]) -> None:
     # the generic blurb never does — require that to tell them apart.
     date_range_re = re.compile(r"\d{1,2}/\d{1,2}")
 
-    found = 0
+    found_early_access = 0
+    found_galleries = 0
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(user_agent=HEADERS["User-Agent"])
@@ -427,18 +476,24 @@ def check_insiders_early_access(months: dict[str, list[dict]]) -> None:
             try:
                 page.goto(entry["url"], timeout=30000, wait_until="domcontentloaded")
                 page.wait_for_timeout(1200)  # let client-rendered promo content settle
+
                 banner = page.locator('[data-test="markup"]', has_text="Early Access").first
                 if banner.count() > 0:
                     text = banner.inner_text().strip()
                     if date_range_re.search(text):
                         entry["insiders_early_access"] = True
                         entry["insiders_early_access_text"] = text
-                        found += 1
+                        found_early_access += 1
+
+                gallery = extract_gallery_images(page.content())
+                if gallery:
+                    entry["gallery_images"] = gallery
+                    found_galleries += 1
             except Exception as exc:
                 print(f"    ! {entry['set_num']}: {exc}")
         browser.close()
 
-    print(f"  found Insiders early access on {found} set(s)")
+    print(f"  found Insiders early access on {found_early_access} set(s), image galleries for {found_galleries} set(s)")
 
 
 def report(changes: list[dict]) -> None:
@@ -469,7 +524,7 @@ def main() -> None:
     print(f"\n  found {len(products)} buildable sets not yet released, across LEGO.com")
     print(f"  collected {len(images)} product images and {len(prices)} prices along the way")
     current_months = build_calendar(products)
-    check_insiders_early_access(current_months)
+    enrich_from_product_pages(current_months)
 
     changes = diff_and_log(previous_months, current_months)
     save_json(CALENDAR_PATH, {"generated_at": now_iso(), "months": current_months})

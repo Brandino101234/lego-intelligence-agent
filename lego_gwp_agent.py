@@ -21,8 +21,12 @@ same pattern as the other three agents.
 
 from __future__ import annotations
 
-from lego_common import DATA_DIR, fetch_via_curl, load_json, now_iso, save_json, append_log
+import re
+
+from lego_common import DATA_DIR, fetch_via_curl, load_json, now_iso, parse_flexible_date, save_json, append_log
 from lego_release_calendar_agent import parse_next_data, resolve
+
+_ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}")
 
 # Pages confirmed (by direct inspection) to carry the sitewide GWP promo
 # banner in their Apollo state. Fetching a few gives redundancy in case any
@@ -47,11 +51,19 @@ def extract_gwp_promotions(apollo: dict) -> dict[str, dict]:
         if not code:
             continue
 
-        # endDate arrives ISO-ish with a UTC offset, e.g.
-        # "2026-08-17T04:59:00+01:00" — the date component is already
-        # YYYY-MM-DD, no parsing needed.
+        # endDate has been observed in two shapes from LEGO's API: ISO with
+        # a UTC offset (e.g. "2026-08-17T04:59:00+01:00") — the date
+        # component is already YYYY-MM-DD, no parsing needed — and, for
+        # some entries, a human-readable date instead (e.g. "August 24,
+        # 2026"). Normalize both to YYYY-MM-DD rather than assuming ISO.
         end_date_raw = v.get("endDate")
-        end_date = end_date_raw[:10] if end_date_raw else None
+        if end_date_raw and _ISO_DATE_RE.match(end_date_raw):
+            end_date = end_date_raw[:10]
+        elif end_date_raw:
+            parsed = parse_flexible_date(end_date_raw)
+            end_date = parsed.isoformat() if parsed else None
+        else:
+            end_date = None
 
         found[code] = {
             "gwp_code": code,

@@ -1,11 +1,13 @@
-"""Download full-resolution product images for a given month's LEGO sets.
+"""Download each set's full image gallery for a given month, not just the
+single cover photo shown on the dashboard.
 
 Reuses the release calendar data the dashboard already scrapes (data/
-release_calendar.json) instead of hitting LEGO.com again. The images stored
-there are 320x320 thumbnails (sized for the dashboard cards); this bumps the
-same CDN URL's width/height/quality query params to pull the same asset at
-a much higher resolution, since LEGO's image CDN happily serves whatever
-size you ask for.
+release_calendar.json) instead of hitting LEGO.com again — including each
+set's gallery_images list (box front/back, in-hand shots, feature
+call-outs), collected per-product by lego_release_calendar_agent.py's
+Playwright pass. Each set gets its own subfolder. Every image is pulled at
+a capped high resolution (LEGO's CDN will serve any size on request) rather
+than the dashboard's 320x320 thumbnails.
 
 Usage:
     python3 export_month_images.py            # current month
@@ -66,25 +68,26 @@ def main() -> None:
     for e in entries:
         set_num = e.get("set_num", "unknown")
         name = e.get("name", set_num)
-        image_url = e.get("image")
+        gallery = e.get("gallery_images") or ([e["image"]] if e.get("image") else [])
 
-        if not image_url:
+        if not gallery:
             print(f"  ! {set_num} {name}: no image available, skipping")
             skipped += 1
             continue
 
-        filename = f"{set_num} {sanitize_filename(name)}.jpg"
-        dest = out_dir / filename
+        set_dir = out_dir / f"{set_num} {sanitize_filename(name)}"
+        set_dir.mkdir(parents=True, exist_ok=True)
 
-        resp = requests.get(upsize_lego_image_url(image_url), headers=HEADERS, timeout=20)
-        if resp.status_code != 200:
-            print(f"  ! {set_num} {name}: image request returned HTTP {resp.status_code}")
-            skipped += 1
-            continue
+        for i, image_url in enumerate(gallery, start=1):
+            resp = requests.get(upsize_lego_image_url(image_url), headers=HEADERS, timeout=20)
+            if resp.status_code != 200:
+                print(f"  ! {set_num} {name} [{i}]: image request returned HTTP {resp.status_code}")
+                skipped += 1
+                continue
+            (set_dir / f"{i:02d}.jpg").write_bytes(resp.content)
+            downloaded += 1
 
-        dest.write_bytes(resp.content)
-        print(f"  {dest.name}")
-        downloaded += 1
+        print(f"  {set_dir.name}/ ({len(gallery)} image(s))")
 
     print(f"\nSaved {downloaded} image(s) to {out_dir}" + (f" ({skipped} skipped)" if skipped else ""))
 

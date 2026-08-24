@@ -126,7 +126,9 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
         zip_info = zip_manifest.get(month_key)
         download_button = (
             f'<a class="cal-month-download" href="{esc(zip_info["file"])}" download>'
-            f'&#8681; Download images <span class="n">({zip_info["count"]})</span></a>'
+            f'<span class="label">&#8681; Download images</span>'
+            f'<span class="n">{zip_info["images"]} photo{"s" if zip_info["images"] != 1 else ""} '
+            f'&middot; {zip_info["sets"]} set{"s" if zip_info["sets"] != 1 else ""}</span></a>'
             if zip_info else ""
         )
 
@@ -587,21 +589,23 @@ section.panel[data-accent="green"] .panel-num {{ color: var(--green); }}
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1px;
+  gap: 3px;
   margin-top: 12px;
-  padding: 6px 7px;
-  border: 1px solid var(--line);
+  padding: 7px 9px;
   border-radius: 5px;
-  background: var(--paper);
+  background: var(--blue);
+  text-decoration: none;
+  line-height: 1.3;
+}}
+.cal-month-download .label {{
+  font-family: 'Plex Mono', monospace;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: var(--blue);
-  text-decoration: none;
-  line-height: 1.5;
+  color: var(--paper);
 }}
-.cal-month-download .n {{ font-weight: 500; color: var(--ink-muted); letter-spacing: 0; }}
-.cal-month-download:hover {{ border-color: var(--blue); background: var(--blue-soft); }}
+.cal-month-download .n {{ font-size: 9px; color: var(--paper); opacity: 0.75; }}
+.cal-month-download:hover {{ opacity: 0.85; }}
 .cal-month-download:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px; }}
 
 .cal-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }}
