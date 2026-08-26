@@ -496,6 +496,14 @@ def extract_future_gwp(apollo: dict) -> dict | None:
             "text": STRIP_TAGS_RE.sub("", body).strip(),
             "date_range": date_match.group(0),
             "url": f"https://www.lego.com{link}" if link and link.startswith("/") else link,
+            # The gift's own product page usually doesn't exist yet this
+            # far ahead of launch (confirmed: 404 on Darth Vader's
+            # Lightsaber's page a month out) — this block's own marketing
+            # image is a real photo of the gift itself (confirmed by eye),
+            # unlike the anchor set's photo, which would show the wrong
+            # product entirely. Used as a fallback if the follow-up visit
+            # below can't get a cleaner shot from the gift's own page.
+            "hero_image": v.get("backgroundImageDesktop"),
             "image": None,  # filled in by a follow-up visit to the gift's own product page
         }
     return None
@@ -566,6 +574,10 @@ def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
                                 future_gwp["image"] = extract_primary_image(gwp_apollo)
                         except Exception:
                             pass  # still worth keeping the promo without an image
+                    if not future_gwp.get("image"):
+                        future_gwp["image"] = future_gwp.pop("hero_image", None)
+                    else:
+                        future_gwp.pop("hero_image", None)
                     entry["future_gwp"] = future_gwp
                     found_future_gwp += 1
             except Exception as exc:
