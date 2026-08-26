@@ -27,6 +27,13 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      # The runner's LaunchAgent service has no PATH override, so it
+      # inherits launchd's bare-minimum default (no /opt/homebrew/bin).
+      # actions/upload-pages-artifact shells out to `gtar` (GNU tar, via
+      # `brew install gnu-tar`) without a full path, so it needs
+      # /opt/homebrew/bin on PATH to be found at all.
+      PATH: /opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin
     steps:
       - uses: actions/checkout@v4
 
