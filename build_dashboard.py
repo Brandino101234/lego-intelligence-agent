@@ -303,10 +303,19 @@ def render_future_gwp(calendar: dict) -> tuple[int, str]:
     cards = []
     for e in entries:
         g = e["future_gwp"]
-        image = g.get("image") or e.get("image")
+        # Deliberately NOT falling back to the anchor set's own image (e's
+        # "image" field) — that would show the purchased set's photo under
+        # a card about the free gift, which is a different product
+        # entirely and actively misleading (confirmed wrong in testing).
+        # The image used here is LEGO's own wide marketing banner for the
+        # reveal, not a square product photo (there usually isn't one yet
+        # this far ahead of launch) — a dedicated wide layout instead of
+        # the standard square .gwp-img box, cropped to its left side where
+        # the gift itself is pictured (confirmed by eye).
+        image = g.get("image")
         image_html = (
-            f'<img class="gwp-img" src="{esc(image)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{{className:\'gwp-img gwp-img-empty\'}}))">'
-            if image else '<div class="gwp-img gwp-img-empty"></div>'
+            f'<img class="gwp-future-img" src="{esc(image)}" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+            if image else ""
         )
 
         cards.append(f'''
@@ -783,8 +792,11 @@ a.gwp-card:focus-visible {{ outline: 2px solid var(--green); outline-offset: 2px
 .gwp-card-name {{ font-size: 14px; font-weight: 600; line-height: 1.3; }}
 .gwp-card-qualify {{ font-size: 12px; color: var(--ink-muted); }}
 
+a.gwp-card-future {{ flex-direction: column; gap: 0; padding: 0; overflow: hidden; }}
 a.gwp-card-future:hover {{ border-color: var(--blue); }}
 a.gwp-card-future:focus-visible {{ outline-color: var(--blue); }}
+.gwp-future-img {{ width: 100%; height: 110px; object-fit: cover; object-position: left center; display: block; }}
+.gwp-card-future .gwp-card-body {{ padding: 14px; }}
 
 .gwp-future-heading {{ margin: 32px 0 16px; padding-top: 20px; border-top: 1px solid var(--line); }}
 .gwp-future-heading h3 {{ font-family: 'Rubik Var', sans-serif; font-size: 15px; font-weight: 700; }}
