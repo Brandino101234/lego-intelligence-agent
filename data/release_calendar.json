@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-08-26T12:45:40",
+  "generated_at": "2026-08-26T14:29:20",
   "months": {
     "2026-08": [
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on August 29, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt4f7fe6a2e7dfc08b/blt4f8bf42325dcbdfa-40975_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltbbd070060310e766/blt4f8bf42325dcbdfa-40975_boxprod_v39_en-us.png",
@@ -36,6 +37,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt81c03b1e591fa811/43024_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt5310fd1d45288b73/43024_boxprod_v39.png",
@@ -64,6 +66,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt8f2f860a2990d9e7/bltaa1f5d2205b08b15-76345_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt8106c1117c4851b9/bltaa1f5d2205b08b15-76345_boxprod_v39_en-us.png",
@@ -97,6 +100,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt52848b506011af0a/bltb213baf82cc46073-40859_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltf717a717a03b1aa8/bltb213baf82cc46073-40859_boxprod_v39_en-us.png",
@@ -120,12 +124,13 @@
         "pieces": 218,
         "price": "$24.99",
         "set_num": "40859",
-        "theme": "DC",
+        "theme": "Batman™",
         "url": "https://www.lego.com/en-us/product/golden-age-superman-and-batman-figures-40859"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt687602a6e925f129/40919_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltee5611ca5b2421c6/40919_boxprod_v39.png",
@@ -151,6 +156,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt11e9eb94791a27d1/blte2a9ca4bf40536af-60510_Box1_v39_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/blt67d47a0578d27ffa/blte2a9ca4bf40536af-60510_boxprod_v39_en-us.png",
@@ -181,19 +187,9 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blt89c905c72b3feae1/bltecc1c309cb684314-42698_Box1_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt6e23902fea6681ca/bltecc1c309cb684314-42698_boxprod_v39_en-us.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltbd103cab8ff87870/bltecc1c309cb684314-42698_WEB_SEC01_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltf4546f62575442d0/bltecc1c309cb684314-42698_WEB_SEC02_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt68c9a2af42982b77/bltecc1c309cb684314-42698_WEB_SEC03_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt95f0dd8ec3e13c5e/bltecc1c309cb684314-42698_WEB_SEC04_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt5e29ad796009c067/bltecc1c309cb684314-42698_WEB_SEC05_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt6d0020b9e8fff656/bltecc1c309cb684314-42698_Lifestyle_build.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltffb8f68b83a499f7/bltecc1c309cb684314-42698_Lifestyle_cons_2.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt81a4dd334df60843/bltecc1c309cb684314-42698_Lifestyle_envr_A.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltc8529c0e019ff630/bltecc1c309cb684314-42698_Lifestyle_envr_B.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt47528d9804137026/bltecc1c309cb684314-42698_Box5_v39_en-us.png"
+          "https://www.lego.com/cdn/cs/set/assets/blt44cb6bddbf544676/bltecc1c309cb684314-42698_Box1_v39_en-gb.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt44cb6bddbf544676/bltecc1c309cb684314-42698_Box1_v39_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
@@ -209,6 +205,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt5cc1cec0ec66de57/blt691e598d84db744d-75456_Box1_v39_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/blte5ce582632491cb5/blt691e598d84db744d-75456_boxprod_v39_en-us.png",
@@ -229,6 +226,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt6e04005a7731cbd9/blt0fed8b3062f3baae-43298_Box1_v39_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/blt274ff3e14c96fe62/blt0fed8b3062f3baae-43298_boxprod_v39_en-us.png",
@@ -255,6 +253,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltfa976a58138e9a27/blt91ca18fede88b80f-76340_Box1_v39_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/blt7443dd0bc7ee86d9/blt91ca18fede88b80f-76340_WEB_SEC01_NOBG.png",
@@ -281,6 +280,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltaf15f7318ac0ba98/blt21fb8295f9caaf81-11383_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt5a4e15a9fc0512fa/blt21fb8295f9caaf81-11383_boxprod_v39_en-us.png",
@@ -316,6 +316,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt1e9850b2422c6389/43026_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt27dfdc71e6d7125a/43026_boxprod_v39.png",
@@ -338,12 +339,13 @@
         "pieces": 1093,
         "price": "$99.99",
         "set_num": "43026",
-        "theme": "LEGO® Editions",
+        "theme": "Nike",
         "url": "https://www.lego.com/en-us/product/nike-air-force-1-x-lego-set-43026"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt11defb77b4e145c4/blt4849c1b44cb1dbf6-71053_Prod_en-gb.png",
           "https://www.lego.com/cdn/cs/set/assets/bltcf4583541c757f97/blt4849c1b44cb1dbf6-71053_boxprod_v110.png",
@@ -372,6 +374,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt6e1bda68e6b9868e/blt7ca855356bdbf7b0-66815_Box1_v39.png",
           "https://www.lego.com/cdn/cs/set/assets/bltf3145cdf0a13f09d/blt7ca855356bdbf7b0-66815_boxprod_v39_sha.png",
@@ -392,6 +395,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltfaa10e0579ff9fb5/bltddca44e48e587403-40858_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt7c2785c21a8cf124/bltddca44e48e587403-40858_boxprod_v39_en-us.png",
@@ -416,6 +420,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt7a65be3e885d0dee/blt5a0bc0d19682a2a8-11386_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt85aaf30d636df795/blt5a0bc0d19682a2a8-11386_boxprod_v39_en-us.png",
@@ -452,6 +457,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt627df9e1cdc9d07b/blt68b96db9d6f9e80c-11385_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltddf121a903661758/blt68b96db9d6f9e80c-11385_boxprod_v39.png",
@@ -490,6 +496,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltfbb0ca97c8981815/76476_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt5ef9ca3cc8f26125/76476_boxprod_v39_(1).png",
@@ -524,6 +531,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on September 4, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltc6f27d4a45e9571c/76355_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltd13ed56409724505/76355_boxprod_v39.png",
@@ -561,6 +569,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on October 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltfdd36071c62c1948/blt3904de066105e8e7-40958_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt34546c239631d0dd/blt3904de066105e8e7-40958_boxprod_v39_en-us.png",
@@ -590,6 +599,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt59f10fadf173c1ba/blt3435be8c14df0276-72154_Prod_en-gb.png",
           "https://www.lego.com/cdn/cs/set/assets/bltd7d4eb49f8b610f4/blt3435be8c14df0276-72154_boxprod_v39.png",
@@ -626,6 +636,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on October 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt16ab20bfcf8f3d5f/76788_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt435aedd7770a5136/76788_Box5_v39.png",
@@ -654,6 +665,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt2ec5ce89bac1779e/bltb704864bcbaae140-40868_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt88246fcbcd3e7318/bltb704864bcbaae140-40868_boxprod_v39_en-us.png",
@@ -677,12 +689,13 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Minifigures",
+        "theme": "Pokémon",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on October 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt6448e1e86266ce62/76787_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt50eca0be3f7bfab8/76787_boxprod_v39.png",
@@ -715,6 +728,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on October 4, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltf245070bb2a06ee3/40880_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltf03a4c55792ffe40/blt11626136edaa9196-40880_boxprod_v39_en-us.png",
@@ -743,6 +757,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt23f24dd445978662/bltf8fe100c932e85ca-76352_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt20280e5a9b0dff5d/bltf8fe100c932e85ca-76352_boxprod_v39_en-us.png",
@@ -770,6 +785,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt180612f98cc6016a/blt0b01e7e47f3494e9-76347_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt1743a3d90819092d/blt0b01e7e47f3494e9-76347_boxprod_v39.png",
@@ -798,6 +814,7 @@
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt4cad29cf235a91fb/blte08480224b17a8b6-76348_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt7276602c4a32dad6/blte08480224b17a8b6-76348_boxprod_v39_en-us.png",
@@ -826,6 +843,13 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on October 4, 2026",
+        "future_gwp": {
+          "date_range": "10/1 - 10/7",
+          "image": null,
+          "name": "Recreate Darth Vader’s LIGHTSABER™",
+          "text": "Your gift with the purchase of the LEGO® Star Wars™ Executor Super Star Destroyer™ (75457). 10/1 - 10/7  while supplies last.*",
+          "url": "https://www.lego.com/product/darth-vaders-lightsaber-40897"
+        },
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltb4c3d072be35f7fa/75457_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt51e9252c9dc00311/75457_Box5_v39.png",
@@ -863,6 +887,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on November 1, 2026",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt312f953b5974a677/blt7fc2e495b14acd1c-21065_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt61b763fcf75006b3/blt7fc2e495b14acd1c-21065_boxprod_v39_en-us.png",
@@ -900,6 +925,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt61dfd886600761bb/72060_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltca5d698fc6fef6e3/72060_Back_02_01.png",
@@ -921,6 +947,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltf035f8f9de512053/72058_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt1955675440cbf04f/72058_Back_01_01.png",
@@ -942,6 +969,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt59695bcce3b24805/72056_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltccae76dae30419b8/72056_Front_01_02.png",
@@ -963,6 +991,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltced5edcf5bc700e0/72054_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltb4bd8412247f2109/72054_Back_01_01.png",
@@ -983,6 +1012,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt961657d053316aab/72055_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blte66b9b17d6e460a6/72055_Back_01_01.png",
@@ -1003,6 +1033,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt9c039ad50d2d1d66/72052_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt61afdbf72ffd4ae3/72052_Back_02_01.png",
@@ -1024,6 +1055,7 @@
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt92360bae55d5882c/72057_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt1e2b3ed87d6b0905/72057_Back_01_01.png",
