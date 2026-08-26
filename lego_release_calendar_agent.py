@@ -55,6 +55,10 @@ state's `productMediaAssets` field — listing pages only ever carry one
 thumbnail per product, so this is the only place that data exists at all.
 Reusing the same page load as the Insiders check avoids a second browser
 pass per set.
+
+It also checks for a pre-announced future gift-with-purchase promo — see
+extract_future_gwp() for why that's a real (if occasional) thing worth
+scraping, unlike lego_gwp_agent.py's current-only scope.
 """
 
 from __future__ import annotations
@@ -174,12 +178,13 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
         "availability_text": availability_text,
         "launch_date": parse_availability_date(availability_text),
         # Filled in later by enrich_from_product_pages(), which visits each
-        # product page with a real browser — the per-product promo banner
-        # and the full image gallery aren't in this listing-page data at
-        # all (see module docstring for why).
+        # product page with a real browser — the per-product promo banner,
+        # the full image gallery, and any pre-announced future GWP aren't
+        # in this listing-page data at all (see module docstring for why).
         "insiders_early_access": False,
         "insiders_early_access_text": None,
         "gallery_images": [],
+        "future_gwp": None,
         "url": f"https://www.lego.com{product['pdpPath']}",
         "image": product_image(product),
     }
@@ -406,29 +411,42 @@ def diff_and_log(previous_months: dict[str, list[dict]], current_months: dict[st
 
 PDP_NEXT_DATA_RE = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
 
+GWP_TEXT_RE = re.compile(r"gift with (?:the )?purchase", re.IGNORECASE)
+GWP_DATE_RANGE_RE = re.compile(r"\d{1,2}/\d{1,2}\s*-\s*\d{1,2}/\d{1,2}")
+STRIP_TAGS_RE = re.compile(r"<[^>]+>")
 
-def extract_gallery_images(html: str) -> list[str]:
+
+def extract_pdp_apollo_state(html: str) -> dict | None:
+    """Parses a PDP's embedded Apollo state — same normalized-cache shape
+    as the listing pages, but under a different key path
+    (props.pageProps.__APOLLO_STATE__ rather than apolloState)."""
+    match = PDP_NEXT_DATA_RE.search(html)
+    if not match:
+        return None
+    try:
+        data = json.loads(match.group(1))
+        return data["props"]["pageProps"]["__APOLLO_STATE__"]
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return None
+
+
+def find_single_variant_product(apollo: dict) -> dict | None:
+    return next(
+        (v for k, v in apollo.items() if k.startswith("SingleVariantProduct:") and "." not in k),
+        None,
+    )
+
+
+def extract_gallery_images(apollo: dict) -> list[str]:
     """Pulls the full product image gallery (box front/back, in-hand shots,
-    feature call-outs, etc.) from a PDP's embedded Apollo state — a signal
-    the listing-page crawl never sees, since listing pages only carry one
+    feature call-outs, etc.) from a PDP's Apollo state — a signal the
+    listing-page crawl never sees, since listing pages only carry one
     thumbnail per product. `productMediaAssets` on the SingleVariantProduct
     node is the ordered gallery list, mixing ProductAssetImage and
     ProductAssetVideo refs; only the images are useful here. Returns full
     native-resolution URLs (no size/quality params) — callers that want a
     capped size should run them through upsize_lego_image_url()."""
-    match = PDP_NEXT_DATA_RE.search(html)
-    if not match:
-        return []
-    try:
-        data = json.loads(match.group(1))
-        apollo = data["props"]["pageProps"]["__APOLLO_STATE__"]
-    except (json.JSONDecodeError, KeyError, TypeError):
-        return []
-
-    product = next(
-        (v for k, v in apollo.items() if k.startswith("SingleVariantProduct:") and "." not in k),
-        None,
-    )
+    product = find_single_variant_product(apollo)
     if not product:
         return []
 
@@ -442,13 +460,55 @@ def extract_gallery_images(html: str) -> list[str]:
     return urls
 
 
+def extract_primary_image(apollo: dict) -> str | None:
+    product = find_single_variant_product(apollo)
+    return product.get('primaryImage({"size":"HIRES"})') if product else None
+
+
+def extract_future_gwp(apollo: dict) -> dict | None:
+    """LEGO occasionally pre-announces a flagship set's gift-with-purchase
+    promo well before it goes live — confirmed with the LEGO Star Wars
+    Executor Super Star Destroyer (75457), whose Darth Vader's Lightsaber
+    GWP was revealed the same day as the set itself, over a month before
+    either goes on sale. That announcement isn't a `GwpPromotion` Apollo
+    entry (the type lego_gwp_agent.py's *current*-only scraper relies on,
+    which only reflects promos already live) — it's a one-off marketing
+    content block embedded directly on the set's own product page. LEGO
+    doesn't use one consistent content type for these across sets, so this
+    scans every content block's body text for GWP-shaped language rather
+    than matching a specific type, requiring an explicit date range
+    (LEGO's generic promo copy never includes one) to avoid false
+    positives — the same pattern used for the Insiders early-access
+    banner."""
+    for v in apollo.values():
+        if not isinstance(v, dict):
+            continue
+        body = v.get("bodyText")
+        if not body or not isinstance(body, str) or not GWP_TEXT_RE.search(body):
+            continue
+        date_match = GWP_DATE_RANGE_RE.search(body)
+        if not date_match:
+            continue
+
+        link = v.get("primaryButtonCallToActionLink")
+        return {
+            "name": v.get("title") or "Gift with purchase",
+            "text": STRIP_TAGS_RE.sub("", body).strip(),
+            "date_range": date_match.group(0),
+            "url": f"https://www.lego.com{link}" if link and link.startswith("/") else link,
+            "image": None,  # filled in by a follow-up visit to the gift's own product page
+        }
+    return None
+
+
 def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
     """Visits each calendar entry's product page with a real headless
-    browser to fill in the two signals that only exist there, not on the
+    browser to fill in the signals that only exist there, not on the
     listing pages the rest of this crawl uses: a LEGO Insiders early-access
-    promo banner, and the full image gallery. One page load per set covers
-    both, mutating each entry in place. Scoped to just the calendar (~30
-    sets), not the full catalog, to stay fast."""
+    promo banner, the full image gallery, and a pre-announced future GWP
+    (see extract_future_gwp). One page load per set covers all three,
+    mutating each entry in place. Scoped to just the calendar (~30 sets),
+    not the full catalog, to stay fast."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -456,7 +516,7 @@ def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
         return
 
     entries = [e for month_entries in months.values() for e in month_entries if e.get("url")]
-    print(f"  checking {len(entries)} product pages for Insiders early access + image galleries...")
+    print(f"  checking {len(entries)} product pages for Insiders early access, image galleries, and future GWPs...")
 
     # LEGO.com shows a generic recurring Insiders marketing blurb ("...
     # unlock Early Access to exclusive sets! Sign up today.") on products
@@ -469,6 +529,7 @@ def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
 
     found_early_access = 0
     found_galleries = 0
+    found_future_gwp = 0
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(user_agent=HEADERS["User-Agent"])
@@ -485,15 +546,37 @@ def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
                         entry["insiders_early_access_text"] = text
                         found_early_access += 1
 
-                gallery = extract_gallery_images(page.content())
+                apollo = extract_pdp_apollo_state(page.content())
+                if not apollo:
+                    continue
+
+                gallery = extract_gallery_images(apollo)
                 if gallery:
                     entry["gallery_images"] = gallery
                     found_galleries += 1
+
+                future_gwp = extract_future_gwp(apollo)
+                if future_gwp:
+                    if future_gwp.get("url"):
+                        try:
+                            page.goto(future_gwp["url"], timeout=30000, wait_until="domcontentloaded")
+                            page.wait_for_timeout(1200)
+                            gwp_apollo = extract_pdp_apollo_state(page.content())
+                            if gwp_apollo:
+                                future_gwp["image"] = extract_primary_image(gwp_apollo)
+                        except Exception:
+                            pass  # still worth keeping the promo without an image
+                    entry["future_gwp"] = future_gwp
+                    found_future_gwp += 1
             except Exception as exc:
                 print(f"    ! {entry['set_num']}: {exc}")
         browser.close()
 
-    print(f"  found Insiders early access on {found_early_access} set(s), image galleries for {found_galleries} set(s)")
+    print(
+        f"  found Insiders early access on {found_early_access} set(s), "
+        f"image galleries for {found_galleries} set(s), "
+        f"future GWPs for {found_future_gwp} set(s)"
+    )
 
 
 def report(changes: list[dict]) -> None:

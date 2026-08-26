@@ -284,6 +284,47 @@ def render_gwp(gwp: dict, today: date) -> tuple[str, str]:
     return stat, f'<div class="gwp-cards">{"".join(cards)}</div>'
 
 
+def render_future_gwp(calendar: dict) -> tuple[int, str]:
+    """LEGO occasionally reveals a flagship set's GWP well ahead of launch
+    (see extract_future_gwp() in lego_release_calendar_agent.py for how
+    that's detected) — surfaced here as a distinct "announced" section
+    below the currently-active promos, sourced from the same calendar
+    entries the Release calendar panel uses rather than a separate
+    scrape."""
+    entries = [
+        e for month_entries in calendar.get("months", {}).values()
+        for e in month_entries if e.get("future_gwp")
+    ]
+    if not entries:
+        return 0, ""
+
+    entries.sort(key=lambda e: e.get("launch_date") or "")
+
+    cards = []
+    for e in entries:
+        g = e["future_gwp"]
+        image = g.get("image") or e.get("image")
+        image_html = (
+            f'<img class="gwp-img" src="{esc(image)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{{className:\'gwp-img gwp-img-empty\'}}))">'
+            if image else '<div class="gwp-img gwp-img-empty"></div>'
+        )
+
+        cards.append(f'''
+          <a class="gwp-card gwp-card-future" href="{esc(e.get("url", "#"))}" target="_blank" rel="noopener">
+            {image_html}
+            <div class="gwp-card-body">
+              <div class="gwp-card-top">
+                <span class="date-pill neutral mono">{esc(g.get("date_range") or "date TBA")}</span>
+                <span class="theme-tag announced">ANNOUNCED</span>
+              </div>
+              <div class="gwp-card-name">{esc(g.get("name"))}</div>
+              <div class="gwp-card-qualify">{esc(g.get("text"))}</div>
+            </div>
+          </a>''')
+
+    return len(entries), f'<div class="gwp-cards">{"".join(cards)}</div>'
+
+
 # ------------------------------------------------------------------ template --
 
 PAGE_TEMPLATE = """<!doctype html>
@@ -738,8 +779,16 @@ a.gwp-card:focus-visible {{ outline: 2px solid var(--green); outline-offset: 2px
 .gwp-card-body {{ display: flex; flex-direction: column; gap: 6px; min-width: 0; }}
 .gwp-card-top {{ display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }}
 .theme-tag.insiders {{ background: var(--green-soft); border-color: var(--green); color: var(--green); }}
+.theme-tag.announced {{ background: var(--blue-soft); border-color: var(--blue); color: var(--blue); }}
 .gwp-card-name {{ font-size: 14px; font-weight: 600; line-height: 1.3; }}
 .gwp-card-qualify {{ font-size: 12px; color: var(--ink-muted); }}
+
+a.gwp-card-future:hover {{ border-color: var(--blue); }}
+a.gwp-card-future:focus-visible {{ outline-color: var(--blue); }}
+
+.gwp-future-heading {{ margin: 32px 0 16px; padding-top: 20px; border-top: 1px solid var(--line); }}
+.gwp-future-heading h3 {{ font-family: 'Rubik Var', sans-serif; font-size: 15px; font-weight: 700; }}
+.gwp-future-heading p {{ margin-top: 4px; font-size: 12.5px; color: var(--ink-muted); }}
 
 footer.page-footer {{
   max-width: 1080px;
@@ -832,7 +881,7 @@ footer.page-footer {{
           <div class="panel-num display">03</div>
           <div class="panel-title">
             <h2>Gift with purchase</h2>
-            <p>Currently active GWP promotions, straight from LEGO.com. Future GWPs aren&rsquo;t announced in advance by LEGO or reliably tracked anywhere, so this is current-only.</p>
+            <p>Currently active GWP promotions, straight from LEGO.com, plus any future ones LEGO has pre-announced for an upcoming set (rare, but it happens for flagship releases).</p>
           </div>
         </div>
         <div class="panel-stat">{gwp_stat}</div>
@@ -841,6 +890,7 @@ footer.page-footer {{
         <input type="text" placeholder="Search by name&hellip;" oninput="filterCards(this,'panel-gwp','.gwp-card',null)">
       </div>
       {gwp_body}
+      {future_gwp_body}
       <p class="no-matches" id="no-matches-gwp">No promotions match your search.</p>
     </section>
   </main>
@@ -921,6 +971,17 @@ def build() -> Path:
     calendar_stat, calendar_body = render_calendar(calendar, today)
     retiring_stat, retiring_body = render_retiring(retiring, today)
     gwp_stat, gwp_body = render_gwp(gwp, today)
+    future_gwp_count, future_gwp_cards = render_future_gwp(calendar)
+
+    future_gwp_body = ""
+    if future_gwp_cards:
+        future_gwp_body = f'''
+      <div class="gwp-future-heading">
+        <h3>Announced for an upcoming set</h3>
+        <p>Not live yet &mdash; LEGO has pre-revealed these ahead of the set&rsquo;s own launch.</p>
+      </div>
+      {future_gwp_cards}'''
+        gwp_stat += f" &middot; {future_gwp_count} announced"
 
     page = PAGE_TEMPLATE.format(
         fonts_css=FONTS_CSS,
@@ -931,6 +992,7 @@ def build() -> Path:
         retiring_stat=retiring_stat,
         retiring_body=retiring_body,
         gwp_stat=gwp_stat,
+        future_gwp_body=future_gwp_body,
         gwp_body=gwp_body,
         refresh_minutes=REFRESH_MINUTES,
     )

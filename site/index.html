@@ -486,8 +486,16 @@ a.gwp-card:focus-visible { outline: 2px solid var(--green); outline-offset: 2px;
 .gwp-card-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .gwp-card-top { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .theme-tag.insiders { background: var(--green-soft); border-color: var(--green); color: var(--green); }
+.theme-tag.announced { background: var(--blue-soft); border-color: var(--blue); color: var(--blue); }
 .gwp-card-name { font-size: 14px; font-weight: 600; line-height: 1.3; }
 .gwp-card-qualify { font-size: 12px; color: var(--ink-muted); }
+
+a.gwp-card-future:hover { border-color: var(--blue); }
+a.gwp-card-future:focus-visible { outline-color: var(--blue); }
+
+.gwp-future-heading { margin: 32px 0 16px; padding-top: 20px; border-top: 1px solid var(--line); }
+.gwp-future-heading h3 { font-family: 'Rubik Var', sans-serif; font-size: 15px; font-weight: 700; }
+.gwp-future-heading p { margin-top: 4px; font-size: 12.5px; color: var(--ink-muted); }
 
 footer.page-footer {
   max-width: 1080px;
@@ -518,7 +526,7 @@ footer.page-footer {
 <div class="statusbar">
   <div class="wordmark">LEGO<span>&bull;</span>INTEL</div>
   <div class="status-right">
-    <span>Updated <span class="mono">Aug 26, 12:33 PM</span></span>
+    <span>Updated <span class="mono">Aug 26, 2:18 PM</span></span>
     <span>Next run <span class="mono">6:00 PM</span></span>
     <button class="refresh" onclick="location.reload()">Refresh</button>
   </div>
@@ -3876,7 +3884,7 @@ footer.page-footer {
           <div class="panel-num display">03</div>
           <div class="panel-title">
             <h2>Gift with purchase</h2>
-            <p>Currently active GWP promotions, straight from LEGO.com. Future GWPs aren&rsquo;t announced in advance by LEGO or reliably tracked anywhere, so this is current-only.</p>
+            <p>Currently active GWP promotions, straight from LEGO.com, plus any future ones LEGO has pre-announced for an upcoming set (rare, but it happens for flagship releases).</p>
           </div>
         </div>
         <div class="panel-stat">1 active</div>
@@ -3896,6 +3904,7 @@ footer.page-footer {
               <div class="gwp-card-qualify">Unlock when purchasing Koenigsegg Sadair&#x27;s Spear Megacar</div>
             </div>
           </a></div>
+      
       <p class="no-matches" id="no-matches-gwp">No promotions match your search.</p>
     </section>
   </main>
