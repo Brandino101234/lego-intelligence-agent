@@ -12,15 +12,21 @@
     "sets": 18
   },
   "2026-10": {
-    "bytes": 21997432,
+    "bytes": 28415649,
     "file": "downloads/2026-10.zip",
-    "images": 101,
-    "sets": 8
+    "images": 140,
+    "sets": 10
   },
   "2026-11": {
     "bytes": 3082036,
     "file": "downloads/2026-11.zip",
     "images": 19,
     "sets": 1
+  },
+  "2027-01": {
+    "bytes": 8911302,
+    "file": "downloads/2027-01.zip",
+    "images": 33,
+    "sets": 7
   }
 }

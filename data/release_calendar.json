@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T18:33:53",
+  "generated_at": "2026-08-26T12:29:40",
   "months": {
     "2026-08": [
       {
@@ -120,7 +120,7 @@
         "pieces": 218,
         "price": "$24.99",
         "set_num": "40859",
-        "theme": "Batman™",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/golden-age-superman-and-batman-figures-40859"
       },
       {
@@ -338,7 +338,7 @@
         "pieces": 1093,
         "price": "$99.99",
         "set_num": "43026",
-        "theme": "LEGO® Editions",
+        "theme": "Nike",
         "url": "https://www.lego.com/en-us/product/nike-air-force-1-x-lego-set-43026"
       },
       {
@@ -553,7 +553,7 @@
         "pieces": 2269,
         "price": "$229.99",
         "set_num": "76355",
-        "theme": "Batman™",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/batman-returns-batmobile-76355"
       }
     ],
@@ -586,6 +586,42 @@
         "set_num": "40958",
         "theme": null,
         "url": "https://www.lego.com/en-us/product/christmas-stocking-40958"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt59f10fadf173c1ba/blt3435be8c14df0276-72154_Prod_en-gb.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd7d4eb49f8b610f4/blt3435be8c14df0276-72154_boxprod_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltdf7406c8ea3930c0/blt3435be8c14df0276-72154_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt89226d8d65bf1405/blt3435be8c14df0276-72154_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltce66e6f11c04a205/blt3435be8c14df0276-72154_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt73e6196966b26502/blt3435be8c14df0276-72154_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt1946d890c560aa9c/blt3435be8c14df0276-72154_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt09725b8a2dcff586/blt3435be8c14df0276-72154_Lifestyle_Build_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltba287583dcaee494/blt3435be8c14df0276-72154_Lifestyle_Build_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltb15ba73ab9e5e957/blt3435be8c14df0276-72154_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt0db957bc53ab2fc7/blt3435be8c14df0276-72154_Lifestyle_Build_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blte36e563a58dfe45f/blt3435be8c14df0276-72154_Lifestyle_Build_06.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt62511bb8b79327e7/blt3435be8c14df0276-72154_Lifestyle_Build_07.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc4018d280ac7319f/blt3435be8c14df0276-72154_Lifestyle_Build_08.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt1c280701ea72142d/blt3435be8c14df0276-72154_Lifestyle_Build_09.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt38224cd5386adee5/blt3435be8c14df0276-72154_Lifestyle_Cons_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt112bbcf7781ade3c/blt3435be8c14df0276-72154_Lifestyle_Envr_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blted92e486d252dbb5/blt3435be8c14df0276-72154_Lifestyle_Envr_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltf702f0920ecc99fb/blt3435be8c14df0276-72154_Lifestyle_Envr_06.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt848fad4272dee13b/blt3435be8c14df0276-72154_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt59f10fadf173c1ba/blt3435be8c14df0276-72154_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-10-01",
+        "name": "Iconic Trainer Moments Poké Ball",
+        "pieces": 2386,
+        "price": "$299.99",
+        "set_num": "72154",
+        "theme": "Pokémon",
+        "url": "https://www.lego.com/en-us/product/iconic-trainer-moments-poke-ball-72154"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
@@ -641,7 +677,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Minifigures",
+        "theme": "Pokémon",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -786,6 +822,41 @@
         "set_num": "76348",
         "theme": "Marvel",
         "url": "https://www.lego.com/en-us/product/epic-battle-avengers-doomsday-76348"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 4, 2026",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltb4c3d072be35f7fa/75457_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt51e9252c9dc00311/75457_Box5_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcb2fb5c8c0bdf03f/75457_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt137b5884e5c55592/75457_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt922ebd532925186a/75457_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt063abd59f9c887b3/75457_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt68e0204aafd6d3f4/75457_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltc41234a01419c32e/75457_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte333fed8a730d7ee/75457_WEB_SEC07_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf426cc8506fbbb78/75457_Lifestyle_Build_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltecf1af2956686f62/75457_Lifestyle_Build_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltb3cdc16bc3b5efe0/75457_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc6916bf8aa9c866c/75457_Lifestyle_Build_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc690824597f690f2/75457_Lifestyle_Build_06.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt1885ab5619e55655/75457_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltfab5b84e6f330fd2/75457_Lifestyle_Envr_03.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt69a352ed65564700/75457_Lifestyle_Envr_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blte03c348aefe24d39/75457_Lifestyle_Envr_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt2a7495892c769a8f/75457_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-10-04",
+        "name": "Executor Super Star Destroyer™",
+        "pieces": 6130,
+        "price": "$799.99",
+        "set_num": "75457",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/executor-super-star-destroyer-75457"
       }
     ],
     "2026-11": [
@@ -823,6 +894,153 @@
         "set_num": "21065",
         "theme": "Architecture",
         "url": "https://www.lego.com/en-us/product/sagrada-familia-21065"
+      }
+    ],
+    "2027-01": [
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt61dfd886600761bb/72060_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltca5d698fc6fef6e3/72060_Back_02_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5b8d2c19a6a756ac/72060_Front_01_03.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt17971e812e14aa38/72060_Back_04_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5e9596dbceb46bbd/72060_Back_05_01.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt7f1dff380bb78179/72060_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Fire Mario & Bowser's Castle",
+        "pieces": 850,
+        "price": "$99.99",
+        "set_num": "72060",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/fire-mario-bowsers-castle-72060"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltf035f8f9de512053/72058_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt1955675440cbf04f/72058_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt58a402c91c7bd9ad/72058_Front_01_05.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5340cd751c14cb7d/72058_Top_01_07.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd95a76a014d01ca9/72058_Front_01_08.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltd848d532123e7252/72058_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Mario Kart™ – Bowser's Rumbling Race",
+        "pieces": 409,
+        "price": "$59.99",
+        "set_num": "72058",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/mario-kart-bowsers-rumbling-race-72058"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt59695bcce3b24805/72056_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltccae76dae30419b8/72056_Front_01_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt869852e4d2ce1d6e/72056_Front_01_07.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt2c21b275b83c8a30/72056_Top_01_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4aaeb688bf2666b3/72056_Top_01_01.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt6009fd3beca49464/72056_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Mario Kart™ – Luigi & Bowser Jr.'s Race",
+        "pieces": 104,
+        "price": "$29.99",
+        "set_num": "72056",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/mario-kart-luigi-bowser-jrs-race-72056"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltced5edcf5bc700e0/72054_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb4bd8412247f2109/72054_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7a33ee104a9f9c89/72054_Back_03_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blta16b4e89985c86f0/72054_Back_02_01.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Mario Kart™ – Racing with Mario",
+        "pieces": 84,
+        "price": "$14.99",
+        "set_num": "72054",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/mario-kart-racing-with-mario-72054"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt961657d053316aab/72055_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte66b9b17d6e460a6/72055_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd390d97e92ada911/72055_Back_04_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltff873ac11bf4c644/72055_Front_01_02.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltb319e73660667bf3/72055_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Mario's Beach Adventures",
+        "pieces": 196,
+        "price": "$19.99",
+        "set_num": "72055",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/marios-beach-adventures-72055"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt9c039ad50d2d1d66/72052_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt61afdbf72ffd4ae3/72052_Back_02_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb91d2892c7673443/72052_Front_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0b7818629e2309dd/72052_Back_03_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt039eb04464a258ca/72052_Back_01_01.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt10eed03191835556/72052_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Mario's Pipe Jump",
+        "pieces": 61,
+        "price": "$9.99",
+        "set_num": "72052",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/marios-pipe-jump-72052"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt92360bae55d5882c/72057_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt1e2b3ed87d6b0905/72057_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt47382a37835244d7/72057_LineUp_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd676ce25cf6fb0fa/72057_Back_02_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltebe94c534dd0575f/72057_Top_01_01.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltdd4ecdcfe3edb1b3/72057_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Yoshi at Mario's House",
+        "pieces": 147,
+        "price": "$39.99",
+        "set_num": "72057",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/yoshi-at-marios-house-72057"
       }
     ]
   }

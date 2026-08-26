@@ -382,5 +382,77 @@
     "theme": "Pokémon",
     "timestamp": "2026-08-24T06:36:54",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Iconic Trainer Moments Poké Ball",
+    "set_num": "72154",
+    "theme": "Pokémon",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Executor Super Star Destroyer™",
+    "set_num": "75457",
+    "theme": "Star Wars™",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Fire Mario & Bowser's Castle",
+    "set_num": "72060",
+    "theme": "LEGO® Super Mario™",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Mario Kart™ – Bowser's Rumbling Race",
+    "set_num": "72058",
+    "theme": "LEGO® Super Mario™",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Mario Kart™ – Luigi & Bowser Jr.'s Race",
+    "set_num": "72056",
+    "theme": "LEGO® Super Mario™",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Mario Kart™ – Racing with Mario",
+    "set_num": "72054",
+    "theme": "LEGO® Super Mario™",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Mario's Beach Adventures",
+    "set_num": "72055",
+    "theme": "LEGO® Super Mario™",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Mario's Pipe Jump",
+    "set_num": "72052",
+    "theme": "LEGO® Super Mario™",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Yoshi at Mario's House",
+    "set_num": "72057",
+    "theme": "LEGO® Super Mario™",
+    "timestamp": "2026-08-26T12:29:40",
+    "type": "added_to_calendar"
   }
 ]
