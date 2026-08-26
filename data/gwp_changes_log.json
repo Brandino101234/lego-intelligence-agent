@@ -50,5 +50,17 @@
     "qualifying_text": "Unlock when purchasing Koenigsegg Sadair's Spear Megacar",
     "timestamp": "2026-08-21T18:33:06",
     "type": "gwp_started"
+  },
+  {
+    "gwp_code": "30730",
+    "name": "Trainer Supplies",
+    "timestamp": "2026-08-26T12:30:02",
+    "type": "gwp_ended"
+  },
+  {
+    "gwp_code": "30733",
+    "name": "Badnik: Skorp",
+    "timestamp": "2026-08-26T12:30:02",
+    "type": "gwp_ended"
   }
 ]
