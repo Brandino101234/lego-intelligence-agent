@@ -8,12 +8,13 @@ card), collected per-product by lego_release_calendar_agent.py's Playwright
 pass. Each set gets its own folder inside the zip.
 
 Runs as part of every scrape (see run_all.py) and writes straight into
-site/downloads/ — NOT committed to git (see .gitignore), since Netlify
-deploys directly from the local site/ folder regardless of what's tracked,
-and re-zipping identical images twice a day would otherwise bloat the repo
-with duplicate binary blobs forever. build_dashboard.py reads the manifest
-this writes to know which months got a real zip (vs. e.g. every image in
-that month being broken on LEGO's own CDN) before rendering a button.
+site/downloads/ — NOT committed to git (see .gitignore), since GitHub Pages
+deploys from an uploaded build artifact (actions/upload-pages-artifact) built
+from the local site/ folder, not from what's tracked in the repo, and
+re-zipping identical images twice a day would otherwise bloat the repo with
+duplicate binary blobs forever. build_dashboard.py reads the manifest this
+writes to know which months got a real zip (vs. e.g. every image in that
+month being broken on LEGO's own CDN) before rendering a button.
 """
 
 from __future__ import annotations
@@ -31,13 +32,12 @@ DOWNLOADS_DIR = ROOT / "site" / "downloads"
 MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
 
 # Deliberately smaller than upsize_lego_image_url()'s default (1500/90).
-# These zips get deployed to Netlify and served to whoever clicks the
-# button, unlike export_month_images.py's local-only, full-res CLI export
-# — a full month of galleries at full res runs 100MB+ per zip (confirmed:
-# September alone was 112MB at the default), which is real hosted
-# bandwidth on a metered free plan. 1000px/quality 82 is still ~3x the
-# dashboard's 320px thumbnails and plenty sharp for a video overlay, at
-# roughly a third of the file size.
+# These zips get deployed with the dashboard and served to whoever clicks
+# the button, unlike export_month_images.py's local-only, full-res CLI
+# export — a full month of galleries at full res runs 100MB+ per zip
+# (confirmed: September alone was 112MB at the default). 1000px/quality 82
+# is still ~3x the dashboard's 320px thumbnails and plenty sharp for a
+# video overlay, at roughly a third of the file size.
 ZIP_IMAGE_SIZE = 1000
 ZIP_IMAGE_QUALITY = 82
 

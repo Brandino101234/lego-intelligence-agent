@@ -34,7 +34,7 @@ RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
 RESEND_URL = "https://api.resend.com/emails"
 FROM_EMAIL = "LEGO Intel <onboarding@resend.dev>"
 TO_EMAIL = "brannew110@gmail.com"
-DASHBOARD_URL = "https://lego-intelligence-agent.netlify.app"
+DASHBOARD_URL = "https://brandino101234.github.io/lego-intelligence-agent/"
 
 STATE_PATH = DATA_DIR / "last_notified.json"
 
