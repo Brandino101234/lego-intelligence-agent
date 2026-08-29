@@ -62,5 +62,13 @@
     "name": "Badnik: Skorp",
     "timestamp": "2026-08-26T12:30:02",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "5011072",
+    "name": "Ministry of Magic™ Phone Booth",
+    "qualifying_text": "Unlock when purchasing The Ministry of Magic™ – Collectors' Edition",
+    "timestamp": "2026-08-28T23:59:26",
+    "type": "gwp_started"
   }
 ]

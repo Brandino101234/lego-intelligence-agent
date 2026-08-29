@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T23:06:34",
+  "generated_at": "2026-08-28T23:59:09",
   "months": {
     "2026-08": [
       {
@@ -124,7 +124,7 @@
         "pieces": 218,
         "price": "$24.99",
         "set_num": "40859",
-        "theme": "BrickHeadz",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/golden-age-superman-and-batman-figures-40859"
       },
       {
@@ -700,7 +700,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Pokémon",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -882,9 +882,9 @@
           "https://www.lego.com/cdn/cs/set/assets/blte03c348aefe24d39/75457_Lifestyle_Envr_05.jpg",
           "https://www.lego.com/cdn/cs/set/assets/blt2a7495892c769a8f/75457_Box5_v39.png"
         ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt61c4d98ab0d5a2fc/75457_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/4",
         "launch_date": "2026-10-04",
         "name": "Executor Super Star Destroyer™",
         "pieces": 6130,
@@ -933,6 +933,27 @@
       }
     ],
     "2027-01": [
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltdc0a956f8f115c6b/72061_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd4dd99bf5281d6b8/72061_Back_02_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6447f1208d861fb3/72061_Front_01_03.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf6e18c9383a0b437/72061_Back_03_01.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt779ee4550a5d3e6b/72061_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Fire Luigi vs. Koopa Troopa Battle",
+        "pieces": 241,
+        "price": "$29.99",
+        "set_num": "72061",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/fire-luigi-vs-koopa-troopa-battle-72061"
+      },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",

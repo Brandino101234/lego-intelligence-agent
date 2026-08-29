@@ -1,12 +1,22 @@
 {
   "40894": {
-    "end_date": "2026-08-28",
-    "end_date_raw": "August 28, 2026",
+    "end_date": null,
+    "end_date_raw": "08/28/2026",
     "gwp_code": "40894",
     "image": "https://www.lego.com/cdn/cs/set/assets/blt277aa92d593803ca/bltdda4cd05f6b1431a-40894_Box1_v29.png",
     "insiders_only": false,
     "name": "Koenigsegg Sadair's Spear Steering Wheel",
     "qualifying_text": "Unlock when purchasing Koenigsegg Sadair's Spear Megacar",
     "url": "https://www.lego.com/en-us/search?q=40894"
+  },
+  "5011072": {
+    "end_date": null,
+    "end_date_raw": "09/06/2026",
+    "gwp_code": "5011072",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blte717cb5294f3a170/HP_PhoneStand_1.png",
+    "insiders_only": true,
+    "name": "Ministry of Magic™ Phone Booth",
+    "qualifying_text": "Unlock when purchasing The Ministry of Magic™ – Collectors' Edition",
+    "url": "https://www.lego.com/en-us/search?q=5011072"
   }
 }
