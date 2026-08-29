@@ -476,6 +476,76 @@ button.refresh {{
 button.refresh:hover {{ opacity: 0.85; }}
 button.refresh:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px; }}
 
+button.run-now {{
+  font-family: 'Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: var(--blue);
+  color: var(--paper);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}}
+button.run-now:hover {{ opacity: 0.85; }}
+button.run-now:disabled {{ opacity: 0.6; cursor: default; }}
+button.run-now:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px; }}
+
+.token-modal {{
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}}
+.token-modal.open {{ display: flex; }}
+.token-modal-box {{
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}}
+.token-modal-box h3 {{ font-family: 'Rubik Var', sans-serif; font-size: 17px; margin-bottom: 8px; color: var(--ink); }}
+.token-modal-box p {{ font-size: 13px; color: var(--ink-muted); line-height: 1.5; margin-bottom: 10px; }}
+.token-modal-box ol {{ font-size: 13px; color: var(--ink); line-height: 1.7; margin: 0 0 14px 18px; }}
+.token-modal-box a {{ color: var(--blue); }}
+.token-modal-box code {{ background: var(--paper); padding: 1px 5px; border-radius: 3px; font-family: 'Plex Mono', monospace; font-size: 12px; }}
+#token-input {{
+  width: 100%;
+  font-family: 'Plex Mono', monospace;
+  font-size: 13px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}}
+.token-modal-actions {{ display: flex; gap: 8px; }}
+.token-modal-actions button {{
+  font-family: 'Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}}
+.token-modal-actions button:first-child {{ background: var(--blue); color: var(--paper); border: none; }}
+.token-status {{ margin-top: 10px; font-size: 12px; color: var(--red); }}
+
 /* ---- shell ---- */
 .shell {{
   max-width: 1080px;
@@ -833,7 +903,27 @@ footer.page-footer {{
   <div class="status-right">
     <span>Updated <span class="mono">{updated_label}</span></span>
     <span>Next run <span class="mono">{next_run_label}</span></span>
+    <button class="run-now" id="run-now-btn" onclick="runScraperNow()">Run now</button>
     <button class="refresh" onclick="location.reload()">Refresh</button>
+  </div>
+</div>
+
+<div class="token-modal" id="token-modal">
+  <div class="token-modal-box">
+    <h3>Connect GitHub to run the scraper</h3>
+    <p>This triggers the same scrape workflow shown in the repo&rsquo;s Actions tab, straight from your browser. It needs a GitHub token &mdash; stored only in this browser&rsquo;s local storage, never sent anywhere but GitHub&rsquo;s own API. Only someone with write access to the repo can actually make it run, so this is safe to leave on a public page.</p>
+    <ol>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a></li>
+      <li>Under &ldquo;Repository access&rdquo;, choose <b>Only select repositories</b> &rarr; <code>lego-intelligence-agent</code></li>
+      <li>Under &ldquo;Permissions&rdquo; &rarr; &ldquo;Repository permissions&rdquo;, set <b>Actions</b> to <b>Read and write</b></li>
+      <li>Generate the token, then paste it below</li>
+    </ol>
+    <input type="password" id="token-input" placeholder="github_pat_&hellip;" autocomplete="off">
+    <div class="token-modal-actions">
+      <button onclick="saveToken()">Save &amp; run</button>
+      <button onclick="closeTokenModal()">Cancel</button>
+    </div>
+    <p class="token-status" id="token-status"></p>
   </div>
 </div>
 
@@ -963,6 +1053,89 @@ function filterCards(input, panelId, itemSelector, groupSelector) {{
 
   const noMatches = document.getElementById(panelId.replace('panel-', 'no-matches-'));
   if (noMatches) noMatches.style.display = visibleCount === 0 ? '' : 'none';
+}}
+
+const GH_TOKEN_KEY = 'lego_gh_token';
+const GH_DISPATCH_URL = 'https://api.github.com/repos/Brandino101234/lego-intelligence-agent/actions/workflows/scrape.yml/dispatches';
+
+// Some browsers/modes (Safari private browsing, restrictive privacy
+// settings) throw on any localStorage access rather than just returning
+// null — wrapped so that degrades to "no saved token" instead of a dead
+// button.
+function readSavedToken() {{
+  try {{ return localStorage.getItem(GH_TOKEN_KEY); }} catch (e) {{ return null; }}
+}}
+function saveTokenToStorage(token) {{
+  try {{ localStorage.setItem(GH_TOKEN_KEY, token); }} catch (e) {{ /* not persisted this session, still usable below */ }}
+}}
+function clearSavedToken() {{
+  try {{ localStorage.removeItem(GH_TOKEN_KEY); }} catch (e) {{}}
+}}
+
+function runScraperNow() {{
+  const token = readSavedToken();
+  if (!token) {{
+    openTokenModal();
+    return;
+  }}
+  dispatchWorkflow(token);
+}}
+
+function openTokenModal() {{
+  document.getElementById('token-modal').classList.add('open');
+}}
+
+function closeTokenModal() {{
+  document.getElementById('token-modal').classList.remove('open');
+  document.getElementById('token-status').textContent = '';
+}}
+
+function saveToken() {{
+  const token = document.getElementById('token-input').value.trim();
+  if (!token) return;
+  saveTokenToStorage(token);
+  dispatchWorkflow(token);
+}}
+
+async function dispatchWorkflow(token) {{
+  const btn = document.getElementById('run-now-btn');
+  const status = document.getElementById('token-status');
+  const originalLabel = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Starting…';
+
+  try {{
+    const resp = await fetch(GH_DISPATCH_URL, {{
+      method: 'POST',
+      headers: {{
+        'Authorization': 'Bearer ' + token,
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+      }},
+      body: JSON.stringify({{ ref: 'main' }}),
+    }});
+
+    if (resp.status === 204) {{
+      btn.textContent = 'Started ✓';
+      closeTokenModal();
+      setTimeout(() => {{ btn.textContent = originalLabel; btn.disabled = false; }}, 6000);
+      return;
+    }}
+
+    if (resp.status === 401 || resp.status === 403 || resp.status === 404) {{
+      clearSavedToken();
+      status.textContent = 'That token was rejected (HTTP ' + resp.status + ') — it may be invalid, expired, or missing Actions write access on this repo. Try again.';
+    }} else {{
+      const body = await resp.text();
+      status.textContent = 'GitHub returned an error (HTTP ' + resp.status + '): ' + body.slice(0, 200);
+    }}
+  }} catch (e) {{
+    status.textContent = 'Request failed: ' + e.message;
+  }}
+
+  btn.textContent = originalLabel;
+  btn.disabled = false;
+  openTokenModal();
 }}
 
 setTimeout(() => location.reload(), {refresh_minutes} * 60 * 1000);
