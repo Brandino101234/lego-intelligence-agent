@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T14:29:20",
+  "generated_at": "2026-08-28T23:59:09",
   "months": {
     "2026-08": [
       {
@@ -124,7 +124,7 @@
         "pieces": 218,
         "price": "$24.99",
         "set_num": "40859",
-        "theme": "Batman™",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/golden-age-superman-and-batman-figures-40859"
       },
       {
@@ -189,7 +189,18 @@
         "availability_text": "Pre-order this item today, it will ship from September 1, 2026",
         "future_gwp": null,
         "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blt44cb6bddbf544676/bltecc1c309cb684314-42698_Box1_v39_en-gb.png"
+          "https://www.lego.com/cdn/cs/set/assets/blt89c905c72b3feae1/bltecc1c309cb684314-42698_Box1_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6e23902fea6681ca/bltecc1c309cb684314-42698_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltbd103cab8ff87870/bltecc1c309cb684314-42698_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf4546f62575442d0/bltecc1c309cb684314-42698_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt68c9a2af42982b77/bltecc1c309cb684314-42698_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt95f0dd8ec3e13c5e/bltecc1c309cb684314-42698_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5e29ad796009c067/bltecc1c309cb684314-42698_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6d0020b9e8fff656/bltecc1c309cb684314-42698_Lifestyle_build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltffb8f68b83a499f7/bltecc1c309cb684314-42698_Lifestyle_cons_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt81a4dd334df60843/bltecc1c309cb684314-42698_Lifestyle_envr_A.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc8529c0e019ff630/bltecc1c309cb684314-42698_Lifestyle_envr_B.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt47528d9804137026/bltecc1c309cb684314-42698_Box5_v39_en-us.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt44cb6bddbf544676/bltecc1c309cb684314-42698_Box1_v39_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
@@ -339,7 +350,7 @@
         "pieces": 1093,
         "price": "$99.99",
         "set_num": "43026",
-        "theme": "Nike",
+        "theme": "LEGO® Editions",
         "url": "https://www.lego.com/en-us/product/nike-air-force-1-x-lego-set-43026"
       },
       {
@@ -561,7 +572,7 @@
         "pieces": 2269,
         "price": "$229.99",
         "set_num": "76355",
-        "theme": "Batman™",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/batman-returns-batmobile-76355"
       }
     ],
@@ -689,7 +700,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Pokémon",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -751,7 +762,7 @@
         "pieces": 467,
         "price": "$39.99",
         "set_num": "40880",
-        "theme": "Marvel",
+        "theme": "BrickHeadz",
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880"
       },
       {
@@ -845,7 +856,7 @@
         "availability_text": "Coming soon on October 4, 2026",
         "future_gwp": {
           "date_range": "10/1 - 10/7",
-          "image": null,
+          "image": "https://www.lego.com/cdn/cs/set/assets/bltb2259e982658b9f7/bltc050d95083260c90-Hero_Superhero.jpg",
           "name": "Recreate Darth Vader’s LIGHTSABER™",
           "text": "Your gift with the purchase of the LEGO® Star Wars™ Executor Super Star Destroyer™ (75457). 10/1 - 10/7  while supplies last.*",
           "url": "https://www.lego.com/product/darth-vaders-lightsaber-40897"
@@ -871,9 +882,9 @@
           "https://www.lego.com/cdn/cs/set/assets/blte03c348aefe24d39/75457_Lifestyle_Envr_05.jpg",
           "https://www.lego.com/cdn/cs/set/assets/blt2a7495892c769a8f/75457_Box5_v39.png"
         ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt61c4d98ab0d5a2fc/75457_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/4",
         "launch_date": "2026-10-04",
         "name": "Executor Super Star Destroyer™",
         "pieces": 6130,
@@ -922,6 +933,27 @@
       }
     ],
     "2027-01": [
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltdc0a956f8f115c6b/72061_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd4dd99bf5281d6b8/72061_Back_02_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6447f1208d861fb3/72061_Front_01_03.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf6e18c9383a0b437/72061_Back_03_01.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt779ee4550a5d3e6b/72061_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Fire Luigi vs. Koopa Troopa Battle",
+        "pieces": 241,
+        "price": "$29.99",
+        "set_num": "72061",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/fire-luigi-vs-koopa-troopa-battle-72061"
+      },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
