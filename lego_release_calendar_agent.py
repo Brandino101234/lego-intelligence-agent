@@ -64,8 +64,13 @@ scraping, unlike lego_gwp_agent.py's current-only scope.
 from __future__ import annotations
 
 import json
+import os
 import re
 import signal
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
 
 from lego_common import DATA_DIR, HEADERS, fetch_via_curl, load_json, now_iso, parse_flexible_date, save_json, append_log
 
@@ -510,16 +515,8 @@ def extract_future_gwp(apollo: dict) -> dict | None:
     return None
 
 
-class EnrichmentTimedOut(Exception):
-    """Raised by the SIGALRM handler below — see enrich_from_product_pages
-    for why this exists."""
-
-
-def _raise_enrichment_timeout(signum, frame):
-    raise EnrichmentTimedOut()
-
-
 ENRICHMENT_TIME_BUDGET_SECONDS = 1200  # 20 min — well above the ~10-15 min this normally takes
+ENRICH_WORKER_PATH = Path(__file__).resolve().parent / "enrich_worker.py"
 
 
 def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
@@ -527,106 +524,90 @@ def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
     browser to fill in the signals that only exist there, not on the
     listing pages the rest of this crawl uses: a LEGO Insiders early-access
     promo banner, the full image gallery, and a pre-announced future GWP
-    (see extract_future_gwp). One page load per set covers all three,
-    mutating each entry in place. Scoped to just the calendar (~30 sets),
-    not the full catalog, to stay fast.
+    (see extract_future_gwp). One page load per set covers all three.
+    Scoped to just the calendar (~30 sets), not the full catalog, to stay
+    fast.
 
-    Wrapped in a hard SIGALRM ceiling: every individual Playwright call
-    below already declares its own timeout, but those are enforced by
-    Playwright's own driver process — if that process (or its stdio pipe
-    to Chromium) gets wedged, none of those in-process timeouts can fire.
-    Confirmed happening in production: this step hung for the full 6-hour
-    GitHub Actions job ceiling twice, both times with zero data written to
-    disk (this runs before any save_json() call — see main()), losing the
-    *entire* run over one browser hang. SIGALRM is enforced by the OS, not
-    by whatever's wedged inside the process, so it fires regardless and
-    lets the run fall through to saving whatever was collected before the
-    hang instead of losing everything."""
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        print("  ! playwright not installed — skipping product page enrichment")
+    The actual work runs in enrich_worker.py, launched as a genuinely
+    separate OS process via subprocess.run's own timeout — which kills the
+    child outright if it runs over, regardless of what's wedged inside it
+    (Chromium, Playwright's driver process, its stdio pipe, ...). This
+    step runs before any save_json() call in main(), so a hang here loses
+    the *entire* run's data, not just this one signal — confirmed
+    happening in production three times, hanging for the full 6-hour
+    GitHub Actions job ceiling every time before being force-cancelled.
+
+    Two earlier fixes were tried and both failed for reasons worth
+    recording: an in-process SIGALRM didn't help (still hung a third time)
+    — Playwright's sync API runs its real event loop on a background
+    thread, and Python only delivers signals to the main thread, so a
+    thread blocked below the point where it checks for pending signals
+    just swallows the alarm. multiprocessing's "spawn" context was tried
+    next, but has a real pickling footgun with how this project actually
+    invokes agents: run_all.py runs each one via
+    runpy.run_module(name, run_name="__main__"), which stamps every
+    function defined during that execution with __module__ == "__main__"
+    — spawn's bootstrap then can't correctly locate the target function in
+    the child, since sys.modules["__main__"] there is actually run_all.py
+    itself. A plain subprocess sidesteps both problems: no signal delivery
+    to race, no pickling of code objects — just JSON in, JSON out, the
+    same reliable pattern fetch_via_curl() already uses in lego_common.py."""
+    entries = [
+        {"set_num": e.get("set_num"), "url": e["url"]}
+        for month_entries in months.values() for e in month_entries if e.get("url")
+    ]
+    if not entries:
         return
-
-    entries = [e for month_entries in months.values() for e in month_entries if e.get("url")]
     print(f"  checking {len(entries)} product pages for Insiders early access, image galleries, and future GWPs...")
 
-    # LEGO.com shows a generic recurring Insiders marketing blurb ("...
-    # unlock Early Access to exclusive sets! Sign up today.") on products
-    # that DON'T have an active window — it happens to contain "Early
-    # Access" too, so text-matching alone false-positives on it (confirmed:
-    # it showed up right alongside two genuine, dated banners in testing).
-    # A real window always names a specific date range (e.g. "9/1-9/4"),
-    # the generic blurb never does — require that to tell them apart.
-    date_range_re = re.compile(r"\d{1,2}/\d{1,2}")
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        input_path = Path(tmp_dir) / "entries.json"
+        output_path = Path(tmp_dir) / "result.json"
+        input_path.write_text(json.dumps(entries), encoding="utf-8")
 
-    found_early_access = 0
-    found_galleries = 0
-    found_future_gwp = 0
-    has_alarm = hasattr(signal, "SIGALRM")
-    if has_alarm:
-        signal.signal(signal.SIGALRM, _raise_enrichment_timeout)
-        signal.alarm(ENRICHMENT_TIME_BUDGET_SECONDS)
+        # start_new_session=True puts the worker in its own process group,
+        # so a timeout can kill the whole tree (Playwright's Node driver,
+        # Chromium, ...) via killpg — plain Popen.kill()/subprocess.run's
+        # default timeout handling only signals the direct child, leaving
+        # any grandchildren to leak as orphans.
+        proc = subprocess.Popen(
+            [sys.executable, str(ENRICH_WORKER_PATH), str(input_path), str(output_path)],
+            start_new_session=True,
+        )
+        try:
+            proc.wait(timeout=ENRICHMENT_TIME_BUDGET_SECONDS)
+        except subprocess.TimeoutExpired:
+            print(f"  ! enrichment pass hit its {ENRICHMENT_TIME_BUDGET_SECONDS // 60}-minute time budget — "
+                  f"killing it and moving on with whatever the rest of the run can still do")
+            try:
+                os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+            except ProcessLookupError:
+                pass  # already gone
+            proc.wait()
+            return
 
-    try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch()
-            page = browser.new_page(user_agent=HEADERS["User-Agent"])
-            for entry in entries:
-                try:
-                    page.goto(entry["url"], timeout=30000, wait_until="domcontentloaded")
-                    page.wait_for_timeout(1200)  # let client-rendered promo content settle
+        if not output_path.exists():
+            print("  ! enrichment worker exited without writing results — nothing to merge")
+            return
 
-                    banner = page.locator('[data-test="markup"]', has_text="Early Access").first
-                    if banner.count() > 0:
-                        text = banner.inner_text().strip()
-                        if date_range_re.search(text):
-                            entry["insiders_early_access"] = True
-                            entry["insiders_early_access_text"] = text
-                            found_early_access += 1
+        result = json.loads(output_path.read_text(encoding="utf-8"))
 
-                    apollo = extract_pdp_apollo_state(page.content())
-                    if not apollo:
-                        continue
-
-                    gallery = extract_gallery_images(apollo)
-                    if gallery:
-                        entry["gallery_images"] = gallery
-                        found_galleries += 1
-
-                    future_gwp = extract_future_gwp(apollo)
-                    if future_gwp:
-                        if future_gwp.get("url"):
-                            try:
-                                page.goto(future_gwp["url"], timeout=30000, wait_until="domcontentloaded")
-                                page.wait_for_timeout(1200)
-                                gwp_apollo = extract_pdp_apollo_state(page.content())
-                                if gwp_apollo:
-                                    future_gwp["image"] = extract_primary_image(gwp_apollo)
-                            except Exception:
-                                pass  # still worth keeping the promo without an image
-                        if not future_gwp.get("image"):
-                            future_gwp["image"] = future_gwp.pop("hero_image", None)
-                        else:
-                            future_gwp.pop("hero_image", None)
-                        entry["future_gwp"] = future_gwp
-                        found_future_gwp += 1
-                except EnrichmentTimedOut:
-                    raise
-                except Exception as exc:
-                    print(f"    ! {entry['set_num']}: {exc}")
-            browser.close()
-    except EnrichmentTimedOut:
-        print(f"  ! enrichment pass hit its {ENRICHMENT_TIME_BUDGET_SECONDS // 60}-minute time budget — "
-              f"stopping here and keeping whatever was collected so far")
-    finally:
-        if has_alarm:
-            signal.alarm(0)
+    # The worker got a stripped-down {set_num, url} copy of each entry, not
+    # the real objects — merge whatever it added back into the real
+    # entries by set_num, since dict order isn't guaranteed to round-trip
+    # through a subprocess the same way identity-position merging would
+    # assume.
+    enriched_by_set_num = {e["set_num"]: e for e in result["entries"]}
+    for month_entries in months.values():
+        for entry in month_entries:
+            enriched = enriched_by_set_num.get(entry.get("set_num"))
+            if enriched:
+                entry.update({k: v for k, v in enriched.items() if k not in ("set_num", "url")})
 
     print(
-        f"  found Insiders early access on {found_early_access} set(s), "
-        f"image galleries for {found_galleries} set(s), "
-        f"future GWPs for {found_future_gwp} set(s)"
+        f"  found Insiders early access on {result['found_early_access']} set(s), "
+        f"image galleries for {result['found_galleries']} set(s), "
+        f"future GWPs for {result['found_future_gwp']} set(s)"
     )
 
 
