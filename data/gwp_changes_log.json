@@ -70,5 +70,27 @@
     "qualifying_text": "Unlock when purchasing The Ministry of Magic™ – Collectors' Edition",
     "timestamp": "2026-08-28T23:59:26",
     "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40901",
+    "name": "Ministry Munchies & The Daily Prophet Stands",
+    "qualifying_text": "Spend over $130 on Harry Potter™ to unlock this gift",
+    "timestamp": "2026-08-30T18:19:23",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "30724",
+    "name": "Dumbledore's Office with Harry Potter™",
+    "qualifying_text": "Unlock when purchasing qualifying products",
+    "timestamp": "2026-08-30T18:19:23",
+    "type": "gwp_started"
+  },
+  {
+    "gwp_code": "40894",
+    "name": "Koenigsegg Sadair's Spear Steering Wheel",
+    "timestamp": "2026-08-30T18:19:23",
+    "type": "gwp_ended"
   }
 ]
