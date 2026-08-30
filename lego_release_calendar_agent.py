@@ -65,6 +65,7 @@ from __future__ import annotations
 
 import json
 import re
+import signal
 
 from lego_common import DATA_DIR, HEADERS, fetch_via_curl, load_json, now_iso, parse_flexible_date, save_json, append_log
 
@@ -509,6 +510,18 @@ def extract_future_gwp(apollo: dict) -> dict | None:
     return None
 
 
+class EnrichmentTimedOut(Exception):
+    """Raised by the SIGALRM handler below — see enrich_from_product_pages
+    for why this exists."""
+
+
+def _raise_enrichment_timeout(signum, frame):
+    raise EnrichmentTimedOut()
+
+
+ENRICHMENT_TIME_BUDGET_SECONDS = 1200  # 20 min — well above the ~10-15 min this normally takes
+
+
 def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
     """Visits each calendar entry's product page with a real headless
     browser to fill in the signals that only exist there, not on the
@@ -516,7 +529,19 @@ def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
     promo banner, the full image gallery, and a pre-announced future GWP
     (see extract_future_gwp). One page load per set covers all three,
     mutating each entry in place. Scoped to just the calendar (~30 sets),
-    not the full catalog, to stay fast."""
+    not the full catalog, to stay fast.
+
+    Wrapped in a hard SIGALRM ceiling: every individual Playwright call
+    below already declares its own timeout, but those are enforced by
+    Playwright's own driver process — if that process (or its stdio pipe
+    to Chromium) gets wedged, none of those in-process timeouts can fire.
+    Confirmed happening in production: this step hung for the full 6-hour
+    GitHub Actions job ceiling twice, both times with zero data written to
+    disk (this runs before any save_json() call — see main()), losing the
+    *entire* run over one browser hang. SIGALRM is enforced by the OS, not
+    by whatever's wedged inside the process, so it fires regardless and
+    lets the run fall through to saving whatever was collected before the
+    hang instead of losing everything."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -538,51 +563,65 @@ def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
     found_early_access = 0
     found_galleries = 0
     found_future_gwp = 0
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page(user_agent=HEADERS["User-Agent"])
-        for entry in entries:
-            try:
-                page.goto(entry["url"], timeout=30000, wait_until="domcontentloaded")
-                page.wait_for_timeout(1200)  # let client-rendered promo content settle
+    has_alarm = hasattr(signal, "SIGALRM")
+    if has_alarm:
+        signal.signal(signal.SIGALRM, _raise_enrichment_timeout)
+        signal.alarm(ENRICHMENT_TIME_BUDGET_SECONDS)
 
-                banner = page.locator('[data-test="markup"]', has_text="Early Access").first
-                if banner.count() > 0:
-                    text = banner.inner_text().strip()
-                    if date_range_re.search(text):
-                        entry["insiders_early_access"] = True
-                        entry["insiders_early_access_text"] = text
-                        found_early_access += 1
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            page = browser.new_page(user_agent=HEADERS["User-Agent"])
+            for entry in entries:
+                try:
+                    page.goto(entry["url"], timeout=30000, wait_until="domcontentloaded")
+                    page.wait_for_timeout(1200)  # let client-rendered promo content settle
 
-                apollo = extract_pdp_apollo_state(page.content())
-                if not apollo:
-                    continue
+                    banner = page.locator('[data-test="markup"]', has_text="Early Access").first
+                    if banner.count() > 0:
+                        text = banner.inner_text().strip()
+                        if date_range_re.search(text):
+                            entry["insiders_early_access"] = True
+                            entry["insiders_early_access_text"] = text
+                            found_early_access += 1
 
-                gallery = extract_gallery_images(apollo)
-                if gallery:
-                    entry["gallery_images"] = gallery
-                    found_galleries += 1
+                    apollo = extract_pdp_apollo_state(page.content())
+                    if not apollo:
+                        continue
 
-                future_gwp = extract_future_gwp(apollo)
-                if future_gwp:
-                    if future_gwp.get("url"):
-                        try:
-                            page.goto(future_gwp["url"], timeout=30000, wait_until="domcontentloaded")
-                            page.wait_for_timeout(1200)
-                            gwp_apollo = extract_pdp_apollo_state(page.content())
-                            if gwp_apollo:
-                                future_gwp["image"] = extract_primary_image(gwp_apollo)
-                        except Exception:
-                            pass  # still worth keeping the promo without an image
-                    if not future_gwp.get("image"):
-                        future_gwp["image"] = future_gwp.pop("hero_image", None)
-                    else:
-                        future_gwp.pop("hero_image", None)
-                    entry["future_gwp"] = future_gwp
-                    found_future_gwp += 1
-            except Exception as exc:
-                print(f"    ! {entry['set_num']}: {exc}")
-        browser.close()
+                    gallery = extract_gallery_images(apollo)
+                    if gallery:
+                        entry["gallery_images"] = gallery
+                        found_galleries += 1
+
+                    future_gwp = extract_future_gwp(apollo)
+                    if future_gwp:
+                        if future_gwp.get("url"):
+                            try:
+                                page.goto(future_gwp["url"], timeout=30000, wait_until="domcontentloaded")
+                                page.wait_for_timeout(1200)
+                                gwp_apollo = extract_pdp_apollo_state(page.content())
+                                if gwp_apollo:
+                                    future_gwp["image"] = extract_primary_image(gwp_apollo)
+                            except Exception:
+                                pass  # still worth keeping the promo without an image
+                        if not future_gwp.get("image"):
+                            future_gwp["image"] = future_gwp.pop("hero_image", None)
+                        else:
+                            future_gwp.pop("hero_image", None)
+                        entry["future_gwp"] = future_gwp
+                        found_future_gwp += 1
+                except EnrichmentTimedOut:
+                    raise
+                except Exception as exc:
+                    print(f"    ! {entry['set_num']}: {exc}")
+            browser.close()
+    except EnrichmentTimedOut:
+        print(f"  ! enrichment pass hit its {ENRICHMENT_TIME_BUDGET_SECONDS // 60}-minute time budget — "
+              f"stopping here and keeping whatever was collected so far")
+    finally:
+        if has_alarm:
+            signal.alarm(0)
 
     print(
         f"  found Insiders early access on {found_early_access} set(s), "
