@@ -6,17 +6,33 @@ agent already handles its own failures gracefully (best-effort sources,
 is just to run them in sequence and make sure one agent's exception doesn't
 stop the others from running, then always rebuild the dashboard from
 whatever state ended up in data/ afterward.
-"""
+
+Each step runs as a genuinely separate OS process (subprocess.Popen with
+its own process group) with a hard wall-clock budget, rather than in-
+process via runpy — confirmed necessary in production: a step hanging (or
+just going pathologically slow — e.g. the release calendar's theme crawl
+retrying every request for hours under degraded network conditions) with
+zero output for the *entire* run before GitHub Actions' own 6-hour job
+ceiling force-cancelled it, four separate times, is what this guards
+against. A timeout here kills the whole process tree via killpg and moves
+on to the next step instead of blocking the rest of the pipeline (data
+commit, dashboard rebuild, Pages deploy) on one stuck step."""
 
 from __future__ import annotations
 
-import runpy
+import os
+import signal
+import subprocess
 import sys
-import traceback
 from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+
+# Generous relative to normal runtimes (the full pipeline usually finishes
+# in ~10-15 min) so this only ever bites when something's actually stuck,
+# not on ordinary slowness.
+STEP_TIME_BUDGET_SECONDS = 30 * 60
 
 AGENTS = [
     # Calendar first: its crawl builds data/lego_product_images.json (every
@@ -31,18 +47,32 @@ AGENTS = [
 
 
 def run_module(name: str) -> None:
-    print(f"\n{'=' * 60}\n{name}\n{'=' * 60}")
+    print(f"\n{'=' * 60}\n{name}\n{'=' * 60}", flush=True)
+
+    script_path = ROOT / f"{name}.py"
+    proc = subprocess.Popen([sys.executable, str(script_path)], cwd=str(ROOT), start_new_session=True)
     try:
-        runpy.run_module(name, run_name="__main__")
-    except Exception:
-        print(f"! {name} raised an exception:")
-        traceback.print_exc()
+        proc.wait(timeout=STEP_TIME_BUDGET_SECONDS)
+    except subprocess.TimeoutExpired:
+        print(
+            f"! {name} hit its {STEP_TIME_BUDGET_SECONDS // 60}-minute time budget — "
+            f"killing it and moving on to the next step",
+            flush=True,
+        )
+        try:
+            os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+        except ProcessLookupError:
+            pass  # already gone
+        proc.wait()
+        return
+
+    if proc.returncode != 0:
+        print(f"! {name} exited with code {proc.returncode}", flush=True)
 
 
 def main() -> None:
-    sys.path.insert(0, str(ROOT))
     start = datetime.now()
-    print(f"Run started {start.isoformat(timespec='seconds')}")
+    print(f"Run started {start.isoformat(timespec='seconds')}", flush=True)
 
     for agent in AGENTS:
         run_module(agent)
@@ -50,7 +80,7 @@ def main() -> None:
     run_module("build_image_zips")
     run_module("build_dashboard")
 
-    print(f"\nRun finished {datetime.now().isoformat(timespec='seconds')}")
+    print(f"\nRun finished {datetime.now().isoformat(timespec='seconds')}", flush=True)
 
 
 if __name__ == "__main__":
