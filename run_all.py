@@ -34,6 +34,19 @@ ROOT = Path(__file__).resolve().parent
 # not on ordinary slowness.
 STEP_TIME_BUDGET_SECONDS = 30 * 60
 
+# The calendar agent is consistently the heaviest step — a full ~76-theme
+# site crawl plus a real-browser visit to every tracked product — and has
+# been observed hitting the default 30-minute budget under nothing worse
+# than ordinary network slowness (confirmed in production: killed mid-crawl
+# with no other symptoms). When that happens the step gets killed before
+# its own save_json() call, so already-released sets don't drop off the
+# calendar until a run actually finishes — not a filtering bug, just a
+# starved-for-time crawl. Give it more headroom than the lighter agents
+# rather than raising the shared budget for everything.
+STEP_TIME_BUDGETS = {
+    "lego_release_calendar_agent": 45 * 60,
+}
+
 AGENTS = [
     # Calendar first: its crawl builds data/lego_product_images.json (every
     # currently-on-sale product it passes through, not just upcoming ones),
@@ -48,14 +61,15 @@ AGENTS = [
 
 def run_module(name: str) -> None:
     print(f"\n{'=' * 60}\n{name}\n{'=' * 60}", flush=True)
+    budget = STEP_TIME_BUDGETS.get(name, STEP_TIME_BUDGET_SECONDS)
 
     script_path = ROOT / f"{name}.py"
     proc = subprocess.Popen([sys.executable, str(script_path)], cwd=str(ROOT), start_new_session=True)
     try:
-        proc.wait(timeout=STEP_TIME_BUDGET_SECONDS)
+        proc.wait(timeout=budget)
     except subprocess.TimeoutExpired:
         print(
-            f"! {name} hit its {STEP_TIME_BUDGET_SECONDS // 60}-minute time budget — "
+            f"! {name} hit its {budget // 60}-minute time budget — "
             f"killing it and moving on to the next step",
             flush=True,
         )
