@@ -1,13 +1,23 @@
 {
-  "40894": {
+  "30724": {
     "end_date": null,
-    "end_date_raw": "08/28/2026",
-    "gwp_code": "40894",
-    "image": "https://www.lego.com/cdn/cs/set/assets/blt277aa92d593803ca/bltdda4cd05f6b1431a-40894_Box1_v29.png",
+    "end_date_raw": "09/06/2026",
+    "gwp_code": "30724",
+    "image": "https://www.lego.com/cdn/cs/set/assets/bltd75071970d46aa86/30724_Prod.png",
     "insiders_only": false,
-    "name": "Koenigsegg Sadair's Spear Steering Wheel",
-    "qualifying_text": "Unlock when purchasing Koenigsegg Sadair's Spear Megacar",
-    "url": "https://www.lego.com/en-us/search?q=40894"
+    "name": "Dumbledore's Office with Harry Potter™",
+    "qualifying_text": "Unlock when purchasing qualifying products",
+    "url": "https://www.lego.com/en-us/search?q=30724"
+  },
+  "40901": {
+    "end_date": null,
+    "end_date_raw": "09/06/2026",
+    "gwp_code": "40901",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt644688186718bc01/40901_Prod.png",
+    "insiders_only": false,
+    "name": "Ministry Munchies & The Daily Prophet Stands",
+    "qualifying_text": "Spend over $130 on Harry Potter™ to unlock this gift",
+    "url": "https://www.lego.com/en-us/search?q=40901"
   },
   "5011072": {
     "end_date": null,
