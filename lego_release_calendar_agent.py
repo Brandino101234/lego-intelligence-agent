@@ -89,11 +89,21 @@ NEXT_DATA_MARKER = '__NEXT_DATA__" type="application/json">'
 # today, it will ship from September 1, 2026" for the same date concept.
 AVAILABILITY_DATE_RE = re.compile(r"([A-Za-z]+ \d{1,2},\s*\d{4})")
 
-# The only two statuses that mean "not released yet" — everything else
-# (E_AVAILABLE, F/G_BACKORDER*, H_OUT_OF_STOCK, K_SOLD_OUT, ...) describes
-# the stock state of a set that's already out, confirmed against ~540 real
-# products across 8 themes before relying on this.
-UPCOMING_STATUSES = {"A_PRE_ORDER_FOR_DATE", "B_COMING_SOON_AT_DATE"}
+# Statuses that mean "not released yet for the general public" —
+# everything else (E_AVAILABLE, F/G_BACKORDER*, H_OUT_OF_STOCK, K_SOLD_OUT,
+# ...) describes the stock state of a set that's already out, confirmed
+# against ~540 real products across 8 themes before relying on this.
+# D_COMING_SOON showed up later (confirmed missing a real set — Batman
+# Returns Batmobile, 76355 — that had already correctly appeared as
+# B_COMING_SOON_AT_DATE, then dropped off entirely a few days later): a
+# set transitions to it once its LEGO Insiders early-access window opens
+# (vipAvailabilityStatus flips to E_AVAILABLE / vipCanAddToBag: true while
+# canAddToBag for everyone else stays false). Its availabilityText loses
+# the specific date ("Coming Soon" instead of "Coming soon on <date>"),
+# so parse_availability_date() won't find one here — that's fine, the
+# per-product Insiders-banner check in enrich_from_product_pages() picks
+# up the real date range separately for sets in this state.
+UPCOMING_STATUSES = {"A_PRE_ORDER_FOR_DATE", "B_COMING_SOON_AT_DATE", "D_COMING_SOON"}
 
 # Snapshot of top-level theme slugs from LEGO.com's sitemap (captured
 # 2026-08-15), used only if the live sitemap fetch fails so a transient
@@ -196,12 +206,17 @@ def build_entry(apollo: dict, product: dict) -> dict | None:
     }
 
 
-def extract_products(apollo: dict) -> tuple[list[dict], int | None, dict[str, str], dict[str, str]]:
+def extract_products(apollo: dict, requested_page: int = 1) -> tuple[list[dict], int | None, dict[str, str], dict[str, str]]:
     """Returns (upcoming_entries, next_page, images, prices). `images` and
     `prices` cover every real buildable set seen on the page — not just
     upcoming ones — keyed by set number, so other agents (e.g. the
     retirement tracker) can look up an official LEGO.com product image or
-    current price without a separate crawl."""
+    current price without a separate crawl.
+
+    `requested_page` is the page number the caller actually asked for —
+    needed because the ProductQueryResult branch below can't reliably
+    derive its own page number from the response. See the comment there
+    for why."""
 
     images: dict[str, str] = {}
     prices: dict[str, str] = {}
@@ -259,8 +274,19 @@ def extract_products(apollo: dict) -> tuple[list[dict], int | None, dict[str, st
                 entries.append(entry)
         offset, count, total = pqr.get("offset", 0), pqr.get("count", 0), pqr.get("total", 0)
         has_more = offset + count < total
-        current_page = (offset // count) + 1 if count else 1
-        return entries, (current_page + 1 if has_more else None), images, prices
+        # LEGO's own `?page=N` URL parameter works correctly — confirmed
+        # directly: requesting page=3 and page=4 for a theme whose page=2
+        # response looked "stuck" returned genuinely new results with
+        # offsets that summed correctly to the real total. What's broken
+        # is trying to derive a page number FROM the response
+        # (offset // count assumes every page is the same size, which
+        # LEGO's API doesn't guarantee — confirmed: one theme's page 2
+        # reported offset=16 with count=18, an offset that isn't even a
+        # multiple of its own page's count). The caller already knows
+        # what page it just requested, so just increment that instead of
+        # reverse-engineering a number from data that doesn't reliably
+        # encode it.
+        return entries, (requested_page + 1 if has_more else None), images, prices
 
     return [], None, images, prices
 
@@ -305,11 +331,18 @@ def scrape_listing(start_url: str) -> tuple[dict[str, dict], dict[str, str], dic
             # unrelated page (e.g. a discontinued-product news article)
             # instead of a product listing — nothing to scrape there.
             break
-        entries, next_page, images, prices = extract_products(apollo)
+        entries, next_page, images, prices = extract_products(apollo, requested_page=page)
         for e in entries:
             found[e["set_num"]] = e
         all_images.update(images)
         all_prices.update(prices)
+        # Defensive backstop, not the primary mechanism (see
+        # extract_products' ProductQueryResult branch for the real fix):
+        # a well-formed sequence always advances, so bail out rather than
+        # trust a non-advancing value blindly and loop up to
+        # MAX_PAGES_PER_LISTING times for nothing.
+        if next_page is not None and next_page <= page:
+            break
         page = next_page
     return found, all_images, all_prices
 
@@ -571,7 +604,7 @@ def enrich_from_product_pages(months: dict[str, list[dict]]) -> None:
         # default timeout handling only signals the direct child, leaving
         # any grandchildren to leak as orphans.
         proc = subprocess.Popen(
-            [sys.executable, str(ENRICH_WORKER_PATH), str(input_path), str(output_path)],
+            [sys.executable, "-u", str(ENRICH_WORKER_PATH), str(input_path), str(output_path)],
             start_new_session=True,
         )
         try:

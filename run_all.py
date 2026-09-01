@@ -68,7 +68,17 @@ def run_module(name: str) -> None:
     budget = STEP_TIME_BUDGETS.get(name, STEP_TIME_BUDGET_SECONDS)
 
     script_path = ROOT / f"{name}.py"
-    proc = subprocess.Popen([sys.executable, str(script_path)], cwd=str(ROOT), start_new_session=True)
+    # -u: unbuffered stdout. Without it, Python block-buffers output that
+    # isn't attached to a real terminal (true for both a subprocess here
+    # and GitHub Actions' own log capture) — confirmed to hide genuine,
+    # possibly-slow-but-real progress entirely until either the buffer
+    # fills or the process exits, which made two separate hangs much
+    # harder to diagnose than they needed to be (a step's own step log
+    # showed *zero* output across a full 6 hours, even though it almost
+    # certainly wasn't sitting fully idle that whole time).
+    proc = subprocess.Popen(
+        [sys.executable, "-u", str(script_path)], cwd=str(ROOT), start_new_session=True
+    )
     try:
         proc.wait(timeout=budget)
     except subprocess.TimeoutExpired:

@@ -43,7 +43,7 @@ jobs:
       # first run) — kept here so a fresh/reset runner stays self-healing.
       - run: '"/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/playwright" install chromium'
 
-      - run: '"/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/python3" run_all.py'
+      - run: '"/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/python3" -u run_all.py'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
 
