@@ -150,12 +150,26 @@ def upsize_lego_image_url(url: str, *, size: int = 1500, quality: int = 90) -> s
     """The image URLs collected while scraping are sized for the dashboard's
     small thumbnails (320x320). LEGO's image CDN will happily re-render the
     same asset at any size on request, so bump the query params rather than
-    re-scraping — used for image exports where a real resolution matters."""
+    re-scraping — used for image exports where a real resolution matters.
+
+    Explicitly forces format=jpg. Gallery image URLs (from
+    productMediaAssets) arrive with no query string at all, and without an
+    explicit format the CDN serves whatever the source asset natively is —
+    confirmed some assets are genuinely transparent PNGs at the source
+    (LEGO's own filenames sometimes even say so, e.g. "*_NOBG.png"), which
+    the CDN does NOT reliably flatten to a background on its own. Every
+    caller here saves the response with a .jpg extension regardless, so a
+    passed-through PNG's real transparency wasn't being lost — it was
+    silently *kept*, just mislabeled, showing up as a black background in
+    whatever video/photo tool the image was later opened in in place of
+    LEGO's own white studio background. Forcing format=jpg here makes the
+    CDN do the flattening itself, once, consistently, for every asset."""
     parts = urlsplit(url)
     query = dict(parse_qsl(parts.query))
     query["width"] = str(size)
     query["height"] = str(size)
     query["quality"] = str(quality)
+    query["format"] = "jpg"
     return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
 
 
