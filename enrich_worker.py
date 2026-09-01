@@ -50,7 +50,14 @@ def run(entries: list[dict]) -> dict:
         page = browser.new_page(user_agent=HEADERS["User-Agent"])
         for entry in entries:
             try:
-                page.goto(entry["url"], timeout=30000, wait_until="domcontentloaded")
+                # Confirmed in production: a real, sleep-unrelated slowdown
+                # (verified no sleep/wake events across a full 47-minute
+                # run that still didn't finish) — with 30s per page and up
+                # to two page loads per set, worst case scales linearly to
+                # tens of minutes once enough individual pages are slow.
+                # 15s still leaves a real page (observed loading in 2-3s
+                # under normal conditions) plenty of margin.
+                page.goto(entry["url"], timeout=15000, wait_until="domcontentloaded")
                 page.wait_for_timeout(1200)  # let client-rendered promo content settle
 
                 banner = page.locator('[data-test="markup"]', has_text="Early Access").first
@@ -74,7 +81,7 @@ def run(entries: list[dict]) -> dict:
                 if future_gwp:
                     if future_gwp.get("url"):
                         try:
-                            page.goto(future_gwp["url"], timeout=30000, wait_until="domcontentloaded")
+                            page.goto(future_gwp["url"], timeout=15000, wait_until="domcontentloaded")
                             page.wait_for_timeout(1200)
                             gwp_apollo = extract_pdp_apollo_state(page.content())
                             if gwp_apollo:

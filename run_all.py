@@ -36,15 +36,19 @@ STEP_TIME_BUDGET_SECONDS = 30 * 60
 
 # The calendar agent is consistently the heaviest step — a full ~76-theme
 # site crawl plus a real-browser visit to every tracked product — and has
-# been observed hitting the default 30-minute budget under nothing worse
-# than ordinary network slowness (confirmed in production: killed mid-crawl
-# with no other symptoms). When that happens the step gets killed before
-# its own save_json() call, so already-released sets don't drop off the
-# calendar until a run actually finishes — not a filtering bug, just a
-# starved-for-time crawl. Give it more headroom than the lighter agents
-# rather than raising the shared budget for everything.
+# been observed hitting even a 45-minute budget under nothing worse than
+# ordinary network slowness (confirmed in production: a full run watched
+# live start-to-finish with zero sleep/wake events on the Mac the entire
+# time still didn't finish in 45 min). When that happens the step gets
+# killed before its own save_json() call, so already-released sets don't
+# drop off the calendar until a run actually finishes — not a filtering
+# bug, just a starved-for-time crawl. Paired with tightening
+# enrich_worker.py's own per-page timeout (30s -> 15s, since that's what
+# scales linearly with tracked-set count and was the likely real driver),
+# this should mostly be moot now — but still generous headroom over the
+# lighter agents in case it isn't.
 STEP_TIME_BUDGETS = {
-    "lego_release_calendar_agent": 45 * 60,
+    "lego_release_calendar_agent": 75 * 60,
 }
 
 AGENTS = [
