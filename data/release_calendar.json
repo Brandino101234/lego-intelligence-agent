@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T06:03:38",
+  "generated_at": "2026-09-01T10:32:19",
   "months": {
     "2026-10": [
       {
@@ -31,6 +31,35 @@
         "set_num": "40958",
         "theme": null,
         "url": "https://www.lego.com/en-us/product/christmas-stocking-40958"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 1, 2026",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt52d91c2941b1d716/blt48ab724c0180ca36-40862_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltadac10e88c3da278/blt48ab724c0180ca36-40862_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb3ddb9bbde981438/blt48ab724c0180ca36-40862_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt9cc06de6c4448708/blt48ab724c0180ca36-40862_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltefa32500083c2563/blt48ab724c0180ca36-40862_Front_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4e2073b3a807d481/blt48ab724c0180ca36-40862_Back_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt255a6f57e6595d37/blt48ab724c0180ca36-40862_Front_03.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcc5f816f28f281c0/blt48ab724c0180ca36-40862_Lifestyle_Cons_1.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt6a889e0cd3172ee7/blt48ab724c0180ca36-40862_Lifestyle_Cons_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt6aae671eb6de68d1/blt48ab724c0180ca36-40862_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt823719adfe73a306/blt48ab724c0180ca36-40862_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt8702ab0afc3e3b12/blt48ab724c0180ca36-40862_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltf53a6463dbfd2356/bltf53a6463dbfd2356?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-10-01",
+        "name": "Holiday Ornament Selection 2",
+        "pieces": 179,
+        "price": "$12.99",
+        "set_num": "40862",
+        "theme": "Other",
+        "url": "https://www.lego.com/en-us/product/holiday-ornament-selection-2-40862"
       },
       {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
@@ -99,6 +128,60 @@
         "url": "https://www.lego.com/en-us/product/nevermore-academy-76788"
       },
       {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 1, 2026",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blte4ce7b4eb8d04300/bltef325e4d60641b11-40866_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt65854ba519321973/bltef325e4d60641b11-40866_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltdeb9ae761f00d46c/bltef325e4d60641b11-40866_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blteb6fb126b9803663/bltef325e4d60641b11-40866_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt35dc9dcb959d79b6/bltef325e4d60641b11-40866_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4056bf027d9f7a6a/bltef325e4d60641b11-40866_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt3b1cb8931dab11ab/bltef325e4d60641b11-40866_Lifestyle_Cons_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt4e275e4dcebfc4e2/bltef325e4d60641b11-40866_Lifestyle_Cons_1.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt3c56802b804847d3/bltef325e4d60641b11-40866_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blta9ff981940eca856/bltef325e4d60641b11-40866_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt6e4a364d27709b23/bltef325e4d60641b11-40866_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt70eb54487acc72aa/bltef325e4d60641b11-40866_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-10-01",
+        "name": "Santa's Holiday Sleigh Adventure",
+        "pieces": 187,
+        "price": "$29.99",
+        "set_num": "40866",
+        "theme": "Other",
+        "url": "https://www.lego.com/en-us/product/santas-holiday-sleigh-adventure-40866"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 1, 2026",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt3f63be50d91997bd/bltf1df1459ba3b1736-40875_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd8fafaa674d9b3e2/bltf1df1459ba3b1736-40875_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt23fb4f6a2a32f36d/bltf1df1459ba3b1736-40875_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt51dbceb6a3cdcd52/bltf1df1459ba3b1736-40875_WEB_SEC02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blte4440dec6d88f53c/bltf1df1459ba3b1736-40875_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltf7c61e92d429eae9/bltf1df1459ba3b1736-40875_lifestyle_Cons_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt262d6c4dcba73276/bltf1df1459ba3b1736-40875_lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltf236132e01369e59/bltf1df1459ba3b1736-40875_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltdf77b0522471f259/bltf1df1459ba3b1736-40875_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt6f93f9d207c92d6a/bltf1df1459ba3b1736-40875_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-10-01",
+        "name": "Up-Scaled Mrs. Claus Minifigure",
+        "pieces": 904,
+        "price": "$59.99",
+        "set_num": "40875",
+        "theme": "Minifigures",
+        "url": "https://www.lego.com/en-us/product/up-scaled-mrs-claus-minifigure-40875"
+      },
+      {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
         "future_gwp": null,
@@ -125,7 +208,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Minifigures",
+        "theme": "Pokémon",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -317,7 +400,7 @@
         "availability_text": "Coming soon on October 4, 2026",
         "future_gwp": {
           "date_range": "10/1 - 10/7",
-          "image": "https://www.lego.com/cdn/cs/set/assets/bltb2259e982658b9f7/bltc050d95083260c90-Hero_Superhero.jpg",
+          "image": "https://www.lego.com/cdn/cs/set/assets/blt34c7ecd746e00dfe/40897_Prod.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
           "name": "Recreate Darth Vader’s LIGHTSABER™",
           "text": "Your gift with the purchase of the LEGO® Star Wars™ Executor Super Star Destroyer™ (75457). 10/1 - 10/7  while supplies last.*",
           "url": "https://www.lego.com/product/darth-vaders-lightsaber-40897"

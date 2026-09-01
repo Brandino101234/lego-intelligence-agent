@@ -623,5 +623,29 @@
     "theme": "Harry Potter™",
     "timestamp": "2026-09-01T06:03:38",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Holiday Ornament Selection 2",
+    "set_num": "40862",
+    "theme": "Other",
+    "timestamp": "2026-09-01T10:32:19",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Santa's Holiday Sleigh Adventure",
+    "set_num": "40866",
+    "theme": "Other",
+    "timestamp": "2026-09-01T10:32:19",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Up-Scaled Mrs. Claus Minifigure",
+    "set_num": "40875",
+    "theme": "Minifigures",
+    "timestamp": "2026-09-01T10:32:19",
+    "type": "added_to_calendar"
   }
 ]
