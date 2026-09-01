@@ -1,18 +1,6 @@
 {
-  "2026-08": {
-    "bytes": 1317706,
-    "file": "downloads/2026-08.zip",
-    "images": 13,
-    "sets": 1
-  },
-  "2026-09": {
-    "bytes": 25995175,
-    "file": "downloads/2026-09.zip",
-    "images": 235,
-    "sets": 18
-  },
   "2026-10": {
-    "bytes": 14327449,
+    "bytes": 19354323,
     "file": "downloads/2026-10.zip",
     "images": 191,
     "sets": 14
@@ -24,13 +12,13 @@
     "sets": 1
   },
   "2027-01": {
-    "bytes": 3478735,
+    "bytes": 6529826,
     "file": "downloads/2027-01.zip",
     "images": 53,
     "sets": 8
   },
   "TBA": {
-    "bytes": 3246476,
+    "bytes": 1634909,
     "file": "downloads/TBA.zip",
     "images": 19,
     "sets": 1
