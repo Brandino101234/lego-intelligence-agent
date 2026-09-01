@@ -462,5 +462,190 @@
     "theme": "LEGO® Super Mario™",
     "timestamp": "2026-08-28T23:59:09",
     "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Wallace & Gromit",
+    "set_num": "21371",
+    "theme": "Ideas",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "added_to_calendar"
+  },
+  {
+    "name": "Batman Returns™ Batmobile™",
+    "new_month": "TBA",
+    "old_month": "2026-09",
+    "set_num": "76355",
+    "theme": "DC",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "month_changed"
+  },
+  {
+    "last_known_month": "2026-08",
+    "name": "Mini Hogwarts™ Castle",
+    "set_num": "40975",
+    "theme": "Harry Potter™",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Ayrton Senna Helmet",
+    "set_num": "43024",
+    "theme": "LEGO® Editions",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Doctor Doom Bust",
+    "set_num": "76345",
+    "theme": "Marvel",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Golden Age Superman™ and Batman™ Figures",
+    "set_num": "40859",
+    "theme": "DC",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Gremlins Gizmo™ and Stripe Figures",
+    "set_num": "40919",
+    "theme": "BrickHeadz",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "LEGO® City Advent Calendar 2026",
+    "set_num": "60510",
+    "theme": "City",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "LEGO® Friends Advent Calendar 2026",
+    "set_num": "42698",
+    "theme": "Friends",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "LEGO® Star Wars™ Advent Calendar 2026",
+    "set_num": "75456",
+    "theme": "Star Wars™",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "LEGO® ǀ Disney Princess Advent Calendar 2026",
+    "set_num": "43298",
+    "theme": "Disney™",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "LEGO® ǀ Marvel Advent Calendar 2026",
+    "set_num": "76340",
+    "theme": "Marvel",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Mayor Manor",
+    "set_num": "11383",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Nike Air Force 1 x LEGO® Set",
+    "set_num": "43026",
+    "theme": "LEGO® Editions",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Shrek Series",
+    "set_num": "71053",
+    "theme": "Minifigures",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Shrek Series 6 Pack",
+    "set_num": "66815",
+    "theme": "Minifigures",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "SpongeBob SquarePants Figure",
+    "set_num": "40858",
+    "theme": "BrickHeadz",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "SpongeBob SquarePants: Bikini Bottom",
+    "set_num": "11386",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "Star Trek: U.S.S. Enterprise NCC-1701™ Bridge",
+    "set_num": "11385",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-09",
+    "name": "The Ministry of Magic™ – Collectors' Edition",
+    "set_num": "76476",
+    "theme": "Harry Potter™",
+    "timestamp": "2026-09-01T06:03:38",
+    "type": "removed_from_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Holiday Ornament Selection 2",
+    "set_num": "40862",
+    "theme": "Other",
+    "timestamp": "2026-09-01T10:32:19",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Santa's Holiday Sleigh Adventure",
+    "set_num": "40866",
+    "theme": "Other",
+    "timestamp": "2026-09-01T10:32:19",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Up-Scaled Mrs. Claus Minifigure",
+    "set_num": "40875",
+    "theme": "Minifigures",
+    "timestamp": "2026-09-01T10:32:19",
+    "type": "added_to_calendar"
   }
 ]
