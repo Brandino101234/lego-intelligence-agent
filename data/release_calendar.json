@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T19:57:53",
+  "generated_at": "2026-09-02T10:06:28",
   "months": {
     "2026-10": [
       {
@@ -103,18 +103,7 @@
         "availability_text": "Coming soon on October 1, 2026",
         "future_gwp": null,
         "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blt16ab20bfcf8f3d5f/76788_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt435aedd7770a5136/76788_Box5_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltccde63b457bfb81f/76788_WEB_PRI_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt66b7ba38a8b08cb3/76788_WEB_SEC01_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltce5068c7bf63dd9c/76788_WEB_SEC02_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltfeaa48a313f01dbd/76788_WEB_SEC03_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltfe7fc9e051aa5955/76788_WEB_SEC04_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt00936c306bfc5ece/76788_Lifestyle_Build.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blta6a73dd32a6d565f/76788_Lifestyle_Cons.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt7722ee571d3bcc09/76788_Lifestyle_Cons_2.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltae375f8cab70f76e/76788_Lifestyle_Envr.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltb76ef7f2251de26c/76788_Box5_v39.png"
+          "https://www.lego.com/cdn/cs/set/assets/bltf1f4a0b23741fb92/76788_Prod.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/bltf1f4a0b23741fb92/76788_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
@@ -208,7 +197,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Minifigures",
+        "theme": "Pokémon",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -701,7 +690,7 @@
         "pieces": 2269,
         "price": "$229.99",
         "set_num": "76355",
-        "theme": "DC",
+        "theme": "Batman™",
         "url": "https://www.lego.com/en-us/product/batman-returns-batmobile-76355"
       }
     ]
