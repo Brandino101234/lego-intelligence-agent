@@ -647,5 +647,13 @@
     "theme": "Minifigures",
     "timestamp": "2026-09-01T10:32:19",
     "type": "added_to_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Christmas Stocking",
+    "set_num": "40958",
+    "theme": null,
+    "timestamp": "2026-09-02T20:00:41",
+    "type": "removed_from_calendar"
   }
 ]
