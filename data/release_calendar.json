@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T20:00:41",
+  "generated_at": "2026-09-04T15:43:20",
   "months": {
     "2026-10": [
       {
@@ -148,7 +148,7 @@
         "pieces": 904,
         "price": "$59.99",
         "set_num": "40875",
-        "theme": "Minifigures",
+        "theme": "Other",
         "url": "https://www.lego.com/en-us/product/up-scaled-mrs-claus-minifigure-40875"
       },
       {
@@ -276,7 +276,7 @@
         "pieces": 467,
         "price": "$39.99",
         "set_num": "40880",
-        "theme": "Marvel",
+        "theme": "BrickHeadz",
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880"
       },
       {
@@ -397,8 +397,8 @@
           "https://www.lego.com/cdn/cs/set/assets/blt2a7495892c769a8f/75457_Box5_v39.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt61c4d98ab0d5a2fc/75457_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
         "launch_date": "2026-10-04",
         "name": "Executor Super Star Destroyer™",
         "pieces": 6130,
@@ -406,6 +406,41 @@
         "set_num": "75457",
         "theme": "Star Wars™",
         "url": "https://www.lego.com/en-us/product/executor-super-star-destroyer-75457"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 4, 2026",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt5c20a70f0fb4cdf9/72306_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7a66a96e7a41dfcf/72306_boxprod_v29.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd32ec934fd871833/72306_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt36120d2a8fc83abd/72306_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcc8eeb205b8ac23d/72306_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcc914de0550177b1/72306_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt84c16c2cf90df688/72306_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7bdadff4c261b237/72306_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt1dbfad524e48eabc/72306_WEB_SEC07_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt9248b71a2504f942/72306_Lifestyle_Build_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blta9cc1fdf6f9c916b/72306_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc5870f6a250b5ea5/72306_Lifestyle_Build_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blte66d82962dab16ab/72306_Lifestyle_Build_07.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt17b50795409570a8/72306_Lifestyle_Build_08.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt796e2159a2188ba3/72306_Lifestyle_Build_09.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt9503124ce1181382/72306_Lifestyle_Build_10.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt05f98fd729363db6/72306_Lifestyle_Envr_crop.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt304a7b4ab3c188a0/72306_Lifestyle_Cons_02.jpg"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt59f8e9c961cb7e14/72306_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
+        "launch_date": "2026-10-04",
+        "name": "PlayStation™",
+        "pieces": 1911,
+        "price": "$179.99",
+        "set_num": "72306",
+        "theme": "Other",
+        "url": "https://www.lego.com/en-us/product/playstation-72306"
       }
     ],
     "2026-11": [
@@ -635,44 +670,6 @@
         "set_num": "72057",
         "theme": "LEGO® Super Mario™",
         "url": "https://www.lego.com/en-us/product/yoshi-at-marios-house-72057"
-      }
-    ],
-    "TBA": [
-      {
-        "availability_status": "D_COMING_SOON",
-        "availability_text": "Coming Soon",
-        "future_gwp": null,
-        "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/bltc6f27d4a45e9571c/76355_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltd13ed56409724505/76355_boxprod_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt60ac6192e3f0bc76/76355_WEB_SEC02_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltdfc589c735bec4cf/76355_WEB_SEC01_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt841f09a900459613/76355_WEB_SEC05_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt953d61aa9b7b11ab/76355_WEB_SEC07_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt2cc9c84a34c4eb19/76355_WEB_SEC06_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt6460bb05105297b9/76355_WEB_SEC04_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt3ed5e46f86f9d742/76355_Lifestyle_Build_01.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt2144f98a64da72be/76355_Lifestyle_Build_02.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt523e548090d3a4ef/76355_Lifestyle_Cons_02.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltdeafc007cf9b0a50/76355_Lifestyle_Build_05.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt7dc4d89177532b4d/76355_Lifestyle_Build_06.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt03c01f6222b3b628/76355_Lifestyle_Build_04.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt352e0ba03a3a2772/76355_Lifestyle_Build_07.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt37063fb3357f4257/76355_Lifestyle_Envr_01.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltad99f8d314563bca/76355_Lifestyle_Envr_02.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt188b74227c523a4d/76355_Lifestyle_Envr_03.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt09ca2bb5ddbd4fec/76355_Box5_v39.png"
-        ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/bltfbc74614e1423428/76355_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
-        "launch_date": null,
-        "name": "Batman Returns™ Batmobile™",
-        "pieces": 2269,
-        "price": "$229.99",
-        "set_num": "76355",
-        "theme": "Batman™",
-        "url": "https://www.lego.com/en-us/product/batman-returns-batmobile-76355"
       }
     ]
   }
