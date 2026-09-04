@@ -655,5 +655,21 @@
     "theme": null,
     "timestamp": "2026-09-02T20:00:41",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "PlayStation™",
+    "set_num": "72306",
+    "theme": "Other",
+    "timestamp": "2026-09-04T15:59:48",
+    "type": "added_to_calendar"
+  },
+  {
+    "last_known_month": "TBA",
+    "name": "Batman Returns™ Batmobile™",
+    "set_num": "76355",
+    "theme": "Batman™",
+    "timestamp": "2026-09-04T15:59:48",
+    "type": "removed_from_calendar"
   }
 ]
