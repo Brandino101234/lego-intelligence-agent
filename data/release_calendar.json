@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-09-04T15:59:48",
+  "generated_at": "2026-09-06T18:20:14",
   "months": {
     "2026-10": [
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 1, 2026",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt93b12260f66cd50b/11379_Prod.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt93b12260f66cd50b/11379_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-10-01",
+        "name": "Bookstore: Book Nook",
+        "pieces": 1690,
+        "price": "$149.99",
+        "set_num": "11379",
+        "theme": "LEGO® Icons",
+        "url": "https://www.lego.com/en-us/product/bookstore-book-nook-11379"
+      },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on October 1, 2026",
@@ -148,7 +166,7 @@
         "pieces": 904,
         "price": "$59.99",
         "set_num": "40875",
-        "theme": "Other",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-mrs-claus-minifigure-40875"
       },
       {
@@ -178,7 +196,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Pokémon",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -276,7 +294,7 @@
         "pieces": 467,
         "price": "$39.99",
         "set_num": "40880",
-        "theme": "BrickHeadz",
+        "theme": "Marvel",
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880"
       },
       {
@@ -397,8 +415,8 @@
           "https://www.lego.com/cdn/cs/set/assets/blt2a7495892c769a8f/75457_Box5_v39.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt61c4d98ab0d5a2fc/75457_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
         "launch_date": "2026-10-04",
         "name": "Executor Super Star Destroyer™",
         "pieces": 6130,

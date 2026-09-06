@@ -671,5 +671,13 @@
     "theme": "Batman™",
     "timestamp": "2026-09-04T15:59:48",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Bookstore: Book Nook",
+    "set_num": "11379",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-09-06T18:20:14",
+    "type": "added_to_calendar"
   }
 ]
