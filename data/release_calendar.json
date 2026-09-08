@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T18:20:14",
+  "generated_at": "2026-09-08T10:08:12",
   "months": {
     "2026-10": [
       {
@@ -7,7 +7,30 @@
         "availability_text": "Coming soon on October 1, 2026",
         "future_gwp": null,
         "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blt93b12260f66cd50b/11379_Prod.png"
+          "https://www.lego.com/cdn/cs/set/assets/blt7feaf36ff10b46c9/11379_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf45b8aa7e8819c90/11379_boxprod_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltc5f9bd2e781fb470/11379_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt1f10e262d3f7e217/11379_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt13bd2710a3bbd525/11379_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcd6b0d89ba8fa6fe/11379_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt15be9eb0eece2a4d/11379_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcf9b433742455c02/11379_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt56e1b799a0b55e2b/11379_WEB_SEC07_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltbb75f0605868e23f/11379_WEB_SEC08_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt9f096a3526ae6f59/11379_WEB_SEC09_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt9fc4686db61d7f0d/11379_Lifestyle_Build_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc1cf99c0266d35ac/11379_Lifestyle_Build_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc44acd305c7fc90c/11379_Lifestyle_Build_03.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt40dbd56fec1e8b7a/11379_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd2f486c8a7600523/11379_Lifestyle_Build_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt0982975fec2f7164/11379_Lifestyle_Build_09.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt20c34663ace9f1d1/11379_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltb883f7ef87e7a704/11379_Lifestyle_Envr_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltfad5b3be60b0d6c0/11379_Lifestyle_Envr_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltee0711d3e31f5c3f/11379_Lifestyle_Envr_03.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt7311210d33838a58/11379_Lifestyle_Envr_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt73e96c893d8219a5/11379_Lifestyle_Envr_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltddd9c3414a6109f5/11379_Box5_v39.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt93b12260f66cd50b/11379_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
@@ -415,8 +438,8 @@
           "https://www.lego.com/cdn/cs/set/assets/blt2a7495892c769a8f/75457_Box5_v39.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt61c4d98ab0d5a2fc/75457_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
         "launch_date": "2026-10-04",
         "name": "Executor Super Star Destroyer™",
         "pieces": 6130,
@@ -450,8 +473,8 @@
           "https://www.lego.com/cdn/cs/set/assets/blt304a7b4ab3c188a0/72306_Lifestyle_Cons_02.jpg"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt59f8e9c961cb7e14/72306_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
         "launch_date": "2026-10-04",
         "name": "PlayStation™",
         "pieces": 1911,
@@ -505,6 +528,30 @@
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltf035f8f9de512053/72058_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf69f73561e19fd32/72058_Box1_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt1955675440cbf04f/72058_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt58a402c91c7bd9ad/72058_Front_01_05.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5340cd751c14cb7d/72058_Top_01_07.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd95a76a014d01ca9/72058_Front_01_08.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltdbde5b5769e72595/72058_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltd848d532123e7252/72058_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Bowser's Rumbling Race",
+        "pieces": 409,
+        "price": "$59.99",
+        "set_num": "72058",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/mario-kart-bowsers-rumbling-race-72058"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltdc0a956f8f115c6b/72061_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltb7f3b71cdb558f25/72061_Box1_v39.png",
           "https://www.lego.com/cdn/cs/set/assets/bltd4dd99bf5281d6b8/72061_Back_02_02.png",
@@ -552,30 +599,6 @@
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/bltf035f8f9de512053/72058_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltf69f73561e19fd32/72058_Box1_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt1955675440cbf04f/72058_Back_01_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt58a402c91c7bd9ad/72058_Front_01_05.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt5340cd751c14cb7d/72058_Top_01_07.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltd95a76a014d01ca9/72058_Front_01_08.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltdbde5b5769e72595/72058_Box5_v39.png"
-        ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/bltd848d532123e7252/72058_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
-        "launch_date": "2027-01-01",
-        "name": "Mario Kart™ – Bowser's Rumbling Race",
-        "pieces": 409,
-        "price": "$59.99",
-        "set_num": "72058",
-        "theme": "LEGO® Super Mario™",
-        "url": "https://www.lego.com/en-us/product/mario-kart-bowsers-rumbling-race-72058"
-      },
-      {
-        "availability_status": "B_COMING_SOON_AT_DATE",
-        "availability_text": "Coming soon on January 1, 2027",
-        "future_gwp": null,
-        "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt59695bcce3b24805/72056_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt74b069b3e4cf555d/72056_Box1_v39.png",
           "https://www.lego.com/cdn/cs/set/assets/bltccae76dae30419b8/72056_Front_01_02.png",
@@ -588,35 +611,12 @@
         "insiders_early_access": false,
         "insiders_early_access_text": null,
         "launch_date": "2027-01-01",
-        "name": "Mario Kart™ – Luigi & Bowser Jr.'s Race",
+        "name": "Luigi & Bowser Jr.'s Race",
         "pieces": 104,
         "price": "$29.99",
         "set_num": "72056",
         "theme": "LEGO® Super Mario™",
         "url": "https://www.lego.com/en-us/product/mario-kart-luigi-bowser-jrs-race-72056"
-      },
-      {
-        "availability_status": "B_COMING_SOON_AT_DATE",
-        "availability_text": "Coming soon on January 1, 2027",
-        "future_gwp": null,
-        "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/bltced5edcf5bc700e0/72054_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt67aeeb1f6f2d533c/72054_Box1_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltb4bd8412247f2109/72054_Back_01_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt7a33ee104a9f9c89/72054_Back_03_02.png",
-          "https://www.lego.com/cdn/cs/set/assets/blta16b4e89985c86f0/72054_Back_02_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt1bfa606ef7e89446/72054_Box5_v39.png"
-        ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
-        "launch_date": "2027-01-01",
-        "name": "Mario Kart™ – Racing with Mario",
-        "pieces": 84,
-        "price": "$14.99",
-        "set_num": "72054",
-        "theme": "LEGO® Super Mario™",
-        "url": "https://www.lego.com/en-us/product/mario-kart-racing-with-mario-72054"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
@@ -664,6 +664,29 @@
         "set_num": "72052",
         "theme": "LEGO® Super Mario™",
         "url": "https://www.lego.com/en-us/product/marios-pipe-jump-72052"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltced5edcf5bc700e0/72054_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt67aeeb1f6f2d533c/72054_Box1_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb4bd8412247f2109/72054_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7a33ee104a9f9c89/72054_Back_03_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blta16b4e89985c86f0/72054_Back_02_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt1bfa606ef7e89446/72054_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Racing with Mario",
+        "pieces": 84,
+        "price": "$14.99",
+        "set_num": "72054",
+        "theme": "LEGO® Super Mario™",
+        "url": "https://www.lego.com/en-us/product/mario-kart-racing-with-mario-72054"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
