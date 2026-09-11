@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T10:08:12",
+  "generated_at": "2026-09-10T20:04:54",
   "months": {
     "2026-10": [
       {
@@ -219,7 +219,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Minifigures",
+        "theme": "Pokémon",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -378,6 +378,47 @@
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-quinjet-76347"
       },
       {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 4, 2026",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltad314f25ee503191/21373_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt3005a550c379fd69/21373_boxprod_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt73e92456af878ccb/21373_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt280a2bd4f88c0a2d/21373_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5346905e16ce5d40/21373_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte7a91b82999d1309/21373_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0b9bc975e0ced3ee/21373_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltdaf0d31b5f058c23/21373_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt681784b66d0f3ffb/21373_WEB_SEC07_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb04aa03e889b2dc7/AID262GLa8c9291d_Crop_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt7f28ceba2791eefd/AID262GLa8c9291d_Crop_3.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt6d208715ce50c9e3/AID262GLa8c9291d_Crop_5.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd529997b7bbf45a7/AID262GLa8c9291d_Crop_6.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltdbf2f954de3899c7/21373_Lifestyle_Build_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt6eef465a89e540f4/21373_Lifestyle_Build_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt67aa6831da8fde16/21373_Lifestyle_Build_03.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blte80f3550f518929e/21373_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd984d7e8e8d97d65/21373_Lifestyle_Build_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt3c211008fe663b2b/21373_Lifestyle_Build_06.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd134dc7f577a94cf/21373_Lifestyle_Cons_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc771ba5b19954466/21373_Lifestyle_Envr_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt5e339c5e46f128d0/21373_Lifestyle_Envr_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt8f35870bc2b678a8/21373_Lifestyle_Envr_03.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt0a0c41086c2cf708/21373_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt859bd34dfebcd95a/21373_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insiders Early Access 10/1-10/3",
+        "launch_date": "2026-10-04",
+        "name": "Downton Abbey",
+        "pieces": 4711,
+        "price": "$349.99",
+        "set_num": "21373",
+        "theme": "Ideas",
+        "url": "https://www.lego.com/en-us/product/downton-abbey-21373"
+      },
+      {
         "availability_status": "A_PRE_ORDER_FOR_DATE",
         "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
         "future_gwp": null,
@@ -438,8 +479,8 @@
           "https://www.lego.com/cdn/cs/set/assets/blt2a7495892c769a8f/75457_Box5_v39.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt61c4d98ab0d5a2fc/75457_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
         "launch_date": "2026-10-04",
         "name": "Executor Super Star Destroyer™",
         "pieces": 6130,
@@ -473,8 +514,8 @@
           "https://www.lego.com/cdn/cs/set/assets/blt304a7b4ab3c188a0/72306_Lifestyle_Cons_02.jpg"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt59f8e9c961cb7e14/72306_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
         "launch_date": "2026-10-04",
         "name": "PlayStation™",
         "pieces": 1911,

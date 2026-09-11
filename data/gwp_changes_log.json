@@ -104,5 +104,21 @@
     "name": "Ministry Munchies & The Daily Prophet Stands",
     "timestamp": "2026-09-08T10:08:29",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "30726",
+    "name": "Batman™: Bruce Wayne™ and the Batsuit™",
+    "qualifying_text": "Spend over $40 on Batman™ to unlock this gift",
+    "timestamp": "2026-09-10T20:05:10",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40780",
+    "name": "Birthday Cake",
+    "qualifying_text": "Spend over $65 to unlock this gift",
+    "timestamp": "2026-09-10T20:05:10",
+    "type": "gwp_started"
   }
 ]

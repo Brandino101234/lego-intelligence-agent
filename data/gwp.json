@@ -1,4 +1,24 @@
 {
+  "30726": {
+    "end_date": null,
+    "end_date_raw": "09/19/2026",
+    "gwp_code": "30726",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt1325387522042d5c/blt66ee8563e9c1d039-30726_Prod_en-gb.png",
+    "insiders_only": false,
+    "name": "Batman™: Bruce Wayne™ and the Batsuit™",
+    "qualifying_text": "Spend over $40 on Batman™ to unlock this gift",
+    "url": "https://www.lego.com/en-us/search?q=30726"
+  },
+  "40780": {
+    "end_date": null,
+    "end_date_raw": "09/19/2026",
+    "gwp_code": "40780",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt4f54b4ab2a099580/40780_Prod_en-gb.png",
+    "insiders_only": true,
+    "name": "Birthday Cake",
+    "qualifying_text": "Spend over $65 to unlock this gift",
+    "url": "https://www.lego.com/en-us/search?q=40780"
+  },
   "5011072": {
     "end_date": null,
     "end_date_raw": "09/30/2026",
