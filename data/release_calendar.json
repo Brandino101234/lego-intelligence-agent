@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T20:04:54",
+  "generated_at": "2026-09-11T20:13:37",
   "months": {
     "2026-10": [
       {
@@ -189,7 +189,7 @@
         "pieces": 904,
         "price": "$59.99",
         "set_num": "40875",
-        "theme": "Minifigures",
+        "theme": "Other",
         "url": "https://www.lego.com/en-us/product/up-scaled-mrs-claus-minifigure-40875"
       },
       {
@@ -321,8 +321,8 @@
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880"
       },
       {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 4, 2026",
         "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt23f24dd445978662/bltf8fe100c932e85ca-76352_Prod.png",
@@ -526,6 +526,34 @@
       }
     ],
     "2026-11": [
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on November 1, 2026",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blta0997056f1c2bb51/10371_Prod_Pre.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt019411fad9545d1a/10371_Box1_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt92554c972387487c/10371_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt8175449290c1ea4c/10371_WEB_SEC02_NOBG_(1).png",
+          "https://www.lego.com/cdn/cs/set/assets/blt8943d53eb2c98ac9/10371_WEB_SEC03_NOBG_(1).png",
+          "https://www.lego.com/cdn/cs/set/assets/blt67b48d7c637fe319/10371_WEB_SEC04_NOBG_(2).png",
+          "https://www.lego.com/cdn/cs/set/assets/blt8498e089fd01fffd/10371_Lifestyle_build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blte0eea0292c5d4b37/10371_Lifestyle_cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt3690216566f1e860/10371_Lifestyle_cons_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt927f1e487c883e95/10371_Lifestyle_envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltcbf2abdfbd22fe0f/10371_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt42ce0b3815e3a491/10371_Prod_Pre.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-11-01",
+        "name": "Cozy Plants",
+        "pieces": 248,
+        "price": "$22.99",
+        "set_num": "10371",
+        "theme": "Botanicals",
+        "url": "https://www.lego.com/en-us/product/cozy-plants-10371"
+      },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on November 1, 2026",
