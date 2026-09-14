@@ -120,5 +120,11 @@
     "qualifying_text": "Spend over $65 to unlock this gift",
     "timestamp": "2026-09-10T20:05:10",
     "type": "gwp_started"
+  },
+  {
+    "gwp_code": "40780",
+    "name": "Birthday Cake",
+    "timestamp": "2026-09-13T20:01:45",
+    "type": "gwp_ended"
   }
 ]
