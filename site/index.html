@@ -492,12 +492,14 @@ a.cal-card:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; 
 
 /* ---- designer program ---- */
 .bdp-series { display: grid; grid-template-columns: 130px 1fr; gap: 16px; margin-bottom: 28px; }
-.bdp-series-label { padding-top: 2px; }
+.bdp-series-label { padding-top: 2px; min-width: 0; }
 .bdp-series-name { font-family: 'Rubik Var', sans-serif; font-weight: 700; font-size: 13.5px; }
 .bdp-series-count { margin-top: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-muted); }
 .theme-tag.bdp-phase { display: inline-block; margin-top: 6px; background: var(--gold-soft); border-color: var(--gold-fill); color: var(--gold); }
+.date-pill.bdp-milestone { display: block; width: 100%; max-width: 100%; box-sizing: border-box; white-space: normal; line-height: 1.35; margin-top: 8px; border-radius: 8px; }
 
 .bdp-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.bdp-empty { font-size: 13px; color: var(--ink-muted); padding: 13px 0; }
 
 a.bdp-card {
   display: flex;
@@ -635,7 +637,7 @@ footer.page-footer {
 <div class="statusbar">
   <div class="wordmark">LEGO<span>&bull;</span>INTEL</div>
   <div class="status-right">
-    <span>Updated <span class="mono">Sep 17, 1:20 AM</span></span>
+    <span>Updated <span class="mono">Sep 17, 1:29 AM</span></span>
     <span>Next run <span class="mono">6:00 AM</span></span>
     <button class="run-now" id="run-now-btn" onclick="runScraperNow()">Run now</button>
     <button class="refresh" onclick="location.reload()">Refresh</button>
@@ -3936,58 +3938,20 @@ footer.page-footer {
       
           <div class="bdp-series">
             <div class="bdp-series-label">
-              <div class="bdp-series-name">Series 9</div>
-              <span class="theme-tag bdp-phase">Validation</span>
-              <div class="bdp-series-count">5 FINALISTS</div>
-              <a class="cal-month-download gold" href="downloads/bdp-series-9.zip" download><span class="label">&#8681; Download images</span><span class="n">58 photos &middot; 5 designs</span></a>
+              <div class="bdp-series-name">2028 Wave 1</div>
+              <span class="theme-tag bdp-phase">Intake</span>
+              <div class="bdp-series-count">AWAITING FINALISTS</div>
+              <span class="date-pill soon mono bdp-milestone" title="Crowdsourcing closes">Crowdsourcing closes &middot; Sep 28, 2026, 3:00 PM</span>
+              
             </div>
-            <div class="bdp-cards">
-              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
-                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366532.EE594D84506FA6D0.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
-                <div class="bdp-card-name">Fisherman&#x27;s Village</div>
-                <div class="bdp-card-bottom">
-                  <div class="badge-circle"><span class="n">4,007</span><span class="u">PC</span></div>
-                  <span class="bdp-card-minifigs">13 minifigs</span>
-                </div>
-              </a>
-              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
-                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366554.4F4565B7BE20CD6B.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
-                <div class="bdp-card-name">Pumpkin Patch</div>
-                <div class="bdp-card-bottom">
-                  <div class="badge-circle"><span class="n">565</span><span class="u">PC</span></div>
-                  <span class="bdp-card-minifigs">3 minifigs</span>
-                </div>
-              </a>
-              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
-                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366510.53CEA5E118DB6B1C.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
-                <div class="bdp-card-name">Sleepy Dragon Inn</div>
-                <div class="bdp-card-bottom">
-                  <div class="badge-circle"><span class="n">2,981</span><span class="u">PC</span></div>
-                  <span class="bdp-card-minifigs">9 minifigs</span>
-                </div>
-              </a>
-              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
-                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366485.E9907EFCAFE32EAB.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
-                <div class="bdp-card-name">Wild West Blacksmith</div>
-                <div class="bdp-card-bottom">
-                  <div class="badge-circle"><span class="n">2,513</span><span class="u">PC</span></div>
-                  <span class="bdp-card-minifigs">7 minifigs</span>
-                </div>
-              </a>
-              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
-                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366566.9C182E7D319AAB9A.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
-                <div class="bdp-card-name">Woodbrick Freight Depot</div>
-                <div class="bdp-card-bottom">
-                  <div class="badge-circle"><span class="n">2,199</span><span class="u">PC</span></div>
-                  <span class="bdp-card-minifigs">7 minifigs</span>
-                </div>
-              </a></div>
+            <p class="bdp-empty">No finalists announced yet.</p>
           </div>
           <div class="bdp-series">
             <div class="bdp-series-label">
               <div class="bdp-series-name">Series 11</div>
               <span class="theme-tag bdp-phase">Validation</span>
               <div class="bdp-series-count">5 FINALISTS</div>
+              <span class="date-pill neutral mono bdp-milestone" title="Refining ends">Refining ends &middot; May 3, 2027, 2:59 PM</span>
               <a class="cal-month-download gold" href="downloads/bdp-series-11.zip" download><span class="label">&#8681; Download images</span><span class="n">48 photos &middot; 5 designs</span></a>
             </div>
             <div class="bdp-cards">
@@ -4037,6 +4001,7 @@ footer.page-footer {
               <div class="bdp-series-name">Series 10</div>
               <span class="theme-tag bdp-phase">Validation</span>
               <div class="bdp-series-count">5 FINALISTS</div>
+              <span class="date-pill neutral mono bdp-milestone" title="Refining ends">Refining ends &middot; Jan 4, 2027, 3:00 PM</span>
               <a class="cal-month-download gold" href="downloads/bdp-series-10.zip" download><span class="label">&#8681; Download images</span><span class="n">49 photos &middot; 5 designs</span></a>
             </div>
             <div class="bdp-cards">
@@ -4077,6 +4042,56 @@ footer.page-footer {
                 <div class="bdp-card-name">Wild West Train Station</div>
                 <div class="bdp-card-bottom">
                   <div class="badge-circle"><span class="n">3,184</span><span class="u">PC</span></div>
+                  <span class="bdp-card-minifigs">7 minifigs</span>
+                </div>
+              </a></div>
+          </div>
+          <div class="bdp-series">
+            <div class="bdp-series-label">
+              <div class="bdp-series-name">Series 9</div>
+              <span class="theme-tag bdp-phase">Validation</span>
+              <div class="bdp-series-count">5 FINALISTS</div>
+              <span class="date-pill soon mono bdp-milestone" title="Crowdfunding opens">Crowdfunding opens &middot; Oct 6, 2026, 11:00 AM</span>
+              <a class="cal-month-download gold" href="downloads/bdp-series-9.zip" download><span class="label">&#8681; Download images</span><span class="n">58 photos &middot; 5 designs</span></a>
+            </div>
+            <div class="bdp-cards">
+              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
+                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366532.EE594D84506FA6D0.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
+                <div class="bdp-card-name">Fisherman&#x27;s Village</div>
+                <div class="bdp-card-bottom">
+                  <div class="badge-circle"><span class="n">4,007</span><span class="u">PC</span></div>
+                  <span class="bdp-card-minifigs">13 minifigs</span>
+                </div>
+              </a>
+              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
+                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366554.4F4565B7BE20CD6B.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
+                <div class="bdp-card-name">Pumpkin Patch</div>
+                <div class="bdp-card-bottom">
+                  <div class="badge-circle"><span class="n">565</span><span class="u">PC</span></div>
+                  <span class="bdp-card-minifigs">3 minifigs</span>
+                </div>
+              </a>
+              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
+                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366510.53CEA5E118DB6B1C.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
+                <div class="bdp-card-name">Sleepy Dragon Inn</div>
+                <div class="bdp-card-bottom">
+                  <div class="badge-circle"><span class="n">2,981</span><span class="u">PC</span></div>
+                  <span class="bdp-card-minifigs">9 minifigs</span>
+                </div>
+              </a>
+              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
+                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366485.E9907EFCAFE32EAB.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
+                <div class="bdp-card-name">Wild West Blacksmith</div>
+                <div class="bdp-card-bottom">
+                  <div class="badge-circle"><span class="n">2,513</span><span class="u">PC</span></div>
+                  <span class="bdp-card-minifigs">7 minifigs</span>
+                </div>
+              </a>
+              <a class="bdp-card" href="https://www.bricklink.com/v3/designer-program/series-9/main.page" target="_blank" rel="noopener">
+                <img class="bdp-card-img" src="https://file.bricklink.info/19/4366/4366566.9C182E7D319AAB9A.jpeg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'bdp-card-img bdp-card-img-empty'}))">
+                <div class="bdp-card-name">Woodbrick Freight Depot</div>
+                <div class="bdp-card-bottom">
+                  <div class="badge-circle"><span class="n">2,199</span><span class="u">PC</span></div>
                   <span class="bdp-card-minifigs">7 minifigs</span>
                 </div>
               </a></div>
@@ -4133,8 +4148,11 @@ function filterCards(input, panelId, itemSelector, groupSelector) {
 
   if (groupSelector) {
     panel.querySelectorAll(groupSelector).forEach(group => {
-      const anyVisible = Array.from(group.querySelectorAll(itemSelector))
-        .some(item => item.style.display !== 'none');
+      const items = Array.from(group.querySelectorAll(itemSelector));
+      // A group with no items to filter (e.g. a BDP series with no
+      // finalists announced yet) has nothing to hide — leave it visible
+      // rather than reading false from .some() on an empty array.
+      const anyVisible = items.length === 0 || items.some(item => item.style.display !== 'none');
       group.style.display = anyVisible ? '' : 'none';
     });
   }

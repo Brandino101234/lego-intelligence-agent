@@ -25,6 +25,7 @@ RETIRING_PATH = DATA_DIR / "retiring_sets.json"
 CALENDAR_PATH = DATA_DIR / "release_calendar.json"
 GWP_PATH = DATA_DIR / "gwp.json"
 BDP_PATH = DATA_DIR / "bdp_finalists.json"
+BDP_SERIES_PATH = DATA_DIR / "bdp_series.json"
 BDP_ZIP_MANIFEST_PATH = DATA_DIR / "bdp_zip_manifest.json"
 IMAGE_ZIP_MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
 
@@ -165,30 +166,54 @@ BDP_PHASE_LABEL = {
 }
 
 
-def render_bdp(bdp: dict) -> tuple[str, str]:
+def render_bdp(bdp: dict, series_info: dict, today: date) -> tuple[str, str]:
     zip_manifest = load_json(BDP_ZIP_MANIFEST_PATH, {})
     entries = list(bdp.values())
-    series_count = len({e["series_name"] for e in entries})
+    series_count = len({e["series_name"] for e in entries}) or len(series_info)
     stat = f"{len(entries)} finalist{'s' if len(entries) != 1 else ''} across {series_count} series"
 
-    if not entries:
+    if not entries and not series_info:
         return stat, '<p class="empty">No active BrickLink Designer Program finalists right now.</p>'
 
     by_series: dict[str, list[dict]] = {}
     for e in entries:
         by_series.setdefault(e["series_name"], []).append(e)
 
-    # Newest series first — names are "Series N" or a wave label like
-    # "2028 Wave 1"; sort by the finalists' own series_url (carries the
-    # numeric slug) so this doesn't depend on parsing the display name.
-    ordered_series = sorted(by_series.keys(), key=lambda name: by_series[name][0].get("series_url") or name, reverse=True)
+    # Every active series gets a group, even ones with zero finalists yet
+    # (e.g. a not-yet-opened series still in INTAKE) — series_info covers
+    # all of them; by_series only covers ones with finalists announced.
+    all_series_names = set(series_info.keys()) | set(by_series.keys())
+    # Newest first, by the series' own numeric id — sorting by name/url
+    # text put "Series 9" after "Series 11" (lexicographic, wrong).
+    ordered_series = sorted(
+        all_series_names,
+        key=lambda name: series_info.get(name, {}).get("id") or -1,
+        reverse=True,
+    )
 
     groups = []
     for series_name in ordered_series:
-        series_entries = sorted(by_series[series_name], key=lambda e: e.get("name") or "")
-        phase = series_entries[0].get("series_phase")
+        info = series_info.get(series_name, {})
+        series_entries = sorted(by_series.get(series_name, []), key=lambda e: e.get("name") or "")
+
+        phase = info.get("phase") or (series_entries[0].get("series_phase") if series_entries else None)
         phase_label = BDP_PHASE_LABEL.get(phase, phase or "")
-        series_url = series_entries[0].get("series_url")
+        series_url = info.get("url") or (series_entries[0].get("series_url") if series_entries else "#")
+
+        milestone_html = ""
+        milestone_at = info.get("next_milestone_at")
+        if milestone_at:
+            d = datetime.fromisoformat(milestone_at)
+            days_left = days_between(today, d.date())
+            urgency_class = "urgent" if days_left <= 7 else ("soon" if days_left <= 30 else "neutral")
+            when = d.strftime("%b %-d, %Y, %-I:%M %p")
+            milestone_html = (
+                f'<span class="date-pill {urgency_class} mono bdp-milestone" '
+                f'title="{esc(info.get("next_milestone_label"))}">{esc(info.get("next_milestone_label"))} &middot; {esc(when)}</span>'
+            )
+        elif phase == "PRODUCTION" and info.get("production_start_at"):
+            d = datetime.fromisoformat(info["production_start_at"])
+            milestone_html = f'<span class="date-pill neutral mono bdp-milestone">In production since {esc(d.strftime("%b %-d, %Y"))}</span>'
 
         cards = []
         for e in series_entries:
@@ -224,15 +249,22 @@ def render_bdp(bdp: dict) -> tuple[str, str]:
             if zip_info else ""
         )
 
+        cards_html = (
+            f'<div class="bdp-cards">{"".join(cards)}</div>' if cards
+            else '<p class="bdp-empty">No finalists announced yet.</p>'
+        )
+        count_label = f'{len(series_entries)} FINALIST{"S" if len(series_entries) != 1 else ""}' if series_entries else "AWAITING FINALISTS"
+
         groups.append(f'''
           <div class="bdp-series">
             <div class="bdp-series-label">
               <div class="bdp-series-name">{esc(series_name)}</div>
               <span class="theme-tag bdp-phase">{esc(phase_label)}</span>
-              <div class="bdp-series-count">{len(series_entries)} FINALIST{"S" if len(series_entries) != 1 else ""}</div>
+              <div class="bdp-series-count">{count_label}</div>
+              {milestone_html}
               {download_button}
             </div>
-            <div class="bdp-cards">{"".join(cards)}</div>
+            {cards_html}
           </div>''')
 
     return stat, "".join(groups)
@@ -886,12 +918,14 @@ a.cal-card:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px;
 
 /* ---- designer program ---- */
 .bdp-series {{ display: grid; grid-template-columns: 130px 1fr; gap: 16px; margin-bottom: 28px; }}
-.bdp-series-label {{ padding-top: 2px; }}
+.bdp-series-label {{ padding-top: 2px; min-width: 0; }}
 .bdp-series-name {{ font-family: 'Rubik Var', sans-serif; font-weight: 700; font-size: 13.5px; }}
 .bdp-series-count {{ margin-top: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-muted); }}
 .theme-tag.bdp-phase {{ display: inline-block; margin-top: 6px; background: var(--gold-soft); border-color: var(--gold-fill); color: var(--gold); }}
+.date-pill.bdp-milestone {{ display: block; width: 100%; max-width: 100%; box-sizing: border-box; white-space: normal; line-height: 1.35; margin-top: 8px; border-radius: 8px; }}
 
 .bdp-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }}
+.bdp-empty {{ font-size: 13px; color: var(--ink-muted); padding: 13px 0; }}
 
 a.bdp-card {{
   display: flex;
@@ -1194,8 +1228,11 @@ function filterCards(input, panelId, itemSelector, groupSelector) {{
 
   if (groupSelector) {{
     panel.querySelectorAll(groupSelector).forEach(group => {{
-      const anyVisible = Array.from(group.querySelectorAll(itemSelector))
-        .some(item => item.style.display !== 'none');
+      const items = Array.from(group.querySelectorAll(itemSelector));
+      // A group with no items to filter (e.g. a BDP series with no
+      // finalists announced yet) has nothing to hide — leave it visible
+      // rather than reading false from .some() on an empty array.
+      const anyVisible = items.length === 0 || items.some(item => item.style.display !== 'none');
       group.style.display = anyVisible ? '' : 'none';
     }});
   }}
@@ -1299,6 +1336,7 @@ def build() -> Path:
     calendar = load_json(CALENDAR_PATH, {"months": {}})
     gwp = load_json(GWP_PATH, {})
     bdp = load_json(BDP_PATH, {})
+    bdp_series = load_json(BDP_SERIES_PATH, {})
 
     now = datetime.now()
     today = now.date()
@@ -1307,7 +1345,7 @@ def build() -> Path:
     retiring_stat, retiring_body = render_retiring(retiring, today)
     gwp_stat, gwp_body = render_gwp(gwp, today)
     future_gwp_count, future_gwp_cards = render_future_gwp(calendar)
-    bdp_stat, bdp_body = render_bdp(bdp)
+    bdp_stat, bdp_body = render_bdp(bdp, bdp_series, today)
 
     future_gwp_body = ""
     if future_gwp_cards:
