@@ -1,0 +1,122 @@
+[
+  {
+    "id": 3360,
+    "name": "Wild West Blacksmith",
+    "series_name": "Series 9",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 3378,
+    "name": "Fisherman's Village",
+    "series_name": "Series 9",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 3562,
+    "name": "Sleepy Dragon Inn",
+    "series_name": "Series 9",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 3259,
+    "name": "Pumpkin Patch",
+    "series_name": "Series 9",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 3131,
+    "name": "Woodbrick Freight Depot",
+    "series_name": "Series 9",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 3681,
+    "name": "Wild West Train Station",
+    "series_name": "Series 10",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 4099,
+    "name": "Firehouse",
+    "series_name": "Series 10",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 4005,
+    "name": "Space Café",
+    "series_name": "Series 10",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 4123,
+    "name": "The Joust (Medieval Tournament)",
+    "series_name": "Series 10",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 3997,
+    "name": "Kiosk",
+    "series_name": "Series 10",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 5027,
+    "name": "Royal Nest",
+    "series_name": "Series 11",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 5077,
+    "name": "Lunar Cargo Train",
+    "series_name": "Series 11",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 4744,
+    "name": "Elven Citadel",
+    "series_name": "Series 11",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 4924,
+    "name": "Le Petit Bouquet",
+    "series_name": "Series 11",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  },
+  {
+    "id": 4462,
+    "name": "Village Parlour",
+    "series_name": "Series 11",
+    "series_phase": "POST_VALIDATION",
+    "timestamp": "2026-09-17T00:31:43",
+    "type": "new_finalist"
+  }
+]

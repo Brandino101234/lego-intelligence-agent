@@ -42,23 +42,27 @@ LOG_SOURCES = {
     "calendar": DATA_DIR / "release_calendar_changes_log.json",
     "retiring": DATA_DIR / "retiring_changes_log.json",
     "gwp": DATA_DIR / "gwp_changes_log.json",
+    "bdp": DATA_DIR / "bdp_changes_log.json",
 }
 
 NOTABLE_TYPES = {
     "calendar": {"added_to_calendar"},
     "retiring": {"newly_flagged", "confirmed_retired"},
     "gwp": {"gwp_started"},
+    "bdp": {"new_finalist"},
 }
 
 SECTION_LABEL = {
     "calendar": "Release calendar",
     "retiring": "Retiring soon",
     "gwp": "Gift with purchase",
+    "bdp": "Designer Program",
 }
 SECTION_COLOR = {
     "calendar": "#0055BF",
     "retiring": "#C91A09",
     "gwp": "#237A3F",
+    "bdp": "#8B5A2B",
 }
 
 MAX_NAMES_PER_SECTION = 8
@@ -85,7 +89,7 @@ def format_email(grouped: dict[str, list[dict]]) -> tuple[str, str]:
     subject = f"LEGO Intel: {total} update{'s' if total != 1 else ''}"
 
     sections_html = []
-    for source in ("calendar", "retiring", "gwp"):
+    for source in ("calendar", "retiring", "gwp", "bdp"):
         entries = grouped.get(source)
         if not entries:
             continue

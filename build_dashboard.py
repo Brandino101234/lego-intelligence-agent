@@ -24,6 +24,7 @@ FONTS_CSS = (ROOT / "assets" / "embedded_fonts.css").read_text(encoding="utf-8")
 RETIRING_PATH = DATA_DIR / "retiring_sets.json"
 CALENDAR_PATH = DATA_DIR / "release_calendar.json"
 GWP_PATH = DATA_DIR / "gwp.json"
+BDP_PATH = DATA_DIR / "bdp_finalists.json"
 IMAGE_ZIP_MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
 
 REFRESH_MINUTES = 30
@@ -144,6 +145,85 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
           </div>''')
 
     return stat, "".join(rows)
+
+
+# ------------------------------------------------------------------------ bdp --
+
+BDP_PHASE_LABEL = {
+    "INTAKE": "Intake",
+    "CROWDSOURCING": "Crowdsourcing",
+    "CROWD_VALIDATION": "Validation",
+    "VALIDATION": "Validation",
+    "POST_VALIDATION": "Validation",
+    "REVIEW": "In review",
+    "DESIGNS_ANNOUNCED": "Designs announced",
+    "REFINING": "Refining",
+    "CROWDFUNDING_ANNOUNCEMENT": "Crowdfunding soon",
+    "CROWDFUNDING": "Crowdfunding",
+    "PRODUCTION": "In production",
+}
+
+
+def render_bdp(bdp: dict) -> tuple[str, str]:
+    entries = list(bdp.values())
+    series_count = len({e["series_name"] for e in entries})
+    stat = f"{len(entries)} finalist{'s' if len(entries) != 1 else ''} across {series_count} series"
+
+    if not entries:
+        return stat, '<p class="empty">No active BrickLink Designer Program finalists right now.</p>'
+
+    by_series: dict[str, list[dict]] = {}
+    for e in entries:
+        by_series.setdefault(e["series_name"], []).append(e)
+
+    # Newest series first — names are "Series N" or a wave label like
+    # "2028 Wave 1"; sort by the finalists' own series_url (carries the
+    # numeric slug) so this doesn't depend on parsing the display name.
+    ordered_series = sorted(by_series.keys(), key=lambda name: by_series[name][0].get("series_url") or name, reverse=True)
+
+    groups = []
+    for series_name in ordered_series:
+        series_entries = sorted(by_series[series_name], key=lambda e: e.get("name") or "")
+        phase = series_entries[0].get("series_phase")
+        phase_label = BDP_PHASE_LABEL.get(phase, phase or "")
+        series_url = series_entries[0].get("series_url")
+
+        cards = []
+        for e in series_entries:
+            image = e.get("image")
+            image_html = (
+                f'<img class="bdp-card-img" src="{esc(image)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{{className:\'bdp-card-img bdp-card-img-empty\'}}))">'
+                if image else '<div class="bdp-card-img bdp-card-img-empty"></div>'
+            )
+            pieces = e.get("pieces")
+            piece_badge = (
+                f'<div class="badge-circle"><span class="n">{pieces:,}</span><span class="u">PC</span></div>'
+                if pieces else ""
+            )
+            minifigs = e.get("minifigures")
+            minifig_label = f"{minifigs} minifig{'s' if minifigs != 1 else ''}" if minifigs else ""
+
+            cards.append(f'''
+              <a class="bdp-card" href="{esc(series_url or '#')}" target="_blank" rel="noopener">
+                {image_html}
+                <div class="bdp-card-name">{esc(e.get("name"))}</div>
+                <div class="bdp-card-bottom">
+                  {piece_badge}
+                  <span class="bdp-card-minifigs">{esc(minifig_label)}</span>
+                </div>
+              </a>''')
+
+        groups.append(f'''
+          <div class="bdp-series">
+            <div class="bdp-series-label">
+              <div class="bdp-series-name">{esc(series_name)}</div>
+              <span class="theme-tag bdp-phase">{esc(phase_label)}</span>
+              <div class="bdp-series-count">{len(series_entries)} FINALIST{"S" if len(series_entries) != 1 else ""}</div>
+            </div>
+            <div class="bdp-cards">{"".join(cards)}</div>
+          </div>''')
+
+    return stat, "".join(groups)
 
 
 # ------------------------------------------------------------------ retiring --
@@ -596,9 +676,11 @@ nav.chapters {{
 .chapter-btn[data-accent="blue"].active {{ border-left-color: var(--blue); }}
 .chapter-btn[data-accent="red"].active {{ border-left-color: var(--red); }}
 .chapter-btn[data-accent="green"].active {{ border-left-color: var(--green); }}
+.chapter-btn[data-accent="gold"].active {{ border-left-color: var(--gold); }}
 .chapter-btn[data-accent="blue"].active .num {{ color: var(--blue); }}
 .chapter-btn[data-accent="red"].active .num {{ color: var(--red); }}
 .chapter-btn[data-accent="green"].active .num {{ color: var(--green); }}
+.chapter-btn[data-accent="gold"].active .num {{ color: var(--gold); }}
 .chapter-btn:not(.active) {{ opacity: 0.6; }}
 .chapter-btn:hover {{ opacity: 1; }}
 
@@ -633,6 +715,7 @@ section.panel.active {{ display: block; }}
 section.panel[data-accent="blue"] .panel-num {{ color: var(--blue); }}
 section.panel[data-accent="red"] .panel-num {{ color: var(--red); }}
 section.panel[data-accent="green"] .panel-num {{ color: var(--green); }}
+section.panel[data-accent="gold"] .panel-num {{ color: var(--gold); }}
 
 .panel-title h2 {{
   font-family: 'Rubik Var', sans-serif;
@@ -787,6 +870,36 @@ a.cal-card:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px;
 .badge-circle .n {{ font-family: 'Plex Mono', monospace; font-size: 11px; font-weight: 700; }}
 .badge-circle .u {{ font-size: 7px; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-muted); margin-top: 1px; }}
 
+/* ---- designer program ---- */
+.bdp-series {{ display: grid; grid-template-columns: 130px 1fr; gap: 16px; margin-bottom: 28px; }}
+.bdp-series-label {{ padding-top: 2px; }}
+.bdp-series-name {{ font-family: 'Rubik Var', sans-serif; font-weight: 700; font-size: 13.5px; }}
+.bdp-series-count {{ margin-top: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-muted); }}
+.theme-tag.bdp-phase {{ display: inline-block; margin-top: 6px; background: var(--gold-soft); border-color: var(--gold-fill); color: var(--gold); }}
+
+.bdp-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }}
+
+a.bdp-card {{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--paper-2);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 13px 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.12s ease, transform 0.12s ease;
+}}
+a.bdp-card:hover {{ border-color: var(--gold); transform: translateY(-1px); }}
+a.bdp-card:focus-visible {{ outline: 2px solid var(--gold); outline-offset: 2px; }}
+
+.bdp-card-img {{ width: 100%; height: 120px; object-fit: contain; background: var(--img-bg); border: 1px solid var(--line); border-radius: 6px; }}
+.bdp-card-img-empty {{ background: var(--img-bg); }}
+.bdp-card-name {{ font-size: 14px; font-weight: 600; line-height: 1.32; }}
+.bdp-card-bottom {{ display: flex; justify-content: space-between; align-items: center; margin-top: auto; }}
+.bdp-card-minifigs {{ font-family: 'Plex Mono', monospace; font-size: 11.5px; color: var(--ink-muted); }}
+
 /* ---- retiring table ---- */
 .table-wrap {{ max-height: 68vh; overflow: auto; border: 2px solid var(--line); border-radius: 8px; background: var(--paper-2); }}
 table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
@@ -892,6 +1005,7 @@ footer.page-footer {{
   .chapter-btn[data-accent="blue"].active {{ border-bottom-color: var(--blue); }}
   .chapter-btn[data-accent="red"].active {{ border-bottom-color: var(--red); }}
   .chapter-btn[data-accent="green"].active {{ border-bottom-color: var(--green); }}
+  .chapter-btn[data-accent="gold"].active {{ border-bottom-color: var(--gold); }}
   .statusbar {{ flex-wrap: wrap; }}
 }}
 </style>
@@ -937,6 +1051,9 @@ footer.page-footer {{
     </button>
     <button class="chapter-btn" data-accent="green" data-target="panel-gwp" onclick="showPanel(this)">
       <span class="num">03</span><span class="name">Gift w/ purchase</span>
+    </button>
+    <button class="chapter-btn" data-accent="gold" data-target="panel-bdp" onclick="showPanel(this)">
+      <span class="num">04</span><span class="name">Designer Program</span>
     </button>
   </nav>
 
@@ -995,11 +1112,29 @@ footer.page-footer {{
       {future_gwp_body}
       <p class="no-matches" id="no-matches-gwp">No promotions match your search.</p>
     </section>
+
+    <section class="panel" data-accent="gold" id="panel-bdp">
+      <div class="panel-head">
+        <div class="title-block">
+          <div class="panel-num display">04</div>
+          <div class="panel-title">
+            <h2>Designer Program</h2>
+            <p>Fan-designed sets that reached Finalist status on BrickLink and are working toward production, grouped by series.</p>
+          </div>
+        </div>
+        <div class="panel-stat">{bdp_stat}</div>
+      </div>
+      <div class="panel-search">
+        <input type="text" placeholder="Search by name or series&hellip;" oninput="filterCards(this,'panel-bdp','.bdp-card','.bdp-series')">
+      </div>
+      {bdp_body}
+      <p class="no-matches" id="no-matches-bdp">No designs match your search.</p>
+    </section>
   </main>
 </div>
 
 <footer class="page-footer">
-  <span>Sources: lego.com &middot; brickset.com &middot; brickranker.com &middot; brickfanatics.com</span>
+  <span>Sources: lego.com &middot; brickset.com &middot; brickranker.com &middot; brickfanatics.com &middot; bricklink.com</span>
   <span>Auto-refreshes every {refresh_minutes} min &middot; data regenerates 6am &amp; 6pm daily</span>
 </footer>
 
@@ -1149,6 +1284,7 @@ def build() -> Path:
     retiring = load_json(RETIRING_PATH, {})
     calendar = load_json(CALENDAR_PATH, {"months": {}})
     gwp = load_json(GWP_PATH, {})
+    bdp = load_json(BDP_PATH, {})
 
     now = datetime.now()
     today = now.date()
@@ -1157,6 +1293,7 @@ def build() -> Path:
     retiring_stat, retiring_body = render_retiring(retiring, today)
     gwp_stat, gwp_body = render_gwp(gwp, today)
     future_gwp_count, future_gwp_cards = render_future_gwp(calendar)
+    bdp_stat, bdp_body = render_bdp(bdp)
 
     future_gwp_body = ""
     if future_gwp_cards:
@@ -1179,6 +1316,8 @@ def build() -> Path:
         gwp_stat=gwp_stat,
         future_gwp_body=future_gwp_body,
         gwp_body=gwp_body,
+        bdp_stat=bdp_stat,
+        bdp_body=bdp_body,
         refresh_minutes=REFRESH_MINUTES,
     )
 
