@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T01:29:01",
+  "generated_at": "2026-09-17T10:39:38",
   "months": {
     "2026-10": [
       {
@@ -189,7 +189,7 @@
         "pieces": 904,
         "price": "$59.99",
         "set_num": "40875",
-        "theme": "Other",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-mrs-claus-minifigure-40875"
       },
       {
@@ -219,7 +219,7 @@
         "pieces": 930,
         "price": "$79.99",
         "set_num": "40868",
-        "theme": "Minifigures",
+        "theme": "Pokémon",
         "url": "https://www.lego.com/en-us/product/up-scaled-red-minifigure-40868"
       },
       {
@@ -478,7 +478,7 @@
           "https://www.lego.com/cdn/cs/set/assets/blte03c348aefe24d39/75457_Lifestyle_Envr_05.jpg",
           "https://www.lego.com/cdn/cs/set/assets/blt2a7495892c769a8f/75457_Box5_v39.png"
         ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/blt61c4d98ab0d5a2fc/75457_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "image": "https://www.lego.com/cdn/cs/set/assets/blta4cee150c80403bd/blta6d4a31cdd14d65d-75457_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": true,
         "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
         "launch_date": "2026-10-04",
