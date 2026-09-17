@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T10:35:02",
+  "generated_at": "2026-09-16T20:14:26",
   "months": {
     "2026-10": [
       {
@@ -189,7 +189,7 @@
         "pieces": 904,
         "price": "$59.99",
         "set_num": "40875",
-        "theme": "Other",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-mrs-claus-minifigure-40875"
       },
       {
@@ -419,8 +419,8 @@
         "url": "https://www.lego.com/en-us/product/downton-abbey-21373"
       },
       {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from October 4, 2026",
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on October 4, 2026",
         "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt4cad29cf235a91fb/blte08480224b17a8b6-76348_Prod.png",
