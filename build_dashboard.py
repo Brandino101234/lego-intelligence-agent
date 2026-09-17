@@ -183,12 +183,15 @@ def render_bdp(bdp: dict, series_info: dict, today: date) -> tuple[str, str]:
     # (e.g. a not-yet-opened series still in INTAKE) — series_info covers
     # all of them; by_series only covers ones with finalists announced.
     all_series_names = set(series_info.keys()) | set(by_series.keys())
-    # Newest first, by the series' own numeric id — sorting by name/url
-    # text put "Series 9" after "Series 11" (lexicographic, wrong).
+    # Soonest-to-buy first, by the series' own numeric id ascending — a
+    # lower id launched earlier and is further along its ~2-year pipeline,
+    # so it reaches crowdfunding/production sooner than a higher-numbered
+    # series. (Sorting by name/url text instead put "Series 9" after
+    # "Series 11" — lexicographic, wrong — on top of getting the order
+    # backwards.)
     ordered_series = sorted(
         all_series_names,
-        key=lambda name: series_info.get(name, {}).get("id") or -1,
-        reverse=True,
+        key=lambda name: series_info.get(name, {}).get("id") if series_info.get(name, {}).get("id") is not None else float("inf"),
     )
 
     groups = []
