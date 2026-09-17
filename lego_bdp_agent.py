@@ -27,16 +27,28 @@ class of problem as LEGO.com's own Cloudflare protection.
 Scoped to non-CLOSED series only (closed ones are fully historical — nothing
 about them changes run to run) to keep the crawl fast: one page load per
 active series, typically 3-4 series at a time.
+
+Alongside the finalists (bdp_finalists.json), also saves one record per
+active series (bdp_series.json) — including series with zero finalists
+so far, like an INTAKE-phase series still in crowdsourcing — carrying its
+`phase` and the next upcoming pipeline date (next_milestone_label/_at,
+picked from the series' own udt* timestamp fields, whichever is soonest
+and still in the future) plus its eventual production_start_at. This is
+what lets the dashboard show "what's coming up and when" per series, not
+just which designs already exist.
 """
 
 from __future__ import annotations
 
 import json
 import re
+import time
+from datetime import datetime
 
 from lego_common import DATA_DIR, HEADERS, now_iso, load_json, save_json, append_log
 
 BDP_PATH = DATA_DIR / "bdp_finalists.json"
+SERIES_PATH = DATA_DIR / "bdp_series.json"
 LOG_PATH = DATA_DIR / "bdp_changes_log.json"
 
 BASE_SERIES_URL = "https://www.bricklink.com/v3/designer-program/series-{slug}/main.page"
@@ -50,6 +62,40 @@ ACTIVE_PHASES = {
 }
 
 SERIES_OBJECT_RE = re.compile(r'\{"idSeries":\d+.*?"phase":"[A-Z_]+"\}')
+
+# Every `udt*` millisecond-timestamp field on a series object, in pipeline
+# order, paired with a human label — used to find "what's the next thing
+# that happens for this series" regardless of its current `phase` (phase
+# alone doesn't say how close the next date is, and a couple of these
+# (e.g. crowdsourcing open) can lag the timestamp by a few days in
+# practice, so we scan dates directly rather than switching on phase).
+MILESTONE_FIELDS = [
+    ("udtCrowdSourcingStart", "Crowdsourcing opens"),
+    ("udtCrowdSourcingEnd", "Crowdsourcing closes"),
+    ("udtCrowdValidationStart", "Community validation begins"),
+    ("udtCrowdValidationEnd", "Community validation ends"),
+    ("udtReviewStart", "LEGO review begins"),
+    ("udtReviewEnd", "LEGO review ends"),
+    ("udtDesignsAnnounced", "Finalists announced"),
+    ("udtRefiningStart", "Refining begins"),
+    ("udtRefiningEnd", "Refining ends"),
+    ("udtCrowdFundingAnnouncement", "Crowdfunding announcement"),
+    ("udtCrowdFundingStart", "Crowdfunding opens"),
+    ("udtCrowdFundingEnd", "Crowdfunding closes"),
+    ("udtProductionStart", "Production begins"),
+]
+
+
+def next_milestone(series: dict, now_ms: float) -> dict | None:
+    """Earliest still-upcoming pipeline date on this series, with its label."""
+    upcoming = [
+        (series[field], label) for field, label in MILESTONE_FIELDS
+        if series.get(field) and series[field] > now_ms
+    ]
+    if not upcoming:
+        return None
+    at_ms, label = min(upcoming, key=lambda pair: pair[0])
+    return {"label": label, "at": datetime.fromtimestamp(at_ms / 1000).isoformat()}
 
 
 def extract_json_object(html: str, marker: str) -> dict | None:
@@ -142,14 +188,16 @@ def extract_finalists(html: str, series_name: str, series_slug: str, series_phas
     return entries
 
 
-def scrape_bdp_finalists() -> dict[str, dict]:
+def scrape_bdp_finalists() -> tuple[dict[str, dict], dict[str, dict]]:
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
         print("  ! playwright not installed — skipping BDP scrape")
-        return {}
+        return {}, {}
 
     found: dict[str, dict] = {}
+    series_info: dict[str, dict] = {}
+    now_ms = time.time() * 1000
 
     with sync_playwright() as p:
         browser = p.chromium.launch()
@@ -165,7 +213,7 @@ def scrape_bdp_finalists() -> dict[str, dict]:
         except Exception as exc:
             print(f"  ! failed to discover series list: {exc}")
             browser.close()
-            return {}
+            return {}, {}
 
         active = [s for s in all_series if s.get("phase") in ACTIVE_PHASES]
         print(f"  found {len(active)} active series out of {len(all_series)} total")
@@ -178,13 +226,29 @@ def scrape_bdp_finalists() -> dict[str, dict]:
                 finalists = extract_finalists(page.content(), series["strName"], slug, series["phase"])
                 for f in finalists:
                     found[str(f["id"])] = f
+
+                milestone = next_milestone(series, now_ms)
+                production_ts = series.get("udtProductionStart")
+                series_info[series["strName"]] = {
+                    "id": series["idSeries"],
+                    "name": series["strName"],
+                    "phase": series["phase"],
+                    "url": BASE_SERIES_URL.format(slug=slug),
+                    "finalist_count": len(finalists),
+                    "next_milestone_label": milestone["label"] if milestone else None,
+                    "next_milestone_at": milestone["at"] if milestone else None,
+                    "production_start_at": (
+                        datetime.fromtimestamp(production_ts / 1000).isoformat() if production_ts else None
+                    ),
+                }
+
                 print(f"  {series['strName']} ({series['phase']}): {len(finalists)} finalist(s)")
             except Exception as exc:
                 print(f"    ! {series['strName']}: {exc}")
 
         browser.close()
 
-    return found
+    return found, series_info
 
 
 def diff_and_log(previous: dict[str, dict], current: dict[str, dict]) -> list[dict]:
@@ -218,13 +282,14 @@ def report(changes: list[dict]) -> None:
 
 def main() -> None:
     previous = load_json(BDP_PATH, {})
-    current = scrape_bdp_finalists()
-    if not current:
+    current, series_info = scrape_bdp_finalists()
+    if not current and not series_info:
         print("No data scraped (BrickLink fetch failed) — leaving saved state untouched.")
         return
 
     changes = diff_and_log(previous, current)
     save_json(BDP_PATH, current)
+    save_json(SERIES_PATH, series_info)
     append_log(LOG_PATH, changes)
     report(changes)
 
