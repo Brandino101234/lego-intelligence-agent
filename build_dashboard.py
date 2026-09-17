@@ -25,6 +25,7 @@ RETIRING_PATH = DATA_DIR / "retiring_sets.json"
 CALENDAR_PATH = DATA_DIR / "release_calendar.json"
 GWP_PATH = DATA_DIR / "gwp.json"
 BDP_PATH = DATA_DIR / "bdp_finalists.json"
+BDP_ZIP_MANIFEST_PATH = DATA_DIR / "bdp_zip_manifest.json"
 IMAGE_ZIP_MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
 
 REFRESH_MINUTES = 30
@@ -165,6 +166,7 @@ BDP_PHASE_LABEL = {
 
 
 def render_bdp(bdp: dict) -> tuple[str, str]:
+    zip_manifest = load_json(BDP_ZIP_MANIFEST_PATH, {})
     entries = list(bdp.values())
     series_count = len({e["series_name"] for e in entries})
     stat = f"{len(entries)} finalist{'s' if len(entries) != 1 else ''} across {series_count} series"
@@ -213,12 +215,22 @@ def render_bdp(bdp: dict) -> tuple[str, str]:
                 </div>
               </a>''')
 
+        zip_info = zip_manifest.get(series_name)
+        download_button = (
+            f'<a class="cal-month-download gold" href="{esc(zip_info["file"])}" download>'
+            f'<span class="label">&#8681; Download images</span>'
+            f'<span class="n">{zip_info["images"]} photo{"s" if zip_info["images"] != 1 else ""} '
+            f'&middot; {zip_info["sets"]} design{"s" if zip_info["sets"] != 1 else ""}</span></a>'
+            if zip_info else ""
+        )
+
         groups.append(f'''
           <div class="bdp-series">
             <div class="bdp-series-label">
               <div class="bdp-series-name">{esc(series_name)}</div>
               <span class="theme-tag bdp-phase">{esc(phase_label)}</span>
               <div class="bdp-series-count">{len(series_entries)} FINALIST{"S" if len(series_entries) != 1 else ""}</div>
+              {download_button}
             </div>
             <div class="bdp-cards">{"".join(cards)}</div>
           </div>''')
@@ -810,6 +822,8 @@ section.panel[data-accent="gold"] .panel-num {{ color: var(--gold); }}
 .cal-month-download .n {{ font-size: 9px; color: var(--paper); opacity: 0.75; }}
 .cal-month-download:hover {{ opacity: 0.85; }}
 .cal-month-download:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px; }}
+.cal-month-download.gold {{ background: var(--gold); }}
+.cal-month-download.gold:focus-visible {{ outline-color: var(--gold); }}
 
 .cal-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }}
 

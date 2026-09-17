@@ -112,14 +112,20 @@ def extract_finalists(html: str, series_name: str, series_slug: str, series_phas
     if not result or result.get("errorCode") != "EC_OK":
         return []
 
+    def to_https(url: str | None) -> str | None:
+        if not url:
+            return None
+        return f"https:{url}" if url.startswith("//") else url
+
     entries = []
     for sub in result.get("data", {}).get("submissions", []):
         images = sub.get("arrImages") or []
-        thumb = None
-        if images:
-            url = images[0].get("dmThumbnail", {}).get("url") or images[0].get("dmImage", {}).get("url")
-            if url:
-                thumb = f"https:{url}" if url.startswith("//") else url
+        # dmImage is the real upload (2048x1536 on everything checked) —
+        # dmThumbnail (640x480) is only used as the dashboard card's own
+        # small preview, see build_dashboard.py.
+        gallery = [to_https(img.get("dmImage", {}).get("url")) for img in images]
+        gallery = [u for u in gallery if u]
+        thumb = to_https(images[0].get("dmThumbnail", {}).get("url")) if images else None
 
         entries.append({
             "id": sub.get("idSubmission"),
@@ -130,6 +136,7 @@ def extract_finalists(html: str, series_name: str, series_slug: str, series_phas
             "pieces": sub.get("nTotalParts") or None,
             "minifigures": sub.get("nMinifigureCnt") or None,
             "image": thumb,
+            "gallery_images": gallery,
             "video_url": sub.get("strVideoUrl") or None,
         })
     return entries

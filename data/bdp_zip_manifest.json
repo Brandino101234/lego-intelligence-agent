@@ -1,0 +1,20 @@
+{
+  "Series 10": {
+    "bytes": 5061969,
+    "file": "downloads/bdp-series-10.zip",
+    "images": 49,
+    "sets": 5
+  },
+  "Series 11": {
+    "bytes": 5242666,
+    "file": "downloads/bdp-series-11.zip",
+    "images": 48,
+    "sets": 5
+  },
+  "Series 9": {
+    "bytes": 5552793,
+    "file": "downloads/bdp-series-9.zip",
+    "images": 58,
+    "sets": 5
+  }
+}

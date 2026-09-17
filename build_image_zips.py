@@ -1,35 +1,46 @@
-"""Zips up full-resolution set images for every month on the dashboard,
-so the "Download images" button on each month's calendar section has
-something to link to.
+"""Zips up full-resolution images for the "Download images" buttons on the
+dashboard: one per calendar month, plus one per active BrickLink Designer
+Program series.
 
-Pulls each set's full image gallery (box front/back, in-hand shots, feature
-call-outs — not just the single cover thumbnail shown on the dashboard
-card), collected per-product by lego_release_calendar_agent.py's Playwright
-pass. Each set gets its own folder inside the zip.
+Calendar sets: pulls each set's full image gallery (box front/back,
+in-hand shots, feature call-outs — not just the single cover thumbnail
+shown on the dashboard card), collected per-product by
+lego_release_calendar_agent.py's Playwright pass, resized via LEGO's own
+CDN (upsize_lego_image_url).
 
-Runs as part of every scrape (see run_all.py) and writes straight into
-site/downloads/ — NOT committed to git (see .gitignore), since GitHub Pages
-deploys from an uploaded build artifact (actions/upload-pages-artifact) built
-from the local site/ folder, not from what's tracked in the repo, and
-re-zipping identical images twice a day would otherwise bloat the repo with
-duplicate binary blobs forever. build_dashboard.py reads the manifest this
-writes to know which months got a real zip (vs. e.g. every image in that
-month being broken on LEGO's own CDN) before rendering a button.
+BDP finalists: pulls each design's full gallery, collected by
+lego_bdp_agent.py. BrickLink's file host has no URL-based resize like
+LEGO's CDN does, so these are downsized+recompressed locally with Pillow
+instead (see resize_for_zip) — the raw uploads run up to ~1.8MB each at
+2048x1536, and a single finalist can have 10 of them.
+
+Each set/design gets its own folder inside its zip. Runs as part of every
+scrape (see run_all.py) and writes straight into site/downloads/ — NOT
+committed to git (see .gitignore), since GitHub Pages deploys from an
+uploaded build artifact (actions/upload-pages-artifact) built from the
+local site/ folder, not from what's tracked in the repo, and re-zipping
+identical images twice a day would otherwise bloat the repo with
+duplicate binary blobs forever. build_dashboard.py reads the manifests
+this writes to know which months/series got a real zip before rendering
+a button.
 """
 
 from __future__ import annotations
 
+import io
 import re
 import zipfile
 from pathlib import Path
 
 import requests
+from PIL import Image
 
 from lego_common import DATA_DIR, HEADERS, load_json, save_json, upsize_lego_image_url
 
 ROOT = Path(__file__).resolve().parent
 DOWNLOADS_DIR = ROOT / "site" / "downloads"
 MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
+BDP_MANIFEST_PATH = DATA_DIR / "bdp_zip_manifest.json"
 
 # Deliberately smaller than upsize_lego_image_url()'s default (1500/90).
 # These zips get deployed with the dashboard and served to whoever clicks
@@ -88,9 +99,67 @@ def build_month_zip(month: str, entries: list[dict]) -> dict | None:
     }
 
 
+def resize_for_zip(image_bytes: bytes) -> bytes | None:
+    """BrickLink's file host (unlike LEGO's CDN) has no URL-based resize —
+    the raw uploads run ~700KB-1.8MB each at 2048x1536, and a single
+    finalist can have 10 of them, so this downsizes+recompresses locally
+    instead of shipping the originals wholesale."""
+    try:
+        img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+    except Exception:
+        return None
+    img.thumbnail((ZIP_IMAGE_SIZE, ZIP_IMAGE_SIZE))
+    out = io.BytesIO()
+    img.save(out, format="JPEG", quality=ZIP_IMAGE_QUALITY)
+    return out.getvalue()
+
+
+def build_bdp_zip(series_name: str, entries: list[dict]) -> dict | None:
+    DOWNLOADS_DIR.mkdir(parents=True, exist_ok=True)
+    safe_series = sanitize_filename(series_name).replace(" ", "-").lower()
+    zip_path = DOWNLOADS_DIR / f"bdp-{safe_series}.zip"
+
+    entries = sorted(entries, key=lambda e: e.get("name") or "")
+    designs_added, images_added = 0, 0
+
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        for e in entries:
+            gallery = e.get("gallery_images") or ([e["image"]] if e.get("image") else [])
+            if not gallery:
+                continue
+
+            folder = sanitize_filename(e.get("name", "unknown"))
+            design_had_image = False
+            for i, image_url in enumerate(gallery, start=1):
+                resp = requests.get(image_url, headers=HEADERS, timeout=20)
+                if resp.status_code != 200:
+                    continue
+                resized = resize_for_zip(resp.content)
+                if not resized:
+                    continue
+                zf.writestr(f"{folder}/{i:02d}.jpg", resized)
+                images_added += 1
+                design_had_image = True
+
+            if design_had_image:
+                designs_added += 1
+
+    if images_added == 0:
+        zip_path.unlink(missing_ok=True)
+        return None
+
+    return {
+        "file": f"downloads/{zip_path.name}",
+        "sets": designs_added,
+        "images": images_added,
+        "bytes": zip_path.stat().st_size,
+    }
+
+
 def main() -> None:
     calendar = load_json(DATA_DIR / "release_calendar.json", {"months": {}})
     months = calendar.get("months", {})
+    bdp = load_json(DATA_DIR / "bdp_finalists.json", {})
 
     if DOWNLOADS_DIR.exists():
         for old_zip in DOWNLOADS_DIR.glob("*.zip"):
@@ -105,7 +174,21 @@ def main() -> None:
         else:
             print(f"  {month}: no usable images, skipping zip")
 
+    by_series: dict[str, list[dict]] = {}
+    for entry in bdp.values():
+        by_series.setdefault(entry["series_name"], []).append(entry)
+
+    bdp_manifest = {}
+    for series_name, entries in by_series.items():
+        result = build_bdp_zip(series_name, entries)
+        if result:
+            bdp_manifest[series_name] = result
+            print(f"  BDP {series_name}: {result['images']} image(s) across {result['sets']} design(s), {result['bytes'] / 1024:.0f} KB")
+        else:
+            print(f"  BDP {series_name}: no usable images, skipping zip")
+
     save_json(MANIFEST_PATH, manifest)
+    save_json(BDP_MANIFEST_PATH, bdp_manifest)
 
 
 if __name__ == "__main__":
