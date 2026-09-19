@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T11:33:23",
+  "generated_at": "2026-09-18T20:25:16",
   "months": {
     "2026-10": [
       {
@@ -42,6 +42,36 @@
         "set_num": "11379",
         "theme": "LEGO® Icons",
         "url": "https://www.lego.com/en-us/product/bookstore-book-nook-11379"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltfdd36071c62c1948/blt3904de066105e8e7-40958_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt34546c239631d0dd/blt3904de066105e8e7-40958_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf776bd25ec99910c/blt3904de066105e8e7-40958_Back_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt99566786075e4918/blt3904de066105e8e7-40958_Back_03.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt9ff60f38d64fed8b/blt3904de066105e8e7-40958_Back_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf69c7782efc3c6f7/blt3904de066105e8e7-40958_Back_04.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt01c17a9797ce4290/blt3904de066105e8e7-40958_Left_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt57b2842309cb57f4/blt3904de066105e8e7-40958_1to1.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5425766ec5f4e7f6/blt3904de066105e8e7-40958_Lifestyle_Build_en-us.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltf5fe586ca5202ae7/blt3904de066105e8e7-40958_Lifestyle_Cons_1_en-us.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltf33df431f2157d80/blt3904de066105e8e7-40958_Lifestyle_Cons_2_en-us.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd34f93cfb2b5d2d9/blt3904de066105e8e7-40958_Lifestyle_Envr_en-us.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltc1b268c8184ba809/blt3904de066105e8e7-40958_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt4cc32e184a314402/blt3904de066105e8e7-40958_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-10-01",
+        "name": "Christmas Stocking",
+        "pieces": 342,
+        "price": "$34.99",
+        "set_num": "40958",
+        "theme": null,
+        "url": "https://www.lego.com/en-us/product/christmas-stocking-40958"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
@@ -189,7 +219,7 @@
         "pieces": 904,
         "price": "$59.99",
         "set_num": "40875",
-        "theme": "Other",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-mrs-claus-minifigure-40875"
       },
       {
