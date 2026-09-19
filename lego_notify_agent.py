@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import html
 import os
+from datetime import datetime
 
 import requests
 
@@ -49,7 +50,7 @@ NOTABLE_TYPES = {
     "calendar": {"added_to_calendar"},
     "retiring": {"newly_flagged", "confirmed_retired"},
     "gwp": {"gwp_started"},
-    "bdp": {"new_finalist"},
+    "bdp": {"new_finalist", "milestone_date_changed"},
 }
 
 SECTION_LABEL = {
@@ -84,6 +85,29 @@ def esc(value) -> str:
     return html.escape(str(value)) if value is not None else ""
 
 
+def format_date(iso: str | None) -> str:
+    if not iso:
+        return "TBD"
+    return datetime.fromisoformat(iso).strftime("%b %-d, %Y")
+
+
+def event_label(e: dict) -> str:
+    """Most entry types just have a `name` — milestone_date_changed
+    doesn't (it's series-level, not a single design), so it needs its own
+    human-readable line instead of falling through to a blank list item."""
+    if e.get("type") != "milestone_date_changed":
+        return e.get("name") or ""
+
+    old_at, new_at = e.get("from_at"), e.get("to_at")
+    series, label = e.get("series_name"), e.get("milestone_label")
+    if not old_at:
+        return f"{series}: {label} now scheduled for {format_date(new_at)}"
+    if not new_at:
+        return f"{series}: {label} date removed (was {format_date(old_at)})"
+    direction = "pushed back" if new_at > old_at else "moved up"
+    return f"{series}: {label} {direction} to {format_date(new_at)} (was {format_date(old_at)})"
+
+
 def format_email(grouped: dict[str, list[dict]]) -> tuple[str, str]:
     total = sum(len(v) for v in grouped.values())
     subject = f"LEGO Intel: {total} update{'s' if total != 1 else ''}"
@@ -94,7 +118,7 @@ def format_email(grouped: dict[str, list[dict]]) -> tuple[str, str]:
         if not entries:
             continue
         color = SECTION_COLOR[source]
-        items = "".join(f"<li style='margin:4px 0'>{esc(e.get('name'))}</li>" for e in entries[:MAX_NAMES_PER_SECTION])
+        items = "".join(f"<li style='margin:4px 0'>{esc(event_label(e))}</li>" for e in entries[:MAX_NAMES_PER_SECTION])
         more = ""
         if len(entries) > MAX_NAMES_PER_SECTION:
             more = f"<div style='color:#666;font-size:13px;margin-top:4px'>…and {len(entries) - MAX_NAMES_PER_SECTION} more</div>"

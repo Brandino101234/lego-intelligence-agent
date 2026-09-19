@@ -36,6 +36,11 @@ picked from the series' own udt* timestamp fields, whichever is soonest
 and still in the future) plus its eventual production_start_at. This is
 what lets the dashboard show "what's coming up and when" per series, not
 just which designs already exist.
+
+Each series record also keeps every pipeline field's own raw date under
+`dates` (not just the "next" one), so diff_series_dates() can catch
+BrickLink itself moving a date — e.g. crowdfunding getting pushed back —
+run to run, logged as a milestone_date_changed change.
 """
 
 from __future__ import annotations
@@ -96,6 +101,18 @@ def next_milestone(series: dict, now_ms: float) -> dict | None:
         return None
     at_ms, label = min(upcoming, key=lambda pair: pair[0])
     return {"label": label, "at": datetime.fromtimestamp(at_ms / 1000).isoformat()}
+
+
+def milestone_dates(series: dict) -> dict[str, str | None]:
+    """Every pipeline field's own date (ISO, or None if BrickLink hasn't set
+    it yet), keyed by field name — the raw record diff_series_dates() compares
+    run to run to catch BrickLink pushing a date back (or moving it up), as
+    opposed to next_milestone()'s single "what's next" pointer which advances
+    on its own as time passes and isn't a useful diff target."""
+    return {
+        field: (datetime.fromtimestamp(series[field] / 1000).isoformat() if series.get(field) else None)
+        for field, _ in MILESTONE_FIELDS
+    }
 
 
 def extract_json_object(html: str, marker: str) -> dict | None:
@@ -240,6 +257,7 @@ def scrape_bdp_finalists() -> tuple[dict[str, dict], dict[str, dict]]:
                     "production_start_at": (
                         datetime.fromtimestamp(production_ts / 1000).isoformat() if production_ts else None
                     ),
+                    "dates": milestone_dates(series),
                 }
 
                 print(f"  {series['strName']} ({series['phase']}): {len(finalists)} finalist(s)")
@@ -268,6 +286,35 @@ def diff_and_log(previous: dict[str, dict], current: dict[str, dict]) -> list[di
     return changes
 
 
+def diff_series_dates(previous: dict[str, dict], current: dict[str, dict]) -> list[dict]:
+    """Flags BrickLink itself moving a pipeline date — e.g. crowdfunding
+    getting pushed back — by comparing each series' raw per-field dates
+    run to run, not just the "next upcoming" pointer (which changes on its
+    own as time passes and would falsely look like a change every time an
+    old milestone rolls off)."""
+    timestamp = now_iso()
+    changes = []
+    for name, entry in current.items():
+        prev_entry = previous.get(name)
+        if not prev_entry or "dates" not in prev_entry:
+            # No baseline yet (new series, or the first run after this
+            # tracking was added) — nothing to compare against, and every
+            # field would otherwise look like it just "appeared".
+            continue
+        prev_dates = prev_entry["dates"]
+        cur_dates = entry.get("dates") or {}
+        for field, label in MILESTONE_FIELDS:
+            old_at, new_at = prev_dates.get(field), cur_dates.get(field)
+            if old_at == new_at:
+                continue
+            changes.append({
+                "type": "milestone_date_changed", "timestamp": timestamp,
+                "series_name": name, "milestone_label": label,
+                "from_at": old_at, "to_at": new_at,
+            })
+    return changes
+
+
 def report(changes: list[dict]) -> None:
     if not changes:
         print("No changes to BDP finalists since last run.")
@@ -276,18 +323,29 @@ def report(changes: list[dict]) -> None:
     for c in changes:
         if c["type"] == "new_finalist":
             print(f"  - NEW: {c['name']} ({c['series_name']})")
-        else:
+        elif c["type"] == "phase_changed":
             print(f"  - {c['name']}: {c['from_phase']} -> {c['to_phase']}")
+        else:
+            old, new = c["from_at"], c["to_at"]
+            if not old:
+                print(f"  - {c['series_name']}: {c['milestone_label']} now scheduled for {new}")
+            elif not new:
+                print(f"  - {c['series_name']}: {c['milestone_label']} date removed (was {old})")
+            else:
+                direction = "pushed back" if new > old else "moved up"
+                print(f"  - {c['series_name']}: {c['milestone_label']} {direction} to {new} (was {old})")
 
 
 def main() -> None:
     previous = load_json(BDP_PATH, {})
+    previous_series = load_json(SERIES_PATH, {})
     current, series_info = scrape_bdp_finalists()
     if not current and not series_info:
         print("No data scraped (BrickLink fetch failed) — leaving saved state untouched.")
         return
 
     changes = diff_and_log(previous, current)
+    changes += diff_series_dates(previous_series, series_info)
     save_json(BDP_PATH, current)
     save_json(SERIES_PATH, series_info)
     append_log(LOG_PATH, changes)
