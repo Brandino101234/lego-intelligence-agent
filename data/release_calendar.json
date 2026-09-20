@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T20:02:51",
+  "generated_at": "2026-09-20T09:55:11",
   "months": {
     "2026-10": [
       {
@@ -71,43 +71,6 @@
         "set_num": "40862",
         "theme": "Other",
         "url": "https://www.lego.com/en-us/product/holiday-ornament-selection-2-40862"
-      },
-      {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from October 1, 2026",
-        "future_gwp": null,
-        "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blt59f10fadf173c1ba/blt3435be8c14df0276-72154_Prod_en-gb.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltd7d4eb49f8b610f4/blt3435be8c14df0276-72154_boxprod_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltdf7406c8ea3930c0/blt3435be8c14df0276-72154_WEB_SEC04_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt89226d8d65bf1405/blt3435be8c14df0276-72154_WEB_SEC05_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltce66e6f11c04a205/blt3435be8c14df0276-72154_WEB_PRI_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt73e6196966b26502/blt3435be8c14df0276-72154_WEB_SEC01_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt1946d890c560aa9c/blt3435be8c14df0276-72154_WEB_SEC03_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt09725b8a2dcff586/blt3435be8c14df0276-72154_Lifestyle_Build_02.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltba287583dcaee494/blt3435be8c14df0276-72154_Lifestyle_Build_01.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltb15ba73ab9e5e957/blt3435be8c14df0276-72154_Lifestyle_Build_04.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt0db957bc53ab2fc7/blt3435be8c14df0276-72154_Lifestyle_Build_05.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blte36e563a58dfe45f/blt3435be8c14df0276-72154_Lifestyle_Build_06.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt62511bb8b79327e7/blt3435be8c14df0276-72154_Lifestyle_Build_07.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltc4018d280ac7319f/blt3435be8c14df0276-72154_Lifestyle_Build_08.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt1c280701ea72142d/blt3435be8c14df0276-72154_Lifestyle_Build_09.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt38224cd5386adee5/blt3435be8c14df0276-72154_Lifestyle_Cons_01.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt112bbcf7781ade3c/blt3435be8c14df0276-72154_Lifestyle_Envr_01.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blted92e486d252dbb5/blt3435be8c14df0276-72154_Lifestyle_Envr_04.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltf702f0920ecc99fb/blt3435be8c14df0276-72154_Lifestyle_Envr_06.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt848fad4272dee13b/blt3435be8c14df0276-72154_Box5_v39.png"
-        ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/blt59f10fadf173c1ba/blt3435be8c14df0276-72154_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
-        "launch_date": "2026-10-01",
-        "name": "Iconic Trainer Moments Poké Ball",
-        "pieces": 2386,
-        "price": "$299.99",
-        "set_num": "72154",
-        "theme": "Pokémon",
-        "url": "https://www.lego.com/en-us/product/iconic-trainer-moments-poke-ball-72154"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
