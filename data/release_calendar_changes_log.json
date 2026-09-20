@@ -783,5 +783,53 @@
     "theme": "Other",
     "timestamp": "2026-09-19T10:00:11",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Bookstore: Book Nook",
+    "set_num": "11379",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-09-19T20:02:51",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Holiday Ornament Selection 2",
+    "set_num": "40862",
+    "theme": "Other",
+    "timestamp": "2026-09-19T20:02:51",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Santa's Holiday Sleigh Adventure",
+    "set_num": "40866",
+    "theme": "Other",
+    "timestamp": "2026-09-19T20:02:51",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Executor Super Star Destroyer™",
+    "set_num": "75457",
+    "theme": "Star Wars™",
+    "timestamp": "2026-09-19T20:02:51",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "Holiday House",
+    "set_num": "11387",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-09-19T20:02:51",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-10",
+    "name": "PlayStation™",
+    "set_num": "72306",
+    "theme": "Other",
+    "timestamp": "2026-09-19T20:02:51",
+    "type": "added_to_calendar"
   }
 ]
