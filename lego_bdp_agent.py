@@ -91,6 +91,15 @@ MILESTONE_FIELDS = [
 ]
 
 
+def _ms_to_iso(ms: float) -> str:
+    # BrickLink's own udt* values apparently aren't perfectly stable at the
+    # sub-second level between requests for the same nominal date (seen:
+    # the same calendar minute coming back with a different microsecond
+    # remainder run to run) — round that off here rather than storing noise
+    # that later looks like the date itself moved.
+    return datetime.fromtimestamp(ms / 1000).replace(microsecond=0).isoformat()
+
+
 def next_milestone(series: dict, now_ms: float) -> dict | None:
     """Earliest still-upcoming pipeline date on this series, with its label."""
     upcoming = [
@@ -100,7 +109,7 @@ def next_milestone(series: dict, now_ms: float) -> dict | None:
     if not upcoming:
         return None
     at_ms, label = min(upcoming, key=lambda pair: pair[0])
-    return {"label": label, "at": datetime.fromtimestamp(at_ms / 1000).isoformat()}
+    return {"label": label, "at": _ms_to_iso(at_ms)}
 
 
 def milestone_dates(series: dict) -> dict[str, str | None]:
@@ -110,7 +119,7 @@ def milestone_dates(series: dict) -> dict[str, str | None]:
     opposed to next_milestone()'s single "what's next" pointer which advances
     on its own as time passes and isn't a useful diff target."""
     return {
-        field: (datetime.fromtimestamp(series[field] / 1000).isoformat() if series.get(field) else None)
+        field: (_ms_to_iso(series[field]) if series.get(field) else None)
         for field, _ in MILESTONE_FIELDS
     }
 
@@ -305,7 +314,14 @@ def diff_series_dates(previous: dict[str, dict], current: dict[str, dict]) -> li
         cur_dates = entry.get("dates") or {}
         for field, label in MILESTONE_FIELDS:
             old_at, new_at = prev_dates.get(field), cur_dates.get(field)
-            if old_at == new_at:
+            # Compare with the second-level rounding _ms_to_iso() applies,
+            # not raw string equality — a `previous` record written before
+            # that rounding existed can still carry microsecond noise, and
+            # a straight string compare would misread that as the date
+            # itself having moved.
+            old_rounded = datetime.fromisoformat(old_at).replace(microsecond=0).isoformat() if old_at else None
+            new_rounded = datetime.fromisoformat(new_at).replace(microsecond=0).isoformat() if new_at else None
+            if old_rounded == new_rounded:
                 continue
             changes.append({
                 "type": "milestone_date_changed", "timestamp": timestamp,
