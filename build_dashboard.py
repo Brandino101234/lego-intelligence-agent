@@ -808,6 +808,21 @@ section.panel[data-accent="gold"] .panel-num {{ color: var(--gold); }}
 }}
 .panel-search input::placeholder {{ color: var(--ink-faint); }}
 .panel-search input:focus {{ outline: none; border-color: var(--ink-muted); }}
+.panel-search-row {{ display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }}
+.panel-search-row input[type="text"] {{ flex: 1 1 260px; }}
+.price-filter {{ display: flex; align-items: center; gap: 7px; font-family: 'Plex Mono', monospace; font-size: 12px; color: var(--ink-muted); }}
+.price-filter input[type="number"] {{
+  width: 76px;
+  font-family: 'Plex Mono', monospace;
+  font-size: 13px;
+  background: var(--paper-2);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 10px;
+  color: var(--ink);
+}}
+.price-filter input[type="number"]::placeholder {{ color: var(--ink-faint); }}
+.price-filter input[type="number"]:focus {{ outline: none; border-color: var(--ink-muted); }}
 .no-matches {{
   display: none;
   color: var(--ink-muted);
@@ -1139,7 +1154,15 @@ footer.page-footer {{
         <div class="panel-stat">{retiring_stat}</div>
       </div>
       <div class="panel-search">
-        <input type="text" placeholder="Search by name, set #, or theme&hellip;" oninput="filterCards(this,'panel-retiring','tbody tr',null)">
+        <div class="panel-search-row">
+          <input type="text" id="retiring-search" placeholder="Search by name, set #, or theme&hellip;" oninput="filterRetiring()">
+          <div class="price-filter">
+            <span>Price</span>
+            <input type="number" id="retiring-price-min" placeholder="Min" min="0" step="1" oninput="filterRetiring()">
+            <span>&ndash;</span>
+            <input type="number" id="retiring-price-max" placeholder="Max" min="0" step="1" oninput="filterRetiring()">
+          </div>
+        </div>
       </div>
       {retiring_body}
       <p class="no-matches" id="no-matches-retiring">No sets match your search.</p>
@@ -1241,6 +1264,42 @@ function filterCards(input, panelId, itemSelector, groupSelector) {{
   }}
 
   const noMatches = document.getElementById(panelId.replace('panel-', 'no-matches-'));
+  if (noMatches) noMatches.style.display = visibleCount === 0 ? '' : 'none';
+}}
+
+// Retiring soon has its own filter (rather than reusing filterCards) since
+// it combines the usual text search with a price range — a row must pass
+// both. Price comes off the price <td>'s own data-sort value (col index 4)
+// rather than re-parsing the display text, matching what sortTable() reads
+// for the same column; that field is 999999 for a set with no price data
+// (see render_retiring), which a range filter should exclude, not treat as
+// $999,999.
+function filterRetiring() {{
+  const panel = document.getElementById('panel-retiring');
+  const query = document.getElementById('retiring-search').value.trim().toLowerCase();
+  const minRaw = document.getElementById('retiring-price-min').value;
+  const maxRaw = document.getElementById('retiring-price-max').value;
+  const min = minRaw === '' ? null : parseFloat(minRaw);
+  const max = maxRaw === '' ? null : parseFloat(maxRaw);
+  const priceActive = min !== null || max !== null;
+  let visibleCount = 0;
+
+  panel.querySelectorAll('tbody tr').forEach(row => {{
+    const textMatch = row.textContent.toLowerCase().includes(query);
+
+    let priceMatch = true;
+    if (priceActive) {{
+      const price = parseFloat(row.cells[4].dataset.sort);
+      const hasPrice = !isNaN(price) && price < 999999;
+      priceMatch = hasPrice && (min === null || price >= min) && (max === null || price <= max);
+    }}
+
+    const match = textMatch && priceMatch;
+    row.style.display = match ? '' : 'none';
+    if (match) visibleCount++;
+  }});
+
+  const noMatches = document.getElementById('no-matches-retiring');
   if (noMatches) noMatches.style.display = visibleCount === 0 ? '' : 'none';
 }}
 
