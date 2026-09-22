@@ -1782,5 +1782,421 @@
     "timestamp": "2026-09-21T20:44:33",
     "to_at": "2028-03-01T15:00:00.354000",
     "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2025-09-15T15:00:00.354000",
+    "milestone_label": "Crowdsourcing opens",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2025-09-15T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2025-09-29T15:00:00.354000",
+    "milestone_label": "Crowdsourcing closes",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2025-09-29T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2025-10-06T10:00:00.354000",
+    "milestone_label": "Community validation begins",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2025-10-06T10:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2025-10-17T15:00:00.354000",
+    "milestone_label": "Community validation ends",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2025-10-17T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2025-10-17T15:01:00.354000",
+    "milestone_label": "LEGO review begins",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2025-10-17T15:01:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2025-11-19T14:59:00.354000",
+    "milestone_label": "LEGO review ends",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2025-11-19T14:59:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2025-11-20T08:00:00.354000",
+    "milestone_label": "Finalists announced",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2025-11-20T08:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2025-12-03T15:00:00.354000",
+    "milestone_label": "Refining begins",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2025-12-03T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-09-01T16:00:00.354000",
+    "milestone_label": "Refining ends",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-09-01T16:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-09-08T15:00:00.354000",
+    "milestone_label": "Crowdfunding announcement",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-09-08T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-10-06T11:00:00.354000",
+    "milestone_label": "Crowdfunding opens",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-10-06T11:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-10-12T18:00:00.354000",
+    "milestone_label": "Crowdfunding closes",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-10-12T18:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-03-01T15:00:00.354000",
+    "milestone_label": "Production begins",
+    "series_name": "Series 9",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-03-01T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-01-19T15:00:00.354000",
+    "milestone_label": "Crowdsourcing opens",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-01-19T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-01-30T15:05:00.354000",
+    "milestone_label": "Crowdsourcing closes",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-01-30T15:05:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-02-09T15:00:00.354000",
+    "milestone_label": "Community validation begins",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-02-09T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-02-20T15:00:00.354000",
+    "milestone_label": "Community validation ends",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-02-20T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-02-20T15:05:00.354000",
+    "milestone_label": "LEGO review begins",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-02-20T15:05:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-03-19T15:59:00.354000",
+    "milestone_label": "LEGO review ends",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-03-19T15:59:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-03-20T11:00:00.354000",
+    "milestone_label": "Finalists announced",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-03-20T11:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-04-01T07:09:00.354000",
+    "milestone_label": "Refining begins",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-04-01T07:09:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-01-04T15:00:00.354000",
+    "milestone_label": "Refining ends",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-01-04T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-01-04T15:00:00.354000",
+    "milestone_label": "Crowdfunding announcement",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-01-04T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-02-01T11:00:00.354000",
+    "milestone_label": "Crowdfunding opens",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-02-01T11:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-02-02T15:00:00.354000",
+    "milestone_label": "Crowdfunding closes",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-02-02T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-07-01T09:00:00.354000",
+    "milestone_label": "Production begins",
+    "series_name": "Series 10",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-07-01T09:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-04-20T15:00:00.354000",
+    "milestone_label": "Crowdsourcing opens",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-04-20T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-05-04T15:02:00.354000",
+    "milestone_label": "Crowdsourcing closes",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-05-04T15:02:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-05-11T15:00:00.354000",
+    "milestone_label": "Community validation begins",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-05-11T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-05-25T15:00:00.354000",
+    "milestone_label": "Community validation ends",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-05-25T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-05-25T15:01:00.354000",
+    "milestone_label": "LEGO review begins",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-05-25T15:01:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-06-20T14:59:00.354000",
+    "milestone_label": "LEGO review ends",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-06-20T14:59:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-06-20T14:00:00.354000",
+    "milestone_label": "Finalists announced",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-06-20T14:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-07-06T15:49:00.354000",
+    "milestone_label": "Refining begins",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-07-06T15:49:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-05-03T14:59:00.354000",
+    "milestone_label": "Refining ends",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-05-03T14:59:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-05-03T15:00:00.354000",
+    "milestone_label": "Crowdfunding announcement",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-05-03T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-06-01T11:00:00.354000",
+    "milestone_label": "Crowdfunding opens",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-06-01T11:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-06-02T11:00:00.354000",
+    "milestone_label": "Crowdfunding closes",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-06-02T11:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-11-01T06:47:00.354000",
+    "milestone_label": "Production begins",
+    "series_name": "Series 11",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-11-01T06:47:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-09-14T15:00:00.354000",
+    "milestone_label": "Crowdsourcing opens",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-09-14T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-09-28T15:00:00.354000",
+    "milestone_label": "Crowdsourcing closes",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-09-28T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-09-30T11:00:00.354000",
+    "milestone_label": "Community validation begins",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-09-30T11:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-10-14T11:00:00.354000",
+    "milestone_label": "Community validation ends",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-10-14T11:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-10-14T11:01:00.354000",
+    "milestone_label": "LEGO review begins",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-10-14T11:01:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-11-20T14:59:00.354000",
+    "milestone_label": "LEGO review ends",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-11-20T14:59:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2026-11-12T15:00:00.354000",
+    "milestone_label": "Finalists announced",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2026-11-12T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-01-01T15:00:00.354000",
+    "milestone_label": "Refining begins",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-01-01T15:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-09-01T16:00:00.354000",
+    "milestone_label": "Refining ends",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-09-01T16:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-09-01T16:00:00.354000",
+    "milestone_label": "Crowdfunding announcement",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-09-01T16:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-10-01T13:00:00.354000",
+    "milestone_label": "Crowdfunding opens",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-10-01T13:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2027-10-31T13:00:00.354000",
+    "milestone_label": "Crowdfunding closes",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2027-10-31T13:00:00.663000",
+    "type": "milestone_date_changed"
+  },
+  {
+    "from_at": "2028-03-01T15:00:00.354000",
+    "milestone_label": "Production begins",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-09-22T10:22:57",
+    "to_at": "2028-03-01T15:00:00.663000",
+    "type": "milestone_date_changed"
   }
 ]
