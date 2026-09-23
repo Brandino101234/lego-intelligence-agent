@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T20:07:48",
+  "generated_at": "2026-09-23T10:38:35",
   "months": {
     "2026-10": [
       {
@@ -317,7 +317,7 @@
         "pieces": 467,
         "price": "$39.99",
         "set_num": "40880",
-        "theme": "Marvel",
+        "theme": "BrickHeadz",
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-heroes-villain-40880"
       },
       {
@@ -531,24 +531,25 @@
         "availability_text": "Coming soon on October 4, 2026",
         "future_gwp": null,
         "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blt5c20a70f0fb4cdf9/72306_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt7a66a96e7a41dfcf/72306_boxprod_v29.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltd32ec934fd871833/72306_WEB_PRI_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt36120d2a8fc83abd/72306_WEB_SEC01_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltcc8eeb205b8ac23d/72306_WEB_SEC02_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltcc914de0550177b1/72306_WEB_SEC03_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt84c16c2cf90df688/72306_WEB_SEC05_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt7bdadff4c261b237/72306_WEB_SEC06_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt1dbfad524e48eabc/72306_WEB_SEC07_NOBG.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt9248b71a2504f942/72306_Lifestyle_Build_02.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blta9cc1fdf6f9c916b/72306_Lifestyle_Build_04.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/bltc5870f6a250b5ea5/72306_Lifestyle_Build_05.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blte66d82962dab16ab/72306_Lifestyle_Build_07.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt17b50795409570a8/72306_Lifestyle_Build_08.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt796e2159a2188ba3/72306_Lifestyle_Build_09.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt9503124ce1181382/72306_Lifestyle_Build_10.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt027dd971da05e450/blt5831cca8505c1f87-72306_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7ec5e8a6eceabd16/blt5831cca8505c1f87-72306_boxprod_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4e836b11abf92222/blt5831cca8505c1f87-72306_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt80784f11cd73e7e8/blt5831cca8505c1f87-72306_WEB_SEC08.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt47114e245d18b3d5/blt5831cca8505c1f87-72306_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt59780c79443af5a8/blt5831cca8505c1f87-72306_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt3ec3533a57dc8512/blt5831cca8505c1f87-72306_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt821ab6700add4b2f/blt5831cca8505c1f87-72306_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt90bba5e01323fe35/blt5831cca8505c1f87-72306_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt327e8c307c475931/blt5831cca8505c1f87-72306_WEB_SEC07_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte72abf5f92ab5a3c/blt5831cca8505c1f87-72306_Lifestyle_Cons_crop.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltef2f7de1d73d3480/blt5831cca8505c1f87-72306_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltfdaae01f9f711378/blt5831cca8505c1f87-72306_Lifestyle_Build_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltfe5bf2fcde2aad5d/blt5831cca8505c1f87-72306_Lifestyle_Build_07.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltf2c9a6947887f57b/blt5831cca8505c1f87-72306_Lifestyle_Build_08.jpg",
           "https://www.lego.com/cdn/cs/set/assets/blt05f98fd729363db6/72306_Lifestyle_Envr_crop.jpg",
-          "https://www.lego.com/cdn/cs/set/assets/blt304a7b4ab3c188a0/72306_Lifestyle_Cons_02.jpg"
+          "https://www.lego.com/cdn/cs/set/assets/blta6f90db3f7a117fe/blt5831cca8505c1f87-72306_Lifestyle_Build_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blta23b6d672e3163f3/blt5831cca8505c1f87-72306_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltcda11b69be613620/blt5831cca8505c1f87-72306_Box1_v39.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt59f8e9c961cb7e14/72306_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": true,
