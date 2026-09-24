@@ -11,6 +11,7 @@ browser tab can auto-reload and pick up each regeneration.
 from __future__ import annotations
 
 import html
+from collections import Counter
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
@@ -276,26 +277,47 @@ def render_bdp(bdp: dict, series_info: dict, today: date) -> tuple[str, str]:
 # ------------------------------------------------------------------ retiring --
 
 def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
-    flagged = [v for v in retiring.values() if v.get("retiring_soon")]
-    confirmed = sum(1 for v in flagged if v.get("brickfanatics_confirmed"))
-    total_tracked = len(retiring)
+    entries = list(retiring.values())
+    total_tracked = len(entries)
+    confirmed = sum(1 for v in entries if v.get("brickfanatics_confirmed"))
 
-    stat = f"{len(flagged)} flagged of {total_tracked} tracked &middot; {confirmed} confirmed by both sources"
+    stat = f"{total_tracked} tracked &middot; {confirmed} confirmed by Brick Tap + Brick Fanatics"
 
-    if not flagged:
-        return stat, '<p class="empty">Nothing currently flagged as retiring soon.</p>'
+    if not entries:
+        return stat, '<p class="empty">No retiring sets tracked right now.</p>'
 
     def sort_key(v):
         d = v.get("retirement_date")
         return (d is None, d or "", v["name"])
 
-    ordered = sorted(flagged, key=sort_key)
+    ordered = sorted(entries, key=sort_key)
+
+    def year_of(v) -> str:
+        d = v.get("retirement_date")
+        return d[:4] if d else "Unknown"
+
+    year_counts = Counter(year_of(v) for v in ordered)
 
     rows = []
+    current_year = None
     for v in ordered:
+        year = year_of(v)
+        if year != current_year:
+            current_year = year
+            count = year_counts[year]
+            year_label = f"Date unknown &middot; {count} set{'s' if count != 1 else ''}" if year == "Unknown" \
+                else f"{year} &middot; {count} set{'s' if count != 1 else ''}"
+            # Year dividers only make sense in this default date order —
+            # sortTable() drops them the moment a column click reorders
+            # rows any other way, rather than leave them stranded (or
+            # crash: a divider has one colspan <td>, not one per real
+            # column, so indexing into it like a data row would throw).
+            rows.append(f'<tr class="year-divider"><td colspan="8">{year_label}</td></tr>')
+
         d_raw = v.get("retirement_date")
         urgency_class = "neutral"
         date_label = v.get("retirement_date_raw") or "unknown"
+        year_sort = 9999
         if d_raw:
             d = datetime.strptime(d_raw, "%Y-%m-%d").date()
             delta = days_between(today, d)
@@ -304,11 +326,11 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
             elif delta <= SOON_DAYS:
                 urgency_class = "soon"
             date_label = d.strftime("%b %-d, %Y")
+            year_sort = d.year
 
         confirmed_flag = bool(v.get("brickfanatics_confirmed"))
         sources_count = 2 if confirmed_flag else 1
-        confirm_mark = "&#10003;&#10003;" if confirmed_flag else "&#10003;"
-        confirm_title = "Confirmed by Brick Tap + Brick Fanatics" if confirmed_flag else "Brick Tap only"
+        source_label = "Brick Tap + Brick Fanatics" if confirmed_flag else "Brick Tap"
 
         retiring_sort = delta if d_raw else 999999
 
@@ -343,8 +365,8 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
             <td data-sort="{esc((v.get("theme") or "").lower())}"><span class="theme-tag">{esc(v.get("theme"))}</span></td>
             <td class="mono" data-sort="{pieces_sort}">{pieces_label}</td>
             <td class="mono" data-sort="{price_sort}">{price_label}</td>
-            <td data-sort="{retiring_sort}"><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
-            <td class="mono confirm" data-sort="{sources_count}" title="{confirm_title}">{confirm_mark}</td>
+            <td data-sort="{retiring_sort}" data-year="{year_sort}"><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
+            <td class="mono confirm" data-sort="{sources_count}">{esc(source_label)}</td>
           </tr>''')
 
     table = f'''
@@ -359,7 +381,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
               <th onclick="sortTable(4,this)">Pieces</th>
               <th onclick="sortTable(5,this)">Price</th>
               <th onclick="sortTable(6,this)" data-dir="asc" class="sorted">Retiring</th>
-              <th onclick="sortTable(7,this)" title="Number of sources confirming this set is retiring">Sources</th>
+              <th onclick="sortTable(7,this)" title="Which source(s) confirm this set is retiring">Source</th>
             </tr>
           </thead>
           <tbody>{"".join(rows)}</tbody>
@@ -1018,7 +1040,17 @@ td.thumb-cell {{ padding: 6px 0 6px 14px; width: 44px; }}
 .date-pill.urgent {{ background: var(--red-soft); border-color: var(--red); color: var(--red); }}
 .date-pill.soon {{ background: var(--gold-soft); border-color: var(--gold-fill); color: var(--gold); }}
 .date-pill.neutral {{ color: var(--ink-muted); }}
-td.confirm {{ text-align: center; letter-spacing: 1px; }}
+td.confirm {{ white-space: nowrap; color: var(--ink-muted); font-size: 12px; }}
+tr.year-divider td {{
+  background: var(--paper);
+  font-family: 'Rubik Var', sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  color: var(--ink-muted);
+  padding: 9px 14px;
+  border-bottom: 2px solid var(--line);
+}}
 
 a.row-link {{ text-decoration: none; font-weight: 500; }}
 a.row-link:hover {{ text-decoration: underline; color: var(--red); }}
@@ -1168,7 +1200,7 @@ footer.page-footer {{
           <div class="panel-num display">02</div>
           <div class="panel-title">
             <h2>Retiring soon</h2>
-            <p>Flagged by Brick Tap&rsquo;s tracker, cross-checked against Brick Fanatics.</p>
+            <p>Tracked by Brick Tap&rsquo;s sheet, organized by retirement year, cross-checked against Brick Fanatics.</p>
           </div>
         </div>
         <div class="panel-stat">{retiring_stat}</div>
@@ -1181,6 +1213,12 @@ footer.page-footer {{
             <input type="number" id="retiring-price-min" placeholder="Min" min="0" step="1" oninput="filterRetiring()">
             <span>&ndash;</span>
             <input type="number" id="retiring-price-max" placeholder="Max" min="0" step="1" oninput="filterRetiring()">
+          </div>
+          <div class="price-filter">
+            <span>Retiring</span>
+            <input type="number" id="retiring-year-min" placeholder="From" min="2000" step="1" oninput="filterRetiring()">
+            <span>&ndash;</span>
+            <input type="number" id="retiring-year-max" placeholder="To" min="2000" step="1" oninput="filterRetiring()">
           </div>
         </div>
       </div>
@@ -1243,13 +1281,20 @@ function showPanel(btn) {{
 function sortTable(colIndex, header) {{
   const table = header.closest('table');
   const tbody = table.querySelector('tbody');
-  const rows = Array.from(tbody.querySelectorAll('tr'));
   const dir = header.dataset.dir === 'asc' ? 'desc' : 'asc';
 
   table.querySelectorAll('th').forEach(th => {{ delete th.dataset.dir; th.classList.remove('sorted'); }});
   header.dataset.dir = dir;
   header.classList.add('sorted');
 
+  // Year-divider rows (see render_retiring) only make sense in the
+  // table's default date order — any other sort scrambles their meaning,
+  // so drop them rather than leave them stranded in the wrong spot (or
+  // crash: a divider has one colspan <td>, not one per real column, so
+  // indexing into it like a data row below would throw).
+  tbody.querySelectorAll('tr.year-divider').forEach(tr => tr.remove());
+
+  const rows = Array.from(tbody.querySelectorAll('tr'));
   rows.sort((a, b) => {{
     const av = a.children[colIndex].dataset.sort || '';
     const bv = b.children[colIndex].dataset.sort || '';
@@ -1288,36 +1333,70 @@ function filterCards(input, panelId, itemSelector, groupSelector) {{
 }}
 
 // Retiring soon has its own filter (rather than reusing filterCards) since
-// it combines the usual text search with a price range — a row must pass
-// both. Price comes off the price <td>'s own data-sort value (col index 5)
-// rather than re-parsing the display text, matching what sortTable() reads
-// for the same column; that field is 999999 for a set with no price data
-// (see render_retiring), which a range filter should exclude, not treat as
-// $999,999.
+// it combines the usual text search with a price range and a retirement-
+// year range — a row must pass all three. Price and year come off their
+// <td>'s own data-sort/data-year values (col indexes 5 and 6) rather than
+// re-parsing display text; 999999 (price) and 9999 (year) mean "no data"
+// (see render_retiring), which an active range filter should exclude
+// rather than treat as a real value.
 function filterRetiring() {{
   const panel = document.getElementById('panel-retiring');
   const query = document.getElementById('retiring-search').value.trim().toLowerCase();
-  const minRaw = document.getElementById('retiring-price-min').value;
-  const maxRaw = document.getElementById('retiring-price-max').value;
-  const min = minRaw === '' ? null : parseFloat(minRaw);
-  const max = maxRaw === '' ? null : parseFloat(maxRaw);
-  const priceActive = min !== null || max !== null;
-  let visibleCount = 0;
 
-  panel.querySelectorAll('tbody tr').forEach(row => {{
+  const minPriceRaw = document.getElementById('retiring-price-min').value;
+  const maxPriceRaw = document.getElementById('retiring-price-max').value;
+  const minPrice = minPriceRaw === '' ? null : parseFloat(minPriceRaw);
+  const maxPrice = maxPriceRaw === '' ? null : parseFloat(maxPriceRaw);
+  const priceActive = minPrice !== null || maxPrice !== null;
+
+  const minYearRaw = document.getElementById('retiring-year-min').value;
+  const maxYearRaw = document.getElementById('retiring-year-max').value;
+  const minYear = minYearRaw === '' ? null : parseInt(minYearRaw, 10);
+  const maxYear = maxYearRaw === '' ? null : parseInt(maxYearRaw, 10);
+  const yearActive = minYear !== null || maxYear !== null;
+
+  let visibleCount = 0;
+  const rows = Array.from(panel.querySelectorAll('tbody tr'));
+
+  rows.forEach(row => {{
+    if (row.classList.contains('year-divider')) return; // visibility set below, once its group is known
+
     const textMatch = row.textContent.toLowerCase().includes(query);
 
     let priceMatch = true;
     if (priceActive) {{
       const price = parseFloat(row.cells[5].dataset.sort);
       const hasPrice = !isNaN(price) && price < 999999;
-      priceMatch = hasPrice && (min === null || price >= min) && (max === null || price <= max);
+      priceMatch = hasPrice && (minPrice === null || price >= minPrice) && (maxPrice === null || price <= maxPrice);
     }}
 
-    const match = textMatch && priceMatch;
+    let yearMatch = true;
+    if (yearActive) {{
+      const year = parseInt(row.cells[6].dataset.year, 10);
+      const hasYear = !isNaN(year) && year < 9999;
+      yearMatch = hasYear && (minYear === null || year >= minYear) && (maxYear === null || year <= maxYear);
+    }}
+
+    const match = textMatch && priceMatch && yearMatch;
     row.style.display = match ? '' : 'none';
     if (match) visibleCount++;
   }});
+
+  // A year-divider (absent entirely once a non-default sort has removed
+  // it — see sortTable()) stays visible only if at least one row in its
+  // group, up to the next divider, is still visible.
+  let currentDivider = null;
+  let groupHasVisible = false;
+  rows.forEach(row => {{
+    if (row.classList.contains('year-divider')) {{
+      if (currentDivider) currentDivider.style.display = groupHasVisible ? '' : 'none';
+      currentDivider = row;
+      groupHasVisible = false;
+    }} else if (row.style.display !== 'none') {{
+      groupHasVisible = true;
+    }}
+  }});
+  if (currentDivider) currentDivider.style.display = groupHasVisible ? '' : 'none';
 
   const noMatches = document.getElementById('no-matches-retiring');
   if (noMatches) noMatches.style.display = visibleCount === 0 ? '' : 'none';
