@@ -21,7 +21,7 @@
     "next_milestone_at": "2026-09-28T15:00:00",
     "next_milestone_label": "Crowdsourcing closes",
     "phase": "INTAKE",
-    "production_start_at": "2028-03-01T15:00:00.866000",
+    "production_start_at": "2028-03-01T15:00:00.320000",
     "url": "https://www.bricklink.com/v3/designer-program/series-2028-wave-1/main.page"
   },
   "Series 10": {
@@ -46,7 +46,7 @@
     "next_milestone_at": "2027-01-04T15:00:00",
     "next_milestone_label": "Refining ends",
     "phase": "POST_VALIDATION",
-    "production_start_at": "2027-07-01T09:00:00.866000",
+    "production_start_at": "2027-07-01T09:00:00.320000",
     "url": "https://www.bricklink.com/v3/designer-program/series-10/main.page"
   },
   "Series 11": {
@@ -71,7 +71,7 @@
     "next_milestone_at": "2027-05-03T14:59:00",
     "next_milestone_label": "Refining ends",
     "phase": "POST_VALIDATION",
-    "production_start_at": "2027-11-01T06:47:00.866000",
+    "production_start_at": "2027-11-01T06:47:00.320000",
     "url": "https://www.bricklink.com/v3/designer-program/series-11/main.page"
   },
   "Series 9": {
@@ -96,7 +96,7 @@
     "next_milestone_at": "2026-10-06T11:00:00",
     "next_milestone_label": "Crowdfunding opens",
     "phase": "POST_VALIDATION",
-    "production_start_at": "2027-03-01T15:00:00.866000",
+    "production_start_at": "2027-03-01T15:00:00.320000",
     "url": "https://www.bricklink.com/v3/designer-program/series-9/main.page"
   }
 }
