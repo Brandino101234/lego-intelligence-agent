@@ -1,6 +1,7 @@
 """Zips up full-resolution images for the "Download images" buttons on the
-dashboard: one per calendar month, plus one per active BrickLink Designer
-Program series.
+dashboard: one per calendar month, one per active BrickLink Designer
+Program series, one per retiring-sets year-month wave, and one per
+individual retiring set.
 
 Calendar sets: pulls each set's full image gallery (box front/back,
 in-hand shots, feature call-outs — not just the single cover thumbnail
@@ -14,15 +15,25 @@ LEGO's CDN does, so these are downsized+recompressed locally with Pillow
 instead (see resize_for_zip) — the raw uploads run up to ~1.8MB each at
 2048x1536, and a single finalist can have 10 of them.
 
-Each set/design gets its own folder inside its zip. Runs as part of every
-scrape (see run_all.py) and writes straight into site/downloads/ — NOT
-committed to git (see .gitignore), since GitHub Pages deploys from an
+Retiring sets: unlike calendar/BDP entries, these only ever have the one
+listing-page thumbnail (data/lego_product_images.json) — retiring sets
+aren't in scope for lego_release_calendar_agent.py's per-product gallery
+crawl, which is scoped to just the ~30 upcoming sets in the calendar to
+keep that Playwright pass fast. So each retiring set's zip (individual or
+grouped by retirement wave) holds exactly one image; see
+build_retiring_zips() for why each image is still only fetched once even
+though it can land in two different zips.
+
+Each set/design gets its own folder inside its zip (except retiring sets,
+which don't need one — there's only the single image). Runs as part of
+every scrape (see run_all.py) and writes straight into site/downloads/ —
+NOT committed to git (see .gitignore), since GitHub Pages deploys from an
 uploaded build artifact (actions/upload-pages-artifact) built from the
 local site/ folder, not from what's tracked in the repo, and re-zipping
 identical images twice a day would otherwise bloat the repo with
 duplicate binary blobs forever. build_dashboard.py reads the manifests
-this writes to know which months/series got a real zip before rendering
-a button.
+this writes to know which months/series/sets got a real zip before
+rendering a button.
 """
 
 from __future__ import annotations
@@ -41,6 +52,8 @@ ROOT = Path(__file__).resolve().parent
 DOWNLOADS_DIR = ROOT / "site" / "downloads"
 MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
 BDP_MANIFEST_PATH = DATA_DIR / "bdp_zip_manifest.json"
+RETIRING_SEASON_MANIFEST_PATH = DATA_DIR / "retiring_season_zip_manifest.json"
+RETIRING_SET_MANIFEST_PATH = DATA_DIR / "retiring_set_zip_manifest.json"
 
 # Deliberately smaller than upsize_lego_image_url()'s default (1500/90).
 # These zips get deployed with the dashboard and served to whoever clicks
@@ -156,10 +169,62 @@ def build_bdp_zip(series_name: str, entries: list[dict]) -> dict | None:
     }
 
 
+def build_retiring_zips(retiring: dict) -> tuple[dict, dict]:
+    """Builds one zip per individual retiring set (for the per-row download
+    button) and one zip per retirement year-month wave (for the per-group
+    download button next to each year-divider — e.g. "2026-12" for every
+    set retiring Dec 2026). Each set's single image is fetched once and
+    reused for both, rather than fetched twice for sets that end up in a
+    wave zip too."""
+    DOWNLOADS_DIR.mkdir(parents=True, exist_ok=True)
+
+    by_month: dict[str, list[tuple[str, bytes]]] = {}
+    set_manifest: dict[str, dict] = {}
+
+    for set_num, e in retiring.items():
+        image = e.get("image")
+        retirement_date = e.get("retirement_date")
+        if not image or not retirement_date:
+            continue
+
+        url = upsize_lego_image_url(image, size=ZIP_IMAGE_SIZE, quality=ZIP_IMAGE_QUALITY)
+        resp = requests.get(url, headers=HEADERS, timeout=20)
+        if resp.status_code != 200:
+            continue
+
+        filename = f"{sanitize_filename(e.get('name') or set_num)}.jpg"
+
+        zip_path = DOWNLOADS_DIR / f"retiring-set-{set_num}.zip"
+        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            zf.writestr(filename, resp.content)
+        set_manifest[set_num] = {
+            "file": f"downloads/{zip_path.name}",
+            "bytes": zip_path.stat().st_size,
+        }
+
+        yearmonth = retirement_date[:7]
+        by_month.setdefault(yearmonth, []).append((f"{set_num} {filename}", resp.content))
+
+    season_manifest: dict[str, dict] = {}
+    for yearmonth, files in by_month.items():
+        zip_path = DOWNLOADS_DIR / f"retiring-{yearmonth}.zip"
+        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            for name, content in files:
+                zf.writestr(name, content)
+        season_manifest[yearmonth] = {
+            "file": f"downloads/{zip_path.name}",
+            "sets": len(files),
+            "bytes": zip_path.stat().st_size,
+        }
+
+    return set_manifest, season_manifest
+
+
 def main() -> None:
     calendar = load_json(DATA_DIR / "release_calendar.json", {"months": {}})
     months = calendar.get("months", {})
     bdp = load_json(DATA_DIR / "bdp_finalists.json", {})
+    retiring = load_json(DATA_DIR / "retiring_sets.json", {})
 
     if DOWNLOADS_DIR.exists():
         for old_zip in DOWNLOADS_DIR.glob("*.zip"):
@@ -187,8 +252,17 @@ def main() -> None:
         else:
             print(f"  BDP {series_name}: no usable images, skipping zip")
 
+    retiring_set_manifest, retiring_season_manifest = build_retiring_zips(retiring)
+    print(f"  Retiring: {len(retiring_set_manifest)} individual set zip(s) across "
+          f"{len(retiring_season_manifest)} retirement wave(s)")
+    for yearmonth in sorted(retiring_season_manifest):
+        result = retiring_season_manifest[yearmonth]
+        print(f"    {yearmonth}: {result['sets']} set(s), {result['bytes'] / 1024:.0f} KB")
+
     save_json(MANIFEST_PATH, manifest)
     save_json(BDP_MANIFEST_PATH, bdp_manifest)
+    save_json(RETIRING_SET_MANIFEST_PATH, retiring_set_manifest)
+    save_json(RETIRING_SEASON_MANIFEST_PATH, retiring_season_manifest)
 
 
 if __name__ == "__main__":

@@ -29,6 +29,8 @@ BDP_PATH = DATA_DIR / "bdp_finalists.json"
 BDP_SERIES_PATH = DATA_DIR / "bdp_series.json"
 BDP_ZIP_MANIFEST_PATH = DATA_DIR / "bdp_zip_manifest.json"
 IMAGE_ZIP_MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
+RETIRING_SEASON_ZIP_MANIFEST_PATH = DATA_DIR / "retiring_season_zip_manifest.json"
+RETIRING_SET_ZIP_MANIFEST_PATH = DATA_DIR / "retiring_set_zip_manifest.json"
 
 REFRESH_MINUTES = 30
 DAILY_RUN_TIMES = ((6, 0), (18, 0))
@@ -289,6 +291,9 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
     if not entries:
         return stat, '<p class="empty">No retiring sets tracked right now.</p>', ""
 
+    season_zips = load_json(RETIRING_SEASON_ZIP_MANIFEST_PATH, {})
+    set_zips = load_json(RETIRING_SET_ZIP_MANIFEST_PATH, {})
+
     def sort_key(v):
         d = v.get("retirement_date")
         return (d is None, d or "", v["name"])
@@ -309,27 +314,42 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
         yearmonth_options.append(f'<option value="{ym}">{esc(label)}</option>')
     yearmonth_options_html = "".join(yearmonth_options)
 
-    def year_of(v) -> str:
+    def yearmonth_of(v) -> str:
         d = v.get("retirement_date")
-        return d[:4] if d else "Unknown"
+        return d[:7] if d else "Unknown"
 
-    year_counts = Counter(year_of(v) for v in ordered)
+    group_counts = Counter(yearmonth_of(v) for v in ordered)
 
     rows = []
-    current_year = None
+    current_group = None
     for v in ordered:
-        year = year_of(v)
-        if year != current_year:
-            current_year = year
-            count = year_counts[year]
-            year_label = f"Date unknown &middot; {count} set{'s' if count != 1 else ''}" if year == "Unknown" \
-                else f"{year} &middot; {count} set{'s' if count != 1 else ''}"
-            # Year dividers only make sense in this default date order —
+        group = yearmonth_of(v)
+        if group != current_group:
+            current_group = group
+            count = group_counts[group]
+            if group == "Unknown":
+                group_label = f"Date unknown &middot; {count} set{'s' if count != 1 else ''}"
+            else:
+                yr, mo = group.split("-")
+                group_label = f"{MONTH_NAMES[int(mo) - 1]} {yr} &middot; {count} set{'s' if count != 1 else ''}"
+
+            zip_info = season_zips.get(group)
+            download_html = (
+                f'<a class="year-divider-download" href="{esc(zip_info["file"])}" download>'
+                f'&#8681; Download images <span class="n">({zip_info["sets"]})</span></a>'
+                if zip_info else ""
+            )
+
+            # Groups only make sense in this default date order —
             # sortTable() drops them the moment a column click reorders
             # rows any other way, rather than leave them stranded (or
             # crash: a divider has one colspan <td>, not one per real
             # column, so indexing into it like a data row would throw).
-            rows.append(f'<tr class="year-divider"><td colspan="8">{year_label}</td></tr>')
+            rows.append(
+                f'<tr class="year-divider"><td colspan="9">'
+                f'<div class="year-divider-row"><span class="year-divider-label">{group_label}</span>{download_html}</div>'
+                f'</td></tr>'
+            )
 
         d_raw = v.get("retirement_date")
         urgency_class = "neutral"
@@ -374,6 +394,12 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
             if image else '<div class="row-thumb row-thumb-empty"></div>'
         )
 
+        set_zip = set_zips.get(v.get("set_num"))
+        download_html = (
+            f'<a class="row-download" href="{esc(set_zip["file"])}" download title="Download image">&#8681;</a>'
+            if set_zip else ""
+        )
+
         rows.append(f'''
           <tr>
             <td class="thumb-cell">{image_html}</td>
@@ -384,6 +410,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
             <td class="mono" data-sort="{price_sort}">{price_label}</td>
             <td data-sort="{retiring_sort}" data-yearmonth="{yearmonth}"><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
             <td class="mono confirm" data-sort="{sources_count}">{esc(source_label)}</td>
+            <td class="thumb-cell">{download_html}</td>
           </tr>''')
 
     table = f'''
@@ -399,6 +426,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
               <th onclick="sortTable(5,this)">Price</th>
               <th onclick="sortTable(6,this)" data-dir="asc" class="sorted">Retiring</th>
               <th onclick="sortTable(7,this)" title="Which source(s) confirm this set is retiring">Source</th>
+              <th title="Download this set's image"></th>
             </tr>
           </thead>
           <tbody>{"".join(rows)}</tbody>
@@ -933,6 +961,8 @@ section.panel[data-accent="gold"] .panel-num {{ color: var(--gold); }}
 .cal-month-download:focus-visible {{ outline: 2px solid var(--blue); outline-offset: 2px; }}
 .cal-month-download.gold {{ background: var(--gold); }}
 .cal-month-download.gold:focus-visible {{ outline-color: var(--gold); }}
+.cal-month-download.red {{ background: var(--red); }}
+.cal-month-download.red:focus-visible {{ outline-color: var(--red); }}
 
 .cal-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }}
 
@@ -1071,17 +1101,53 @@ td.thumb-cell {{ padding: 6px 0 6px 14px; width: 44px; }}
 td.confirm {{ white-space: nowrap; color: var(--ink-muted); font-size: 12px; }}
 tr.year-divider td {{
   background: var(--paper);
+  padding: 9px 14px;
+  border-bottom: 2px solid var(--line);
+}}
+.year-divider-row {{ display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }}
+.year-divider-label {{
   font-family: 'Rubik Var', sans-serif;
   font-weight: 700;
   font-size: 12.5px;
   letter-spacing: 0.02em;
   color: var(--ink-muted);
-  padding: 9px 14px;
-  border-bottom: 2px solid var(--line);
 }}
+.year-divider-download {{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: var(--red);
+  text-decoration: none;
+  font-family: 'Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--paper);
+}}
+.year-divider-download:hover {{ opacity: 0.85; }}
+.year-divider-download:focus-visible {{ outline: 2px solid var(--red); outline-offset: 2px; }}
+.year-divider-download .n {{ opacity: 0.75; }}
 
 a.row-link {{ text-decoration: none; font-weight: 500; }}
 a.row-link:hover {{ text-decoration: underline; color: var(--red); }}
+
+a.row-download {{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  color: var(--ink-muted);
+  text-decoration: none;
+  font-size: 12px;
+}}
+a.row-download:hover {{ border-color: var(--red); color: var(--red); }}
+a.row-download:focus-visible {{ outline: 2px solid var(--red); outline-offset: 1px; }}
 
 /* ---- gift with purchase ---- */
 .gwp-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }}
