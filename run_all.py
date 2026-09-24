@@ -52,9 +52,11 @@ STEP_TIME_BUDGETS = {
 }
 
 AGENTS = [
-    # Calendar first: its crawl builds data/lego_product_images.json (every
+    # Calendar first: its crawl builds data/lego_product_images.json,
+    # data/lego_product_prices.json, and data/lego_product_urls.json (every
     # currently-on-sale product it passes through, not just upcoming ones),
-    # which the retirement agent then uses for official LEGO.com images.
+    # which the retirement agent then uses for official LEGO.com images,
+    # prices, and product links.
     "lego_release_calendar_agent",
     "lego_retirement_agent",
     "lego_gwp_agent",

@@ -1,30 +1,50 @@
 """Tracks LEGO sets that are retiring soon or confirmed retired.
 
-- Scrapes BrickRanker's retirement tracker (https://brickranker.com/retirement-tracker),
-  a table of currently-sold sets grouped by theme with expected retirement dates
-  and a "Retiring soon!" flag.
-- Cross-checks against Brick Fanatics' running "every LEGO set retiring this
-  year and beyond" article as a second-source confirmation signal. Brick
-  Fanatics sits behind Cloudflare's JS challenge, so this step is best-effort:
-  if it can't be fetched, the run continues without the confirmation signal
-  rather than failing.
+- Primary source: Brick Tap's community-maintained "LEGO Set List" Google
+  Sheet (https://bricktap.org/#retirement links to it), sourced by its
+  maintainer from Brick Hound. It's a plain public Google Sheet, so it's
+  fetched as CSV export (no bot-protection dance needed, unlike the old
+  BrickRanker source or LEGO.com/BrickLink) and covers far more sets
+  (~990 tracked vs. BrickRanker's ~570) with richer per-set data: age
+  rating, piece count, and exclusivity notes, none of which BrickRanker
+  provided at all.
+- Cross-checks against Brick Fanatics' running "every LEGO set retiring
+  this year and beyond" article as a second-source confirmation signal,
+  same as before. Brick Fanatics sits behind Cloudflare's JS challenge,
+  so this step is best-effort: if it can't be fetched, the run continues
+  without the confirmation signal rather than failing.
 - Diffs the result against data/retiring_sets.json to detect newly-flagged,
   confirmed-retired, and date-changed sets, and logs those changes to
   data/retiring_changes_log.json.
 
-Product images and prices come from LEGO.com itself rather than
-BrickRanker (which never listed price at all): the release-calendar
-agent's crawl passes through every currently-on-sale product too and
-saves lookups to data/lego_product_images.json and
-data/lego_product_prices.json — run_all.py runs that agent before this
-one so the lookups are fresh. A set that's no longer sold on LEGO.com at
-all (fully gone, not just retiring) won't have an entry there, and gets
-no image/price rather than a substitute.
+Brick Tap's sheet doesn't have an explicit "retiring soon" flag the way
+BrickRanker did — most rows carry a generic year-end placeholder date
+(LEGO sets are typically estimated to retire "by end of year N" until a
+firmer date is known), covering the whole current catalog years out. So
+`retiring_soon` here is derived: true if the retirement date falls within
+SOON_DAYS of today, reusing the same threshold build_dashboard.py already
+uses for its own urgency color-coding, rather than inventing a second
+threshold to keep in sync.
+
+Product images and prices still come from LEGO.com itself (via the
+release-calendar agent's crawl, data/lego_product_images.json and
+data/lego_product_prices.json) rather than Brick Tap, which doesn't list
+either. That same crawl now also saves a product-page URL lookup
+(data/lego_product_urls.json) — Brick Tap's own "LEGO.com Link" column is
+a set of per-region hyperlinks, but Google's CSV export drops the actual
+hyperlink target and keeps only the visible cell text ("US", "CA", ...),
+so those links aren't recoverable from the CSV at all. A set that's no
+longer sold on LEGO.com (fully gone, not just retiring) won't have an
+entry in that lookup, and falls back to a LEGO.com search link instead of
+a dead product page.
 """
 
 from __future__ import annotations
 
-import re
+import csv
+import io
+from datetime import date
+from urllib.parse import quote
 
 from bs4 import BeautifulSoup
 
@@ -38,62 +58,65 @@ from lego_common import (
     append_log,
 )
 
-BRICKRANKER_URL = "https://brickranker.com/retirement-tracker"
+BRICKTAP_SHEET_ID = "1rlYfEXtNKxUOZt2Mfv0H17DvK7bj6Pe0CuYwq6ay8WA"
+BRICKTAP_GID = "382685820"  # the "Sorted by Retirement Date" tab
+BRICKTAP_CSV_URL = f"https://docs.google.com/spreadsheets/d/{BRICKTAP_SHEET_ID}/export?format=csv&gid={BRICKTAP_GID}"
 BRICKFANATICS_URL = "https://www.brickfanatics.com/every-lego-set-retiring-this-year-and-beyond/"
 
 SETS_PATH = DATA_DIR / "retiring_sets.json"
 LOG_PATH = DATA_DIR / "retiring_changes_log.json"
 IMAGES_PATH = DATA_DIR / "lego_product_images.json"
 PRICES_PATH = DATA_DIR / "lego_product_prices.json"
+URLS_PATH = DATA_DIR / "lego_product_urls.json"
+
+# Matches build_dashboard.py's own "soon" urgency threshold — see module
+# docstring for why this is reused rather than a second magic number.
+SOON_DAYS = 180
 
 
-def scrape_brickranker() -> dict[str, dict]:
-    """Returns {set_num: {set_num, name, theme, year_released,
-    retirement_date_raw, retirement_date, retiring_soon, url}}."""
-    resp = fetch(BRICKRANKER_URL)
+def scrape_bricktap() -> dict[str, dict]:
+    """Returns {set_num: {set_num, name, theme, subtheme, age, pieces,
+    retirement_date_raw, retirement_date, notes}}."""
+    resp = fetch(BRICKTAP_CSV_URL)
     if resp is None:
         return {}
 
-    soup = BeautifulSoup(resp.text, "html.parser")
     sets: dict[str, dict] = {}
+    reader = csv.reader(io.StringIO(resp.text))
+    rows = list(reader)
 
-    for h2 in soup.select("h2.text-3xl.font-bold.mb-4"):
-        theme = h2.get_text(strip=True)
-        table = h2.find_next_sibling("table")
-        if table is None:
+    # Row 0 is a blank banner-image row, row 1 is the real header (with a
+    # merged "LEGO.com Link" spanning several blank-named columns) — skip
+    # both and read the rest positionally rather than trust column names.
+    for row in rows[2:]:
+        if len(row) < 7:
+            continue
+        set_num = row[2].strip()
+        if not set_num.isdigit():
+            # Skips stray non-data rows (a trailing disclaimer sentence
+            # in column A, any fully blank row) without needing a
+            # separate "is this a real row" check.
             continue
 
-        for tr in table.select("tbody tr"):
-            tds = tr.find_all("td")
-            if len(tds) < 3:
-                continue
+        theme, subtheme, name = row[0].strip(), row[1].strip(), row[3].strip()
+        age = row[4].strip() or None
+        pieces_raw = row[5].strip()
+        pieces = int(pieces_raw) if pieces_raw.isdigit() else None
+        retirement_raw = row[6].strip()
+        retirement_date = parse_flexible_date(retirement_raw)
+        notes = row[12].strip() if len(row) > 12 else ""
 
-            name_cell = tds[0]
-            links = name_cell.find_all("a", href=True)
-            set_link = next((a for a in links if "/rankings/set/" in a["href"]), None)
-            if set_link is None:
-                continue
-
-            set_num = set_link["href"].split("/rankings/set/")[1].split("/")[0]
-            name = links[-1].get_text(strip=True)
-            retiring_soon = "Retiring soon" in name_cell.get_text()
-
-            year_text = tds[1].get_text(strip=True)
-            year_released = int(year_text) if year_text.isdigit() else None
-
-            retirement_raw = tds[2].get_text(strip=True)
-            retirement_date = parse_flexible_date(retirement_raw)
-
-            sets[set_num] = {
-                "set_num": set_num,
-                "name": name,
-                "theme": theme,
-                "year_released": year_released,
-                "retirement_date_raw": retirement_raw,
-                "retirement_date": retirement_date.isoformat() if retirement_date else None,
-                "retiring_soon": retiring_soon,
-                "url": set_link["href"],
-            }
+        sets[set_num] = {
+            "set_num": set_num,
+            "name": name,
+            "theme": theme,
+            "subtheme": subtheme if subtheme and subtheme != "-" else None,
+            "age": age,
+            "pieces": pieces,
+            "retirement_date_raw": retirement_raw,
+            "retirement_date": retirement_date.isoformat() if retirement_date else None,
+            "notes": notes or None,
+        }
 
     return sets
 
@@ -136,9 +159,9 @@ def scrape_brickfanatics() -> dict[str, dict]:
 
 
 def build_current_state() -> dict[str, dict]:
-    print(f"Fetching {BRICKRANKER_URL} ...")
-    sets = scrape_brickranker()
-    print(f"  found {len(sets)} currently-sold sets across BrickRanker's tracker")
+    print(f"Fetching {BRICKTAP_CSV_URL} ...")
+    sets = scrape_bricktap()
+    print(f"  found {len(sets)} tracked sets on Brick Tap's sheet")
 
     print(f"Fetching {BRICKFANATICS_URL} ...")
     confirmations = scrape_brickfanatics()
@@ -147,17 +170,22 @@ def build_current_state() -> dict[str, dict]:
 
     images = load_json(IMAGES_PATH, {})
     prices = load_json(PRICES_PATH, {})
+    urls = load_json(URLS_PATH, {})
     if not images:
         print("  (no LEGO.com image/price lookup found yet — run the release-calendar agent first to build one)")
 
+    today = date.today()
     for set_num, entry in sets.items():
-        base_num = set_num.split("-")[0]
-        match = confirmations.get(base_num)
+        match = confirmations.get(set_num)
         entry["brickfanatics_confirmed"] = match is not None
         entry["brickfanatics_retirement_heading"] = match["retirement_date_heading"] if match else None
         entry["last_checked"] = now_iso()
-        entry["image"] = images.get(base_num)
-        entry["price"] = prices.get(base_num)
+        entry["image"] = images.get(set_num)
+        entry["price"] = prices.get(set_num)
+        entry["url"] = urls.get(set_num) or f"https://www.lego.com/en-us/search?q={quote(entry['name'] or set_num)}"
+
+        d = entry["retirement_date"]
+        entry["retiring_soon"] = bool(d and (date.fromisoformat(d) - today).days <= SOON_DAYS)
 
     return sets
 
@@ -236,7 +264,7 @@ def main() -> None:
     current = build_current_state()
 
     if not current:
-        print("No data scraped (BrickRanker fetch failed) — leaving saved state untouched.")
+        print("No data scraped (Brick Tap fetch failed) — leaving saved state untouched.")
         return
 
     changes = diff_and_log(previous, current)

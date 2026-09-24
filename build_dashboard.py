@@ -308,7 +308,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
         confirmed_flag = bool(v.get("brickfanatics_confirmed"))
         sources_count = 2 if confirmed_flag else 1
         confirm_mark = "&#10003;&#10003;" if confirmed_flag else "&#10003;"
-        confirm_title = "Confirmed by BrickRanker + Brick Fanatics" if confirmed_flag else "BrickRanker only"
+        confirm_title = "Confirmed by Brick Tap + Brick Fanatics" if confirmed_flag else "Brick Tap only"
 
         retiring_sort = delta if d_raw else 999999
 
@@ -322,6 +322,13 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
         price_sort = price_value if price_value is not None else 999999
         price_label = esc(price_raw) if price_raw else "&mdash;"
 
+        pieces = v.get("pieces")
+        pieces_sort = pieces if pieces is not None else 999999
+        pieces_label = f"{pieces:,}" if pieces is not None else "&mdash;"
+
+        notes = v.get("notes")
+        notes_badge = f'<span class="theme-tag exclusive" title="{esc(notes)}">{esc(notes)}</span>' if notes else ""
+
         image = v.get("image")
         image_html = (
             f'<img class="row-thumb" src="{esc(image)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{{className:\'row-thumb row-thumb-empty\'}}))">'
@@ -332,8 +339,9 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
           <tr>
             <td class="thumb-cell">{image_html}</td>
             <td class="mono" data-sort="{esc(v.get("set_num"))}">{esc(v.get("set_num"))}</td>
-            <td data-sort="{esc((v.get("name") or "").lower())}"><a class="row-link" href="{esc(v.get("url", "#"))}" target="_blank" rel="noopener">{esc(v.get("name"))}</a></td>
+            <td data-sort="{esc((v.get("name") or "").lower())}"><a class="row-link" href="{esc(v.get("url", "#"))}" target="_blank" rel="noopener">{esc(v.get("name"))}</a> {notes_badge}</td>
             <td data-sort="{esc((v.get("theme") or "").lower())}"><span class="theme-tag">{esc(v.get("theme"))}</span></td>
+            <td class="mono" data-sort="{pieces_sort}">{pieces_label}</td>
             <td class="mono" data-sort="{price_sort}">{price_label}</td>
             <td data-sort="{retiring_sort}"><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
             <td class="mono confirm" data-sort="{sources_count}" title="{confirm_title}">{confirm_mark}</td>
@@ -348,9 +356,10 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
               <th onclick="sortTable(1,this)">Set</th>
               <th onclick="sortTable(2,this)">Name</th>
               <th onclick="sortTable(3,this)">Theme</th>
-              <th onclick="sortTable(4,this)">Price</th>
-              <th onclick="sortTable(5,this)" data-dir="asc" class="sorted">Retiring</th>
-              <th onclick="sortTable(6,this)" title="Number of sources confirming this set is retiring">Sources</th>
+              <th onclick="sortTable(4,this)">Pieces</th>
+              <th onclick="sortTable(5,this)">Price</th>
+              <th onclick="sortTable(6,this)" data-dir="asc" class="sorted">Retiring</th>
+              <th onclick="sortTable(7,this)" title="Number of sources confirming this set is retiring">Sources</th>
             </tr>
           </thead>
           <tbody>{"".join(rows)}</tbody>
@@ -1038,6 +1047,17 @@ a.gwp-card:focus-visible {{ outline: 2px solid var(--green); outline-offset: 2px
 .gwp-card-top {{ display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }}
 .theme-tag.insiders {{ background: var(--green-soft); border-color: var(--green); color: var(--green); }}
 .theme-tag.announced {{ background: var(--blue-soft); border-color: var(--blue); color: var(--blue); }}
+.theme-tag.exclusive {{
+  background: var(--gold-soft);
+  border-color: var(--gold-fill);
+  color: var(--gold);
+  font-size: 9.5px;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}}
 .gwp-card-name {{ font-size: 14px; font-weight: 600; line-height: 1.3; }}
 .gwp-card-qualify {{ font-size: 12px; color: var(--ink-muted); }}
 
@@ -1148,7 +1168,7 @@ footer.page-footer {{
           <div class="panel-num display">02</div>
           <div class="panel-title">
             <h2>Retiring soon</h2>
-            <p>Flagged by BrickRanker&rsquo;s tracker, cross-checked against Brick Fanatics.</p>
+            <p>Flagged by Brick Tap&rsquo;s tracker, cross-checked against Brick Fanatics.</p>
           </div>
         </div>
         <div class="panel-stat">{retiring_stat}</div>
@@ -1208,7 +1228,7 @@ footer.page-footer {{
 </div>
 
 <footer class="page-footer">
-  <span>Sources: lego.com &middot; brickset.com &middot; brickranker.com &middot; brickfanatics.com &middot; bricklink.com</span>
+  <span>Sources: lego.com &middot; brickset.com &middot; bricktap.org &middot; brickfanatics.com &middot; bricklink.com</span>
   <span>Auto-refreshes every {refresh_minutes} min &middot; data regenerates 6am &amp; 6pm daily</span>
 </footer>
 
@@ -1269,7 +1289,7 @@ function filterCards(input, panelId, itemSelector, groupSelector) {{
 
 // Retiring soon has its own filter (rather than reusing filterCards) since
 // it combines the usual text search with a price range — a row must pass
-// both. Price comes off the price <td>'s own data-sort value (col index 4)
+// both. Price comes off the price <td>'s own data-sort value (col index 5)
 // rather than re-parsing the display text, matching what sortTable() reads
 // for the same column; that field is 999999 for a set with no price data
 // (see render_retiring), which a range filter should exclude, not treat as
@@ -1289,7 +1309,7 @@ function filterRetiring() {{
 
     let priceMatch = true;
     if (priceActive) {{
-      const price = parseFloat(row.cells[4].dataset.sort);
+      const price = parseFloat(row.cells[5].dataset.sort);
       const hasPrice = !isNaN(price) && price < 999999;
       priceMatch = hasPrice && (min === null || price >= min) && (max === null || price <= max);
     }}
