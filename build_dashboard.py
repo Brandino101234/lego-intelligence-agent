@@ -276,7 +276,10 @@ def render_bdp(bdp: dict, series_info: dict, today: date) -> tuple[str, str]:
 
 # ------------------------------------------------------------------ retiring --
 
-def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
+MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
     entries = list(retiring.values())
     total_tracked = len(entries)
     confirmed = sum(1 for v in entries if v.get("brickfanatics_confirmed"))
@@ -284,13 +287,27 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
     stat = f"{total_tracked} tracked &middot; {confirmed} confirmed by Brick Tap + Brick Fanatics"
 
     if not entries:
-        return stat, '<p class="empty">No retiring sets tracked right now.</p>'
+        return stat, '<p class="empty">No retiring sets tracked right now.</p>', ""
 
     def sort_key(v):
         d = v.get("retirement_date")
         return (d is None, d or "", v["name"])
 
     ordered = sorted(entries, key=sort_key)
+
+    # Real retirement dates cluster into a handful of actual year-month
+    # waves (mostly a mid-year and an end-of-year batch per year) rather
+    # than spreading evenly — a plain year range or a generic 1-12 month
+    # picker would offer dozens of dead combinations. Building the
+    # dropdown from what's actually in the data keeps every option live.
+    yearmonth_counts = Counter(v["retirement_date"][:7] for v in ordered if v.get("retirement_date"))
+    yearmonth_options = ['<option value="">All dates</option>']
+    for ym in sorted(yearmonth_counts):
+        yr, mo = ym.split("-")
+        count = yearmonth_counts[ym]
+        label = f"{MONTH_NAMES[int(mo) - 1]} {yr} ({count})"
+        yearmonth_options.append(f'<option value="{ym}">{esc(label)}</option>')
+    yearmonth_options_html = "".join(yearmonth_options)
 
     def year_of(v) -> str:
         d = v.get("retirement_date")
@@ -317,7 +334,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
         d_raw = v.get("retirement_date")
         urgency_class = "neutral"
         date_label = v.get("retirement_date_raw") or "unknown"
-        year_sort = 9999
+        yearmonth = ""
         if d_raw:
             d = datetime.strptime(d_raw, "%Y-%m-%d").date()
             delta = days_between(today, d)
@@ -326,7 +343,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
             elif delta <= SOON_DAYS:
                 urgency_class = "soon"
             date_label = d.strftime("%b %-d, %Y")
-            year_sort = d.year
+            yearmonth = d_raw[:7]
 
         confirmed_flag = bool(v.get("brickfanatics_confirmed"))
         sources_count = 2 if confirmed_flag else 1
@@ -365,7 +382,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
             <td data-sort="{esc((v.get("theme") or "").lower())}"><span class="theme-tag">{esc(v.get("theme"))}</span></td>
             <td class="mono" data-sort="{pieces_sort}">{pieces_label}</td>
             <td class="mono" data-sort="{price_sort}">{price_label}</td>
-            <td data-sort="{retiring_sort}" data-year="{year_sort}"><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
+            <td data-sort="{retiring_sort}" data-yearmonth="{yearmonth}"><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
             <td class="mono confirm" data-sort="{sources_count}">{esc(source_label)}</td>
           </tr>''')
 
@@ -388,7 +405,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str]:
         </table>
       </div>'''
 
-    return stat, table
+    return stat, table, yearmonth_options_html
 
 
 # ------------------------------------------------------------------------ gwp --
@@ -854,6 +871,17 @@ section.panel[data-accent="gold"] .panel-num {{ color: var(--gold); }}
 }}
 .price-filter input[type="number"]::placeholder {{ color: var(--ink-faint); }}
 .price-filter input[type="number"]:focus {{ outline: none; border-color: var(--ink-muted); }}
+.price-filter select {{
+  font-family: 'Plex Mono', monospace;
+  font-size: 13px;
+  background: var(--paper-2);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 10px;
+  color: var(--ink);
+  max-width: 170px;
+}}
+.price-filter select:focus {{ outline: none; border-color: var(--ink-muted); }}
 .no-matches {{
   display: none;
   color: var(--ink-muted);
@@ -1216,9 +1244,7 @@ footer.page-footer {{
           </div>
           <div class="price-filter">
             <span>Retiring</span>
-            <input type="number" id="retiring-year-min" placeholder="From" min="2000" step="1" oninput="filterRetiring()">
-            <span>&ndash;</span>
-            <input type="number" id="retiring-year-max" placeholder="To" min="2000" step="1" oninput="filterRetiring()">
+            <select id="retiring-yearmonth" onchange="filterRetiring()">{retiring_yearmonth_options}</select>
           </div>
         </div>
       </div>
@@ -1333,12 +1359,15 @@ function filterCards(input, panelId, itemSelector, groupSelector) {{
 }}
 
 // Retiring soon has its own filter (rather than reusing filterCards) since
-// it combines the usual text search with a price range and a retirement-
-// year range — a row must pass all three. Price and year come off their
-// <td>'s own data-sort/data-year values (col indexes 5 and 6) rather than
-// re-parsing display text; 999999 (price) and 9999 (year) mean "no data"
-// (see render_retiring), which an active range filter should exclude
-// rather than treat as a real value.
+// it combines the usual text search with a price range and a retirement
+// year+month picker — a row must pass all three. Price comes off the
+// price <td>'s own data-sort value (col index 5) rather than re-parsing
+// display text; 999999 means "no price data" (see render_retiring), which
+// an active price filter should exclude rather than treat as a real
+// value. The retirement picker is a dropdown of the actual year-month
+// combinations present in the data (col index 6's data-yearmonth, e.g.
+// "2027-07") rather than a free-form range, since real retirement dates
+// cluster into a handful of waves rather than spreading evenly.
 function filterRetiring() {{
   const panel = document.getElementById('panel-retiring');
   const query = document.getElementById('retiring-search').value.trim().toLowerCase();
@@ -1349,11 +1378,7 @@ function filterRetiring() {{
   const maxPrice = maxPriceRaw === '' ? null : parseFloat(maxPriceRaw);
   const priceActive = minPrice !== null || maxPrice !== null;
 
-  const minYearRaw = document.getElementById('retiring-year-min').value;
-  const maxYearRaw = document.getElementById('retiring-year-max').value;
-  const minYear = minYearRaw === '' ? null : parseInt(minYearRaw, 10);
-  const maxYear = maxYearRaw === '' ? null : parseInt(maxYearRaw, 10);
-  const yearActive = minYear !== null || maxYear !== null;
+  const yearmonth = document.getElementById('retiring-yearmonth').value;
 
   let visibleCount = 0;
   const rows = Array.from(panel.querySelectorAll('tbody tr'));
@@ -1370,12 +1395,7 @@ function filterRetiring() {{
       priceMatch = hasPrice && (minPrice === null || price >= minPrice) && (maxPrice === null || price <= maxPrice);
     }}
 
-    let yearMatch = true;
-    if (yearActive) {{
-      const year = parseInt(row.cells[6].dataset.year, 10);
-      const hasYear = !isNaN(year) && year < 9999;
-      yearMatch = hasYear && (minYear === null || year >= minYear) && (maxYear === null || year <= maxYear);
-    }}
+    const yearMatch = !yearmonth || row.cells[6].dataset.yearmonth === yearmonth;
 
     const match = textMatch && priceMatch && yearMatch;
     row.style.display = match ? '' : 'none';
@@ -1503,7 +1523,7 @@ def build() -> Path:
     today = now.date()
 
     calendar_stat, calendar_body = render_calendar(calendar, today)
-    retiring_stat, retiring_body = render_retiring(retiring, today)
+    retiring_stat, retiring_body, retiring_yearmonth_options = render_retiring(retiring, today)
     gwp_stat, gwp_body = render_gwp(gwp, today)
     future_gwp_count, future_gwp_cards = render_future_gwp(calendar)
     bdp_stat, bdp_body = render_bdp(bdp, bdp_series, today)
@@ -1526,6 +1546,7 @@ def build() -> Path:
         calendar_body=calendar_body,
         retiring_stat=retiring_stat,
         retiring_body=retiring_body,
+        retiring_yearmonth_options=retiring_yearmonth_options,
         gwp_stat=gwp_stat,
         future_gwp_body=future_gwp_body,
         gwp_body=gwp_body,
