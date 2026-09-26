@@ -1,7 +1,7 @@
 """Zips up full-resolution images for the "Download images" buttons on the
 dashboard: one per calendar month, one per active BrickLink Designer
-Program series, one per retiring-sets year-month wave, and one per
-individual retiring set.
+Program series, and — for retiring sets — one per individual set, one per
+retirement year-month wave, and one per theme.
 
 Calendar sets: pulls each set's full image gallery (box front/back,
 in-hand shots, feature call-outs — not just the single cover thumbnail
@@ -19,10 +19,10 @@ Retiring sets: unlike calendar/BDP entries, these only ever have the one
 listing-page thumbnail (data/lego_product_images.json) — retiring sets
 aren't in scope for lego_release_calendar_agent.py's per-product gallery
 crawl, which is scoped to just the ~30 upcoming sets in the calendar to
-keep that Playwright pass fast. So each retiring set's zip (individual or
-grouped by retirement wave) holds exactly one image; see
+keep that Playwright pass fast. So every retiring zip (individual, by
+retirement wave, or by theme) holds exactly one image per set; see
 build_retiring_zips() for why each image is still only fetched once even
-though it can land in two different zips.
+though it can land in up to three different zips.
 
 Each set/design gets its own folder inside its zip (except retiring sets,
 which don't need one — there's only the single image). Runs as part of
@@ -32,7 +32,7 @@ uploaded build artifact (actions/upload-pages-artifact) built from the
 local site/ folder, not from what's tracked in the repo, and re-zipping
 identical images twice a day would otherwise bloat the repo with
 duplicate binary blobs forever. build_dashboard.py reads the manifests
-this writes to know which months/series/sets got a real zip before
+this writes to know which months/series/sets/themes got a real zip before
 rendering a button.
 """
 
@@ -54,6 +54,7 @@ MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
 BDP_MANIFEST_PATH = DATA_DIR / "bdp_zip_manifest.json"
 RETIRING_SEASON_MANIFEST_PATH = DATA_DIR / "retiring_season_zip_manifest.json"
 RETIRING_SET_MANIFEST_PATH = DATA_DIR / "retiring_set_zip_manifest.json"
+RETIRING_THEME_MANIFEST_PATH = DATA_DIR / "retiring_theme_zip_manifest.json"
 
 # Deliberately smaller than upsize_lego_image_url()'s default (1500/90).
 # These zips get deployed with the dashboard and served to whoever clicks
@@ -169,22 +170,40 @@ def build_bdp_zip(series_name: str, entries: list[dict]) -> dict | None:
     }
 
 
-def build_retiring_zips(retiring: dict) -> tuple[dict, dict]:
+def _write_group_zips(groups: dict[str, list[tuple[str, bytes]]], zip_name_for) -> dict:
+    """Shared by the retirement-wave and theme groupings below — writes one
+    zip per group key from its already-fetched (filename, bytes) pairs."""
+    manifest: dict[str, dict] = {}
+    for key, files in groups.items():
+        zip_path = DOWNLOADS_DIR / zip_name_for(key)
+        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            for name, content in files:
+                zf.writestr(name, content)
+        manifest[key] = {
+            "file": f"downloads/{zip_path.name}",
+            "sets": len(files),
+            "bytes": zip_path.stat().st_size,
+        }
+    return manifest
+
+
+def build_retiring_zips(retiring: dict) -> tuple[dict, dict, dict]:
     """Builds one zip per individual retiring set (for the per-row download
-    button) and one zip per retirement year-month wave (for the per-group
-    download button next to each year-divider — e.g. "2026-12" for every
-    set retiring Dec 2026). Each set's single image is fetched once and
-    reused for both, rather than fetched twice for sets that end up in a
-    wave zip too."""
+    button), one zip per retirement year-month wave (for the button next to
+    each year-divider — e.g. "2026-12" for every set retiring Dec 2026),
+    and one zip per theme (for a "download by theme" picker — e.g. every
+    tracked Star Wars set regardless of when it retires). Each set's single
+    image is fetched once and reused across whichever of these three it
+    ends up in, rather than fetched again per grouping."""
     DOWNLOADS_DIR.mkdir(parents=True, exist_ok=True)
 
     by_month: dict[str, list[tuple[str, bytes]]] = {}
+    by_theme: dict[str, list[tuple[str, bytes]]] = {}
     set_manifest: dict[str, dict] = {}
 
     for set_num, e in retiring.items():
         image = e.get("image")
-        retirement_date = e.get("retirement_date")
-        if not image or not retirement_date:
+        if not image:
             continue
 
         url = upsize_lego_image_url(image, size=ZIP_IMAGE_SIZE, quality=ZIP_IMAGE_QUALITY)
@@ -193,6 +212,7 @@ def build_retiring_zips(retiring: dict) -> tuple[dict, dict]:
             continue
 
         filename = f"{sanitize_filename(e.get('name') or set_num)}.jpg"
+        entry_name = f"{set_num} {filename}"
 
         zip_path = DOWNLOADS_DIR / f"retiring-set-{set_num}.zip"
         with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
@@ -202,22 +222,20 @@ def build_retiring_zips(retiring: dict) -> tuple[dict, dict]:
             "bytes": zip_path.stat().st_size,
         }
 
-        yearmonth = retirement_date[:7]
-        by_month.setdefault(yearmonth, []).append((f"{set_num} {filename}", resp.content))
+        retirement_date = e.get("retirement_date")
+        if retirement_date:
+            by_month.setdefault(retirement_date[:7], []).append((entry_name, resp.content))
 
-    season_manifest: dict[str, dict] = {}
-    for yearmonth, files in by_month.items():
-        zip_path = DOWNLOADS_DIR / f"retiring-{yearmonth}.zip"
-        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
-            for name, content in files:
-                zf.writestr(name, content)
-        season_manifest[yearmonth] = {
-            "file": f"downloads/{zip_path.name}",
-            "sets": len(files),
-            "bytes": zip_path.stat().st_size,
-        }
+        theme = e.get("theme")
+        if theme:
+            by_theme.setdefault(theme, []).append((entry_name, resp.content))
 
-    return set_manifest, season_manifest
+    season_manifest = _write_group_zips(by_month, lambda yearmonth: f"retiring-{yearmonth}.zip")
+    theme_manifest = _write_group_zips(
+        by_theme, lambda t: f"retiring-theme-{sanitize_filename(t).replace(' ', '-').lower()}.zip"
+    )
+
+    return set_manifest, season_manifest, theme_manifest
 
 
 def main() -> None:
@@ -252,9 +270,9 @@ def main() -> None:
         else:
             print(f"  BDP {series_name}: no usable images, skipping zip")
 
-    retiring_set_manifest, retiring_season_manifest = build_retiring_zips(retiring)
+    retiring_set_manifest, retiring_season_manifest, retiring_theme_manifest = build_retiring_zips(retiring)
     print(f"  Retiring: {len(retiring_set_manifest)} individual set zip(s) across "
-          f"{len(retiring_season_manifest)} retirement wave(s)")
+          f"{len(retiring_season_manifest)} retirement wave(s) and {len(retiring_theme_manifest)} theme(s)")
     for yearmonth in sorted(retiring_season_manifest):
         result = retiring_season_manifest[yearmonth]
         print(f"    {yearmonth}: {result['sets']} set(s), {result['bytes'] / 1024:.0f} KB")
@@ -263,6 +281,7 @@ def main() -> None:
     save_json(BDP_MANIFEST_PATH, bdp_manifest)
     save_json(RETIRING_SET_MANIFEST_PATH, retiring_set_manifest)
     save_json(RETIRING_SEASON_MANIFEST_PATH, retiring_season_manifest)
+    save_json(RETIRING_THEME_MANIFEST_PATH, retiring_theme_manifest)
 
 
 if __name__ == "__main__":

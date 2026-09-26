@@ -31,6 +31,7 @@ BDP_ZIP_MANIFEST_PATH = DATA_DIR / "bdp_zip_manifest.json"
 IMAGE_ZIP_MANIFEST_PATH = DATA_DIR / "image_zip_manifest.json"
 RETIRING_SEASON_ZIP_MANIFEST_PATH = DATA_DIR / "retiring_season_zip_manifest.json"
 RETIRING_SET_ZIP_MANIFEST_PATH = DATA_DIR / "retiring_set_zip_manifest.json"
+RETIRING_THEME_ZIP_MANIFEST_PATH = DATA_DIR / "retiring_theme_zip_manifest.json"
 
 REFRESH_MINUTES = 30
 DAILY_RUN_TIMES = ((6, 0), (18, 0))
@@ -281,7 +282,7 @@ def render_bdp(bdp: dict, series_info: dict, today: date) -> tuple[str, str]:
 MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
 
-def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
+def render_retiring(retiring: dict, today: date) -> tuple[str, str, str, str]:
     entries = list(retiring.values())
     total_tracked = len(entries)
     confirmed = sum(1 for v in entries if v.get("brickfanatics_confirmed"))
@@ -289,10 +290,11 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
     stat = f"{total_tracked} tracked &middot; {confirmed} confirmed by Brick Tap + Brick Fanatics"
 
     if not entries:
-        return stat, '<p class="empty">No retiring sets tracked right now.</p>', ""
+        return stat, '<p class="empty">No retiring sets tracked right now.</p>', "", ""
 
     season_zips = load_json(RETIRING_SEASON_ZIP_MANIFEST_PATH, {})
     set_zips = load_json(RETIRING_SET_ZIP_MANIFEST_PATH, {})
+    theme_zips = load_json(RETIRING_THEME_ZIP_MANIFEST_PATH, {})
 
     def sort_key(v):
         d = v.get("retirement_date")
@@ -313,6 +315,20 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
         label = f"{MONTH_NAMES[int(mo) - 1]} {yr} ({count})"
         yearmonth_options.append(f'<option value="{ym}">{esc(label)}</option>')
     yearmonth_options_html = "".join(yearmonth_options)
+
+    # Themes, unlike retirement dates, don't cluster into a handful of
+    # values — 44 at last count — so this is a plain "choose one, then hit
+    # download" picker rather than also driving the table filter the way
+    # the retirement-date dropdown does.
+    theme_counts = Counter(v.get("theme") for v in ordered if v.get("theme"))
+    theme_download_options = ['<option value="">Choose a theme&hellip;</option>']
+    for theme_name in sorted(theme_counts):
+        zip_info = theme_zips.get(theme_name)
+        if not zip_info:
+            continue
+        label = f"{theme_name} ({theme_counts[theme_name]})"
+        theme_download_options.append(f'<option value="{esc(zip_info["file"])}">{esc(label)}</option>')
+    theme_download_options_html = "".join(theme_download_options)
 
     def yearmonth_of(v) -> str:
         d = v.get("retirement_date")
@@ -433,7 +449,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str]:
         </table>
       </div>'''
 
-    return stat, table, yearmonth_options_html
+    return stat, table, yearmonth_options_html, theme_download_options_html
 
 
 # ------------------------------------------------------------------------ gwp --
@@ -1312,6 +1328,11 @@ footer.page-footer {{
             <span>Retiring</span>
             <select id="retiring-yearmonth" onchange="filterRetiring()">{retiring_yearmonth_options}</select>
           </div>
+          <div class="price-filter">
+            <span>Theme</span>
+            <select id="retiring-theme-download" onchange="updateThemeDownload()">{retiring_theme_download_options}</select>
+            <a id="retiring-theme-download-btn" class="year-divider-download" href="#" download style="display:none">&#8681; Download</a>
+          </div>
         </div>
       </div>
       {retiring_body}
@@ -1488,6 +1509,21 @@ function filterRetiring() {{
   if (noMatches) noMatches.style.display = visibleCount === 0 ? '' : 'none';
 }}
 
+// The theme picker's <option value> is the zip's own path (see
+// render_retiring) — no separate theme-to-URL lookup needed here, just
+// point the download button at whichever option is selected and reveal
+// it, or hide it again for the empty "Choose a theme..." option.
+function updateThemeDownload() {{
+  const select = document.getElementById('retiring-theme-download');
+  const btn = document.getElementById('retiring-theme-download-btn');
+  if (select.value) {{
+    btn.href = select.value;
+    btn.style.display = '';
+  }} else {{
+    btn.style.display = 'none';
+  }}
+}}
+
 const GH_TOKEN_KEY = 'lego_gh_token';
 const GH_DISPATCH_URL = 'https://api.github.com/repos/Brandino101234/lego-intelligence-agent/actions/workflows/scrape.yml/dispatches';
 
@@ -1589,7 +1625,7 @@ def build() -> Path:
     today = now.date()
 
     calendar_stat, calendar_body = render_calendar(calendar, today)
-    retiring_stat, retiring_body, retiring_yearmonth_options = render_retiring(retiring, today)
+    retiring_stat, retiring_body, retiring_yearmonth_options, retiring_theme_download_options = render_retiring(retiring, today)
     gwp_stat, gwp_body = render_gwp(gwp, today)
     future_gwp_count, future_gwp_cards = render_future_gwp(calendar)
     bdp_stat, bdp_body = render_bdp(bdp, bdp_series, today)
@@ -1613,6 +1649,7 @@ def build() -> Path:
         retiring_stat=retiring_stat,
         retiring_body=retiring_body,
         retiring_yearmonth_options=retiring_yearmonth_options,
+        retiring_theme_download_options=retiring_theme_download_options,
         gwp_stat=gwp_stat,
         future_gwp_body=future_gwp_body,
         gwp_body=gwp_body,
