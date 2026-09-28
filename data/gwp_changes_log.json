@@ -156,5 +156,17 @@
     "qualifying_text": "Unlock when purchasing The Lord of the Rings: Minas Tirith™",
     "timestamp": "2026-09-22T10:22:36",
     "type": "gwp_started"
+  },
+  {
+    "gwp_code": "30732",
+    "name": "Alex's Campfire Conflict",
+    "timestamp": "2026-09-27T20:26:49",
+    "type": "gwp_ended"
+  },
+  {
+    "gwp_code": "40900",
+    "name": "Scary Haunted Tree",
+    "timestamp": "2026-09-27T20:26:49",
+    "type": "gwp_ended"
   }
 ]
