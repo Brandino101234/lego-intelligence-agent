@@ -1,22 +1,22 @@
 {
-  "40893": {
+  "40897": {
     "end_date": null,
-    "end_date_raw": "09/30/2026",
-    "gwp_code": "40893",
-    "image": "https://www.lego.com/cdn/cs/set/assets/blt1ebbde5789b2fa7f/blt694082743c4206ee-40893_Prod_en-gb.png",
+    "end_date_raw": "10/07/2026",
+    "gwp_code": "40897",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt34c7ecd746e00dfe/40897_Prod.png",
     "insiders_only": false,
-    "name": "Grond",
-    "qualifying_text": "Unlock when purchasing The Lord of the Rings: Minas Tirith™",
-    "url": "https://www.lego.com/en-us/search?q=40893"
+    "name": "Darth Vader's LIGHTSABER™",
+    "qualifying_text": "Unlock when purchasing Executor Super Star Destroyer™",
+    "url": "https://www.lego.com/en-us/search?q=40897"
   },
-  "5011072": {
+  "40899": {
     "end_date": null,
-    "end_date_raw": "09/30/2026",
-    "gwp_code": "5011072",
-    "image": "https://www.lego.com/cdn/cs/set/assets/blte717cb5294f3a170/HP_PhoneStand_1.png",
-    "insiders_only": true,
-    "name": "Ministry of Magic™ Phone Booth",
-    "qualifying_text": "Unlock when purchasing The Ministry of Magic™ – Collectors' Edition",
-    "url": "https://www.lego.com/en-us/search?q=5011072"
+    "end_date_raw": "10/07/2026",
+    "gwp_code": "40899",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt0ddfa7316299787e/40899_Prod.png",
+    "insiders_only": false,
+    "name": "Astro Bot™",
+    "qualifying_text": "Spend over $150 to unlock this gift",
+    "url": "https://www.lego.com/en-us/search?q=40899"
   }
 }

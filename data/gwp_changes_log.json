@@ -168,5 +168,33 @@
     "name": "Scary Haunted Tree",
     "timestamp": "2026-09-27T20:26:49",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40899",
+    "name": "Astro Bot™",
+    "qualifying_text": "Spend over $150 to unlock this gift",
+    "timestamp": "2026-10-01T13:24:26",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40897",
+    "name": "Darth Vader's LIGHTSABER™",
+    "qualifying_text": "Unlock when purchasing Executor Super Star Destroyer™",
+    "timestamp": "2026-10-01T13:24:26",
+    "type": "gwp_started"
+  },
+  {
+    "gwp_code": "40893",
+    "name": "Grond",
+    "timestamp": "2026-10-01T13:24:26",
+    "type": "gwp_ended"
+  },
+  {
+    "gwp_code": "5011072",
+    "name": "Ministry of Magic™ Phone Booth",
+    "timestamp": "2026-10-01T13:24:26",
+    "type": "gwp_ended"
   }
 ]
