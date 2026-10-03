@@ -25,7 +25,7 @@
     "sets": 26
   },
   "City": {
-    "bytes": 5034420,
+    "bytes": 5027041,
     "file": "downloads/retiring-theme-city.zip",
     "sets": 68
   },
@@ -35,7 +35,7 @@
     "sets": 9
   },
   "Creator": {
-    "bytes": 2770058,
+    "bytes": 2762170,
     "file": "downloads/retiring-theme-creator.zip",
     "sets": 39
   },
@@ -60,7 +60,7 @@
     "sets": 47
   },
   "Editions": {
-    "bytes": 2123964,
+    "bytes": 2114524,
     "file": "downloads/retiring-theme-editions.zip",
     "sets": 21
   },
@@ -100,7 +100,7 @@
     "sets": 56
   },
   "Ideas": {
-    "bytes": 2366130,
+    "bytes": 2359866,
     "file": "downloads/retiring-theme-ideas.zip",
     "sets": 27
   },
@@ -120,9 +120,9 @@
     "sets": 15
   },
   "Marvel": {
-    "bytes": 4295931,
+    "bytes": 4097727,
     "file": "downloads/retiring-theme-marvel.zip",
-    "sets": 44
+    "sets": 42
   },
   "Minecraft": {
     "bytes": 2244297,
@@ -130,9 +130,9 @@
     "sets": 31
   },
   "Miscellaneous": {
-    "bytes": 366094,
+    "bytes": 277926,
     "file": "downloads/retiring-theme-miscellaneous.zip",
-    "sets": 6
+    "sets": 5
   },
   "Monkie Kid": {
     "bytes": 982526,
@@ -153,11 +153,6 @@
     "bytes": 1048070,
     "file": "downloads/retiring-theme-one-piece.zip",
     "sets": 11
-  },
-  "PlayStation": {
-    "bytes": 62252,
-    "file": "downloads/retiring-theme-playstation.zip",
-    "sets": 1
   },
   "Pokémon": {
     "bytes": 1571343,

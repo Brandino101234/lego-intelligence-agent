@@ -847,5 +847,128 @@
     "theme": "Pokémon",
     "timestamp": "2026-09-21T12:12:36",
     "type": "added_to_calendar"
+  },
+  {
+    "month": "2026-11",
+    "name": "Dragon Ball: Shenron & Goku",
+    "set_num": "11390",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Lloyd vs. Ras Spinner Battle",
+    "set_num": "71875",
+    "theme": "NINJAGO®",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "added_to_calendar"
+  },
+  {
+    "name": "Downton Abbey",
+    "new_month": "TBA",
+    "old_month": "2026-10",
+    "set_num": "21373",
+    "theme": "Ideas",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "month_changed"
+  },
+  {
+    "name": "Executor Super Star Destroyer™",
+    "new_month": "TBA",
+    "old_month": "2026-10",
+    "set_num": "75457",
+    "theme": "Star Wars™",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "month_changed"
+  },
+  {
+    "name": "Holiday House",
+    "new_month": "TBA",
+    "old_month": "2026-10",
+    "set_num": "11387",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "month_changed"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Bookstore: Book Nook",
+    "set_num": "11379",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Holiday Ornament Selection 2",
+    "set_num": "40862",
+    "theme": "Other",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Iconic Trainer Moments Poké Ball",
+    "set_num": "72154",
+    "theme": "Pokémon",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Nevermore Academy",
+    "set_num": "76788",
+    "theme": "LEGO® Wednesday",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Santa's Holiday Sleigh Adventure",
+    "set_num": "40866",
+    "theme": "Other",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Up-Scaled Mrs. Claus Minifigure",
+    "set_num": "40875",
+    "theme": "Other",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Up-Scaled Red Minifigure",
+    "set_num": "40868",
+    "theme": "Pokémon",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Wallace & Gromit",
+    "set_num": "21371",
+    "theme": "Ideas",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Wednesday Backpack",
+    "set_num": "76787",
+    "theme": "LEGO® Wednesday",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "PlayStation™",
+    "set_num": "72306",
+    "theme": "Other",
+    "timestamp": "2026-10-03T15:23:30",
+    "type": "removed_from_calendar"
   }
 ]
