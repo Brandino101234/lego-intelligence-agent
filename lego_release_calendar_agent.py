@@ -134,7 +134,12 @@ FALLBACK_THEME_SLUGS = [
 
 def resolve(apollo: dict, ref) -> dict | None:
     """Apollo's normalized cache stores every nested object as a {'id': ...}
-    reference; `ref['id']` is itself a lookup key into the same flat dict."""
+    reference; `ref['id']` is itself a lookup key into the same flat dict.
+    LEGO.com switched to Apollo's standard `{"__ref": key}` form in early
+    October 2026 (the old `{"id": key}` form silently resolved everything to
+    nothing, so the whole crawl came back empty) — both are handled."""
+    if isinstance(ref, dict) and "__ref" in ref:
+        return apollo.get(ref["__ref"])
     if isinstance(ref, dict) and "id" in ref:
         return apollo.get(ref["id"])
     return ref if isinstance(ref, dict) else None
@@ -502,10 +507,10 @@ def extract_gallery_images(apollo: dict) -> list[str]:
 
     urls = []
     for ref in product.get("productMediaAssets") or []:
-        if ref.get("typename") != "ProductAssetImage":
-            continue
         asset = resolve(apollo, ref)
-        if asset and asset.get("url"):
+        if not asset or (ref.get("typename") or asset.get("__typename")) != "ProductAssetImage":
+            continue
+        if asset.get("url"):
             urls.append(asset["url"])
     return urls
 
