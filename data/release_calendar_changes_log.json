@@ -970,5 +970,61 @@
     "theme": "Other",
     "timestamp": "2026-10-03T15:23:30",
     "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Avengers: Doomsday Heroes & Villain",
+    "set_num": "40880",
+    "theme": "BrickHeadz",
+    "timestamp": "2026-10-04T11:09:01",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Avengers: Doomsday New Avengers Tower",
+    "set_num": "76352",
+    "theme": "Marvel",
+    "timestamp": "2026-10-04T11:09:01",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Avengers: Doomsday Quinjet",
+    "set_num": "76347",
+    "theme": "Marvel",
+    "timestamp": "2026-10-04T11:09:01",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Downton Abbey",
+    "set_num": "21373",
+    "theme": "Ideas",
+    "timestamp": "2026-10-04T11:09:01",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Epic Battle: Avengers: Doomsday",
+    "set_num": "76348",
+    "theme": "Marvel",
+    "timestamp": "2026-10-04T11:09:01",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-10",
+    "name": "Executor Super Star Destroyer™",
+    "set_num": "75457",
+    "theme": "Star Wars™",
+    "timestamp": "2026-10-04T11:09:01",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "TBA",
+    "name": "Holiday House",
+    "set_num": "11387",
+    "theme": "LEGO® Icons",
+    "timestamp": "2026-10-04T11:09:01",
+    "type": "removed_from_calendar"
   }
 ]

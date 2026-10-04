@@ -25,7 +25,7 @@
     "sets": 26
   },
   "City": {
-    "bytes": 5027041,
+    "bytes": 5034420,
     "file": "downloads/retiring-theme-city.zip",
     "sets": 68
   },
@@ -35,7 +35,7 @@
     "sets": 9
   },
   "Creator": {
-    "bytes": 2762170,
+    "bytes": 2770058,
     "file": "downloads/retiring-theme-creator.zip",
     "sets": 39
   },
@@ -55,12 +55,12 @@
     "sets": 48
   },
   "Duplo": {
-    "bytes": 3789600,
+    "bytes": 3800529,
     "file": "downloads/retiring-theme-duplo.zip",
     "sets": 47
   },
   "Editions": {
-    "bytes": 2114524,
+    "bytes": 2123964,
     "file": "downloads/retiring-theme-editions.zip",
     "sets": 21
   },
@@ -100,7 +100,7 @@
     "sets": 56
   },
   "Ideas": {
-    "bytes": 2359866,
+    "bytes": 2366130,
     "file": "downloads/retiring-theme-ideas.zip",
     "sets": 27
   },
@@ -155,9 +155,9 @@
     "sets": 11
   },
   "Pokémon": {
-    "bytes": 1571343,
+    "bytes": 63722,
     "file": "downloads/retiring-theme-pokémon.zip",
-    "sets": 20
+    "sets": 1
   },
   "Powered Up": {
     "bytes": 386375,
@@ -180,7 +180,7 @@
     "sets": 69
   },
   "Technic": {
-    "bytes": 4003139,
+    "bytes": 3991206,
     "file": "downloads/retiring-theme-technic.zip",
     "sets": 50
   },

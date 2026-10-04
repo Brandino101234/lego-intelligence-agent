@@ -1,10 +1,4 @@
 {
-  "2026-10": {
-    "bytes": 5096208,
-    "file": "downloads/2026-10.zip",
-    "images": 47,
-    "sets": 4
-  },
   "2026-11": {
     "bytes": 2648936,
     "file": "downloads/2026-11.zip",
@@ -12,15 +6,9 @@
     "sets": 3
   },
   "2027-01": {
-    "bytes": 8112882,
+    "bytes": 8119710,
     "file": "downloads/2027-01.zip",
     "images": 69,
     "sets": 9
-  },
-  "TBA": {
-    "bytes": 280109,
-    "file": "downloads/TBA.zip",
-    "images": 3,
-    "sets": 3
   }
 }
