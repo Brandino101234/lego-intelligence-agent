@@ -100,6 +100,8 @@ def render_calendar(calendar: dict, today: date) -> tuple[str, str]:
         for e in entries:
             launch = e.get("launch_date")
             day_label = datetime.strptime(launch, "%Y-%m-%d").strftime("%b %-d").upper() if launch else "TBA"
+            if launch and e.get("launch_date_unconfirmed"):
+                day_label += " (EST.)"
             theme = esc(e.get("theme") or "Uncategorized")
             pieces = e.get("pieces")
             piece_badge = (

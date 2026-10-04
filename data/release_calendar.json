@@ -89,6 +89,23 @@
         "url": "https://www.lego.com/en-us/product/avengers-doomsday-quinjet-76347"
       },
       {
+        "availability_status": "D_COMING_SOON",
+        "availability_text": "Coming Soon",
+        "future_gwp": null,
+        "gallery_images": [],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt859bd34dfebcd95a/21373_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insiders Early Access 10/1-10/3",
+        "launch_date": "2026-10-04",
+        "name": "Downton Abbey",
+        "pieces": 4711,
+        "price": "$349.99",
+        "set_num": "21373",
+        "theme": "Ideas",
+        "url": "https://www.lego.com/en-us/product/downton-abbey-21373",
+        "launch_date_unconfirmed": true
+      },
+      {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on October 4, 2026",
         "future_gwp": null,
@@ -116,6 +133,29 @@
         "set_num": "76348",
         "theme": "Marvel",
         "url": "https://www.lego.com/en-us/product/epic-battle-avengers-doomsday-76348"
+      },
+      {
+        "availability_status": "D_COMING_SOON",
+        "availability_text": "Coming Soon",
+        "future_gwp": {
+          "date_range": "10/1 - 10/7",
+          "image": "https://www.lego.com/cdn/cs/set/assets/blt34c7ecd746e00dfe/40897_Prod.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+          "name": "Recreate Darth Vader’s LIGHTSABER™",
+          "text": "Your gift with the purchase of the LEGO® Star Wars™ Executor Super Star Destroyer™ (75457). 10/1 - 10/7 while supplies last.*",
+          "url": "https://www.lego.com/product/darth-vaders-lightsaber-40897"
+        },
+        "gallery_images": [],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blta4cee150c80403bd/blta6d4a31cdd14d65d-75457_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
+        "launch_date": "2026-10-04",
+        "name": "Executor Super Star Destroyer™",
+        "pieces": 6130,
+        "price": "$799.99",
+        "set_num": "75457",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/executor-super-star-destroyer-75457",
+        "launch_date_unconfirmed": true
       }
     ],
     "2026-11": [
@@ -421,44 +461,6 @@
       }
     ],
     "TBA": [
-      {
-        "availability_status": "D_COMING_SOON",
-        "availability_text": "Coming Soon",
-        "future_gwp": null,
-        "gallery_images": [],
-        "image": "https://www.lego.com/cdn/cs/set/assets/blt859bd34dfebcd95a/21373_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "LEGO® Insiders Early Access 10/1-10/3",
-        "launch_date": null,
-        "name": "Downton Abbey",
-        "pieces": 4711,
-        "price": "$349.99",
-        "set_num": "21373",
-        "theme": "Ideas",
-        "url": "https://www.lego.com/en-us/product/downton-abbey-21373"
-      },
-      {
-        "availability_status": "D_COMING_SOON",
-        "availability_text": "Coming Soon",
-        "future_gwp": {
-          "date_range": "10/1 - 10/7",
-          "image": "https://www.lego.com/cdn/cs/set/assets/blt34c7ecd746e00dfe/40897_Prod.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
-          "name": "Recreate Darth Vader’s LIGHTSABER™",
-          "text": "Your gift with the purchase of the LEGO® Star Wars™ Executor Super Star Destroyer™ (75457). 10/1 - 10/7 while supplies last.*",
-          "url": "https://www.lego.com/product/darth-vaders-lightsaber-40897"
-        },
-        "gallery_images": [],
-        "image": "https://www.lego.com/cdn/cs/set/assets/blta4cee150c80403bd/blta6d4a31cdd14d65d-75457_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "LEGO® Insider Early Access on this set – 10/1-10/3",
-        "launch_date": null,
-        "name": "Executor Super Star Destroyer™",
-        "pieces": 6130,
-        "price": "$799.99",
-        "set_num": "75457",
-        "theme": "Star Wars™",
-        "url": "https://www.lego.com/en-us/product/executor-super-star-destroyer-75457"
-      },
       {
         "availability_status": "D_COMING_SOON",
         "availability_text": "Coming Soon",

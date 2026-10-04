@@ -72,6 +72,7 @@ import signal
 import subprocess
 import sys
 import tempfile
+from datetime import datetime
 from pathlib import Path
 
 from lego_common import DATA_DIR, HEADERS, fetch_via_curl, load_json, now_iso, parse_flexible_date, save_json, append_log
@@ -393,6 +394,39 @@ def scrape_all_upcoming() -> tuple[dict[str, dict], dict[str, str], dict[str, st
     return all_products, all_images, all_prices, all_urls
 
 
+# How long past a carried-forward date we keep trusting it. LEGO drops the
+# date from a listing in the last days before launch (confirmed: Downton
+# Abbey / Executor Super Star Destroyer went from "Coming soon on October 4,
+# 2026" to a bare "Coming Soon"), so a date that's recently passed usually
+# means "launching right now", not "unknown". Older than this, fall back to TBA.
+CARRY_FORWARD_GRACE_DAYS = 14
+
+
+def carry_forward_dates(products: dict[str, dict], previous_months: dict[str, list[dict]]) -> list[str]:
+    """If LEGO.com stops publishing a launch date for a set we already had a
+    date for, keep the last known one (flagged launch_date_unconfirmed)
+    instead of dumping the set into TBA. Returns the set numbers affected."""
+    prev = {e["set_num"]: e for entries in previous_months.values() for e in entries}
+    today = datetime.now().date()
+    carried = []
+    for set_num, entry in products.items():
+        if entry.get("launch_date"):
+            continue
+        old = prev.get(set_num)
+        if not old or not old.get("launch_date"):
+            continue
+        try:
+            old_date = datetime.strptime(old["launch_date"], "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if (today - old_date).days > CARRY_FORWARD_GRACE_DAYS:
+            continue
+        entry["launch_date"] = old["launch_date"]
+        entry["launch_date_unconfirmed"] = True
+        carried.append(set_num)
+    return carried
+
+
 def build_calendar(products: dict[str, dict]) -> dict[str, list[dict]]:
     months: dict[str, list[dict]] = {}
     for entry in products.values():
@@ -687,6 +721,9 @@ def main() -> None:
 
     print(f"\n  found {len(products)} buildable sets not yet released, across LEGO.com")
     print(f"  collected {len(images)} product images and {len(prices)} prices along the way")
+    carried = carry_forward_dates(products, previous_months)
+    if carried:
+        print(f"  kept last known launch date for {len(carried)} set(s) LEGO.com no longer dates: {', '.join(carried)}")
     current_months = build_calendar(products)
     enrich_from_product_pages(current_months)
 
