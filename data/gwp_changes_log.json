@@ -196,5 +196,11 @@
     "name": "Ministry of Magic™ Phone Booth",
     "timestamp": "2026-10-01T13:24:26",
     "type": "gwp_ended"
+  },
+  {
+    "gwp_code": "40899",
+    "name": "Astro Bot™",
+    "timestamp": "2026-10-05T15:03:51",
+    "type": "gwp_ended"
   }
 ]

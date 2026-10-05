@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T20:33:09",
+  "generated_at": "2026-10-05T15:03:36",
   "months": {
     "2026-11": [
       {
@@ -80,6 +80,63 @@
       }
     ],
     "2027-01": [
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt4db145b98d835fd2/bltaaa754068e2aecb5-67009_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt494360f7b43b816f/bltaaa754068e2aecb5-67009_Box1_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt266d19602a0ac2c3/bltaaa754068e2aecb5-67009_Front_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0188edd6619352e4/bltaaa754068e2aecb5-67009_Back_02_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt65ad73790aa96348/bltaaa754068e2aecb5-67009_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltc86629a8ac0fb157/bltaaa754068e2aecb5-67009_Lineup_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb9fe95b0ecfb8d6c/bltaaa754068e2aecb5-67009_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd8f61e7eef6fb24b/bltaaa754068e2aecb5-67009_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltee725b51dabcea41/bltaaa754068e2aecb5-67009_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt9b3ec05b0119d914/bltaaa754068e2aecb5-67009_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltb6316d06bd4c39da/bltaaa754068e2aecb5-67009_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt52ca804037accb7a/bltaaa754068e2aecb5-67009_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Arkham Batman™ Batmobile™",
+        "pieces": 317,
+        "price": "$29.99",
+        "set_num": "67009",
+        "theme": "DC",
+        "url": "https://www.lego.com/en-us/product/arkham-batman-batmobile-67009"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt3f9adec2e252ce90/blt0eed5416d164cea7-67008_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt35843d5a158a993c/blt0eed5416d164cea7-67008_Box1_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt02cb503cc0ba2010/blt0eed5416d164cea7-67008_Front_01_03.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt661aa814fd6f75ca/blt0eed5416d164cea7-67008_Back_01_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7fe470d51666aaa2/blt0eed5416d164cea7-67008_Front_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6d84399e9db0432e/blt0eed5416d164cea7-67008_Lineup_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt756afb1aca8b479a/blt0eed5416d164cea7-67008_Lineup_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt21354be1ba0ce9ee/blt0eed5416d164cea7-67008_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltecece3e54b3dea8d/blt0eed5416d164cea7-67008_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt57239ace05c621a7/blt0eed5416d164cea7-67008_Lifestyle_Cons_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt63ceb758921625c9/blt0eed5416d164cea7-67008_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltddc588412fd61c29/blt0eed5416d164cea7-67008_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt9d3b153c64c3b706/blt0eed5416d164cea7-67008_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Batman Returns™ Batmobile™ & Duck",
+        "pieces": 672,
+        "price": "$59.99",
+        "set_num": "67008",
+        "theme": "DC",
+        "url": "https://www.lego.com/en-us/product/batman-returns-batmobile-duck-67008"
+      },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
@@ -277,6 +334,37 @@
         "set_num": "72054",
         "theme": "LEGO® Super Mario™",
         "url": "https://www.lego.com/en-us/product/mario-kart-racing-with-mario-72054"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blte3bc56d81b9ca928/bltd2cfb4ed7628df47-67012_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt90a9afd38a349e79/bltd2cfb4ed7628df47-67012_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt52f56507efac4722/bltd2cfb4ed7628df47-67012_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt09e8a76b872a35f9/bltd2cfb4ed7628df47-67012_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt3e61966a60992090/bltd2cfb4ed7628df47-67012_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt31318f8ab43fbc8f/bltd2cfb4ed7628df47-67012_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt8ff18450386181ca/bltd2cfb4ed7628df47-67012_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt36bfd742d95a7dd3/bltd2cfb4ed7628df47-67012_Lifestyle_Build_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt05d93d63e1df6204/bltd2cfb4ed7628df47-67012_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt97d246ba10c36956/bltd2cfb4ed7628df47-67012_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt5a3d0c6594eeeb0e/bltd2cfb4ed7628df47-67012_Lifestyle_Build_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt377838045b2a1aa3/bltd2cfb4ed7628df47-67012_Lifestyle_Envr_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd32af8330ca37fed/bltd2cfb4ed7628df47-67012_Lifestyle_Envr_03.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt2036cdbb314c3fe3/bltd2cfb4ed7628df47-67012_Box5_v29.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt387e22085fcdf4ba/bltd2cfb4ed7628df47-67012_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "The Joker™ Wall Art Comic Cover",
+        "pieces": 1849,
+        "price": "$169.99",
+        "set_num": "67012",
+        "theme": "DC",
+        "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",

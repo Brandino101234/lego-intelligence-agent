@@ -1026,5 +1026,29 @@
     "theme": "LEGO® Icons",
     "timestamp": "2026-10-04T11:09:01",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Arkham Batman™ Batmobile™",
+    "set_num": "67009",
+    "theme": "DC",
+    "timestamp": "2026-10-05T15:03:36",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Batman Returns™ Batmobile™ & Duck",
+    "set_num": "67008",
+    "theme": "DC",
+    "timestamp": "2026-10-05T15:03:36",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "The Joker™ Wall Art Comic Cover",
+    "set_num": "67012",
+    "theme": "DC",
+    "timestamp": "2026-10-05T15:03:36",
+    "type": "added_to_calendar"
   }
 ]
