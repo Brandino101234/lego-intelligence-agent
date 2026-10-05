@@ -25,7 +25,7 @@
     "sets": 26
   },
   "City": {
-    "bytes": 5034420,
+    "bytes": 5027041,
     "file": "downloads/retiring-theme-city.zip",
     "sets": 68
   },
@@ -35,7 +35,7 @@
     "sets": 9
   },
   "Creator": {
-    "bytes": 2770058,
+    "bytes": 2762170,
     "file": "downloads/retiring-theme-creator.zip",
     "sets": 39
   },
@@ -55,12 +55,12 @@
     "sets": 48
   },
   "Duplo": {
-    "bytes": 3800529,
+    "bytes": 3789600,
     "file": "downloads/retiring-theme-duplo.zip",
     "sets": 47
   },
   "Editions": {
-    "bytes": 2123964,
+    "bytes": 2114524,
     "file": "downloads/retiring-theme-editions.zip",
     "sets": 21
   },
@@ -100,7 +100,7 @@
     "sets": 56
   },
   "Ideas": {
-    "bytes": 2366130,
+    "bytes": 2352385,
     "file": "downloads/retiring-theme-ideas.zip",
     "sets": 27
   },
@@ -120,9 +120,9 @@
     "sets": 15
   },
   "Marvel": {
-    "bytes": 4097727,
+    "bytes": 3914085,
     "file": "downloads/retiring-theme-marvel.zip",
-    "sets": 42
+    "sets": 41
   },
   "Minecraft": {
     "bytes": 2244297,
