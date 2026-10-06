@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T22:12:19",
+  "generated_at": "2026-10-06T12:27:47",
   "months": {
     "2026-11": [
       {
@@ -340,8 +340,8 @@
         "availability_text": "Pre-order this item today, it will ship from January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blte3bc56d81b9ca928/bltd2cfb4ed7628df47-67012_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt90a9afd38a349e79/bltd2cfb4ed7628df47-67012_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte73f34a420842bb4/67012_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt60ba704a85a76d5e/67012_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt52f56507efac4722/bltd2cfb4ed7628df47-67012_WEB_SEC01_NOBG.png",
           "https://www.lego.com/cdn/cs/set/assets/blt09e8a76b872a35f9/bltd2cfb4ed7628df47-67012_WEB_SEC02_NOBG.png",
           "https://www.lego.com/cdn/cs/set/assets/blt3e61966a60992090/bltd2cfb4ed7628df47-67012_WEB_SEC03_NOBG.png",
@@ -355,7 +355,7 @@
           "https://www.lego.com/cdn/cs/set/assets/bltd32af8330ca37fed/bltd2cfb4ed7628df47-67012_Lifestyle_Envr_03.jpg",
           "https://www.lego.com/cdn/cs/set/assets/blt2036cdbb314c3fe3/bltd2cfb4ed7628df47-67012_Box5_v29.png"
         ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/blt387e22085fcdf4ba/bltd2cfb4ed7628df47-67012_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "image": "https://www.lego.com/cdn/cs/set/assets/blte6308ce7b5b80dba/67012_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
         "insiders_early_access_text": null,
         "launch_date": "2027-01-01",
@@ -363,7 +363,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Art",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
