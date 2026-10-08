@@ -202,5 +202,19 @@
     "name": "Astro Bot™",
     "timestamp": "2026-10-05T15:03:51",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40762",
+    "name": "Mixed Flowerpot",
+    "qualifying_text": "Spend over $150 to unlock this gift",
+    "timestamp": "2026-10-08T13:11:22",
+    "type": "gwp_started"
+  },
+  {
+    "gwp_code": "40897",
+    "name": "Darth Vader's LIGHTSABER™",
+    "timestamp": "2026-10-08T13:11:22",
+    "type": "gwp_ended"
   }
 ]

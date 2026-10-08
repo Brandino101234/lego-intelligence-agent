@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T21:40:54",
+  "generated_at": "2026-10-08T13:11:09",
   "months": {
     "2026-11": [
       {
@@ -292,15 +292,7 @@
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
-        "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blt9c039ad50d2d1d66/72052_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltcec770105b7d4aab/72052_Box1_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt61afdbf72ffd4ae3/72052_Back_02_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltb91d2892c7673443/72052_Front_01_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt0b7818629e2309dd/72052_Back_03_02.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt039eb04464a258ca/72052_Back_01_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt6a297370c6146f81/72052_Box5_v39.png"
-        ],
+        "gallery_images": [],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt10eed03191835556/72052_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
         "insiders_early_access_text": null,
@@ -363,8 +355,41 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "DC",
+        "theme": "Art",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
+      },
+      {
+        "availability_status": "A_PRE_ORDER_FOR_DATE",
+        "availability_text": "Pre-order this item today, it will ship from January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt9b57bf0090d095e2/blt040f3d56eb77d555-67006_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte6beea1792c77f6d/blt040f3d56eb77d555-67006_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blta6defb53a495ae57/blt040f3d56eb77d555-67006_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0d8700c561fd0e4b/blt040f3d56eb77d555-67006_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4a746ae78b7a68fa/blt040f3d56eb77d555-67006_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf64acbf23c8cc612/blt040f3d56eb77d555-67006_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf3dcb9a88002aa95/blt040f3d56eb77d555-67006_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd0251b4c68cc1f0f/blt040f3d56eb77d555-67006_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt74f596aa8ef785ea/blt040f3d56eb77d555-67006_WEB_SEC07_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt53b884aa04dfc126/blt040f3d56eb77d555-67006_WEB_SEC08_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blteef2f746ad1f5c2d/blt040f3d56eb77d555-67006_Lifestyle_Build_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt9883ed243935b035/blt040f3d56eb77d555-67006_Lifestyle_Build_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt50d7d353e896ba05/blt040f3d56eb77d555-67006_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd24429a90fcd032d/blt040f3d56eb77d555-67006_Lifestyle_Build_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt6f009523f3a42b3d/blt040f3d56eb77d555-67006_Lifestyle_Envr_03.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt1b5ed3d7005f005d/blt040f3d56eb77d555-67006_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltd9ed9c36c7d0f620/blt040f3d56eb77d555-67006_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "The Marvel Skyline",
+        "pieces": 1261,
+        "price": "$99.99",
+        "set_num": "67006",
+        "theme": "Marvel",
+        "url": "https://www.lego.com/en-us/product/the-marvel-skyline-67006"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",

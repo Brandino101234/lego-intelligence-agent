@@ -118,5 +118,13 @@
     "series_phase": "POST_VALIDATION",
     "timestamp": "2026-09-17T00:31:43",
     "type": "new_finalist"
+  },
+  {
+    "from_at": "2026-11-20T14:59:00",
+    "milestone_label": "LEGO review ends",
+    "series_name": "2028 Wave 1",
+    "timestamp": "2026-10-08T13:11:38",
+    "to_at": "2026-11-12T14:59:00",
+    "type": "milestone_date_changed"
   }
 ]
