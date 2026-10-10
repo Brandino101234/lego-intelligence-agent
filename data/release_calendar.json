@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T13:11:09",
+  "generated_at": "2026-10-09T21:37:58",
   "months": {
     "2026-11": [
       {
@@ -292,7 +292,15 @@
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
-        "gallery_images": [],
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt9c039ad50d2d1d66/72052_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcec770105b7d4aab/72052_Box1_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt61afdbf72ffd4ae3/72052_Back_02_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb91d2892c7673443/72052_Front_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0b7818629e2309dd/72052_Back_03_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt039eb04464a258ca/72052_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6a297370c6146f81/72052_Box5_v39.png"
+        ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt10eed03191835556/72052_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
         "insiders_early_access_text": null,
