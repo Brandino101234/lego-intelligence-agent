@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T21:37:58",
+  "generated_at": "2026-10-11T18:52:23",
   "months": {
     "2026-11": [
       {
@@ -336,8 +336,8 @@
         "url": "https://www.lego.com/en-us/product/mario-kart-racing-with-mario-72054"
       },
       {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from January 1, 2027",
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blte73f34a420842bb4/67012_Prod.png",

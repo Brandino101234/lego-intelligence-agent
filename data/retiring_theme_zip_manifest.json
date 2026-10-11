@@ -30,7 +30,7 @@
     "sets": 68
   },
   "Classic": {
-    "bytes": 820128,
+    "bytes": 836237,
     "file": "downloads/retiring-theme-classic.zip",
     "sets": 9
   },
@@ -55,7 +55,7 @@
     "sets": 48
   },
   "Duplo": {
-    "bytes": 3789600,
+    "bytes": 3802174,
     "file": "downloads/retiring-theme-duplo.zip",
     "sets": 47
   },
@@ -80,7 +80,7 @@
     "sets": 10
   },
   "Friends": {
-    "bytes": 4625094,
+    "bytes": 4635344,
     "file": "downloads/retiring-theme-friends.zip",
     "sets": 44
   },
@@ -90,14 +90,14 @@
     "sets": 4
   },
   "Harry Potter": {
-    "bytes": 2889198,
+    "bytes": 1888748,
     "file": "downloads/retiring-theme-harry-potter.zip",
-    "sets": 33
+    "sets": 21
   },
   "Icons": {
-    "bytes": 4918978,
+    "bytes": 4805084,
     "file": "downloads/retiring-theme-icons.zip",
-    "sets": 56
+    "sets": 55
   },
   "Ideas": {
     "bytes": 2352385,
@@ -120,9 +120,9 @@
     "sets": 15
   },
   "Marvel": {
-    "bytes": 3914085,
+    "bytes": 3831349,
     "file": "downloads/retiring-theme-marvel.zip",
-    "sets": 41
+    "sets": 40
   },
   "Minecraft": {
     "bytes": 2244297,
@@ -130,7 +130,7 @@
     "sets": 31
   },
   "Miscellaneous": {
-    "bytes": 284207,
+    "bytes": 277926,
     "file": "downloads/retiring-theme-miscellaneous.zip",
     "sets": 5
   },
@@ -148,11 +148,6 @@
     "bytes": 3936078,
     "file": "downloads/retiring-theme-ninjago.zip",
     "sets": 40
-  },
-  "One Piece": {
-    "bytes": 1048070,
-    "file": "downloads/retiring-theme-one-piece.zip",
-    "sets": 11
   },
   "Pokémon": {
     "bytes": 1571343,
@@ -180,9 +175,9 @@
     "sets": 69
   },
   "Technic": {
-    "bytes": 3991206,
+    "bytes": 3894318,
     "file": "downloads/retiring-theme-technic.zip",
-    "sets": 50
+    "sets": 49
   },
   "The Legend of Zelda": {
     "bytes": 108799,
