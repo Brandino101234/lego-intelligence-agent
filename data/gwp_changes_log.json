@@ -222,5 +222,13 @@
     "name": "Mixed Flowerpot",
     "timestamp": "2026-10-09T21:38:12",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40909",
+    "name": "Restaurants of the World: Italy",
+    "qualifying_text": "Spend over $180 to unlock this gift",
+    "timestamp": "2026-10-13T13:20:29",
+    "type": "gwp_started"
   }
 ]
