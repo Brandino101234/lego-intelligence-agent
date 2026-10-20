@@ -236,5 +236,21 @@
     "name": "Restaurants of the World: Italy",
     "timestamp": "2026-10-18T20:03:59",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40772",
+    "name": "Celebration Series: Luminous Ghost",
+    "qualifying_text": "Spend over $120 to unlock this gift",
+    "timestamp": "2026-10-20T10:40:27",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "30717",
+    "name": "Fun Halloween Skeleton",
+    "qualifying_text": "Spend over $40 to unlock this gift",
+    "timestamp": "2026-10-20T10:40:27",
+    "type": "gwp_started"
   }
 ]

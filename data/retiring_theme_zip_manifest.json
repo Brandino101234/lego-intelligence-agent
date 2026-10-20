@@ -15,7 +15,7 @@
     "sets": 6
   },
   "Botanicals": {
-    "bytes": 2272092,
+    "bytes": 2263513,
     "file": "downloads/retiring-theme-botanicals.zip",
     "sets": 27
   },
@@ -35,7 +35,7 @@
     "sets": 9
   },
   "Creator": {
-    "bytes": 2775251,
+    "bytes": 2782920,
     "file": "downloads/retiring-theme-creator.zip",
     "sets": 39
   },
@@ -55,19 +55,29 @@
     "sets": 48
   },
   "Duplo": {
-    "bytes": 655584,
+    "bytes": 3796403,
     "file": "downloads/retiring-theme-duplo.zip",
-    "sets": 8
+    "sets": 47
   },
   "Editions": {
     "bytes": 2114524,
     "file": "downloads/retiring-theme-editions.zip",
     "sets": 21
   },
+  "Education": {
+    "bytes": 272642,
+    "file": "downloads/retiring-theme-education.zip",
+    "sets": 4
+  },
   "Family": {
     "bytes": 132219,
     "file": "downloads/retiring-theme-family.zip",
     "sets": 1
+  },
+  "Fortnite": {
+    "bytes": 858236,
+    "file": "downloads/retiring-theme-fortnite.zip",
+    "sets": 10
   },
   "Friends": {
     "bytes": 4617282,
@@ -85,14 +95,14 @@
     "sets": 32
   },
   "Icons": {
-    "bytes": 4734226,
+    "bytes": 4732472,
     "file": "downloads/retiring-theme-icons.zip",
     "sets": 54
   },
   "Ideas": {
-    "bytes": 2352385,
+    "bytes": 2276790,
     "file": "downloads/retiring-theme-ideas.zip",
-    "sets": 27
+    "sets": 26
   },
   "Jurassic": {
     "bytes": 1129067,
@@ -110,12 +120,12 @@
     "sets": 14
   },
   "Marvel": {
-    "bytes": 3488650,
+    "bytes": 3472194,
     "file": "downloads/retiring-theme-marvel.zip",
     "sets": 38
   },
   "Minecraft": {
-    "bytes": 2271156,
+    "bytes": 2244297,
     "file": "downloads/retiring-theme-minecraft.zip",
     "sets": 31
   },
@@ -139,6 +149,11 @@
     "file": "downloads/retiring-theme-ninjago.zip",
     "sets": 40
   },
+  "One Piece": {
+    "bytes": 956796,
+    "file": "downloads/retiring-theme-one-piece.zip",
+    "sets": 10
+  },
   "Pokémon": {
     "bytes": 1571343,
     "file": "downloads/retiring-theme-pokémon.zip",
@@ -160,7 +175,7 @@
     "sets": 28
   },
   "Star Wars": {
-    "bytes": 4916620,
+    "bytes": 4892314,
     "file": "downloads/retiring-theme-star-wars.zip",
     "sets": 69
   },
@@ -173,6 +188,11 @@
     "bytes": 108799,
     "file": "downloads/retiring-theme-the-legend-of-zelda.zip",
     "sets": 1
+  },
+  "Wednesday": {
+    "bytes": 348512,
+    "file": "downloads/retiring-theme-wednesday.zip",
+    "sets": 4
   },
   "Wicked": {
     "bytes": 878030,

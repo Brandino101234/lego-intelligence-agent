@@ -1,1 +1,22 @@
-{}
+{
+  "30717": {
+    "end_date": null,
+    "end_date_raw": "10/27/2026",
+    "gwp_code": "30717",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt19b3d9d90d81713e/bltf41f1e48b90ad34f-30717_Prod_en-gb.png",
+    "insiders_only": false,
+    "name": "Fun Halloween Skeleton",
+    "qualifying_text": "Spend over $40 to unlock this gift",
+    "url": "https://www.lego.com/en-us/search?q=30717"
+  },
+  "40772": {
+    "end_date": null,
+    "end_date_raw": "10/27/2026",
+    "gwp_code": "40772",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt087d74cd74f8509f/40772_Prod_en-gb.png",
+    "insiders_only": false,
+    "name": "Celebration Series: Luminous Ghost",
+    "qualifying_text": "Spend over $120 to unlock this gift",
+    "url": "https://www.lego.com/en-us/search?q=40772"
+  }
+}
