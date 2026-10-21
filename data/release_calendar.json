@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T10:40:11",
+  "generated_at": "2026-10-20T20:30:37",
   "months": {
     "2026-11": [
       {
@@ -286,12 +286,17 @@
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/blt961657d053316aab/72055_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt37d869b9fac846db/72055_Box1_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/blte66b9b17d6e460a6/72055_Back_01_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltd390d97e92ada911/72055_Back_04_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltff873ac11bf4c644/72055_Front_01_02.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltc1d521f2dac71cda/72055_Box5_v39.png"
+          "https://www.lego.com/cdn/cs/set/assets/blt4e7856548f215dae/blt8391be57a66da531-72055_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt50d49936f5fa31ff/blt8391be57a66da531-72055_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt21646d6ad31de44d/blt8391be57a66da531-72055_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltadd45da6561e8b5f/blt8391be57a66da531-72055_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcd68329a970c9721/blt8391be57a66da531-72055_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5b6baf69f0d3da14/blt8391be57a66da531-72055_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte2ed2b4dde1c1f4a/blt8391be57a66da531-72055_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt3bc0d679012da224/blt8391be57a66da531-72055_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt6fc0b24c85df1a7b/blt8391be57a66da531-72055_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt04ca81b4cffba308/blt8391be57a66da531-72055_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt09b0ebe8b2b5986c/blt8391be57a66da531-72055_Box5_v39_en-us.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/bltb319e73660667bf3/72055_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
@@ -310,12 +315,17 @@
         "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt9c039ad50d2d1d66/72052_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltcec770105b7d4aab/72052_Box1_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt61afdbf72ffd4ae3/72052_Back_02_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltb91d2892c7673443/72052_Front_01_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt0b7818629e2309dd/72052_Back_03_02.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt039eb04464a258ca/72052_Back_01_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt6a297370c6146f81/72052_Box5_v39.png"
+          "https://www.lego.com/cdn/cs/set/assets/blt397b592a60ee2881/bltc612b183176ebcc6-72052_boxprod_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt8aa7b4b1e3eb672f/bltc612b183176ebcc6-72052_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0e6035aa08b59182/bltc612b183176ebcc6-72052_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb41b1937ca308b6b/bltc612b183176ebcc6-72052_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltde5d5694766d3a26/bltc612b183176ebcc6-72052_WEB_Lineup_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt314285f3ad6a2be8/bltc612b183176ebcc6-72052_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt96f5dd38333f59b4/bltc612b183176ebcc6-72052_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt67a94dd4f8aa02a4/bltc612b183176ebcc6-72052_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt5adb166a1cde39a7/bltc612b183176ebcc6-72052_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltb0f5dd7358a49419/bltc612b183176ebcc6-72052_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt8ff2bb6dc319e940/bltc612b183176ebcc6-72052_Box5_v39.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt10eed03191835556/72052_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
@@ -334,11 +344,16 @@
         "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltced5edcf5bc700e0/72054_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt67aeeb1f6f2d533c/72054_Box1_v39.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltb4bd8412247f2109/72054_Back_01_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt7a33ee104a9f9c89/72054_Back_03_02.png",
-          "https://www.lego.com/cdn/cs/set/assets/blta16b4e89985c86f0/72054_Back_02_01.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt1bfa606ef7e89446/72054_Box5_v39.png"
+          "https://www.lego.com/cdn/cs/set/assets/blt093d88ade47febb0/blta0a99830f2f0e510-72054_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7858af296daa8821/blta0a99830f2f0e510-72054_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt35596fbd3f8f454b/blta0a99830f2f0e510-72054_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt510b33c3c6cbeced/blta0a99830f2f0e510-72054_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte266e0ca00f55c51/blta0a99830f2f0e510-72054_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt8488379e07ffcea2/blta0a99830f2f0e510-72054_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blte6f6307b31af0ed4/blta0a99830f2f0e510-72054_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt2e7ad1cc207d6c06/blta0a99830f2f0e510-72054_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt1a487aaeb2327c29/blta0a99830f2f0e510-72054_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blted0b75e25574ba1f/blta0a99830f2f0e510-72054_Box5_v39_en-us.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
@@ -379,7 +394,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Art",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
