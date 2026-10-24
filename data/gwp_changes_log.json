@@ -252,5 +252,11 @@
     "qualifying_text": "Spend over $40 to unlock this gift",
     "timestamp": "2026-10-20T10:40:27",
     "type": "gwp_started"
+  },
+  {
+    "gwp_code": "40772",
+    "name": "Celebration Series: Luminous Ghost",
+    "timestamp": "2026-10-24T18:19:20",
+    "type": "gwp_ended"
   }
 ]
