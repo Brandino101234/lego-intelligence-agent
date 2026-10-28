@@ -258,5 +258,35 @@
     "name": "Celebration Series: Luminous Ghost",
     "timestamp": "2026-10-24T18:19:20",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40889",
+    "name": "Build, Paint and Play!",
+    "qualifying_text": "Spend over $130 to unlock this gift",
+    "timestamp": "2026-10-28T12:27:13",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "30724",
+    "name": "Dumbledore's Office with Harry Potter™",
+    "qualifying_text": "Unlock when purchasing qualifying products",
+    "timestamp": "2026-10-28T12:27:13",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "30685",
+    "name": "TIE Interceptor™ Mini-Build",
+    "qualifying_text": "Spend over $40 on Star Wars™ to unlock this gift",
+    "timestamp": "2026-10-28T12:27:13",
+    "type": "gwp_started"
+  },
+  {
+    "gwp_code": "30717",
+    "name": "Fun Halloween Skeleton",
+    "timestamp": "2026-10-28T12:27:13",
+    "type": "gwp_ended"
   }
 ]

@@ -1082,5 +1082,37 @@
     "theme": "Marvel",
     "timestamp": "2026-10-25T19:55:54",
     "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Friendship Party Bus",
+    "set_num": "42718",
+    "theme": "Friends",
+    "timestamp": "2026-10-28T12:26:58",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Heartlake City Shopping Mall",
+    "set_num": "42719",
+    "theme": "Friends",
+    "timestamp": "2026-10-28T12:26:58",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Marvel What if...? Doctor Strange Supreme",
+    "set_num": "67005",
+    "theme": "Marvel",
+    "timestamp": "2026-10-28T12:26:58",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Pet Care & Play Center",
+    "set_num": "42709",
+    "theme": "Friends",
+    "timestamp": "2026-10-28T12:26:58",
+    "type": "added_to_calendar"
   }
 ]
