@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T21:40:02",
+  "generated_at": "2026-10-29T12:37:17",
   "months": {
     "2026-11": [
       {
@@ -438,7 +438,7 @@
         "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt0891f1edfed95d95/bltf3aa423d58989424-42709_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/bltc65b0047dc7db193/bltf3aa423d58989424-42709_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb9c68591f7858de1/bltf3aa423d58989424-42709_boxprod_v29.png",
           "https://www.lego.com/cdn/cs/set/assets/blt4762c83202b3adeb/bltf3aa423d58989424-42709_WEB_SEC01_NOBG.png",
           "https://www.lego.com/cdn/cs/set/assets/blt796bf81f2738571c/bltf3aa423d58989424-42709_WEB_SEC02_NOBG.png",
           "https://www.lego.com/cdn/cs/set/assets/blt3d2e9e4e8102529e/bltf3aa423d58989424-42709_WEB_SEC03_NOBG.png",
@@ -520,7 +520,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Batman™",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
