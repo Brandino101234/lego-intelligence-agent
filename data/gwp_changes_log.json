@@ -288,5 +288,19 @@
     "name": "Fun Halloween Skeleton",
     "timestamp": "2026-10-28T12:27:13",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40898",
+    "name": "Venetian Water Taxi",
+    "qualifying_text": "Unlock when purchasing Venetian Neighborhood",
+    "timestamp": "2026-11-01T15:39:31",
+    "type": "gwp_started"
+  },
+  {
+    "gwp_code": "30685",
+    "name": "TIE Interceptor™ Mini-Build",
+    "timestamp": "2026-11-01T15:39:31",
+    "type": "gwp_ended"
   }
 ]

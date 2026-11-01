@@ -1114,5 +1114,21 @@
     "theme": "Friends",
     "timestamp": "2026-10-28T12:26:58",
     "type": "added_to_calendar"
+  },
+  {
+    "last_known_month": "2026-11",
+    "name": "Cozy Plants",
+    "set_num": "10371",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-01T15:39:17",
+    "type": "removed_from_calendar"
+  },
+  {
+    "last_known_month": "2026-11",
+    "name": "Sagrada Família",
+    "set_num": "21065",
+    "theme": "Architecture",
+    "timestamp": "2026-11-01T15:39:17",
+    "type": "removed_from_calendar"
   }
 ]

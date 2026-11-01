@@ -1,14 +1,4 @@
 {
-  "30685": {
-    "end_date": null,
-    "end_date_raw": "11/08/2026",
-    "gwp_code": "30685",
-    "image": "https://www.lego.com/cdn/cs/set/assets/blt8362bec9d5725159/30685_Prod.png",
-    "insiders_only": false,
-    "name": "TIE Interceptor™ Mini-Build",
-    "qualifying_text": "Spend over $40 on Star Wars™ to unlock this gift",
-    "url": "https://www.lego.com/en-us/search?q=30685"
-  },
   "30724": {
     "end_date": null,
     "end_date_raw": "11/08/2026",
@@ -28,5 +18,15 @@
     "name": "Build, Paint and Play!",
     "qualifying_text": "Spend over $130 to unlock this gift",
     "url": "https://www.lego.com/en-us/search?q=40889"
+  },
+  "40898": {
+    "end_date": null,
+    "end_date_raw": "11/08/2026",
+    "gwp_code": "40898",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt9841921551e78faf/bltef74332aa5a694ad-40898_Prod.png",
+    "insiders_only": false,
+    "name": "Venetian Water Taxi",
+    "qualifying_text": "Unlock when purchasing Venetian Neighborhood",
+    "url": "https://www.lego.com/en-us/search?q=40898"
   }
 }
