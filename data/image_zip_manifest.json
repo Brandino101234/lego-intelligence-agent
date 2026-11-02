@@ -1,14 +1,14 @@
 {
   "2026-11": {
-    "bytes": 2784752,
+    "bytes": 1769257,
     "file": "downloads/2026-11.zip",
-    "images": 28,
-    "sets": 4
+    "images": 17,
+    "sets": 2
   },
   "2027-01": {
-    "bytes": 20929644,
+    "bytes": 24637339,
     "file": "downloads/2027-01.zip",
-    "images": 195,
-    "sets": 17
+    "images": 237,
+    "sets": 18
   }
 }

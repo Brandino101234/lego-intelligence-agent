@@ -1130,5 +1130,21 @@
     "theme": "Architecture",
     "timestamp": "2026-11-01T15:39:17",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Gabby's Dollhouse and Doozie's Doghouse",
+    "set_num": "11227",
+    "theme": "LEGO® Gabby's Dollhouse",
+    "timestamp": "2026-11-01T20:23:29",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Solar System Planets in Orbit",
+    "set_num": "42254",
+    "theme": "Technic™",
+    "timestamp": "2026-11-01T20:23:29",
+    "type": "added_to_calendar"
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T15:39:17",
+  "generated_at": "2026-11-01T20:23:29",
   "months": {
     "2026-11": [
       {
@@ -42,8 +42,8 @@
         "future_gwp": null,
         "gallery_images": [],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt608df627ce16d372/blt38b2ba1dce4ae572-11388_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insiders Early access 11/1 - 11/3",
         "launch_date": "2026-11-04",
         "launch_date_unconfirmed": true,
         "name": "Venetian Neighborhood",
@@ -239,6 +239,35 @@
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt4c6b0ecc37e254d7/blt43d085a30853df0b-11227_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte9f98294450436b5/blt43d085a30853df0b-11227_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb0c9ffa9fda3b5d4/blt43d085a30853df0b-11227_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt2060a1bae7bc4ed5/blt43d085a30853df0b-11227_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt013471c98e0d6256/blt43d085a30853df0b-11227_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltc8b529d4405d353b/blt43d085a30853df0b-11227_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltac5a306e46dd1e99/blt43d085a30853df0b-11227_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt198c2f8560938ef4/blt43d085a30853df0b-11227_Lifestyle_build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt33d60ce18c8b58bf/blt43d085a30853df0b-11227_Lifestyle_cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt4c24acbb63088c2e/blt43d085a30853df0b-11227_Lifestyle_envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt3589996b57e64e9a/blt43d085a30853df0b-11227_Box5_v29.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt14cef47ece25db47/blt43d085a30853df0b-11227_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltcfa3261fdab742ba/blt43d085a30853df0b-11227_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Gabby's Dollhouse and Doozie's Doghouse",
+        "pieces": 133,
+        "price": "$19.99",
+        "set_num": "11227",
+        "theme": "LEGO® Gabby's Dollhouse",
+        "url": "https://www.lego.com/en-us/product/gabbys-dollhouse-and-doozies-doghouse-11227"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt06cc103ee11cc597/blt92dd60dffd8f13b4-42719_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltc6cfd18c852d483a/blt92dd60dffd8f13b4-42719_boxprod_v39_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/bltb82fbadf12ed7277/blt92dd60dffd8f13b4-42719_WEB_SEC01_NOBG.png",
@@ -332,7 +361,19 @@
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
-        "gallery_images": [],
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt4e7856548f215dae/blt8391be57a66da531-72055_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt50d49936f5fa31ff/blt8391be57a66da531-72055_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt21646d6ad31de44d/blt8391be57a66da531-72055_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltadd45da6561e8b5f/blt8391be57a66da531-72055_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcd68329a970c9721/blt8391be57a66da531-72055_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5b6baf69f0d3da14/blt8391be57a66da531-72055_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte2ed2b4dde1c1f4a/blt8391be57a66da531-72055_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt3bc0d679012da224/blt8391be57a66da531-72055_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt6fc0b24c85df1a7b/blt8391be57a66da531-72055_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt04ca81b4cffba308/blt8391be57a66da531-72055_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt09b0ebe8b2b5986c/blt8391be57a66da531-72055_Box5_v39_en-us.png"
+        ],
         "image": "https://www.lego.com/cdn/cs/set/assets/bltb319e73660667bf3/72055_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
         "insiders_early_access_text": null,
@@ -462,6 +503,22 @@
         "set_num": "72054",
         "theme": "LEGO® Super Mario™",
         "url": "https://www.lego.com/en-us/product/mario-kart-racing-with-mario-72054"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [],
+        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Solar System Planets in Orbit",
+        "pieces": 572,
+        "price": "$99.99",
+        "set_num": "42254",
+        "theme": "Technic™",
+        "url": "https://www.lego.com/en-us/product/solar-system-planets-in-orbit-42254"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
