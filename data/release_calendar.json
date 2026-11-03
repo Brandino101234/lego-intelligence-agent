@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T22:25:37",
+  "generated_at": "2026-11-03T12:32:11",
   "months": {
     "2026-11": [
       {
@@ -8,8 +8,8 @@
         "future_gwp": null,
         "gallery_images": [],
         "image": "https://www.lego.com/cdn/cs/set/assets/bltd7e602957cfcae53/11390_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
+        "insiders_early_access": true,
+        "insiders_early_access_text": "Unlock Early Access to the exclusive Dragon Ball: Shenron & Goku with LEGO® Insiders membership. While supplies last, 11/01-11/03*",
         "launch_date": "2026-11-04",
         "launch_date_unconfirmed": true,
         "name": "Dragon Ball: Shenron & Goku",
@@ -25,8 +25,8 @@
         "future_gwp": null,
         "gallery_images": [],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt608df627ce16d372/blt38b2ba1dce4ae572-11388_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insiders Early access 11/1 - 11/3",
         "launch_date": "2026-11-04",
         "launch_date_unconfirmed": true,
         "name": "Venetian Neighborhood",
@@ -35,6 +35,28 @@
         "set_num": "11388",
         "theme": "LEGO® Icons",
         "url": "https://www.lego.com/en-us/product/venetian-neighborhood-11388"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on November 27, 2026",
+        "future_gwp": {
+          "date_range": "11/27-11/30",
+          "image": "https://www.lego.com/cdn/cs/set/assets/blt6831b408d7d78153/40888_Prod.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+          "name": "Prepare for total construction",
+          "text": "Capture the Godzilla Logo and Footprint gift with purchase of the exclusive LEGO® Ideas Godzilla set. While supplies last, 11/27-11/30.*",
+          "url": "https://www.lego.com/product/godzilla-logo-footprint-40888"
+        },
+        "gallery_images": [],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltfe10804751318bd4/21375_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2026-11-27",
+        "name": "Godzilla",
+        "pieces": 5363,
+        "price": "$449.99",
+        "set_num": "21375",
+        "theme": "Ideas",
+        "url": "https://www.lego.com/en-us/product/godzilla-21375"
       }
     ],
     "2027-01": [
@@ -558,7 +580,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Art",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
