@@ -1,41 +1,7 @@
 {
-  "generated_at": "2026-11-03T21:01:14",
+  "generated_at": "2026-11-04T12:56:11",
   "months": {
     "2026-11": [
-      {
-        "availability_status": "D_COMING_SOON",
-        "availability_text": "Coming Soon",
-        "future_gwp": null,
-        "gallery_images": [],
-        "image": "https://www.lego.com/cdn/cs/set/assets/bltd7e602957cfcae53/11390_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "Unlock Early Access to the exclusive Dragon Ball: Shenron & Goku with LEGO® Insiders membership. While supplies last, 11/01-11/03*",
-        "launch_date": "2026-11-04",
-        "launch_date_unconfirmed": true,
-        "name": "Dragon Ball: Shenron & Goku",
-        "pieces": 1764,
-        "price": "$179.99",
-        "set_num": "11390",
-        "theme": "LEGO® Icons",
-        "url": "https://www.lego.com/en-us/product/dragon-ball-shenron-goku-11390"
-      },
-      {
-        "availability_status": "D_COMING_SOON",
-        "availability_text": "Coming Soon",
-        "future_gwp": null,
-        "gallery_images": [],
-        "image": "https://www.lego.com/cdn/cs/set/assets/blt608df627ce16d372/blt38b2ba1dce4ae572-11388_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "LEGO® Insiders Early access 11/1 - 11/3",
-        "launch_date": "2026-11-04",
-        "launch_date_unconfirmed": true,
-        "name": "Venetian Neighborhood",
-        "pieces": 5682,
-        "price": "$549.99",
-        "set_num": "11388",
-        "theme": "LEGO® Icons",
-        "url": "https://www.lego.com/en-us/product/venetian-neighborhood-11388"
-      },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on November 27, 2026",
@@ -580,7 +546,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Batman™",
+        "theme": "Art",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
