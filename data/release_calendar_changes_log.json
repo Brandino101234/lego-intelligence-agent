@@ -1170,5 +1170,109 @@
     "theme": "LEGO® Icons",
     "timestamp": "2026-11-04T12:56:11",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Auspicious Pixiu Under Fortune Tree",
+    "set_num": "80122",
+    "theme": "Other",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Bluebell Flowers",
+    "set_num": "11534",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Buttercup Flowers",
+    "set_num": "11532",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Cherry Blossom Branches",
+    "set_num": "11516",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Chicory Flowers",
+    "set_num": "11537",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Ivo's Ninja Dojo",
+    "set_num": "71888",
+    "theme": "NINJAGO®",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Malva Flowers",
+    "set_num": "11533",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Nasturtium Flowers",
+    "set_num": "11536",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Peony Bouquet",
+    "set_num": "11515",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Prosperity Lion",
+    "set_num": "40976",
+    "theme": "Other",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Sweet Pea Flowers",
+    "set_num": "11535",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Wild Orchid",
+    "set_num": "11519",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-02",
+    "name": "Perfectly Pastel Flower Bouquet",
+    "set_num": "11522",
+    "theme": "Botanicals",
+    "timestamp": "2026-11-06T12:27:01",
+    "type": "added_to_calendar"
   }
 ]

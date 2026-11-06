@@ -6,9 +6,15 @@
     "sets": 1
   },
   "2027-01": {
-    "bytes": 26686336,
+    "bytes": 39726903,
     "file": "downloads/2027-01.zip",
-    "images": 263,
-    "sets": 19
+    "images": 404,
+    "sets": 31
+  },
+  "2027-02": {
+    "bytes": 1014251,
+    "file": "downloads/2027-02.zip",
+    "images": 10,
+    "sets": 1
   }
 }
