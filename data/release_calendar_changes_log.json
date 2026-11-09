@@ -1274,5 +1274,13 @@
     "theme": "Botanicals",
     "timestamp": "2026-11-06T12:27:01",
     "type": "added_to_calendar"
+  },
+  {
+    "last_known_month": "2027-01",
+    "name": "The Marvel Skyline",
+    "set_num": "67006",
+    "theme": "Marvel",
+    "timestamp": "2026-11-09T17:26:57",
+    "type": "removed_from_calendar"
   }
 ]
