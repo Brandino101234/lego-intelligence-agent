@@ -1282,5 +1282,13 @@
     "theme": "Marvel",
     "timestamp": "2026-11-09T17:26:57",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "The Marvel Skyline",
+    "set_num": "67006",
+    "theme": "Marvel",
+    "timestamp": "2026-11-10T20:50:44",
+    "type": "added_to_calendar"
   }
 ]
