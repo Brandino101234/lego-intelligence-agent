@@ -12462,5 +12462,725 @@
     "theme": "Powered Up",
     "timestamp": "2026-09-24T13:28:23",
     "type": "new_set_tracked"
+  },
+  {
+    "name": "Grogu's Homestead",
+    "new_date": "2027-07-31",
+    "old_date": "2027-12-31",
+    "set_num": "75443",
+    "theme": "Star Wars",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Brick-Built Bluey Family",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "11217",
+    "theme": "Bluey",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "School with Rusty and Bluey",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "11221",
+    "theme": "Bluey",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Arkham Batman Batmobile",
+    "retiring_soon": false,
+    "set_num": "67009",
+    "theme": "DC",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Beach Fun with Lilo & Stitch",
+    "new_date": "2027-12-31",
+    "old_date": "2030-12-31",
+    "set_num": "43280",
+    "theme": "Disney",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Cristiano Ronaldo – Soccer Legend",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "43016",
+    "theme": "Editions",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Vini Jr. – Soccer Highlights",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "43027",
+    "theme": "Editions",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Olivia Rodrigo's Vinyl",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "43028",
+    "theme": "Editions",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Olivia Rodrigo's Secret Storage",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "43030",
+    "theme": "Editions",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Guaco's Tacos",
+    "retiring_soon": false,
+    "set_num": "77088",
+    "theme": "Fortnite",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Friendship Tree House Hangout",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "42652",
+    "theme": "Friends",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Pet Care & Play Centre",
+    "retiring_soon": false,
+    "set_num": "42709",
+    "theme": "Friends",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Young T. rex Transport Truck",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "77978",
+    "theme": "Jurassic",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Mech Battle: Spider-Man vs. Doc Ock",
+    "new_date": "2027-12-31",
+    "old_date": "2027-07-31",
+    "set_num": "76338",
+    "theme": "Marvel",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Lloyd's Pull-Back Race Car",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "71828",
+    "theme": "Ninjago",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Cole vs. Evil Cole Spinner",
+    "retiring_soon": false,
+    "set_num": "71873",
+    "theme": "Ninjago",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Lloyd vs. Ras Spinner Battle",
+    "retiring_soon": false,
+    "set_num": "71875",
+    "theme": "Ninjago",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "AT-RT Attack",
+    "new_date": "2027-12-31",
+    "old_date": "2028-12-31",
+    "set_num": "75444",
+    "theme": "Star Wars",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Grogu (Mandalorian Apprentice)",
+    "new_date": "2027-12-31",
+    "old_date": "2028-07-31",
+    "set_num": "75446",
+    "theme": "Star Wars",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "BB-8",
+    "new_date": "2027-12-31",
+    "old_date": "2028-07-31",
+    "set_num": "75452",
+    "theme": "Star Wars",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Family Dollhouse",
+    "retiring_soon": false,
+    "set_num": "42717",
+    "theme": "Friends",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Training House with Pikachu",
+    "new_date": "2028-07-31",
+    "old_date": "2027-12-31",
+    "set_num": "72164",
+    "theme": "Pokémon",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Charizard vs. Jolteon Ultimate Battle",
+    "new_date": "2028-07-31",
+    "old_date": "2027-12-31",
+    "set_num": "72167",
+    "theme": "Pokémon",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "The Mandalorian & Grogu's Speeder Bike",
+    "new_date": "2028-07-31",
+    "old_date": "2027-12-31",
+    "set_num": "75436",
+    "theme": "Star Wars",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "AT-AT",
+    "new_date": "2028-07-31",
+    "old_date": "2027-12-31",
+    "set_num": "75440",
+    "theme": "Star Wars",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Sulley, Mike and Boo Figures",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "40861",
+    "theme": "BrickHeadz",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Shrek, Donkey & Gingy Figures",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "40923",
+    "theme": "BrickHeadz",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Tracks",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60205",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Switch Tracks",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60238",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Road Plates",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60304",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Fire Rescue Helicopter",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60411",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Holiday Camper Van",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60454",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Police Motorcycle Chase",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60455",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "EV Supercar",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60486",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Yellow Taxi",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60487",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Fries Food Truck",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60488",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Tractor",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60498",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "The LEGO Van",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60500",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Airport with Airplane",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60502",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Coast Guard Helicopter",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60503",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Backhoe Loader",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60480",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Drive-Through Car Wash",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60497",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Vintage Steam Train",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "60511",
+    "theme": "City",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Cute Hamster with a Flower",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31376",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Fierce Dinosaur",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31379",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Retro Gaming Console",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31380",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Fierce Shark with a Treasure Chest",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31381",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Playful Puppy",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31382",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Colourful Hummingbird",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31384",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Floral Perfume Bottle",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31383",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Wild Animals: Majestic Lion",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31386",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Iconic Pirate Ship",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31387",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Floral Art Painting",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31390",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Fashion Bag with Storage",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31391",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Music Decor Piano with Cat",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "31392",
+    "theme": "Creator",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Batman Returns Batmobile & Duck",
+    "retiring_soon": false,
+    "set_num": "67008",
+    "theme": "DC",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Joker Wall Art Comic Cover",
+    "retiring_soon": false,
+    "set_num": "67012",
+    "theme": "DC",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Angel",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "43257",
+    "theme": "Disney",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "WALL-E and EVE",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "43279",
+    "theme": "Disney",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Elsa's Ice Castle and Snow Ride Adventure",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "43281",
+    "theme": "Disney",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Pua",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "43292",
+    "theme": "Disney",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Stitch & Scrump",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "43296",
+    "theme": "Disney",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Battle Bus",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "77073",
+    "theme": "Fortnite",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "P-1000",
+    "retiring_soon": false,
+    "set_num": "77084",
+    "theme": "Fortnite",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Liann's Family House",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "42687",
+    "theme": "Friends",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Friendship Party Bus",
+    "retiring_soon": false,
+    "set_num": "42718",
+    "theme": "Friends",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Heartlake City Shopping Mall",
+    "retiring_soon": false,
+    "set_num": "42719",
+    "theme": "Friends",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Gabby’s Dollhouse and Doozie’s Doghouse",
+    "retiring_soon": false,
+    "set_num": "11227",
+    "theme": "Gabby's Dollhouse",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Hogwarts Castle and Grounds",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "76419",
+    "theme": "Harry Potter",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Diagon Alley Wizarding Shops",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "76444",
+    "theme": "Harry Potter",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Hogwarts House Crest",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "76462",
+    "theme": "Harry Potter",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Plum Blossom",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "10369",
+    "theme": "Icons",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Venetian Neighbourhood",
+    "retiring_soon": false,
+    "set_num": "11388",
+    "theme": "Icons",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Dragon Ball: Shenron & Goku",
+    "retiring_soon": false,
+    "set_num": "11390",
+    "theme": "Icons",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Godzilla",
+    "retiring_soon": false,
+    "set_num": "21375",
+    "theme": "Ideas",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Marvel What If...? Doctor Strange Supreme",
+    "retiring_soon": false,
+    "set_num": "67005",
+    "theme": "Marvel",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "The Marvel Skyline",
+    "retiring_soon": false,
+    "set_num": "67006",
+    "theme": "Marvel",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
+  },
+  {
+    "name": "Up-Scaled LEGO Minifigure",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "40649",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Up-Scaled Blue Astronaut Minifigure",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "40921",
+    "theme": "Miscellaneous",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "The Going Merry Pirate Ship",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "75639",
+    "theme": "One Piece",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "SMART Play: Millennium Falcon",
+    "new_date": "2028-12-31",
+    "old_date": "2027-12-31",
+    "set_num": "75426",
+    "theme": "Star Wars",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "date_changed"
+  },
+  {
+    "name": "Solar System Planets in Orbit",
+    "retiring_soon": false,
+    "set_num": "42254",
+    "theme": "Technic",
+    "timestamp": "2026-11-11T10:44:14",
+    "type": "new_set_tracked"
   }
 ]

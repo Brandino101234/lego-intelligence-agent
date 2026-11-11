@@ -45,6 +45,7 @@ import csv
 import io
 import json
 import os
+import re
 from datetime import date
 from urllib.parse import quote
 
@@ -61,8 +62,9 @@ from lego_common import (
 )
 
 BRICKTAP_SHEET_ID = "1rlYfEXtNKxUOZt2Mfv0H17DvK7bj6Pe0CuYwq6ay8WA"
-BRICKTAP_GID = "382685820"  # the "Sorted by Retirement Date" tab
+BRICKTAP_GID = "1563335804"  # the "Sorted by Retirement Date" tab
 BRICKTAP_CSV_URL = f"https://docs.google.com/spreadsheets/d/{BRICKTAP_SHEET_ID}/export?format=csv&gid={BRICKTAP_GID}"
+BRICKTAP_PUBHTML_URL = f"https://docs.google.com/spreadsheets/d/{BRICKTAP_SHEET_ID}/pubhtml"
 BRICKFANATICS_URL = "https://www.brickfanatics.com/every-lego-set-retiring-this-year-and-beyond/"
 
 SETS_PATH = DATA_DIR / "retiring_sets.json"
@@ -77,16 +79,50 @@ URLS_PATH = DATA_DIR / "lego_product_urls.json"
 SOON_DAYS = 180
 
 
+def fetch_bricktap_rows() -> list[list[str]] | None:
+    """Returns the sheet's retirement rows, or None if unreachable.
+
+    The tab's gid is not stable: in early November 2026 the sheet's tabs
+    were all reissued new gids, and the old one started returning HTTP 400 —
+    which froze the whole retiring list for over a week, because a failed
+    fetch just leaves the saved state untouched. So if the configured gid
+    fails, discover the current tab ids from the sheet's public page and use
+    the first tab that looks like the retirement table. (The "Sorted by
+    Theme" tab has identical columns and the same sets, so any of them works
+    — we sort ourselves.)"""
+    resp = fetch(BRICKTAP_CSV_URL)
+    if resp is not None:
+        return list(csv.reader(io.StringIO(resp.text)))
+
+    print("  ! configured Brick Tap tab failed — looking for the current tab ids")
+    page = fetch(BRICKTAP_PUBHTML_URL)
+    if page is None:
+        return None
+    gids = list(dict.fromkeys(re.findall(r"gid=(\d+)", page.text)))
+    for gid in gids:
+        if gid == BRICKTAP_GID:
+            continue
+        candidate = fetch(
+            f"https://docs.google.com/spreadsheets/d/{BRICKTAP_SHEET_ID}/export?format=csv&gid={gid}"
+        )
+        if candidate is None:
+            continue
+        rows = list(csv.reader(io.StringIO(candidate.text)))
+        header = " ".join(rows[1]).lower() if len(rows) > 1 else ""
+        if "set #" in header and "retirement" in header:
+            print(f"  using Brick Tap tab gid={gid} (update BRICKTAP_GID)")
+            return rows
+    return None
+
+
 def scrape_bricktap() -> dict[str, dict]:
     """Returns {set_num: {set_num, name, theme, subtheme, age, pieces,
     retirement_date_raw, retirement_date, notes}}."""
-    resp = fetch(BRICKTAP_CSV_URL)
-    if resp is None:
+    rows = fetch_bricktap_rows()
+    if rows is None:
         return {}
 
     sets: dict[str, dict] = {}
-    reader = csv.reader(io.StringIO(resp.text))
-    rows = list(reader)
 
     # Row 0 is a blank banner-image row, row 1 is the real header (with a
     # merged "LEGO.com Link" spanning several blank-named columns) — skip
