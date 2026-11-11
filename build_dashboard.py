@@ -364,7 +364,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str, str]:
             # crash: a divider has one colspan <td>, not one per real
             # column, so indexing into it like a data row would throw).
             rows.append(
-                f'<tr class="year-divider"><td colspan="9">'
+                f'<tr class="year-divider"><td colspan="10">'
                 f'<div class="year-divider-row"><span class="year-divider-label">{group_label}</span>{download_html}</div>'
                 f'</td></tr>'
             )
@@ -403,6 +403,18 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str, str]:
         pieces_sort = pieces if pieces is not None else 999999
         pieces_label = f"{pieces:,}" if pieces is not None else "&mdash;"
 
+        released_year = v.get("released_year")
+        if released_year:
+            released_sort = released_year
+            released_label = str(released_year)
+            if d_raw:
+                shelf_years = int(d_raw[:4]) - released_year
+                if shelf_years >= 0:
+                    released_label += f' <span style="opacity:.6" title="Approximate: release year to retirement year">&middot; ~{shelf_years} yr{"" if shelf_years == 1 else "s"}</span>'
+        else:
+            released_sort = 0
+            released_label = "&mdash;"
+
         notes = v.get("notes")
         notes_badge = f'<span class="theme-tag exclusive" title="{esc(notes)}">{esc(notes)}</span>' if notes else ""
 
@@ -427,6 +439,7 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str, str]:
             <td class="mono" data-sort="{pieces_sort}">{pieces_label}</td>
             <td class="mono" data-sort="{price_sort}">{price_label}</td>
             <td data-sort="{retiring_sort}" data-yearmonth="{yearmonth}"><span class="date-pill {urgency_class} mono">{esc(date_label)}</span></td>
+            <td class="mono" data-sort="{released_sort}">{released_label}</td>
             <td class="mono confirm" data-sort="{sources_count}">{esc(source_label)}</td>
             <td class="thumb-cell">{download_html}</td>
           </tr>''')
@@ -443,7 +456,8 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str, str]:
               <th onclick="sortTable(4,this)">Pieces</th>
               <th onclick="sortTable(5,this)">Price</th>
               <th onclick="sortTable(6,this)" data-dir="asc" class="sorted">Retiring</th>
-              <th onclick="sortTable(7,this)" title="Which source(s) confirm this set is retiring">Source</th>
+              <th onclick="sortTable(7,this)" title="Original release year, and roughly how many years on shelves before retiring">Released</th>
+              <th onclick="sortTable(8,this)" title="Which source(s) confirm this set is retiring">Source</th>
               <th title="Download this set's image"></th>
             </tr>
           </thead>

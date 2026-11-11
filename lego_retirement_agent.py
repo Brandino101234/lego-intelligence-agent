@@ -43,6 +43,8 @@ from __future__ import annotations
 
 import csv
 import io
+import json
+import os
 from datetime import date
 from urllib.parse import quote
 
@@ -64,6 +66,7 @@ BRICKTAP_CSV_URL = f"https://docs.google.com/spreadsheets/d/{BRICKTAP_SHEET_ID}/
 BRICKFANATICS_URL = "https://www.brickfanatics.com/every-lego-set-retiring-this-year-and-beyond/"
 
 SETS_PATH = DATA_DIR / "retiring_sets.json"
+RELEASE_INFO_PATH = DATA_DIR / "release_years.json"
 LOG_PATH = DATA_DIR / "retiring_changes_log.json"
 IMAGES_PATH = DATA_DIR / "lego_product_images.json"
 PRICES_PATH = DATA_DIR / "lego_product_prices.json"
@@ -156,6 +159,75 @@ def scrape_brickfanatics() -> dict[str, dict]:
                     }
 
     return confirmations
+
+
+BRICKSET_API_URL = "https://brickset.com/api/v3.asmx/getSets"
+BRICKSET_BATCH = 100
+
+
+def fetch_release_info(set_nums: list[str], api_key: str) -> dict[str, dict]:
+    """Looks up each set's original release year (and launch date, when
+    Brickset has one) via Brickset's official API, in batches. Returns
+    {set_num: {"year": int, "launch_date": "YYYY-MM-DD" | None}} for the
+    sets it found; anything missing or any API error just yields fewer
+    results, so those sets are retried on the next run."""
+    import requests
+
+    found: dict[str, dict] = {}
+    for i in range(0, len(set_nums), BRICKSET_BATCH):
+        batch = set_nums[i:i + BRICKSET_BATCH]
+        params = {"setNumber": ",".join(f"{n}-1" for n in batch), "pageSize": 500}
+        try:
+            resp = requests.post(
+                BRICKSET_API_URL,
+                data={"apiKey": api_key, "userHash": "", "params": json.dumps(params)},
+                timeout=60,
+            )
+            payload = resp.json()
+        except (requests.RequestException, ValueError) as exc:
+            print(f"  ! Brickset API request failed: {exc}")
+            break
+        if payload.get("status") != "success":
+            print(f"  ! Brickset API error: {payload.get('message')}")
+            break
+        for item in payload.get("sets") or []:
+            number = str(item.get("number") or "").strip()
+            year = item.get("year")
+            if not number or not isinstance(year, int):
+                continue
+            launch = item.get("launchDate") or None
+            found[number] = {"year": year, "launch_date": launch[:10] if launch else None}
+    return found
+
+
+def attach_release_info(sets: dict[str, dict]) -> bool:
+    """Adds released_year / released_date to each set from a persistent
+    cache (data/release_years.json), only asking Brickset about sets the
+    cache hasn't seen yet — a release year never changes, so each set is
+    looked up once. Needs BRICKSET_API_KEY; without it (or on API failure)
+    sets just keep whatever the cache already has. Returns True if any set
+    entry changed."""
+    cache = load_json(RELEASE_INFO_PATH, {})
+    missing = [n for n in sets if n not in cache]
+    api_key = os.environ.get("BRICKSET_API_KEY")
+    if missing and api_key:
+        print(f"Looking up release years for {len(missing)} set(s) on Brickset ...")
+        new = fetch_release_info(missing, api_key)
+        print(f"  found {len(new)}")
+        if new:
+            cache.update(new)
+            save_json(RELEASE_INFO_PATH, cache)
+    elif missing:
+        print("  (BRICKSET_API_KEY not set — skipping release-year lookup)")
+
+    changed = False
+    for set_num, entry in sets.items():
+        info = cache.get(set_num) or {}
+        year, launch = info.get("year"), info.get("launch_date")
+        if entry.get("released_year") != year or entry.get("released_date") != launch:
+            entry["released_year"], entry["released_date"] = year, launch
+            changed = True
+    return changed
 
 
 def build_current_state() -> dict[str, dict]:
@@ -265,8 +337,12 @@ def main() -> None:
 
     if not current:
         print("No data scraped (Brick Tap fetch failed) — leaving saved state untouched.")
+        # Release years don't depend on Brick Tap, so still backfill them.
+        if previous and attach_release_info(previous):
+            save_json(SETS_PATH, previous)
         return
 
+    attach_release_info(current)
     changes = diff_and_log(previous, current)
     save_json(SETS_PATH, current)
     append_log(LOG_PATH, changes)

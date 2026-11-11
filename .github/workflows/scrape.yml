@@ -46,6 +46,7 @@ jobs:
       - run: '"/Users/brendannussenblatt/Lego Retirement Agent/.venv/bin/python3" -u run_all.py'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          BRICKSET_API_KEY: ${{ secrets.BRICKSET_API_KEY }}
 
       - name: Commit updated data and dashboard
         run: |
