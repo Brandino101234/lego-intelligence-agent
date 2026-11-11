@@ -25,9 +25,9 @@
     "sets": 26
   },
   "City": {
-    "bytes": 5027041,
+    "bytes": 4803633,
     "file": "downloads/retiring-theme-city.zip",
-    "sets": 68
+    "sets": 67
   },
   "Classic": {
     "bytes": 820128,
@@ -40,9 +40,9 @@
     "sets": 39
   },
   "DC": {
-    "bytes": 458542,
+    "bytes": 720847,
     "file": "downloads/retiring-theme-dc.zip",
-    "sets": 6
+    "sets": 9
   },
   "DREAMZzz": {
     "bytes": 828102,
@@ -80,14 +80,14 @@
     "sets": 10
   },
   "Friends": {
-    "bytes": 4625094,
+    "bytes": 4853791,
     "file": "downloads/retiring-theme-friends.zip",
-    "sets": 44
+    "sets": 46
   },
   "Gabby's Dollhouse": {
-    "bytes": 334812,
+    "bytes": 409532,
     "file": "downloads/retiring-theme-gabby's-dollhouse.zip",
-    "sets": 4
+    "sets": 5
   },
   "Harry Potter": {
     "bytes": 2707133,
@@ -95,14 +95,14 @@
     "sets": 31
   },
   "Icons": {
-    "bytes": 4712132,
+    "bytes": 4960822,
     "file": "downloads/retiring-theme-icons.zip",
-    "sets": 54
+    "sets": 56
   },
   "Ideas": {
-    "bytes": 2352385,
+    "bytes": 2420954,
     "file": "downloads/retiring-theme-ideas.zip",
-    "sets": 27
+    "sets": 28
   },
   "Jurassic": {
     "bytes": 1138872,
@@ -120,9 +120,9 @@
     "sets": 14
   },
   "Marvel": {
-    "bytes": 3281257,
+    "bytes": 3410291,
     "file": "downloads/retiring-theme-marvel.zip",
-    "sets": 36
+    "sets": 37
   },
   "Minecraft": {
     "bytes": 2244297,
@@ -145,9 +145,9 @@
     "sets": 5
   },
   "Ninjago": {
-    "bytes": 3936078,
+    "bytes": 4041561,
     "file": "downloads/retiring-theme-ninjago.zip",
-    "sets": 40
+    "sets": 41
   },
   "One Piece": {
     "bytes": 956796,
@@ -180,9 +180,9 @@
     "sets": 68
   },
   "Technic": {
-    "bytes": 3834982,
+    "bytes": 3746720,
     "file": "downloads/retiring-theme-technic.zip",
-    "sets": 48
+    "sets": 47
   },
   "The Legend of Zelda": {
     "bytes": 108799,
