@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T21:50:09",
+  "generated_at": "2026-11-12T12:55:31",
   "months": {
     "2026-11": [
       {
@@ -250,6 +250,70 @@
         "set_num": "11537",
         "theme": "Botanicals",
         "url": "https://www.lego.com/en-us/product/chicory-flowers-11537"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt54c501c88052941f/blt125bd219614393ea-75466_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt782b26c769191c73/blt125bd219614393ea-75466_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltea8281bd81203053/blt125bd219614393ea-75466_Top_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0f85dec42248b75a/blt125bd219614393ea-75466_Back_02_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltbdf7e082ce311cfd/blt125bd219614393ea-75466_Right_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt183c0de26d67443c/blt125bd219614393ea-75466_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltfa0ac54ebd4459aa/blt125bd219614393ea-75466_Lifestyle_Cons_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt2a9fd21acc2534e2/blt125bd219614393ea-75466_Lifestyle_Envr_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt5434689b3ab3aa49/blt125bd219614393ea-75466_Lifestyle_Build_04.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt29c79d5ffa9acf8f/blt125bd219614393ea-75466_Lifestyle_Build_05.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt3deecc35c4265bfc/blt125bd219614393ea-75466_Lifestyle_Build_06.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt53537ecd6ecd1b9e/blt125bd219614393ea-75466_Lifestyle_Envr_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltf8bae2df7213adce/blt125bd219614393ea-75466_Lifestyle_Envr_03.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt8dd0030954d869d2/blt125bd219614393ea-75466_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt41f22943539f3488/blt125bd219614393ea-75466_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Darth Vader™ 2 in 1 Wall Art",
+        "pieces": 628,
+        "price": "$69.99",
+        "set_num": "75466",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/darth-vader-2-in-1-wall-art-75466"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltfe25877306715945/blt0def2263a5701053-75480_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt98b859739acef61f/blt0def2263a5701053-75480_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt3cd4709aefe9e774/blt0def2263a5701053-75480_WEB_Lineup_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt9e0b5d7ccd821012/blt0def2263a5701053-75480_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5ec8f024963bccbf/blt0def2263a5701053-75480_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt2a3b378c9e9ca15a/blt0def2263a5701053-75480_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltef982dcaee1d0eb4/blt0def2263a5701053-75480_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltbe57e73f03d897aa/blt0def2263a5701053-75480_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7003ff76b8ff8237/blt0def2263a5701053-75480_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltae395b945f0aa751/blt0def2263a5701053-75480_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blteede926fe29f39e3/blt0def2263a5701053-75480_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt2d67121915aa0108/blt0def2263a5701053-75480_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltaaa302e86bec59c9/blt0def2263a5701053-75480_Lifestyle_Cons_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blte4fc2b440790d0a2/blt0def2263a5701053-75480_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt1da7337b6fa6fd16/blt0def2263a5701053-75480_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt3723cfd3c8d17833/blt0def2263a5701053-75480_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Duel on Bespin™",
+        "pieces": 718,
+        "price": "$79.99",
+        "set_num": "75480",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/duel-on-bespin-75480"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
@@ -624,6 +688,33 @@
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt5eab7b308e58ec3a/blt1fd0090ce46ce34b-75470_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blta1c92b80da0e1ee8/blt1fd0090ce46ce34b-75470_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0424dbdf3d1e363c/blt1fd0090ce46ce34b-75470_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6216581d5a6d1951/blt1fd0090ce46ce34b-75470_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5addddcc7558b8ee/blt1fd0090ce46ce34b-75470_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt55fbbd279a639174/blt1fd0090ce46ce34b-75470_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb96fbe63ffbaf490/blt1fd0090ce46ce34b-75470_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4c7aaaa608217331/blt1fd0090ce46ce34b-75470_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt9aaaca8776c17b97/blt1fd0090ce46ce34b-75470_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt17bbd89fb24d88ae/blt1fd0090ce46ce34b-75470_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt21d3697656d97773/blt1fd0090ce46ce34b-75470_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Mustafar™ Duel",
+        "pieces": 372,
+        "price": "$39.99",
+        "set_num": "75470",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/mustafar-duel-75470"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltd5e649c4dd1ebc85/bltc8620f4b8633d691-11536_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt98b5663c414667aa/bltc8620f4b8633d691-11536_boxprod_v39_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/bltf496aeaa7ff6bcc3/bltc8620f4b8633d691-11536_WEB_SEC01_NOBG.png",
@@ -767,6 +858,31 @@
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt95d4c3e12e6ef577/blt8c0c79883d631ab6-75478_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb4a33ca2935e56ec/blt8c0c79883d631ab6-75478_boxprod_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt50937416c92d8238/blt8c0c79883d631ab6-75478_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt8a9f3239b7518e79/blt8c0c79883d631ab6-75478_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7b13c7baabdc57f6/blt8c0c79883d631ab6-75478_WEB_SEC06_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt83737ed61d664ff4/blt8c0c79883d631ab6-75478_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4c554292aeba6929/blt8c0c79883d631ab6-75478_ecomBuildDim_01.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blta1408d4ab37bbd36/blt8c0c79883d631ab6-75478_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt8f1bd63e9fbf53e1/lt8c0c79883d631ab6-75478_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Rebel Y-Wing Starfighter™",
+        "pieces": 676,
+        "price": "$79.99",
+        "set_num": "75478",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/rebel-y-wing-starfighter-75478"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltcc1313866419d390/blt33ec0948532fb146-42254_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/blt5b4c3f6f4541a78c/blt33ec0948532fb146-42254_boxprod_v29.png",
           "https://www.lego.com/cdn/cs/set/assets/blt358de8297a626228/blt33ec0948532fb146-42254_WEB_PRI_NOBG.png",
@@ -804,6 +920,31 @@
         "set_num": "42254",
         "theme": "Technic™",
         "url": "https://www.lego.com/en-us/product/solar-system-planets-in-orbit-42254"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltda5dadd462df4c7c/blt55584f2376fd0e89-75495_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0e9ccc548d18dbaf/blt55584f2376fd0e89-75495_boxprod_v29_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb4e40074dfefcacf/blt55584f2376fd0e89-75495_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd514c32718b7a827/blt55584f2376fd0e89-75495_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt96ac8372fd147967/blt55584f2376fd0e89-75495_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltdb53764372281176/blt55584f2376fd0e89-75495_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt2bb7296de18d6cc2/blt55584f2376fd0e89-75495_ecomBuildDim_02_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4150474b058c61f8/blt55584f2376fd0e89-75495_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltd5603bf007e73fde/blt55584f2376fd0e89-75495_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Stormtrooper™ (Concept Art) Helmet",
+        "pieces": 832,
+        "price": "$79.99",
+        "set_num": "75495",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/stormtrooper-concept-art-helmet-75495"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
@@ -901,6 +1042,34 @@
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltce95270e486f140f/blt5c672d3e13bb2b76-75482_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt896cb70ddb4d51be/blt5c672d3e13bb2b76-75482_boxprod_v39.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltcdeb3a60ccfd516d/blt5c672d3e13bb2b76-75482_WEB_PRI_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt534802aea236d76a/blt5c672d3e13bb2b76-75482_WEB_SEC04_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf5426b2e1dbed0bc/blt5c672d3e13bb2b76-75482_WEB_SEC05_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt21584425ecc1aeb9/blt5c672d3e13bb2b76-75482_ecomBuildDim_02_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltbae0d85d391f6343/blt5c672d3e13bb2b76-75482_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt60da71b902a0b418/blt5c672d3e13bb2b76-75482_Lifestyle_Cons_2.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blta05fb03f9a7092b7/blt5c672d3e13bb2b76-75482_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt288eb45d27c461db/blt5c672d3e13bb2b76-75482_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltfa8e44b173470d94/blt5c672d3e13bb2b76-75482_Box5_v39.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-01-01",
+        "name": "Up-Scaled Luke Skywalker™ Minifigure",
+        "pieces": 981,
+        "price": "$99.99",
+        "set_num": "75482",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/up-scaled-luke-skywalker-minifigure-75482"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/bltce946cd2fd715a7f/blt07dcd4d100378132-72057_Prod_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/blt41e994ef994acc4f/blt07dcd4d100378132-72057_boxprod_v39_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/blt03bd4f87a127fd43/blt07dcd4d100378132-72057_WEB_Lineup_NOBG_en-us.png",
@@ -925,6 +1094,22 @@
         "set_num": "72057",
         "theme": "LEGO® Super Mario™",
         "url": "https://www.lego.com/en-us/product/yoshi-at-marios-house-72057"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 4, 2027",
+        "future_gwp": null,
+        "gallery_images": [],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt72c6294e4df5e58c/blt9a03b85917ffc00a-75467_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": true,
+        "insiders_early_access_text": "LEGO® Insiders Early Access 01/01 - 01/03.",
+        "launch_date": "2027-01-04",
+        "name": "A New Hope Movie Poster",
+        "pieces": 3209,
+        "price": "$299.99",
+        "set_num": "75467",
+        "theme": "Star Wars™",
+        "url": "https://www.lego.com/en-us/product/a-new-hope-movie-poster-75467"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
