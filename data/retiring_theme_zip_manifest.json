@@ -1,18 +1,13 @@
 {
   "Architecture": {
-    "bytes": 868710,
+    "bytes": 788641,
     "file": "downloads/retiring-theme-architecture.zip",
-    "sets": 9
+    "sets": 8
   },
   "Art": {
     "bytes": 1104901,
     "file": "downloads/retiring-theme-art.zip",
     "sets": 7
-  },
-  "Bluey": {
-    "bytes": 476032,
-    "file": "downloads/retiring-theme-bluey.zip",
-    "sets": 6
   },
   "Botanicals": {
     "bytes": 2263513,
@@ -25,9 +20,9 @@
     "sets": 26
   },
   "City": {
-    "bytes": 4803633,
+    "bytes": 4533306,
     "file": "downloads/retiring-theme-city.zip",
-    "sets": 67
+    "sets": 64
   },
   "Classic": {
     "bytes": 820128,
@@ -35,9 +30,9 @@
     "sets": 9
   },
   "Creator": {
-    "bytes": 2762170,
+    "bytes": 2693099,
     "file": "downloads/retiring-theme-creator.zip",
-    "sets": 39
+    "sets": 38
   },
   "DC": {
     "bytes": 720847,
@@ -45,14 +40,14 @@
     "sets": 9
   },
   "DREAMZzz": {
-    "bytes": 828102,
+    "bytes": 736269,
     "file": "downloads/retiring-theme-dreamzzz.zip",
-    "sets": 8
+    "sets": 7
   },
   "Disney": {
-    "bytes": 4058113,
+    "bytes": 3889192,
     "file": "downloads/retiring-theme-disney.zip",
-    "sets": 48
+    "sets": 46
   },
   "Duplo": {
     "bytes": 3789600,
@@ -69,20 +64,15 @@
     "file": "downloads/retiring-theme-education.zip",
     "sets": 4
   },
-  "Family": {
-    "bytes": 132219,
-    "file": "downloads/retiring-theme-family.zip",
-    "sets": 1
-  },
   "Fortnite": {
-    "bytes": 869303,
+    "bytes": 858236,
     "file": "downloads/retiring-theme-fortnite.zip",
     "sets": 10
   },
   "Friends": {
-    "bytes": 4853791,
+    "bytes": 4713473,
     "file": "downloads/retiring-theme-friends.zip",
-    "sets": 46
+    "sets": 45
   },
   "Gabby's Dollhouse": {
     "bytes": 409532,
@@ -90,24 +80,24 @@
     "sets": 5
   },
   "Harry Potter": {
-    "bytes": 2707133,
+    "bytes": 2637686,
     "file": "downloads/retiring-theme-harry-potter.zip",
-    "sets": 31
+    "sets": 30
   },
   "Icons": {
-    "bytes": 4960822,
+    "bytes": 3254467,
     "file": "downloads/retiring-theme-icons.zip",
-    "sets": 56
+    "sets": 36
   },
   "Ideas": {
-    "bytes": 2420954,
+    "bytes": 2384088,
     "file": "downloads/retiring-theme-ideas.zip",
-    "sets": 28
+    "sets": 27
   },
   "Jurassic": {
-    "bytes": 1138872,
+    "bytes": 1021499,
     "file": "downloads/retiring-theme-jurassic.zip",
-    "sets": 13
+    "sets": 12
   },
   "K-pop Demon Hunters": {
     "bytes": 83360,
@@ -115,19 +105,19 @@
     "sets": 1
   },
   "Mario": {
-    "bytes": 1370860,
+    "bytes": 637293,
     "file": "downloads/retiring-theme-mario.zip",
-    "sets": 14
+    "sets": 7
   },
   "Marvel": {
-    "bytes": 3410291,
+    "bytes": 3116611,
     "file": "downloads/retiring-theme-marvel.zip",
-    "sets": 37
+    "sets": 34
   },
   "Minecraft": {
-    "bytes": 2244297,
+    "bytes": 2170723,
     "file": "downloads/retiring-theme-minecraft.zip",
-    "sets": 31
+    "sets": 30
   },
   "Miscellaneous": {
     "bytes": 277926,
@@ -135,9 +125,9 @@
     "sets": 5
   },
   "Monkie Kid": {
-    "bytes": 982526,
+    "bytes": 918359,
     "file": "downloads/retiring-theme-monkie-kid.zip",
-    "sets": 10
+    "sets": 9
   },
   "Nike": {
     "bytes": 475680,
@@ -145,9 +135,9 @@
     "sets": 5
   },
   "Ninjago": {
-    "bytes": 4041561,
+    "bytes": 3536345,
     "file": "downloads/retiring-theme-ninjago.zip",
-    "sets": 41
+    "sets": 35
   },
   "One Piece": {
     "bytes": 956796,
@@ -155,12 +145,12 @@
     "sets": 10
   },
   "Pokémon": {
-    "bytes": 1571343,
+    "bytes": 63722,
     "file": "downloads/retiring-theme-pokémon.zip",
-    "sets": 20
+    "sets": 1
   },
   "Powered Up": {
-    "bytes": 391444,
+    "bytes": 386375,
     "file": "downloads/retiring-theme-powered-up.zip",
     "sets": 9
   },
@@ -170,19 +160,19 @@
     "sets": 3
   },
   "Speed Champions": {
-    "bytes": 2115105,
+    "bytes": 1960673,
     "file": "downloads/retiring-theme-speed-champions.zip",
-    "sets": 28
+    "sets": 26
   },
   "Star Wars": {
-    "bytes": 4807934,
+    "bytes": 61628,
     "file": "downloads/retiring-theme-star-wars.zip",
-    "sets": 68
+    "sets": 1
   },
   "Technic": {
-    "bytes": 3746720,
+    "bytes": 3327309,
     "file": "downloads/retiring-theme-technic.zip",
-    "sets": 47
+    "sets": 42
   },
   "The Legend of Zelda": {
     "bytes": 108799,
@@ -190,9 +180,9 @@
     "sets": 1
   },
   "Wednesday": {
-    "bytes": 348512,
+    "bytes": 249526,
     "file": "downloads/retiring-theme-wednesday.zip",
-    "sets": 4
+    "sets": 3
   },
   "Wicked": {
     "bytes": 878030,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T21:00:43",
+  "generated_at": "2026-11-16T15:02:39",
   "months": {
     "2026-11": [
       {
@@ -30,7 +30,19 @@
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
-        "gallery_images": [],
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt4db145b98d835fd2/bltaaa754068e2aecb5-67009_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt494360f7b43b816f/bltaaa754068e2aecb5-67009_Box1_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt266d19602a0ac2c3/bltaaa754068e2aecb5-67009_Front_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0188edd6619352e4/bltaaa754068e2aecb5-67009_Back_02_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt65ad73790aa96348/bltaaa754068e2aecb5-67009_Back_01_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltc86629a8ac0fb157/bltaaa754068e2aecb5-67009_Lineup_01.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb9fe95b0ecfb8d6c/bltaaa754068e2aecb5-67009_Lifestyle_Build.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltd8f61e7eef6fb24b/bltaaa754068e2aecb5-67009_Lifestyle_Cons.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltee725b51dabcea41/bltaaa754068e2aecb5-67009_Lifestyle_Cons_02.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/blt9b3ec05b0119d914/bltaaa754068e2aecb5-67009_Lifestyle_Envr.jpg",
+          "https://www.lego.com/cdn/cs/set/assets/bltb6316d06bd4c39da/bltaaa754068e2aecb5-67009_Box5_v39.png"
+        ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt52ca804037accb7a/bltaaa754068e2aecb5-67009_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
         "insiders_early_access_text": null,
@@ -989,7 +1001,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Batman™",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
@@ -1096,7 +1108,7 @@
         "pieces": 3209,
         "price": "$299.99",
         "set_num": "75467",
-        "theme": "Art",
+        "theme": "Star Wars™",
         "url": "https://www.lego.com/en-us/product/a-new-hope-movie-poster-75467"
       },
       {
