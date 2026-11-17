@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T23:27:28",
+  "generated_at": "2026-11-17T13:59:52",
   "months": {
     "2026-11": [
       {
@@ -1001,7 +1001,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Batman™",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
@@ -1062,7 +1062,7 @@
         "pieces": 981,
         "price": "$99.99",
         "set_num": "75482",
-        "theme": "Minifigures",
+        "theme": "Star Wars™",
         "url": "https://www.lego.com/en-us/product/up-scaled-luke-skywalker-minifigure-75482"
       },
       {
@@ -1101,14 +1101,14 @@
         "future_gwp": null,
         "gallery_images": [],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt72c6294e4df5e58c/blt9a03b85917ffc00a-75467_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "LEGO® Insiders Early Access 01/01 - 01/03.",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
         "launch_date": "2027-01-04",
         "name": "A New Hope Movie Poster",
         "pieces": 3209,
         "price": "$299.99",
         "set_num": "75467",
-        "theme": "Art",
+        "theme": "Star Wars™",
         "url": "https://www.lego.com/en-us/product/a-new-hope-movie-poster-75467"
       },
       {
@@ -1131,8 +1131,8 @@
           "https://www.lego.com/cdn/cs/set/assets/blt1194209e969cdfd9/blte88d6e537681ce86-11519_Box5_v29.png"
         ],
         "image": "https://www.lego.com/cdn/cs/set/assets/blt40c7203f71f6193b/blte88d6e537681ce86-11519_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": true,
-        "insiders_early_access_text": "LEGO® Insiders Early Access 01/01 - 01/03.",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
         "launch_date": "2027-01-04",
         "name": "Wild Orchid",
         "pieces": 606,
