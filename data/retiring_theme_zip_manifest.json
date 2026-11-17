@@ -9,6 +9,11 @@
     "file": "downloads/retiring-theme-art.zip",
     "sets": 7
   },
+  "Bluey": {
+    "bytes": 476032,
+    "file": "downloads/retiring-theme-bluey.zip",
+    "sets": 6
+  },
   "Botanicals": {
     "bytes": 2263513,
     "file": "downloads/retiring-theme-botanicals.zip",
@@ -64,6 +69,11 @@
     "file": "downloads/retiring-theme-education.zip",
     "sets": 4
   },
+  "Family": {
+    "bytes": 132219,
+    "file": "downloads/retiring-theme-family.zip",
+    "sets": 1
+  },
   "Fortnite": {
     "bytes": 858236,
     "file": "downloads/retiring-theme-fortnite.zip",
@@ -85,9 +95,9 @@
     "sets": 30
   },
   "Icons": {
-    "bytes": 3254467,
+    "bytes": 4960822,
     "file": "downloads/retiring-theme-icons.zip",
-    "sets": 36
+    "sets": 56
   },
   "Ideas": {
     "bytes": 2384088,
@@ -105,9 +115,9 @@
     "sets": 1
   },
   "Mario": {
-    "bytes": 637293,
+    "bytes": 1370860,
     "file": "downloads/retiring-theme-mario.zip",
-    "sets": 7
+    "sets": 14
   },
   "Marvel": {
     "bytes": 3116611,
@@ -145,9 +155,9 @@
     "sets": 10
   },
   "Pokémon": {
-    "bytes": 63722,
+    "bytes": 1571343,
     "file": "downloads/retiring-theme-pokémon.zip",
-    "sets": 1
+    "sets": 20
   },
   "Powered Up": {
     "bytes": 386375,
@@ -165,9 +175,9 @@
     "sets": 26
   },
   "Star Wars": {
-    "bytes": 61628,
+    "bytes": 4571207,
     "file": "downloads/retiring-theme-star-wars.zip",
-    "sets": 1
+    "sets": 64
   },
   "Technic": {
     "bytes": 3327309,
