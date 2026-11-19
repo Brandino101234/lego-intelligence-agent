@@ -16,5 +16,11 @@
     "file": "downloads/2027-02.zip",
     "images": 10,
     "sets": 1
+  },
+  "2027-03": {
+    "bytes": 6628016,
+    "file": "downloads/2027-03.zip",
+    "images": 64,
+    "sets": 10
   }
 }

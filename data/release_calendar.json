@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T13:40:14",
+  "generated_at": "2026-11-18T22:04:55",
   "months": {
     "2026-11": [
       {
@@ -1001,7 +1001,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "DC",
+        "theme": "Batman™",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
@@ -1108,7 +1108,7 @@
         "pieces": 3209,
         "price": "$299.99",
         "set_num": "75467",
-        "theme": "Art",
+        "theme": "Star Wars™",
         "url": "https://www.lego.com/en-us/product/a-new-hope-movie-poster-75467"
       },
       {
@@ -1169,6 +1169,242 @@
         "set_num": "11522",
         "theme": "Botanicals",
         "url": "https://www.lego.com/en-us/product/perfectly-pastel-flower-bouquet-11522"
+      }
+    ],
+    "2027-03": [
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt7f0382c893f967cb/blt4fa5acfb1079b105-77271_Prod_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltad2d439f182816de/blt4fa5acfb1079b105-77271_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte009462edb6d1762/blt4fa5acfb1079b105-77271_WEB_SEC01_NOBG_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltc0944b9a163c6b19/blt4fa5acfb1079b105-77271_WEB_SEC02_NOBG_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt40c5b9b10a792ffc/blt4fa5acfb1079b105-77271_WEB_SEC03_NOBG_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt934f081263554298/blt4fa5acfb1079b105-77271_ecomBuildDim_02_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte5e17e7810e00b8e/blt4fa5acfb1079b105-77271_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt97a1d7ce97253afb/lt4fa5acfb1079b105-77271_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "Aston Martin Aramco AMR26 F1® Race Car",
+        "pieces": 199,
+        "price": "$29.99",
+        "set_num": "77271",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/aston-martin-aramco-amr26-f1-race-car-77271"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltbc6782eee548f4d5/blt7b83e899a91ad2bb-77272_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt470a2aeb4834d863/blt7b83e899a91ad2bb-77272_boxprod_v29.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltee7af3cef9c971e6/blt7b83e899a91ad2bb-77272_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte9913c31795cc8d9/blt7b83e899a91ad2bb-77272_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blteada34cfe93e303b/blt7b83e899a91ad2bb-77272_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte43cff844758608d/blt7b83e899a91ad2bb-77272_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt1e4755972560685c/blt7b83e899a91ad2bb-77272_Box5_v29.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt51bcbe42433dc8a8/blt7b83e899a91ad2bb-77272_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "Atlassian Williams FW48 F1® Race Car",
+        "pieces": 231,
+        "price": "$29.99",
+        "set_num": "77272",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/atlassian-williams-fw48-f1-race-car-77272"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blte95b3a53db3f059f/bltcfc07c15787fceef-77276_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7bab061a5aca412c/bltcfc07c15787fceef-77276_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb3a702b3e78d23a0/bltcfc07c15787fceef-77276_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt598d0b38037b22e0/bltcfc07c15787fceef-77276_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt274e3d6a862c795a/bltcfc07c15787fceef-77276_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltd94db29ae61ecfe1/bltcfc07c15787fceef-77276_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blta54467888569311c/bltcfc07c15787fceef-77276_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt9264aee3f444c7e6/bltcfc07c15787fceef-77276_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "Audi Revolut R26 F1® Race Car",
+        "pieces": 215,
+        "price": "$29.99",
+        "set_num": "77276",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/audi-revolut-r26-f1-race-car-77276"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt63104a6961538614/blt324bf6e78b800caf-77274_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltb2ce941c656047e0/blt324bf6e78b800caf-77274_Box1_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltc8e39e5edc9d2063/blt324bf6e78b800caf-77274_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt3c6c85221b7dc3ba/blt324bf6e78b800caf-77274_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt987bdad6dd56206b/blt324bf6e78b800caf-77274_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "BWT Alpine A526 F1® Race Car",
+        "pieces": 212,
+        "price": "$29.99",
+        "set_num": "77274",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/bwt-alpine-a526-f1-race-car-77274"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltbc1034240ed4af1a/bltc81f4a50472c18ab-77277_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt735bfb975e83e0f7/bltc81f4a50472c18ab-77277_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltbaf994c041e3785c/bltc81f4a50472c18ab-77277_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltee7a7effc21808ee/bltc81f4a50472c18ab-77277_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf05e3c4e3eef7fcd/bltc81f4a50472c18ab-77277_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7e76e57e6892e57d/bltc81f4a50472c18ab-77277_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blta4bc04270b894bf6/bltc81f4a50472c18ab-77277_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt7d07c3f526811ec6/bltc81f4a50472c18ab-77277_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "Cadillac MAC-26 F1® Race Car",
+        "pieces": 212,
+        "price": "$29.99",
+        "set_num": "77277",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/cadillac-mac-26-f1-race-car-77277"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt2517abc668475f3e/blt9e006e42ccede3f9-77270_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf73a5b44c6df6a4f/blt9e006e42ccede3f9-77270_Box1_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltbe4a93d79b4f193d/blt9e006e42ccede3f9-77270_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6c55afab5b18b37f/blt9e006e42ccede3f9-77270_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0d861bfe70bf868b/blt9e006e42ccede3f9-77270_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt44a02c21095963b2/blt9e006e42ccede3f9-77270_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt912c9539179b3252/blt9e006e42ccede3f9-77270_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltdb3b15754cf3a268/blt9e006e42ccede3f9-77270_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "Mercedes-AMG PETRONAS W17 F1® Race Car",
+        "pieces": 216,
+        "price": "$29.99",
+        "set_num": "77270",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/mercedes-amg-petronas-w17-f1-race-car-77270"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt40c7906958b37929/bltf2cb3dd3e72e5ae5-77268_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blted84fb1a51222c3b/bltf2cb3dd3e72e5ae5-77268_boxprod_v29.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt061bc770ff4c099a/bltf2cb3dd3e72e5ae5-77268_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt6a44ccfa33ff2725/bltf2cb3dd3e72e5ae5-77268_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt8c6d22955d615aaf/bltf2cb3dd3e72e5ae5-77268_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7f63601cb1fa2f3f/bltf2cb3dd3e72e5ae5-77268_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt3dd1c0e98f6f0817/bltf2cb3dd3e72e5ae5-77268_Box5_v29.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt0da1aecf79651987/bltf2cb3dd3e72e5ae5-77268_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "Oracle Red Bull Racing RB22 F1® Race Car",
+        "pieces": 203,
+        "price": "$29.99",
+        "set_num": "77268",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/oracle-red-bull-racing-rb22-f1-race-car-77268"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltae4221889d575127/bltcda16d3b3a82f5f4-77267_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt22bc2e911f662dd4/bltcda16d3b3a82f5f4-77267_Box1_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7c31e36d33bc1eea/bltcda16d3b3a82f5f4-77267_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte0f33b60d51a1e6f/bltcda16d3b3a82f5f4-77267_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt8b67f593f57bf045/bltcda16d3b3a82f5f4-77267_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "SPEED CHAMPIONS 77267",
+        "pieces": 230,
+        "price": "$29.99",
+        "set_num": "77267",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/speed-champions-77267-77267"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltf0c33672af62cc1a/blt0b2813e9e44b5a45-77275_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt28e621c5c9094bc8/blt0b2813e9e44b5a45-77275_boxprod_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt81890851af2ba358/blt0b2813e9e44b5a45-77275_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt4dee09c6897755ae/blt0b2813e9e44b5a45-77275_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt50ee7cc130ec5d5b/blt0b2813e9e44b5a45-77275_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt75e1beccca2131f1/blt0b2813e9e44b5a45-77275_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltc39122fab0f87d66/blt0b2813e9e44b5a45-77275_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt4ed54c9b906beead/blt0b2813e9e44b5a45-77275_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "TGR Haas VF-26 F1® Race Car",
+        "pieces": 209,
+        "price": "$29.99",
+        "set_num": "77275",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/tgr-haas-vf-26-f1-race-car-77275"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltc4a206059a4e9cf7/bltce17bad337221a0d-77273_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf458d75b978fbebe/bltce17bad337221a0d-77273_boxprod_v29.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt45a4f1f4bafb314d/bltce17bad337221a0d-77273_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt11c543cbd1dfba76/bltce17bad337221a0d-77273_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt68e00d858af1355f/bltce17bad337221a0d-77273_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltbe6d4d9c6ad7abe5/bltce17bad337221a0d-77273_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltf6d97b6e5a2596a3/bltce17bad337221a0d-77273_Box5_v29.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/bltdc90ea18841043d2/bltce17bad337221a0d-77273_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "Visa Cash App RB VCARB 03 F1® Race Car",
+        "pieces": 206,
+        "price": "$29.99",
+        "set_num": "77273",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/visa-cash-app-rb-vcarb-03-f1-race-car-77273"
       }
     ]
   }
