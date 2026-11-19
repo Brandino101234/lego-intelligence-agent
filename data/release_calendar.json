@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T22:04:55",
+  "generated_at": "2026-11-19T13:52:32",
   "months": {
     "2026-11": [
       {
@@ -1001,7 +1001,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Batman™",
+        "theme": "Art",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
@@ -1062,7 +1062,7 @@
         "pieces": 981,
         "price": "$99.99",
         "set_num": "75482",
-        "theme": "Star Wars™",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-luke-skywalker-minifigure-75482"
       },
       {
@@ -1108,7 +1108,7 @@
         "pieces": 3209,
         "price": "$299.99",
         "set_num": "75467",
-        "theme": "Star Wars™",
+        "theme": "Art",
         "url": "https://www.lego.com/en-us/product/a-new-hope-movie-poster-75467"
       },
       {
@@ -1294,6 +1294,51 @@
         "availability_text": "Coming soon on March 1, 2027",
         "future_gwp": null,
         "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/bltae4221889d575127/bltcda16d3b3a82f5f4-77267_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt22bc2e911f662dd4/bltcda16d3b3a82f5f4-77267_Box1_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt7c31e36d33bc1eea/bltcda16d3b3a82f5f4-77267_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blte0f33b60d51a1e6f/bltcda16d3b3a82f5f4-77267_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt8b67f593f57bf045/bltcda16d3b3a82f5f4-77267_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "Ferrari SF-26 F1® Race Car",
+        "pieces": 230,
+        "price": "$29.99",
+        "set_num": "77267",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/ferrari-sf-26-f1-race-car-77267"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
+          "https://www.lego.com/cdn/cs/set/assets/blt9120153f234f7592/blt92f4b4fe8c3ee069-77269_Prod.png",
+          "https://www.lego.com/cdn/cs/set/assets/bltedb67a8b926da0b8/blt92f4b4fe8c3ee069-77269_Box1_v39_en-us.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5d663eb9c1720ac9/blt92f4b4fe8c3ee069-77269_WEB_SEC01_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0deeb6a31264de7e/blt92f4b4fe8c3ee069-77269_WEB_SEC02_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt0ff37de0aa2c5f04/blt92f4b4fe8c3ee069-77269_WEB_SEC03_NOBG.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt298c894773ea0c19/blt92f4b4fe8c3ee069-77269_ecomBuildDim_02.png",
+          "https://www.lego.com/cdn/cs/set/assets/blt5f4a448a384d7767/blt92f4b4fe8c3ee069-77269_Box5_v39_en-us.png"
+        ],
+        "image": "https://www.lego.com/cdn/cs/set/assets/blt1bc30439c1548f7d/blt92f4b4fe8c3ee069-77269_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
+        "insiders_early_access": false,
+        "insiders_early_access_text": null,
+        "launch_date": "2027-03-01",
+        "name": "McLaren Mastercard MCL40 F1® Race Car",
+        "pieces": 198,
+        "price": "$29.99",
+        "set_num": "77269",
+        "theme": "Speed Champions",
+        "url": "https://www.lego.com/en-us/product/mclaren-mastercard-mcl40-f1-race-car-77269"
+      },
+      {
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on March 1, 2027",
+        "future_gwp": null,
+        "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt2517abc668475f3e/blt9e006e42ccede3f9-77270_Prod.png",
           "https://www.lego.com/cdn/cs/set/assets/bltf73a5b44c6df6a4f/blt9e006e42ccede3f9-77270_Box1_v39_en-us.png",
           "https://www.lego.com/cdn/cs/set/assets/bltbe4a93d79b4f193d/blt9e006e42ccede3f9-77270_WEB_SEC01_NOBG.png",
@@ -1336,27 +1381,6 @@
         "set_num": "77268",
         "theme": "Speed Champions",
         "url": "https://www.lego.com/en-us/product/oracle-red-bull-racing-rb22-f1-race-car-77268"
-      },
-      {
-        "availability_status": "B_COMING_SOON_AT_DATE",
-        "availability_text": "Coming soon on March 1, 2027",
-        "future_gwp": null,
-        "gallery_images": [
-          "https://www.lego.com/cdn/cs/set/assets/bltae4221889d575127/bltcda16d3b3a82f5f4-77267_Prod.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt22bc2e911f662dd4/bltcda16d3b3a82f5f4-77267_Box1_v39_en-us.png",
-          "https://www.lego.com/cdn/cs/set/assets/blt7c31e36d33bc1eea/bltcda16d3b3a82f5f4-77267_ecomBuildDim_02.png",
-          "https://www.lego.com/cdn/cs/set/assets/blte0f33b60d51a1e6f/bltcda16d3b3a82f5f4-77267_Box5_v39_en-us.png"
-        ],
-        "image": "https://www.lego.com/cdn/cs/set/assets/blt8b67f593f57bf045/bltcda16d3b3a82f5f4-77267_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
-        "launch_date": "2027-03-01",
-        "name": "SPEED CHAMPIONS 77267",
-        "pieces": 230,
-        "price": "$29.99",
-        "set_num": "77267",
-        "theme": "Speed Champions",
-        "url": "https://www.lego.com/en-us/product/speed-champions-77267-77267"
       },
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
