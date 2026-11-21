@@ -25,9 +25,9 @@
     "sets": 26
   },
   "City": {
-    "bytes": 4533306,
+    "bytes": 4304616,
     "file": "downloads/retiring-theme-city.zip",
-    "sets": 64
+    "sets": 61
   },
   "Classic": {
     "bytes": 820128,
@@ -95,9 +95,9 @@
     "sets": 30
   },
   "Icons": {
-    "bytes": 4960822,
+    "bytes": 4784719,
     "file": "downloads/retiring-theme-icons.zip",
-    "sets": 56
+    "sets": 54
   },
   "Ideas": {
     "bytes": 2384088,
@@ -175,9 +175,9 @@
     "sets": 26
   },
   "Star Wars": {
-    "bytes": 4571207,
+    "bytes": 4449530,
     "file": "downloads/retiring-theme-star-wars.zip",
-    "sets": 64
+    "sets": 63
   },
   "Technic": {
     "bytes": 3327309,
