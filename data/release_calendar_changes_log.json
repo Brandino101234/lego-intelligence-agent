@@ -1442,5 +1442,13 @@
     "theme": null,
     "timestamp": "2026-11-20T13:14:45",
     "type": "added_to_calendar"
+  },
+  {
+    "last_known_month": "2027-01",
+    "name": "Cole vs. Evil Cole Spinner",
+    "set_num": "71873",
+    "theme": null,
+    "timestamp": "2026-11-20T22:06:50",
+    "type": "removed_from_calendar"
   }
 ]

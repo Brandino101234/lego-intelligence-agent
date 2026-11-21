@@ -25,9 +25,9 @@
     "sets": 26
   },
   "City": {
-    "bytes": 4756714,
+    "bytes": 4533306,
     "file": "downloads/retiring-theme-city.zip",
-    "sets": 65
+    "sets": 64
   },
   "Classic": {
     "bytes": 820128,
@@ -40,9 +40,9 @@
     "sets": 38
   },
   "DC": {
-    "bytes": 887223,
+    "bytes": 720847,
     "file": "downloads/retiring-theme-dc.zip",
-    "sets": 11
+    "sets": 9
   },
   "DREAMZzz": {
     "bytes": 736269,
@@ -50,19 +50,19 @@
     "sets": 7
   },
   "Disney": {
-    "bytes": 3889192,
+    "bytes": 3800624,
     "file": "downloads/retiring-theme-disney.zip",
-    "sets": 46
+    "sets": 45
   },
   "Duplo": {
-    "bytes": 3421047,
+    "bytes": 3789600,
     "file": "downloads/retiring-theme-duplo.zip",
-    "sets": 42
+    "sets": 47
   },
   "Editions": {
-    "bytes": 1806075,
+    "bytes": 2114524,
     "file": "downloads/retiring-theme-editions.zip",
-    "sets": 18
+    "sets": 21
   },
   "Education": {
     "bytes": 272642,
@@ -90,9 +90,9 @@
     "sets": 5
   },
   "Harry Potter": {
-    "bytes": 1854833,
+    "bytes": 2637686,
     "file": "downloads/retiring-theme-harry-potter.zip",
-    "sets": 22
+    "sets": 30
   },
   "Icons": {
     "bytes": 4960822,
@@ -145,9 +145,9 @@
     "sets": 5
   },
   "Ninjago": {
-    "bytes": 3626697,
+    "bytes": 3536345,
     "file": "downloads/retiring-theme-ninjago.zip",
-    "sets": 36
+    "sets": 35
   },
   "One Piece": {
     "bytes": 956796,
