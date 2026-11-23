@@ -1,22 +1,12 @@
 {
-  "40914": {
+  "5011174": {
     "end_date": null,
-    "end_date_raw": "11/22/2026",
-    "gwp_code": "40914",
-    "image": "https://www.lego.com/cdn/cs/set/assets/blt70a3703e9545fc85/bltb507f856df3183be-40914_Prod_en-gb.png",
-    "insiders_only": false,
-    "name": "Retro Jukebox",
-    "qualifying_text": "Spend over $250 to unlock this gift",
-    "url": "https://www.lego.com/en-us/search?q=40914"
-  },
-  "40918": {
-    "end_date": null,
-    "end_date_raw": "11/22/2026",
-    "gwp_code": "40918",
-    "image": "https://www.lego.com/cdn/cs/set/assets/blt0027a4b5a3cc34c4/bltbe65e7531c7c5249-40918_Prod_en-gb.png",
-    "insiders_only": false,
-    "name": "Winter Snow Globe",
-    "qualifying_text": "Spend over $170 to unlock this gift",
-    "url": "https://www.lego.com/en-us/search?q=40918"
+    "end_date_raw": "11/26/2026",
+    "gwp_code": "5011174",
+    "image": "https://www.lego.com/cdn/cs/set/assets/blt57d74c05178dd0e7/5011174_Prod.png",
+    "insiders_only": true,
+    "name": "Christmas Craft Set",
+    "qualifying_text": "Gift with qualifying purchases of $75 or more",
+    "url": "https://www.lego.com/en-us/search?q=5011174"
   }
 }

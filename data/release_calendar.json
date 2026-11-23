@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T21:23:35",
+  "generated_at": "2026-11-23T16:57:35",
   "months": {
     "2026-11": [
       {
@@ -1001,12 +1001,12 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Batman™",
+        "theme": "Art",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
-        "availability_status": "A_PRE_ORDER_FOR_DATE",
-        "availability_text": "Pre-order this item today, it will ship from January 1, 2027",
+        "availability_status": "B_COMING_SOON_AT_DATE",
+        "availability_text": "Coming soon on January 1, 2027",
         "future_gwp": null,
         "gallery_images": [
           "https://www.lego.com/cdn/cs/set/assets/blt9b57bf0090d095e2/blt040f3d56eb77d555-67006_Prod.png",
@@ -1062,7 +1062,7 @@
         "pieces": 981,
         "price": "$99.99",
         "set_num": "75482",
-        "theme": "Minifigures",
+        "theme": "Star Wars™",
         "url": "https://www.lego.com/en-us/product/up-scaled-luke-skywalker-minifigure-75482"
       },
       {

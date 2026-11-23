@@ -364,5 +364,25 @@
     "name": "Venetian Water Taxi",
     "timestamp": "2026-11-21T12:08:27",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "5011174",
+    "name": "Christmas Craft Set",
+    "qualifying_text": "Gift with qualifying purchases of $75 or more",
+    "timestamp": "2026-11-23T16:57:49",
+    "type": "gwp_started"
+  },
+  {
+    "gwp_code": "40914",
+    "name": "Retro Jukebox",
+    "timestamp": "2026-11-23T16:57:49",
+    "type": "gwp_ended"
+  },
+  {
+    "gwp_code": "40918",
+    "name": "Winter Snow Globe",
+    "timestamp": "2026-11-23T16:57:49",
+    "type": "gwp_ended"
   }
 ]
