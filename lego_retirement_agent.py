@@ -204,7 +204,8 @@ BRICKSET_BATCH = 100
 def fetch_release_info(set_nums: list[str], api_key: str) -> dict[str, dict]:
     """Looks up each set's original release year (and launch date, when
     Brickset has one) via Brickset's official API, in batches. Returns
-    {set_num: {"year": int, "launch_date": "YYYY-MM-DD" | None}} for the
+    {set_num: {"year": int, "launch_date": "YYYY-MM-DD" | None,
+    "retail_price": float | None}} for the
     sets it found; anything missing or any API error just yields fewer
     results, so those sets are retried on the next run."""
     import requests
@@ -231,20 +232,30 @@ def fetch_release_info(set_nums: list[str], api_key: str) -> dict[str, dict]:
             year = item.get("year")
             if not number or not isinstance(year, int):
                 continue
-            launch = item.get("launchDate") or None
-            found[number] = {"year": year, "launch_date": launch[:10] if launch else None}
+            us = ((item.get("LEGOCom") or {}).get("US")) or {}
+            launch = item.get("launchDate") or us.get("dateFirstAvailable") or None
+            price = us.get("retailPrice")
+            found[number] = {
+                "year": year,
+                "launch_date": launch[:10] if launch else None,
+                # Original US retail price in USD — the fallback for sets no
+                # longer listed on LEGO.com (which is where `price` comes from).
+                "retail_price": float(price) if isinstance(price, (int, float)) and price > 0 else None,
+            }
     return found
 
 
 def attach_release_info(sets: dict[str, dict]) -> bool:
-    """Adds released_year / released_date to each set from a persistent
+    """Adds released_year / released_date (and original_price, for sets with
+    no current LEGO.com price) to each set from a persistent
     cache (data/release_years.json), only asking Brickset about sets the
     cache hasn't seen yet — a release year never changes, so each set is
     looked up once. Needs BRICKSET_API_KEY; without it (or on API failure)
     sets just keep whatever the cache already has. Returns True if any set
     entry changed."""
     cache = load_json(RELEASE_INFO_PATH, {})
-    missing = [n for n in sets if n not in cache]
+    # Entries cached before retail_price existed are looked up again once.
+    missing = [n for n in sets if n not in cache or "retail_price" not in cache[n]]
     api_key = os.environ.get("BRICKSET_API_KEY")
     if missing and api_key:
         print(f"Looking up release years for {len(missing)} set(s) on Brickset ...")
@@ -260,8 +271,11 @@ def attach_release_info(sets: dict[str, dict]) -> bool:
     for set_num, entry in sets.items():
         info = cache.get(set_num) or {}
         year, launch = info.get("year"), info.get("launch_date")
-        if entry.get("released_year") != year or entry.get("released_date") != launch:
-            entry["released_year"], entry["released_date"] = year, launch
+        retail = info.get("retail_price")
+        # Only filled in when LEGO.com has no current price for the set.
+        original = f"${retail:,.2f}" if retail and not entry.get("price") else None
+        if (entry.get("released_year"), entry.get("released_date"), entry.get("original_price")) != (year, launch, original):
+            entry["released_year"], entry["released_date"], entry["original_price"] = year, launch, original
             changed = True
     return changed
 

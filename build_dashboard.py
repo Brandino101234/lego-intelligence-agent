@@ -396,8 +396,22 @@ def render_retiring(retiring: dict, today: date) -> tuple[str, str, str, str]:
                 price_value = float(price_raw.replace("$", "").replace(",", ""))
             except ValueError:
                 price_value = None
+        original_raw = v.get("original_price") if not price_raw else None
+        if original_raw:
+            # No current LEGO.com price (sold out / pulled) — fall back to the
+            # original retail price from Brickset, flagged so it isn't mistaken
+            # for a live price.
+            try:
+                price_value = float(original_raw.replace("$", "").replace(",", ""))
+            except ValueError:
+                price_value = None
         price_sort = price_value if price_value is not None else 999999
-        price_label = esc(price_raw) if price_raw else "&mdash;"
+        if price_raw:
+            price_label = esc(price_raw)
+        elif original_raw:
+            price_label = f'{esc(original_raw)} <span style="opacity:.6" title="Original retail price (Brickset) — no longer listed on LEGO.com">orig.</span>'
+        else:
+            price_label = "&mdash;"
 
         pieces = v.get("pieces")
         pieces_sort = pieces if pieces is not None else 999999
