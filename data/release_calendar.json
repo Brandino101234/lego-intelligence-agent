@@ -1,17 +1,11 @@
 {
-  "generated_at": "2026-11-23T16:57:35",
+  "generated_at": "2026-11-24T00:53:16",
   "months": {
     "2026-11": [
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
         "availability_text": "Coming soon on November 27, 2026",
-        "future_gwp": {
-          "date_range": "11/27-11/30",
-          "image": "https://www.lego.com/cdn/cs/set/assets/blt6831b408d7d78153/40888_Prod.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
-          "name": "Prepare for total construction",
-          "text": "Capture the Godzilla Logo and Footprint gift with purchase of the exclusive LEGO® Ideas Godzilla set. While supplies last, 11/27-11/30.*",
-          "url": "https://www.lego.com/product/godzilla-logo-footprint-40888"
-        },
+        "future_gwp": null,
         "gallery_images": [],
         "image": "https://www.lego.com/cdn/cs/set/assets/bltfe10804751318bd4/21375_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
         "insiders_early_access": false,
@@ -1062,7 +1056,7 @@
         "pieces": 981,
         "price": "$99.99",
         "set_num": "75482",
-        "theme": "Star Wars™",
+        "theme": "Minifigures",
         "url": "https://www.lego.com/en-us/product/up-scaled-luke-skywalker-minifigure-75482"
       },
       {
@@ -1108,7 +1102,7 @@
         "pieces": 3209,
         "price": "$299.99",
         "set_num": "75467",
-        "theme": "Star Wars™",
+        "theme": "Art",
         "url": "https://www.lego.com/en-us/product/a-new-hope-movie-poster-75467"
       },
       {
