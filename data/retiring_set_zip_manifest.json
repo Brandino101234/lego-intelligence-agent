@@ -1219,10 +1219,6 @@
     "bytes": 80641,
     "file": "downloads/retiring-set-42175.zip"
   },
-  "42179": {
-    "bytes": 76392,
-    "file": "downloads/retiring-set-42179.zip"
-  },
   "42199": {
     "bytes": 80829,
     "file": "downloads/retiring-set-42199.zip"
@@ -1546,6 +1542,10 @@
   "42709": {
     "bytes": 99789,
     "file": "downloads/retiring-set-42709.zip"
+  },
+  "42717": {
+    "bytes": 105557,
+    "file": "downloads/retiring-set-42717.zip"
   },
   "42719": {
     "bytes": 128928,
@@ -3054,6 +3054,14 @@
   "77082": {
     "bytes": 102922,
     "file": "downloads/retiring-set-77082.zip"
+  },
+  "77084": {
+    "bytes": 76265,
+    "file": "downloads/retiring-set-77084.zip"
+  },
+  "77088": {
+    "bytes": 81977,
+    "file": "downloads/retiring-set-77088.zip"
   },
   "77093": {
     "bytes": 108787,

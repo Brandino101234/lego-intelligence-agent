@@ -1450,5 +1450,69 @@
     "theme": null,
     "timestamp": "2026-11-20T22:06:50",
     "type": "removed_from_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Family Dollhouse",
+    "set_num": "42717",
+    "theme": "Friends",
+    "timestamp": "2026-11-25T23:07:24",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Gryffindor™ Common Room",
+    "set_num": "76482",
+    "theme": "Harry Potter™",
+    "timestamp": "2026-11-25T23:07:24",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Guaco's Tacos",
+    "set_num": "77088",
+    "theme": "LEGO® Fortnite",
+    "timestamp": "2026-11-25T23:07:24",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Harry, Draco and Hagrid™ Figures",
+    "set_num": "40992",
+    "theme": "Harry Potter™",
+    "timestamp": "2026-11-25T23:07:24",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Hogwarts™ Express & Platform 9¾™",
+    "set_num": "76487",
+    "theme": "Harry Potter™",
+    "timestamp": "2026-11-25T23:07:24",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Marvel Rivals: Jeff the Land Shark",
+    "set_num": "67023",
+    "theme": "Marvel",
+    "timestamp": "2026-11-25T23:07:24",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "P-1000",
+    "set_num": "77084",
+    "theme": "LEGO® Fortnite",
+    "timestamp": "2026-11-25T23:07:24",
+    "type": "added_to_calendar"
+  },
+  {
+    "month": "2027-01",
+    "name": "Privet Drive",
+    "set_num": "76481",
+    "theme": "Harry Potter™",
+    "timestamp": "2026-11-25T23:07:24",
+    "type": "added_to_calendar"
   }
 ]

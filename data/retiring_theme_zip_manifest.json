@@ -75,14 +75,14 @@
     "sets": 1
   },
   "Fortnite": {
-    "bytes": 858236,
+    "bytes": 1016458,
     "file": "downloads/retiring-theme-fortnite.zip",
-    "sets": 10
+    "sets": 12
   },
   "Friends": {
-    "bytes": 4713473,
+    "bytes": 4819020,
     "file": "downloads/retiring-theme-friends.zip",
-    "sets": 45
+    "sets": 46
   },
   "Gabby's Dollhouse": {
     "bytes": 409532,
@@ -180,9 +180,9 @@
     "sets": 63
   },
   "Technic": {
-    "bytes": 3327309,
+    "bytes": 3250927,
     "file": "downloads/retiring-theme-technic.zip",
-    "sets": 42
+    "sets": 41
   },
   "The Legend of Zelda": {
     "bytes": 108799,
