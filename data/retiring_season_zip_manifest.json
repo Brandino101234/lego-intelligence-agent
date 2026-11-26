@@ -1,18 +1,18 @@
 {
   "2026-12": {
-    "bytes": 18646779,
+    "bytes": 17041649,
     "file": "downloads/retiring-2026-12.zip",
-    "sets": 219
+    "sets": 197
   },
   "2027-07": {
-    "bytes": 9685836,
+    "bytes": 9550544,
     "file": "downloads/retiring-2027-07.zip",
-    "sets": 115
+    "sets": 113
   },
   "2027-12": {
-    "bytes": 21903290,
+    "bytes": 21420774,
     "file": "downloads/retiring-2027-12.zip",
-    "sets": 263
+    "sets": 257
   },
   "2028-07": {
     "bytes": 1339008,
@@ -20,9 +20,9 @@
     "sets": 16
   },
   "2028-12": {
-    "bytes": 15045180,
+    "bytes": 14789922,
     "file": "downloads/retiring-2028-12.zip",
-    "sets": 173
+    "sets": 170
   },
   "2029-07": {
     "bytes": 69307,
