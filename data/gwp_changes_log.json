@@ -384,5 +384,35 @@
     "name": "Winter Snow Globe",
     "timestamp": "2026-11-23T16:57:49",
     "type": "gwp_ended"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40888",
+    "name": "Godzilla Logo & Footprint",
+    "qualifying_text": "Unlock when purchasing Godzilla",
+    "timestamp": "2026-11-27T14:24:42",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40914",
+    "name": "Retro Jukebox",
+    "qualifying_text": "Spend over $250 to unlock this gift",
+    "timestamp": "2026-11-27T14:24:42",
+    "type": "gwp_started"
+  },
+  {
+    "end_date": null,
+    "gwp_code": "40918",
+    "name": "Winter Snow Globe",
+    "qualifying_text": "Spend over $170 to unlock this gift",
+    "timestamp": "2026-11-27T14:24:42",
+    "type": "gwp_started"
+  },
+  {
+    "gwp_code": "5011174",
+    "name": "Christmas Craft Set",
+    "timestamp": "2026-11-27T14:24:42",
+    "type": "gwp_ended"
   }
 ]

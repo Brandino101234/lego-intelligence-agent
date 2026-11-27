@@ -1514,5 +1514,13 @@
     "theme": "Harry Potter™",
     "timestamp": "2026-11-25T23:07:24",
     "type": "added_to_calendar"
+  },
+  {
+    "last_known_month": "2026-11",
+    "name": "Godzilla",
+    "set_num": "21375",
+    "theme": "Ideas",
+    "timestamp": "2026-11-27T14:24:25",
+    "type": "removed_from_calendar"
   }
 ]

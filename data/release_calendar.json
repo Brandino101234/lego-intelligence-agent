@@ -1,30 +1,6 @@
 {
-  "generated_at": "2026-11-26T23:04:51",
+  "generated_at": "2026-11-27T14:24:25",
   "months": {
-    "2026-11": [
-      {
-        "availability_status": "B_COMING_SOON_AT_DATE",
-        "availability_text": "Coming soon on November 27, 2026",
-        "future_gwp": {
-          "date_range": "11/27-11/30",
-          "image": "https://www.lego.com/cdn/cs/set/assets/blt6831b408d7d78153/40888_Prod.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
-          "name": "Prepare for total construction",
-          "text": "Capture the Godzilla Logo and Footprint gift with purchase of the exclusive LEGO® Ideas Godzilla set. While supplies last, 11/27-11/30.*",
-          "url": "https://www.lego.com/product/godzilla-logo-footprint-40888"
-        },
-        "gallery_images": [],
-        "image": "https://www.lego.com/cdn/cs/set/assets/bltfe10804751318bd4/21375_Prod.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1",
-        "insiders_early_access": false,
-        "insiders_early_access_text": null,
-        "launch_date": "2026-11-27",
-        "name": "Godzilla",
-        "pieces": 5363,
-        "price": "$449.99",
-        "set_num": "21375",
-        "theme": "Ideas",
-        "url": "https://www.lego.com/en-us/product/godzilla-21375"
-      }
-    ],
     "2027-01": [
       {
         "availability_status": "B_COMING_SOON_AT_DATE",
@@ -553,7 +529,7 @@
         "pieces": 380,
         "price": "$24.99",
         "set_num": "40992",
-        "theme": "Harry Potter™",
+        "theme": "BrickHeadz",
         "url": "https://www.lego.com/en-us/product/harry-draco-and-hagrid-figures-40992"
       },
       {
@@ -1236,7 +1212,7 @@
         "pieces": 1849,
         "price": "$169.99",
         "set_num": "67012",
-        "theme": "Art",
+        "theme": "DC",
         "url": "https://www.lego.com/en-us/product/the-joker-wall-art-comic-cover-67012"
       },
       {
@@ -1297,7 +1273,7 @@
         "pieces": 981,
         "price": "$99.99",
         "set_num": "75482",
-        "theme": "Minifigures",
+        "theme": "Star Wars™",
         "url": "https://www.lego.com/en-us/product/up-scaled-luke-skywalker-minifigure-75482"
       },
       {
@@ -1343,7 +1319,7 @@
         "pieces": 3209,
         "price": "$299.99",
         "set_num": "75467",
-        "theme": "Art",
+        "theme": "Star Wars™",
         "url": "https://www.lego.com/en-us/product/a-new-hope-movie-poster-75467"
       },
       {
