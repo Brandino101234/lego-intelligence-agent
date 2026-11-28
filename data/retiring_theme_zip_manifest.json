@@ -25,9 +25,9 @@
     "sets": 25
   },
   "City": {
-    "bytes": 4533306,
+    "bytes": 4466670,
     "file": "downloads/retiring-theme-city.zip",
-    "sets": 64
+    "sets": 63
   },
   "Classic": {
     "bytes": 820128,
@@ -120,9 +120,9 @@
     "sets": 14
   },
   "Marvel": {
-    "bytes": 2936007,
+    "bytes": 2768437,
     "file": "downloads/retiring-theme-marvel.zip",
-    "sets": 32
+    "sets": 30
   },
   "Minecraft": {
     "bytes": 2170723,
@@ -175,9 +175,9 @@
     "sets": 26
   },
   "Star Wars": {
-    "bytes": 4449530,
+    "bytes": 4405455,
     "file": "downloads/retiring-theme-star-wars.zip",
-    "sets": 63
+    "sets": 62
   },
   "Technic": {
     "bytes": 3250927,
@@ -190,9 +190,9 @@
     "sets": 1
   },
   "Wednesday": {
-    "bytes": 249526,
+    "bytes": 174504,
     "file": "downloads/retiring-theme-wednesday.zip",
-    "sets": 3
+    "sets": 2
   },
   "Wicked": {
     "bytes": 878030,
